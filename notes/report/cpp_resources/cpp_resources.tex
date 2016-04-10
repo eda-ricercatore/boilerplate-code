@@ -1,0 +1,1026 @@
+%	This is written by Zhiyang Ong to document usage of C++ STL features that I can use for my C++ -based software, particularly those in electronic design automation.
+
+%	The MIT License (MIT)
+
+%	Copyright (c) <2014> <Zhiyang Ong>
+
+%	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+%	The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+%	Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" | awk '{ sub("23wU4X5M589","F.d_c_b. ") sub("Stanford","d0mA1n"); print $5, $2, $8; for (i=1; i<=1; i++) print "6\b"; print $9, $7, $6 }' | sed y/kqcbuHwM62z/gnotrzadqmC/ | tr 'q' ' ' | tr -d [:cntrl:] | tr -d 'ir' | tr y "\n"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{C++ Resources}
+\label{chp:CppResources}
+
+	Quick advice: {\tt Learn how to use {\it C++1y} features, including those of {C++11}, {C++14}, and {C++17}.} Older {\it C++} versions include {\it C++98} and {\it C++03}. \\
+
+	Reference: Free Software Foundation contributors, ``{C++1y/C++14} Support in {GCC},'' from {\it {GCC}, the {GNU} Compiler Collection: {GCC} Projects}, Free Software Foundation, Boston, MA, November 14, 2015. Available online at: \url{https://gcc.gnu.org/projects/cxx1y.html}; last accessed on January 25, 2016.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Resources for C++ and Notes About C++}
+\label{sec:ResourcesAndNotesAboutCpp}
+
+
+
+Some {\it C++} resources are: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item Online {\it C++} tutorial reference: \cite{CplusplusCom2015a,CplusplusCom2015b,CplusplusCom2014,Soulie2007}: \url{http://www.cplusplus.com/reference/stl/}
+%	\item \cite{CplusplusCom2014}, \cite{CplusplusCom2015}, \cite{CplusplusCom2015a}, \cite{CplusplusCom2015b}, and \cite{Soulie2007}: \url{http://www.cplusplus.com/reference/stl/}
+\item Pointers to functions \cite{CplusplusCom2015b}: \url{http://www.cplusplus.com/doc/tutorial/pointers/}
+\item An online {\it C++} reference: \cite{cppreference2015}.
+\item From an online {\it Marshall Cline} resource: \cite{Cline2011,Cline2003,Cline2000}
+\item Books on {\it C++}: \cite{Pozrikidis2007,Koenig2000}; processed for {\it C++} templates
+\item Embedded {\it C++}: \cite{Katupitiya2006}
+\item GUI and other graphics with {\it C++}: \cite{Pozrikidis2007}
+\item Summaries of {\it C++}: \cite{Josuttis1999} 
+\end{enumerate}
+
+
+Some {\it C++} STL resources are: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item Online {\it C++} STL reference: \cite{CplusplusCom2015}: \url{http://www.cplusplus.com/reference/stl/}
+\item \cite{cppreference2015}: \url{http://en.cppreference.com/w/cpp/container}
+\item From an online {\it C++} STL resource from SGI (formerly, Silicon Graphics, Inc.): \cite{HewlettPackardCompanyStaff2014,HewlettPackardCompanyStaff1994}.
+\item Another online {C++} STL reference: \cite{Mohtashim2015a}: \url{http://www.tutorialspoint.com/cplusplus/cpp_stl_tutorial.htm}
+\item Other online {\it C++} STL references: \cite{Riesbeck2009,Riesbeck2009a}.
+\item \url{http://www.cs.wustl.edu/~schmidt/PDF/stl4.pdf}
+\end{enumerate}
+
+Books to classify: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item C++ programming: \cite{Horstmann2012,Savitch2009,Prata2005,Romanik2003,Schildt2003a,Schildt1998a}
+%	Finished going through: Horstmann2012,Savitch2009,Prata2005,Romanik2003,Schildt2003a,Schildt1998a
+\end{enumerate}
+
+
+
+References for {\it C++} libraries of interest: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item {\it Boost C++}: \cite{Mukherjee2015,Polukhin2013,Schaling2012,Karlsson2006a}
+\item {\it Other libraries that can be considered include:  cpp-netlib: The C++ Network Library; nana; FLTK; gtkmm; Qt; evince; glibmm; cairomm; opencv; Ogre3D; OpenGL; CGAL; QuantLib; Google Test; and cppunit.}
+\item E.g., see \url{http://en.cppreference.com/w/cpp/links/libs} \cite[Useful resources: List of C++ libraries -- A list of open source C++ libraries]{cppreference2015}.
+\end{enumerate}
+
+
+
+C++ topics: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item Function objects: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item \url{https://en.wikipedia.org/wiki/Functional_(C%2B%2B)}
+	\item \url{http://stackoverflow.com/questions/356950/c-functors-and-their-uses}
+	\item \url{http://www.cprogramming.com/tutorial/functors-function-objects-in-c++.html}
+	\item \cite[pp. 233--243]{Josuttis2012}
+	\item \cite[pp. 327--332, 885, 922--931, 947]{Prata2005}
+	\item \cite[pp. 126--129]{Schildt1998a}. Function pointers are pointers to functions; note that these functions are not variables.
+%	Finding references for function objects is not a top priority.
+	\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Strings: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item \cite{Stroustrup2014}, Chp 23
+	\item \cite{Stroustrup2009}, Chp 23
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\item \cite{Gregoire2014}, Chp 18
+	\item \cite{Allain2012}, Chp 19
+	\item \cite[pp. 56--60, string data types, variable vs. literal; strings and string class, 13, 82--87, 320--324, 363--365, 496]{Horstmann2012}
+	\item \cite[655--716]{Josuttis2012}
+	\item \cite[pp. 64--67, 320--325, 465--482]{Savitch2009}
+	\item \cite[\S14.2]{Scheinerman2006}
+	\item \cite[pp. 114--131]{Prata2005}
+	\item \cite{Eckel2003}, Chp 1
+	\item \cite{Heller2003}: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item The {\tt put} pointer points ``to the next free byte in the {\tt stringstream}.'' That is, it ``holds the address of the next byte in the output area of the'' {\tt stringstream}. When the {\tt stringstream} is empty, the {\tt put} pointer points to the beginning of the {\tt stringstream} buffer. \cite[\S9.8]{Heller2003}.
+		\item ``The type of the {\tt put} pointer'' does not matter to the software developer(s), since they ``cannot access it directly'' \cite[\S9.8]{Heller2003}.
+		\item ``The {\tt get} pointer holds the address of the next byte in the input area of the stream, or the next byte we get if we use $>>$ to read data from the {\tt stringstream}'' \cite[\S9.9]{Heller2003}.
+		\item ``The {\tt end} pointer indicates the end of the {\tt stringstream}. Attempting to read anything at or after this position will cause the read to fail because there is nothing else to read'' \cite[\S9.9]{Heller2003}.
+		\item Developers only have to know about how {\tt put}, {\tt get}, and {\tt end} pointers work. They do not have to know the actual representation of these pointers \cite[\S9.9]{Heller2003}.
+		\item The {\tt stringstream} object acts as a buffer, and is ``an area of allocated memory'' (``by the stringstream member functions'') \cite[\S9.9]{Heller2003}.
+		\end{enumerate}
+	\item \cite{McMahon20XY}: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item C strings (or C-strings, or C-style strings) are null-terminated strings (arrays of characters that each end with a terminating ``null character'' with ASCII value 0) and are arrays of characters; the ``null character'' is usually represented by the literal character '$\backslash$0'. ``However, an array of {\tt char} is NOT by itself a C string.''
+		\item ``Since {\tt char} is a built-in data type, no header file is required to create a C string. The C library header file $<${\tt cstring}$>$ contains a number of utility functions that operate on C strings.''
+		\item ``It is also possible to declare a C string as a pointer to a {\tt char}: char$^{\ast}$ s3 = ``hello''; '' It creates a character array with just enough memory space (in the heap) to store the null-terminated string. The address of the string's first character is placed in the {\tt char} pointer {\it s3}. When this improperly used, it can corrupt program memory or cause run-time errors.
+		\item ``[Use] the {\tt C} library function {\tt strlen()}'' to determine ``the length of a {\tt C} string.'' It returns an unsigned integer representing the number of characters in the string, excluding the terminating null character.
+		\item Relational operators (such as $==, !=, >, <, >=, <=$) compare the addresses of the first characters in the two string operands (as the array names are treated as pointers), instead of the contents of these strings.
+		\item ``Use the {\tt C} library function {\tt strcmp()}'' ``to compare the contents of two {\tt C} strings.'' The input arguments of this function are two pointers to {\tt C} strings.
+		\item ``Use the {\tt C} library function {\tt strcpy()}'' to assign a string to a C string or change its contents. The {\tt strcpy()} function accepts a pointer to the C string as the first input argument, and a pointer to the contents of a valid C string or string literal (i.e., a character) as the second input argument. The {\tt C} library function {\tt strcat()} has the same input arguments as {\tt strcpy()}, and is used for concatenating two strings.
+		\item C strings can be used as input parameters or the return type. They are specified as {\tt char[]} or {\tt char$^{\ast}$}.
+		\item ``A {\tt C++} string is an object of the class string, which is defined in the header file $<$string$>$ and which is in the standard namespace.'' The variable name of a {\tt C++} string is a pointer to the first character of the string; the variable name contains the address of the string's first character. The {\tt C++} string is a dynamically-allocated array of characters.
+		\item ``[Use] the string class methods {\tt length()} or {\tt size()}'' to determine ``the length of the {\tt C++} strings.''
+		\item To improve memory efficiency and reduce memory usage, explicitly {\it pass a string object}. Else, the {\tt C++} string objects are pass and returned by value, which involves making a copy of the string object.
+		\item Concatenate C++ strings, C strings, and string literals in any order using the ``+'' operator.
+		\item Convert a C++ string into a C string via the {\tt c\_str()} function of the {\tt string} class. The {\tt c\_str()} function returns a pointer to the array of characters representing the string. If the C++ string is not null-terminated, a null character is appended to the new C string. The returned C string ``can be used, printed, copied, etc.'' but not be modified.
+		\item Since programming with arrays can enbug the code more easily, the use of C++ {string} is (strongly) recommended for use. This is because the properties of a2
+		\item When a C string is required by a function, convert the C++ string into a C string (as aforementioned). Instances in which a C string have to be converted into a C++ string are: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item Strings passed into {\tt main()} as C strings from the command line argument.
+			\item Functions for file input/output operations require filenames to be specified as C strings.
+			\item The C++ string class does not have the equivalent functions of certain C string library functions.
+			\item Unlike C++ strings, C strings can be serialized in binary format without requiring a bunch of extra code to be written.
+			\end{enumerate}
+		\item The function {\tt atoi} converts a string to an integer. Similar functions for converting strings into numbers are: {\tt atol} and {\tt atof}. The C++ STL does not have a {\tt itoa} function to convert a number to an integer. However, some compilers supports this function in the {\it C Standard General Utilities Library}.
+		\end{enumerate}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\item The function {\tt strtol} converts a string into a long integer: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item See \url{http://www.cplusplus.com/reference/cstdlib/strtol/}.
+		\item \cite[$<$cstdlib$>$ (stdlib.h) -- C Standard General Utilities Library: {\tt strtol} function]{CplusplusCom2015}
+		\end{enumerate}
+	\item Danny Kalev, ``String Streams,'' in {\it {InformIT}: The Trusted Technology Learning Source: Articles: Programming: {C/C++} Articles: {InformIT C++} Reference Guide}, Pearson Education, Indianapolis, IN, January 1, 2003. Available online at: \url{http://www.informit.com/guides/content.aspx?g=cplusplus&seqNum=72}; last accessed on November 13, 2015. \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item Static buffers (via {\it atoi()}, {\it sprintf()}, or {\it sscanf()} from the {\it $<$stdio.h$>$}) for type conversions can cause buffer overflow and do not provide adequate type safety (i.e., adequate type checking mechanism). This can be mitigated via {\it stringstreams}.
+		\end{enumerate}
+	\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item IO Streams: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item \cite{Gregoire2014}, Chp 12
+	\item \cite{Stroustrup2014}, Chp 10-11
+	\item \cite{Lippman2013}, Chp 8
+	\item \cite{Allain2012}, Chp 28
+	\item \cite[chp. 12]{Gaddis2012}.
+	\item \cite[Chp. 8, pp. 351--388; pp. 4, 12--15, 49--51, 150--154, 352, 361--365, 497--498]{Horstmann2012}
+	\item \cite[pp. 743--847]{Josuttis2012}
+	\item \cite{Prata2012}, Chp 17q
+	\item \cite[Chp. 13]{Gaddis2011}.
+	\item \cite{Gaddis2010}, Chp 12.
+	\item \cite[\S2.2; Chp. 6]{Savitch2009}
+	\item \cite{Stroustrup2009}, Chp 10-11
+	\item \cite[\S14.3-14.8]{Scheinerman2006}
+	\item \cite[pp. 262--273]{Prata2005}
+	\item \cite{Eckel2003}, Chp 2
+	\item \cite{Oualline2003}, Chp 16
+	\item \cite{Schildt2003}, Chp 21
+	\item \cite[Chp. 18, pp. 417--450; Appendix A, pp. 563--580]{Schildt2003a}
+	\item \cite{Vermeir2001}, Chp 10
+	\item \cite[Chp. 8--9, pp. 187--235; Chp. 20--21, pp. 511--568]{Schildt1998a}
+	\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Templates: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item \cite{Gregoire2014}, Chp 11,21
+	\item \cite{Stroustrup2014}, Chp 19
+	\item \cite{Lippman2013}, Chp 16
+	\item \cite{Allain2012}, Chp 29
+	\item \cite[\S16.2--\S16.4]{Gaddis2012}
+	\item \cite[pp. 13, 26--27, 33--34, 36, 62, 68, 1024]{Josuttis2012}
+	\item \cite[\S16.2--\S16.4]{Gaddis2011}
+	\item \cite[Chp. 17]{Savitch2009}
+	\item \cite{Stroustrup2009}, Chp 19
+	\item \cite[\S6.16, pp. 193--195]{Pozrikidis2007}
+	\item \cite{Abrahams2005}, book
+	\item \cite[pp. --]{Prata2005}
+	\item \cite{Eckel2003}, Chp 3
+	\item \cite{Oualline2003}, Chp 24
+	\item \cite{Schildt2003}, Chp 18
+	\item \cite[Chp. 16, pp. 375--394]{Schildt2003a}
+	\item \cite{Vandevoorde2003}, book
+	\item \cite{Alexandrescu2001}, book; typelist - Chp 3
+	\item \cite{Vermeir2001}, Chp 6
+	\item \cite{Eckel2000}, Chp 16
+	\item \cite[Chp. 18, pp. 461--487]{Schildt1998a}
+	\item References: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item \cite{Moses2016} recommends including the implementation file ({\tt .cpp}), instead of the header file ({\tt .hpp}) in any {\it C++} file that uses the {\it C++} template.
+		\item \cite{Ben2013} argues for separating the {\it C++} template definitions in the header file ({\tt .hpp}) from the {\it C++} template implementations in the implementation file ({\tt .cpp}).
+		\item ``Although standard C++ has no such requirement, some compilers require that all function and class templates need to be made available in every translation unit they are used. In effect, for those compilers, the bodies of template functions must be made available in a header file. To repeat: that means those compilers won't allow them to be defined in non-header files such as .cpp files.\dots\ There is an export keyword which is supposed to mitigate this problem, but it's nowhere close to being portable.'' \cite{Gogolev2009}
+		\item \cite{Benoit2009} argues that you can merge the definition and implementation in a single file, which ends with the {\tt .hpp} file extension.
+		\item \cite{DevSolar2009,Diago2013} argue that both the definition and the implementation of {\it C++} templates should be placed together in the {\it C++} header file, with white space 
+		\item This is a list of different implementations of a C++ template: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item Implemented with {\it C++} template definition and implementation in one file, where the definition and implementation are clearly separated/distinguished/demarcated. The implementation is appended to the end of the definition, with some white space to separate them \cite{Gogolev2009,DevSolar2009,Diago2013}.
+			\item Implemented with merged {\it C++} template definition and implementation in one file \cite{Benoit2009}.
+			\item Implemented with {\it C++} template definition and implementation separately in different files: a {\it C++} header file and a {\it C++} implementation file. Any file that uses this {\it C++} template will have to import the {\it C++} implementation file, instead of the {\it C++} header file \cite{Moses2016,Ben2013}. {\color{red}\tt I shall use this method. This clearly decouples the {\it C++} template definition and implementation separately into different files, and keeps things modular in my software architecture. It prevents templates from being huge monoliths.}
+			\end{enumerate}
+		\end{enumerate}
+	\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Debugging: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item \cite{Eckel2003}, Chp 11 (especially memory management problems, pp. 533)
+	\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item STL, books on {\it C++} STL: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item \cite[\S16.5, 983--996]{Gaddis2012}
+	\item \cite{Josuttis2012}
+	\item \cite[Chp. 18, pp. 943--998]{Savitch2009}
+	\item \cite{Reese2006a}
+	\item \cite[Chp. 16, pp. 877--922, 930--940]{Prata2005}
+	\item \cite[Chp. 21, 499--545]{Schildt2003a}
+	\item \cite{Robson2000}
+	\item \cite{Josuttis1999a}
+	\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item STL containers: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item \cite{Gregoire2014}, Chp 15-16
+	\item \cite{Lippman2013}, Chp 9,11
+	\item \cite{Allain2012}, Chp 18
+	\item \cite{Prata2012}, Chp 16
+	\item \cite{EliteHussar2010}: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item {\tt vector$<$int$>$ v(10);} \hspace{0.2in} //{\it\ Create an int vector of size 10.}
+		\item {\tt v[5] = 10;} //{\it\ Target of this assignment is the return value of operator[].}
+		\end{enumerate}
+	\item \cite[\S18.2, pp. 960--977]{Savitch2009}
+	\item \cite{Reese2006a}, book
+	\item \cite[Chp. 8]{Scheinerman2006}
+	\item \cite{Schildt2004a}, Chp 8
+	\item \cite{Eckel2003}, Chp 4
+	\item \cite{Oualline2003}, Chp 25
+	\item \cite{Vermeir2001}, Chp 7
+	\item \cite[Chp. 24, pp. 625--691; Chp. 25--38, pp. 695--927]{Schildt1998a}
+	\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item STL algorithms: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item \cite{Gregoire2014}, Chp 15,17
+	\item \cite{Lippman2013}, Chp 10
+	\item \cite{Allain2012}, Chp 18
+	\item \cite{Prata2012}, Chp 16
+	\item \cite[\S18.3, pp. 977-991]{Savitch2009}
+	\item \cite{Reese2006a}, book
+	\item \cite{Eckel2003}, Chp 5
+	\item \cite{Oualline2003}, Chp 25
+	\item \cite{Vermeir2001}, Chp 7
+	\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Function addresses: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item \cite{Stroustrup2014}, Chp 8
+	\item \cite{Stroustrup2009}, Chp 8
+	\item \cite[pp. 330--331]{Prata2005}
+	\item \cite{Eckel2000}, Chp 3, pp. 213
+	\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Dynamic memory management problems: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item \cite{Gregoire2014}, Chp 10,22
+	\item \cite{Lippman2013}, Chp 12,13
+	\item \cite{Allain2012}, Chp 14
+	\item \cite[\S13.9, 750--754]{Gaddis2012}.
+	\item \cite{Prata2012}, Chp 9,12
+%	\item \cite{Gaddis2011}.
+	\item \cite{Gaddis2010}, Chp 13.
+	\item \cite{Meyers2005}, Chp 2-4
+	\item \cite[Chp. 9, pp. 393--423; Chp. 12, pp. 562--606; Chp. 13, pp. 677--685]{Prata2005}
+	\item \cite[\S3.1; \S8.1]{Romanik2003}
+	\item \cite{Schildt2003}, Chp 29
+	\item \cite{Eckel2000}, Chp 6,13
+	\item \cite[pp. 349--359]{Schildt1998a}
+	\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Function overloading: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item \cite{Stroustrup2014}, Chp 8
+	\item \cite[\S6.14, pp. 356--360]{Gaddis2012}.
+	\item \cite[\S6.14, pp. 359--363]{Gaddis2011}.
+	\item \cite{Gaddis2010}, Chp 6.
+	\item \cite[\S4.4, pp. 230--243]{Savitch2009}
+	\item \cite{Stroustrup2009}, Chp 8
+	\item \cite[pp. 216--217, 365--370]{Prata2005}. Function overloading is also known as function polymorphism \cite[pp. 388]{Prata2005}.
+	\item \cite{Schildt2003}, Chp 14
+	\item \cite{Eckel2000}, Chp 7
+	\item \cite[Chp. 14, pp. 361--384]{Schildt1998a}
+	\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Operator overloading: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item \cite{Lippman2013}, Chp 14
+	\item \cite[\S11.2, pp. 633--651]{Savitch2009}
+	\item \cite[pp. 502--515, 524--537]{Prata2005}
+	\item \cite{Oualline2003}, Chp 18
+	\item \cite{Schildt2003}, Chp 15
+	\item \cite[Chp. 13, pp. 299--330]{Schildt2003a}
+	\item \cite{Eckel2000}, Chp 12
+	\item \cite[Chp. 15, pp. 385--418]{Schildt1998a}
+	\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Constants: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item \cite{Eckel2000}, Chp 8
+	\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Functions and pointers: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\item \cite{Stroustrup2014}, Chp 8: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item Pass-by-reference: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item e.g., void init(vector$<$double$>$ \&v)
+			\item ``It is not possible to refer directly to a reference variable after it is defined; any occurrence of its name refers directly to the variable it references. ''
+			\item ``Once a reference is created, it cannot be later made to reference another variable. This is something that is often done with pointers.''
+			\item ``References cannot be null, whereas pointers can; every reference refers to some variable, although it may or may not be valid.''
+			\item ``References cannot be uninitialized. Because it is impossible to reinitialize a reference, they must be initialized as soon as they are created. In particular, local and global variables must be initialized where they are defined, and references which are data members of a class must be initialized in the initializer list of the class's constructor.''
+			\item Avoid mixing references and pointers in a block of code to avoid confusion, and make it easier for the {\it C++} code to be read and debug.
+			\item The required syntax for pointers make them prominent in comparison to that of references.
+			\item The number of operations on references is less than that on pointers. Hence, usage of references is easier to understand than that of pointers. Consequently, it is easier to use references than pointers without enbugging the code.
+			\item Pointers can be invalidated as follows: \vspace{-0.1cm}
+				\begin{itemize} \itemsep -1pt
+				\item ``Carrying a null value''
+				\item ``Out-of-bounds [pointer] arithmetic''
+				\item Illegal casts on pointers
+				\item Produce pointers from random integers
+				\end{itemize}
+			\item References can be invalidated as follows: \vspace{-0.1cm}
+				\begin{itemize} \itemsep -1pt
+				\item ``[Refer] to a variable with automatic allocation which goes out of scope''
+				\item ``[Refer] to an object inside a block of dynamic memory which has been freed''
+				\end{itemize}
+			\item ``Arrays are always passed by address. This includes C strings.''
+			\item ``Dynamic storage is allocated using pointers.''
+			\item Reference: Kurt McMahon, ``Passing Variables by Address,'' in {\it Northern Illinois University: College of Engineering and Engineering Technology: Department of Computer Science: CSCI 241 Intermediate Programming in C++ (Fall 2015): Notes}, Northern Illinois University, DeKalb, IL, October 28, 2015. Available online at: \url{http://faculty.cs.niu.edu/~mcmahon/CS241/Notes/pass_by_address.html}; last accessed on November 3, 2015.
+			\end{enumerate}
+		\item Pass-by-const-reference: e.g., void print(const vector$<$double$>$ \&v)
+		\item Pass-by-value: e.g., void fn(int x)
+		\item Pass-by-address: e.g., void print(int * ptr) \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item Reference: Kurt McMahon, ``Passing Variables by Address,'' in {\it Northern Illinois University: College of Engineering and Engineering Technology: Department of Computer Science: CSCI 241 Intermediate Programming in C++ (Fall 2015): Notes}, Northern Illinois University, DeKalb, IL, October 28, 2015. Available online at: \url{http://faculty.cs.niu.edu/~mcmahon/CS241/Notes/pass_by_address.html}; last accessed on November 3, 2015.
+			\end{enumerate}
+		\end{enumerate}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\item \cite{Lippman2013}, Chp 6
+	\item \cite{Allain2012}, Chp 12-13
+	\item \cite[Chp. 5, pp. 193--248; Chp. 7, pp. 307--349]{Horstmann2012}
+	\item \cite{Prata2012}, Chp 7-8
+	\item \cite[Chp. 4--5; \S11.1; and Chp. 14]{Savitch2009}
+	\item \cite{Stroustrup2009}, Chp 8
+	\item \cite[Chp. 7--8, pp. 279--391]{Prata2005}.: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item \cite[pp. 382--383]{Prata2005} provides information on which function version (from function overloading, function templates, and function template overloading) is chosen by the compiler, during compilation.
+		\item {\tt const} member functions (put the {\tt const} after the function parentheses) guarantees that the invoking object would not be modified.
+		\end{enumerate}
+	\item \cite{Oualline2003}, Chp 15,20
+	\item \cite[Chp. 6--8, pp. 105--179]{Schildt2003a}
+	\item \cite{Eckel2000}, Chp 11: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item use const at the end of accessor functions
+		\item Do not use pointers as instance variables
+		\end{enumerate}
+	\item \cite[Chp. 5--6; pp. 113--160]{Schildt1998a}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\item Elsewhere: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item \url{http://stackoverflow.com/questions/1143262/what-is-the-difference-between-const-int-const-int-const-and-int-const} \cite{Mortensen2015}: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item Read it backwards; the first {\it const} can be on either side of the type.
+			\item ``Read pointer declarations right-to-left.''
+			\item From the answer of Ted Dennison, July 17, 2009. {\bf Rule: The ``const'' goes after the thing it applies to. Putting const at the very front (e.g., const int $^{\ast}$) is an exception to the rule.}
+			\item int$^{\ast}$ -- pointer to int
+			\item int const $^{\ast}$ == const int $^{\ast}$ -- pointer to const int
+			\item int $^{\ast}$ const -- const pointer to int
+			\item int const $^{\ast}$ const == const int $^{\ast}$ const -- const pointer to const int
+			\item int $^{\ast}$$^{\ast}$ -- pointer to pointer to int
+			\item int $^{\ast}$$^{\ast}$ const -- A const pointer to a pointer to an int
+			\item int $^{\ast}$ const $^{\ast}$ -- A pointer to a const pointer to an int
+			\item int const $^{\ast}$$^{\ast}$ -- A pointer to a pointer to a const int
+			\item int $^{\ast}$ const $^{\ast}$ const -- A const pointer to a const pointer to an int
+			\end{enumerate}
+		\item For the following \cite{Mortensen2015}, let: {\it int var0 = 0;} \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item {\it const int {\rm \&}ptr1 = var0;} // Constant reference
+			\item {\it int $^{\ast}$ const ptr2 = {\rm \&}var0;} // Constant pointer
+			\item {\it int const $^{\ast}$ ptr3 = {\rm \&}var0;} // Pointer to const
+			\item {\it const int $^{\ast}$ const ptr4 = {\rm \&}var0;} // Const pointer to a const
+			\end{enumerate}
+		\item \cite{Ozcan2013}: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item ``A reference is a variable that refers to something else and can be used as an alias for that something else. A pointer is a variable that stores a memory address, for the purpose of acting as an alias to what is stored at that address. So, a pointer is a reference, but a reference is not necessarily a pointer. Pointers are a particular implementation of the concept of a reference, and the term tends to be used only for languages that give you direct access to the memory address. References can be implemented internally in a language using pointers, or using some other mechanism.'' Answer from dan1111.
+			\item ``Passing an object by value means making a copy of it. You can modify that copy without affecting the original. Making that copy can cost a lot of memory access though. Passing an object by reference means passing a handle to that object. This is cheaper because you don't need to make a copy. It also means that any changes you make will affect the original.'' Answer from Steve Rowe.
+			\item ``There is no such thing as a null reference. A reference must always refer to some object. As a result, if you have a variable whose purpose is to refer to another object, but it is possible that there might not be an object to refer to, you should make the variable a pointer, because then you can set it to null. On the other hand, if the variable must always refer to an object, i.e., if your design does not allow for the possibility that the variable is null, you should probably make the variable a reference.'' Answer from Harssh S. Shrivastava.
+			\end{enumerate}
+		\item A pointer is dereferenced via the explicit $^{\ast}$ operator. The $^{\ast}$ operator should not be used to dereference a reference (variable) \cite{Saks2001}.
+		\item \cite{Saks2001}: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item int $^{\ast}$pi = {\&}i; // Indirect expression to dereference $pi$ to $i$. ``Declare $pi$ as an object of type `pointer to int' whose initial value is the address of object $i$'' \cite{Saks2001a}.
+			\item int {\&}ri = i; // $ri$ is dereferenced to refer to $i$. ``Declares $ri$ as an object of type `reference to int' referring to $i$'' \cite{Saks2001a}.
+			\item The {\it C++} standard does not dictate how compilers shall implement references. However, popular compilers tend to implement references as pointers. Therefore, there are no significant advantages of using references or pointers.
+			\end{enumerate}
+		\item \cite{Saks2001a}: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item ``A valid reference must refer to an object; a pointer need not. A pointer, even a const pointer, can have a null value. A null pointer doesn't point to anything.''
+			\item I can bind a reference to a null pointer, but I cannot dereference a null pointer since it can ``produce undefined behavior''.
+			\end{enumerate}
+		\item You cannot call a non-const method from a const method. That would 'discard' the const qualifier.: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item \url{http://stackoverflow.com/questions/2382834/discards-qualifiers-error}
+			\end{enumerate}
+		\item Pointer to constant data: {\it const type$^{\ast}$ variable;} and {\it type const $^{\ast}$ variable;} \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item \url{http://www.cprogramming.com/reference/pointers/const_pointers.html}
+			\end{enumerate}
+		\item Pointer with constant memory address: {\it type $^{\ast}$ const variable = some-memory-address;} \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item \url{http://www.cprogramming.com/reference/pointers/const_pointers.html}
+			\end{enumerate}
+		\item Constant data with a constant pointer: {\it const type $^{\ast}$ const variable = some-memory-address;} and {\it type const $^{\ast}$ const variable = some-memory-address;} \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item \url{http://www.cprogramming.com/reference/pointers/const_pointers.html}
+			\end{enumerate}
+		\end{enumerate}
+	\item With shallow copying, I would only copy the memory references or pointers. The copy and the original reference the same object. On the other hand, with deep copying, I would copy the values; this is also known as cloning. The copy and the original reference do not share objects; each of them references its own object. The default copy constructor carries out shallow copy.
+	\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Extern function: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item : \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item 
+		\end{enumerate}
+	\item : \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item 
+		\end{enumerate}
+	\item : \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item 
+		\end{enumerate}
+	\item : \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item 
+		\end{enumerate}
+	\item : \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item 
+		\end{enumerate}
+	\item : \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item 
+		\end{enumerate}
+	\item : \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item 
+		\end{enumerate}
+	\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item {\tt typename}: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item Evan Driscoll, ``A Description of the C++ {\tt typename} keyword,'' from the Department of Computer Sciences, University of Wisconsin-Madison College of Engineering, University of Wisconsin-Madison, Madison, WI. Available online at: \url{http://pages.cs.wisc.edu/~driscoll/typename.html}; last accessed on February 15, 2016.
+	\item From \cite[API documentation for Eigen3: The template and typename keywords in C++]{Avery2016}, or \url{http://eigen.tuxfamily.org/dox/TopicTemplateKeyword.html}.
+	\item Wikipedia contributors, ``typename,'' in {\it Wikipedia, The Free Encyclopedia: C++}, Wikimedia Foundation, San Francisco, CA, April 13, 2015. Available online at: \url{https://en.wikipedia.org/wiki/Typename}; last accessed on February 15, 2016.: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item Usage \#1: ``A synonym for "class" in template parameters''
+		\item Usage \#2: ``A method for indicating that a dependent name is a type''
+		\end{enumerate}
+	\item \cite[pp. 916]{Savitch2009}
+	\item 
+	\item 
+	\item 
+	\item 
+	\item 
+	\item 
+	\item 
+	\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item OOD and inheritance: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item \cite{Gregoire2014}, Chp 4-9
+	\item \cite{Stroustrup2014}, Chp 9
+	\item \cite{Lippman2013}, Chp 7,15,18,19
+	\item \cite{Allain2012}, Chp 24-26
+	\item \cite[Chp. 13--15; Appendices E and J]{Gaddis2012}.
+	\item \cite[Chp. 9--10, 389--479]{Horstmann2012}
+	\item \cite{Prata2012}, Chp 10-11,13,14,15
+	\item \cite[Chp. 7, 11, 15; Appendices A, D, J, and K]{Gaddis2011}.
+	\item \cite{Gaddis2010}, Chp 13,14,15.
+	\item \cite[Chp. 10; \S12.1, 696--711; Chp. 15; Chp. 17]{Savitch2009}
+	\item \cite{Stroustrup2009}, Chp 9
+	\item \cite[Chp. 10--14, pp. 445--786]{Prata2005}
+	\item \cite{Oualline2003}, Chp 13-14,21
+	\item \cite[pp. 6--8; Chp. 11--12, pp. 245--298; Chp. 14--15, pp. 331--373]{Schildt2003a}
+	\item \cite{Vermeir2001}, Chp 3-4,8
+	\item \cite{Eckel2000}, Chp 14,15
+	\item \cite[Chp. 11--12, pp. 255--325; Chp. 16--17, pp. 419--460]{Schildt1998a}
+	\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item SW engineering issues: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item \cite{Gregoire2014}, Chp 24-26
+	\item \cite{Allain2012}, Chp 21
+	\item \cite[Chp. 4 and 7]{Romanik2003}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\item Debugging: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item \cite[\S14.2]{Scheinerman2006}
+		\end{enumerate}
+	\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item multi-threading: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item \cite{Schildt2004a}, Chp 3
+	\item \cite[\S5.1]{Romanik2003}
+	\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item graphs: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item \cite{Schildt2004a}, Chp 7
+	\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item typedef: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item In the sandbox, use the {\it Make} target {\it make typedef} to study an example of how {\it typedef} can be used. When the {\it header file} defines/specifies the {\it typedef}, and is included in the {\it C++ implementation file} and other {\it C++ implementation file}s that instantiates those objects, it can be used subsequently without additional definition/specification. October 6, 2015.
+	\item \cite[pp. 510-512]{Savitch2009}
+	\end{enumerate}
+\end{enumerate}
+
+	I am skipping topics, such as: run-time type ID and casting operators \cite[Chp. 19, pp. 451--470]{Schildt2003a}; namespaces \cite[pp. 472--480]{Schildt2003a}; \#error {\it C++} preprocessor \cite[pp. 552]{Schildt2003a}; \#line {\it C++} preprocessor \cite[pp. 558]{Schildt2003a}; \#pragma {\it C++} preprocessor \cite[pp. 559]{Schildt2003a}; \#\# {\it C++} preprocessor operator \cite[pp. 559--560]{Schildt2003a}; and {\it C++} predefined macro names \cite[pp. 560--561]{Schildt2003a}.
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Computational Complexity of C++ Containers}
+\label{sec:ComputationalComplexityofCppContainers}
+
+
+	Table \ref{tab:ComputationalComplexityofCppContainers} shows a tabulated summary of containers in the {\it C++} Standard Template Library (STL) and the computational complexity for each of their common operations: add(element e), remove(element e), search(element e), size(), empty(), begin(), and end(). \\
+
+%\begin{table}[htdp]
+\begin{table}[htp]
+\caption{Computational Complexity of Basic Operations of Containers from the {\it C++ STL}.}	\vspace{-0.2in}
+\label{tab:ComputationalComplexityofCppContainers}
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Container $\backslash$ Complexity & add & remove & search & size & empty & begin & end \\
+		\hline
+		vector & O(1) & O(n) & O(n) & O(1) & O(1) & O(1) & O(1) \\
+		\hline
+		list & O(1) & O(n) & O(n) & O(1) & O(1) & O(1) & O(1) \\
+		\hline
+		queue & O(1) amortized & O(1) & O(n) & O(1) & O(1) & O(1) & O(1) \\
+		\hline
+		priority queue & O(log n) & O(log n) & O(n) & O(1) & O(1) & O(1) & ??? \\
+		\hline
+		set & O(log n) & O(log n) & O(log n) & O(1) & O(1) & O(1) & O(1) \\
+		\hline
+		multi-set & O(log n) & ??? & O(log n) & O(1) & O(1) & O(1) & O(1) \\
+		\hline
+		map & O(log n) & O(log n) & O(log n) & O(1) & O(1) & O(1) & O(1) \\
+		\hline
+		multi-map & O(log n) & ??? & O(log n) & O(1) & O(1) & O(1) & O(1) \\
+		\hline
+		stack & O(1) & O(1) & O(n) & O(1) & O(1) & O(1) & O(1) \\
+		\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+
+
+To conclude, we can get some facts about each data structure: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item {\tt std::list} is very very slow to iterate through the collection due to its very poor spatial locality.
+\item {\tt std::vector} and {\tt std::deque} perform always faster than {\tt std::list} with very small data
+\item {\tt std::list} handles very well large elements
+\item {\tt std::deque} performs better than a {\tt std::vector} for inserting at random positions (especially at the front, which is constant time)
+\item {\tt std::deque} and {\tt std::vector} do not support very well data types with high cost of copy/assignment
+\end{enumerate}
+
+
+
+This draws simple conclusions on the usage of each data structure \cite{Bulka2000,Josuttis1999a}: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item Number crunching: use std::vector or std::deque
+\item Linear search: use std::vector or std::deque
+\item Random Insert/Remove:
+\item Small data size: use std::vector
+\item Large element size: use std::list (unless if intended principally for searching)
+\item Non-trivial data type: use std::list unless you need the container especially for searching. But for multiple modifications of the container, it will be very slow.
+\item Push to front: use std::deque or std::list
+\end{enumerate}
+
+Notes about asymptotic notations: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item Comparison of big O notations, and other asymptotic notations, in general -- based on ``running time (T(n))'' $[$Wikipedia 2015a$] [$Wikipedia 2015$]$: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item $O(1)$: constant time
+	\item $O(\log^{\ast} n)$, log star: iterated logarithmic time.
+
+	Log star n is a recursive function; $\log^{\ast} n \coloneqq
+		\begin{cases}
+		0 &: \mathrm{if}\ n \leq 1 \\
+		1 + \log^{\ast}(\log n) &: \mathrm{if}\ n > 1 \\
+		\end{cases}$\ $[$Wikipedia 2015b$]$
+%	\usepackage{mathtools}
+%	Use the above/aforementioned package to use the symbol: \coloneqq \cite{Pakin2008}
+	\item $O(\log \log n)$: log-logarithmic, double logarithmic
+	\item $O(\log n)$: logarithmic time, computational time complexity class DLOGTIME. E.g., $\log n^{2}$.
+	\item poly$(\log n)$ or $O((\log n)^{c}), c > 1$: polylogarithmic time. E.g., $(\log n)^{2}$.
+	\item $O(n^{c})$, where $0 < c < 1$: fractional power. E.g., $n^{\frac{2}{3}}$.
+	\item $o(n)$: sub-linear time (or sublinear time)
+	\item $O(n)$: linear time
+	\item $O(n \log^{\ast} n)$: ``n log star n'' time, or ``n log-star n''
+	\item $O(n \log n) = O(\log n!)$: linearithmic time, including $\log n!$. Or, loglinear, or quasilinear.
+	\item $O(n^{2})$: quadratic time
+	\item $O(n^{3})$: cubic time
+	\item poly$(n)$, or $2^{O(\log n)}$. Or, $O(n^{c}), c > 1$: polynomial time, including $n, n \log n, n^{10}$. Computational time complexity class P. Or, algebraic.
+	\item $2^{{\rm poly}(\log n)}$: quasi-polynomial time, including $n^{\log \log n}, n^{\log n}$. Computational time complexity class QP.
+	\item $O(2^{n^{\varepsilon}}), \forall \varepsilon > 0$: sub-exponential time, including $O(2^{\log n^{\log \log n}})$. Computational time complexity class SUBEXP.
+	\item $2^{o(n)}$: sub-exponential time, including $2^{n^{\frac{1}{3}}}$. Computational time complexity class SUBEXP. Or, L-notation.
+	\item $2^{O(n)}$: exponential time (with linear exponent), including $1.1^{n}, 10^{n}$. Computational time complexity class E.
+	\item $2^{{\rm poly}(n)}$. Or, $O(c^{n}), c > 1$: exponential time, including $2^{n}, 2^{n^{2}}$. Computational time complexity class EXPTIME.
+	\item $O(n!)$: factorial time, including $n!$.
+	\item $2^{2^{{\rm poly}(n)}}$: double exponential time, including $2^{2^{n}}$. Computational time complexity class 2-EXPTIME.
+	\item $n! > n^{n}$
+	\end{enumerate}
+\item Types of asymptotic notations $[$Wikipedia 2015$]$: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item $f(n) = O(g(n))$: Big O notation, or Big Oh notation
+	\item $f(n) = \Omega(g(n))$: Big Omega notation
+	\item $f(n) = \Theta(g(n))$: Big Theta notation
+	\item $f(n) = o(g(n))$: Small O notation, or Small Oh notation
+	\item $f(n) = \omega(g(n))$: Small Omega notation
+	\item $f(n) \sim g(n)$: ``On the order of''
+	\end{enumerate}
+\item References: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item $[$Wikipedia 2015$]$ Wikipedia contributors, ``Big O notation,'' sections {\it Orders of common functions} and {\it Related asymptotic notations: Family of Bachmann?Landau notations}, in {\it Wikipedia, The Free Encyclopedia: Analysis of algorithms, or Asymptotic analysis}, Wikimedia Foundation, San Francisco, CA, November 29, 2015. Available online at: \url{https://en.wikipedia.org/wiki/Big_O_notation#Orders_of_common_functions}; last accessed on December 1, 2015.
+	\item $[$Wikipedia 2015a$]$ Wikipedia contributors, ``Time complexity,'' section {\it Table of common time complexities}, in {\it Wikipedia, The Free Encyclopedia: Computational complexity theory}, Wikimedia Foundation, San Francisco, CA, November 16, 2015. Available online at: \url{https://en.wikipedia.org/wiki/Time_complexity#Table_of_common_time_complexities}; last accessed on December 1, 2015.
+	\item $[$Wikipedia 2015b$]$ Wikipedia contributors, ``Iterated logarithm,'' in {\it Wikipedia, The Free Encyclopedia: Asymptotic analysis}, Wikimedia Foundation, San Francisco, CA, November 6, 2015. Available online at: \url{https://en.wikipedia.org/wiki/Iterated_logarithm}; last accessed on December 1, 2015.
+	\end{enumerate}
+\item Note that I denote ``is defined as'' as: $\equiv, \triangleq, \stackrel{\text{\tiny def}}{=}, \coloneqq$
+\item Note that $\log n$ is faster than $(\log n)^{2}$, although initially the latter is slightly faster than the former (for negligibly small $n$).
+\end{enumerate}
+
+
+Books on computational complexity: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item \cite[pp.10--11 ]{Josuttis2012}
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Additional Notes About C++}
+\label{sec:AdditionalNotesAboutCpp}
+
+
+Static variables: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	\item K. Hong, ``C++ Tutorial
+%	Private Inheritance - 2015,'' San Francisco, CA. Available online from {\it Open Source \dots: Java/C++/Python/Android/Design Patterns: C++ Tutorial Home -- 2015} at: \url{}; last accessed on October 23, 2015.
+\item K. Hong, ``Static Variables and Static Class Members - 2015,'' San Francisco, CA. Available online from {\it Open Source \dots: Java/C++/Python/Android/Design Patterns: C++ Tutorial Home -- 2015} at: \url{http://www.bogotobogo.com/cplusplus/statics.php}; last accessed on October 23, 2015.
+\end{enumerate}
+
+
+
+
+Formatting data: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item Synesis Software Pty Ltd staff, ``Synesis Software Training Courses: FastFormat, Beginner's (part 1 of 2),'' Synesis Software Pty Ltd, Sydney, Australia, 2015.  Available online at: \url{http://www.synesis.com.au/training-beginners-fastformat.html}; December 1, 2015 was the last accessed date. \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item ``Formatting APIs'': \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item ``Replacement-based APIs'': \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item ``Streams (printf()-family)''
+			\item ``Boost.Format''
+			\item ``FastFormat.Format''
+			\end{enumerate}
+		\item ``Concatenation-based APIs'': \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item ``IOStreams''
+			\item ``Loki.SafeFormat''
+			\item ``FastFormat.Write''
+			\end{enumerate}
+		\end{enumerate}
+	\item ``struct tm''
+	\item ``struct in\_addr''	% struct in_addr
+	\item ``ATL types''
+	\item ``ACE types''
+	\end{enumerate}
+\item Synesis Software Pty Ltd staff, ``Synesis Software Training Courses: FastFormat, Advanced (part 2 of 2),'' Synesis Software Pty Ltd, Sydney, Australia, 2015.  Available online at: \url{http://www.synesis.com.au/training-advanced-fastformat.html}; December 1, 2015 was the last accessed date. \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item ``Format-specification Defect Handling'': ``Scoping'' and ``Disgnostic Logging''
+	\end{enumerate}
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Alternate Computer Number System for Representing Fractions in C++}
+\label{ssec:AlternateComputerNumberSystemforRepresentingFractionsInCpp}
+
+	An alternate computer number system for representing fractions in C++ is the fixed-point number system. For a detailed classification of computer number systems, see \cite{Lu2004}. \\
+
+	In {\it C++}, the numerical data types are based on cardinal numbers (e.g., one, two, three, \dots), instead of ordinal numbers/integers (e.g., first, second, third, \dots); see \cite{DictionaryDotComStaff2016,WolframResearchStaff2016,Pierce2016} for the definitions of ``cardinal number'' and ``ordinal number.'' From \cite{Pierce2016}, ``a Nominal Number is a number used only as a name, or to identify something (not as an actual value or position).'' E.g., ``the number on the back of a footballer (``8''),'' ``a postal code (``91210''),'' and ``a model number (``380'').'' \\
+
+
+
+
+Resources to help me implement the fixed-point ``data type'' as a class in {\it C++}, and fixed-point arithmetic: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item 
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Software Development in C++}
+\label{sec:SoftwareDevelopmentInCpp}
+
+
+Notes about software development in {\it C++}: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item Notes from Synesis Software Pty Ltd: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item Synesis Software Pty Ltd staff, ``Synesis Software Training Courses,'' Synesis Software Pty Ltd, Sydney, Australia, 2015.  Available online at: \url{http://www.synesis.com.au/training.html}; December 1, 2015 was the last accessed date. \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item Use {\tt FastFormat} as a ``C++ diagnostic logging API library''
+		\item {\tt STLSoft libraries}. ``Apply the concepts, principles and techniques of Extended STL to enhance the expressiveness, flexibility, and performance of your C++ software.'' See \cite{Wilson2007} for more details.
+		\item ``Building Bullet-Proof Software in C++ - no system built by Synesis Software has ever failed in production. This course takes you through the principles and practices of how we develop software, providing you with practical, applicable strategies and tactics for achieving the same outcome in your software developments.''
+		\item ``Guerilla Testing C++ - or, {\bf \large `How to discover the Gold Nuggets in your Big Ball of Mud'}. No matter how badly a C++ codebase is enmeshed, you can get it under test if you know how to master its coupling.''
+		\end{enumerate}
+	\item Synesis Software Pty Ltd staff, ``Resources,'' Synesis Software Pty Ltd, Sydney, Australia.  Available online at: \url{http://www.synesis.com.au/resources.html}; December 1, 2015 was the last accessed date. \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item 100\% type-safe {\it C++} API
+		\item C++ diagnostic logging API library (or, diagnostic logging libraries): \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item Pantheios: \url{http://pantheios.org/}
+			\item ACE
+			\item log4cxx
+			\end{enumerate}
+		\item C++ formatting library: FastFormat \url{http://fastformat.org/}
+		\item ``The STLSoft libraries provide STL extensions and facades over operating-system and third-party-library APIs. The libraries are 100\% header-only.'' See \url{http://stlsoft.org/}.
+		\item ``UNIXem is a simple library that emulates a useful subset of the UNIX system APIs on Windows\dots\ UNIXem is the only library provided by Synesis Software that is not production-quality. It is appropriate for research, such as when developing tests for cross-platform software.'' See \url{http://synesis.com.au/software/unixem.html}.
+		\end{enumerate}
+	\item Synesis Software Pty Ltd staff, ``Guerilla Testing C++ or, `How to discover the Gold Nuggets in your Big Ball of Mud','' Synesis Software Pty Ltd, Sydney, Australia.  Available online at: \url{http://www.synesis.com.au/training-guerilla-testing-cplusplus.html}; December 1, 2015 was the last accessed date.: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item ``Change is the most expensive part of the cost of a software project. The biggest impediments to change are lack of clarity on what to alter to effect the change, and uncertainty about unintended side-effects of the change.''
+		\item ``No matter how badly a C++ codebase is enmeshed, you can get it under test if you know how to master its coupling.''
+		\item ``Many long-lived codebases have evolved to a point where some, perhaps most, aspects of its functionality are no longer precisely known / codified / automatically tested. This course will teach you, using practical examples, how to wrest control from any codebase, no matter how badly enmeshed, isolate known pieces of good functionality, get them under test, and eventually to isolate and separate them into a new context, while, where required, maintaining compatibility with their original context.''
+		\item ``This course will teach you how to refactor any codebase with confidence, rather than poking at the edges of its functionality in fear.''
+		\item ``Release costs'' serve as an indicator to the existence of ``a Big Ball of Mud.''
+		\item ``Factors that inhibit testing'': \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item ``Coupling, coupling, coupling''
+			\item ``The inconstant environment''
+			\item ``Trust''
+			\item ``Defensive code''
+			\item ``Fuzzy (or no!) abstraction borders''
+			\end{enumerate}
+		\item ``Key characteristics'' identified in situ: ``diagnostics, contracts, code coverage, and testing.''
+		\item Remember the following ``when testing mud-balls'': ``automation; minimalism, incrementality, unit testing vs component testing; coverage (in realistic time); only change what you can test (and are testing!) -- [there are] exceptions to this rule; beyond salvation -- sometimes it's just mud.''
+		\item Islands of ``known Functionality'' are created as follows: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item ``Decomposition -- Identifying Units, Identifying Components, and Identifying Modules''
+			\item ``Triage''
+			\item ``Isolation''
+			\item ``Striding two worlds''
+			\item ``Transplantation''
+			\item ``Separation''
+			\item ``Versioning -- Static and Dynamic''
+			\item ``When to `throw it out'.''
+			\end{enumerate}
+		\item ``Inconstant Environment'' handling: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item ``File system''
+			\item ``Memory''
+			\item ``User-interface''
+			\item ``Time''
+			\item ``Data storage''
+			\end{enumerate}
+		\item Techniques to address/mitigate coupling: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item ``Pre-processor'': \vspace{-0.1cm}
+				\begin{itemize} \itemsep -1pt
+				\item \#ifdef
+				\item \#define
+				\item \#include
+				\item ``I would recommend putting your include guards above your includes. That way the includes don't get parsed twice for the same file.'' {\color{red} That is, the pre-processors {\tt \#ifdef} and {\tt \#define} should be placed above the {\tt \#include} statements. This would avoid repetitive parsing of (header) files that are included.} Reference: sdsmith, comment to the question ``Why is the discrepancy in these two cases of using C++ templates?,'' Stack Exchange Inc., New York, NY, March 30, 2016. Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://stackoverflow.com/q/36319028/1531728}; March 30, 2016 was the last accessed date \cite{sdsmith2016}.
+				\end{itemize}
+			\item ``linkage'': \vspace{-0.1cm}
+				\begin{itemize} \itemsep -1pt
+				\item ``interpositioning''
+				\item ``dynamic library redirection''
+				\end{itemize}
+			\item ``object-oriented techniques'': \vspace{-0.1cm}
+				\begin{itemize} \itemsep -1pt
+				\item ``overloading''
+				\item ``overriding''
+				\item ``inheritance''
+				\item ``interfaces''
+				\end{itemize}
+			\item ``patterns'': \vspace{-0.1cm}
+				\begin{itemize} \itemsep -1pt
+				\item ``class adaptor''
+				\item ``instance adaptor''
+				\item ``decorator''
+				\item ``visitor''
+				\end{itemize}
+			\item ``generic programming'': \vspace{-0.1cm}
+				\begin{itemize} \itemsep -1pt
+				\item ``policies''
+				\item ``shims''
+				\item ``traits''
+				\end{itemize}
+			\item ``Testing'': \vspace{-0.1cm}
+				\begin{itemize} \itemsep -1pt
+				\item ``Stubbing''
+				\item ``Mocking''
+				\item ``Versioned testing''
+				\end{itemize}
+			\end{enumerate}
+		\item 
+		\item 
+		\item 
+		\item 
+		\item 
+		\item 
+		\item 
+		\item 
+		\end{enumerate}
+	\end{enumerate}
+\item To obtain the {\tt x86} assembly output to a {\it C++} program: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item Reference: Andrew Edgecombe, answer to ``How do you get assembler output from C/C++ source in gcc?,'' Stack Exchange Inc., New York, NY, September 26, 2008 (edited by Prashant Kumar on May 1, 2012). Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://stackoverflow.com/a/137074}; March 15, 2016 was the last accessed date.: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item To view the source file: {\tt cat {\it [source\_file]}}
+		\item To remove all symbol table and relocation information from the executable, the executable for that source file becomes: {\tt gcc -s {\it [source\_file.c]}}: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item Or, try: {\tt gcc -S {\it [source\_file.c]}}
+			\item Alternatively, try: {\tt strip {\it [source\_file]}}
+			\item {\tt gcc -g {\it [source\_file.c]}} adds debugging information to the executable.
+			\end{enumerate}
+		\item If access to source files is unavailable, but access to the object file is available, use: {\tt objdump -S --disassemble {\it [object\_file]} $>$ {\it [object\_file.dump]}}. Use {\tt file {\it [object\_file]}} to determine if I can get enough information from the object file.: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item {\tt gcc -S -o {\it [unassembled\_file.s]} {\it [source\_file.c]}}
+			\item To view the output file from {\tt gcc -S}: {\tt cat {\it [source\_file]}}
+			\end{enumerate}
+		\end{enumerate}
+	\item References: \cite[pp. 3, or pp. 15 in the PDF]{Arndt2010} and Kenneth Finnegan, answer to ``How do you get assembler output from C/C++ source in gcc?,'' Stack Exchange Inc., New York, NY, September 26, 2008. Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://stackoverflow.com/a/137479}; March 16, 2016 was the last accessed date. Also, includes information from comments to this answer by Sundaram Ramaswamy (May 6, 2013) and L{\uhorn}u V{\~{\i}}nh Ph{\'{u}}c (June 7, 2014): \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item Create assembly code: {\tt c++ -S -fverbose-asm -g -02 {\it [source\_code.cpp]} -o {\it [unassembled\_file.s]}}
+		\item Create assembled code interfaced with source lines: {\tt as -alhnd {\it [unassembled\_file.s]} $>$ {\it [listing\_file.lst]}} 
+		\item Alternatively, the on line version on {\it Mac OS X}, try: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item {\tt g++ -g -O0 -c -fverbose-asm -Wa,-adhln test.cpp $>$ test.lst}
+			\item {\tt gcc -c -g -Wa,-ahl=test.s test.c}
+			\item {\tt gcc -c -g -Wa,-a,-ad [{\it other GCC options}] test.c $>$ test.txt}
+			\end{enumerate}
+		\end{enumerate}
+	\item Reference: Cr McDonough, answer to ``How do you get assembler output from C/C++ source in gcc?,'' Stack Exchange Inc., New York, NY, September 29, 2013. Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://stackoverflow.com/a/19083877}; March 16, 2016 was the last accessed date. \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item {\tt g++ -g -O -Wa,-aslh horton\_ex2\_05.cpp $>$ list.txt}
+		\end{enumerate}
+	\item Reference: Andrew Pennebaker, answer to ``How do you get assembler output from C/C++ source in gcc?,'' Stack Exchange Inc., New York, NY, February 6, 2013. Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://stackoverflow.com/a/7871911}; March 16, 2016 was the last accessed date. Also, comment from Grady Player (February 6, 2013) is helpful. \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item To get the LLVM assembly code, try: {\tt llvm-gcc -emit-llvm -S hello.c}
+		\item I can also use the same command for {\tt clang}.
+		\end{enumerate}
+	\end{enumerate}
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Using ``Design By Contract''}
+\label{ssec:UsingDesignByContract}
+
+	The ``Design By Contract'' approach shall be used in software development. This approach is also known as: ``contract programming, programming by contract, and design-by-contract programming.'' Adhere strongly to Hoare logic. \\
+
+References: \\
+Wikipedia contributors, ``Design by contract,'' in {\it Wikipedia, The Free Encyclopedia: Software design}, Wikimedia Foundation, San Francisco, CA, January 20, 2016. Available online at: \url{https://en.wikipedia.org/wiki/Design_by_contract}; last accessed on February 9, 2016. \\
+
+Wikipedia contributors, ``Hoare logic,'' in {\it Wikipedia, The Free Encyclopedia: Static program analysis}, Wikimedia Foundation, San Francisco, CA, November 8, 2015. Available online at: \url{https://en.wikipedia.org/wiki/Hoare_logic}; last accessed on February 10, 2016. \\
+
+	That is, at the start of an implementation of a ({\it C++}) function, check that its precondition(s) is (/are) met; preconditions shall be chosen to be as weak as possible. Within the implementation of the function, check if the assertions (properties that must be true during execution of the function) hold. Lastly, at the end of the implementation, check that its postcondition(s) is (/are) met; postconditions shall be chosen to be as strong as possible. \\
+
+Reference: \\
+Wikipedia contributors, ``Predicate transformer semantics,'' in {\it Wikipedia, The Free Encyclopedia: Formal methods}, Wikimedia Foundation, San Francisco, CA, November 25, 2015. Available online at: \url{https://en.wikipedia.org/wiki/Predicate_transformer_semantics}; last accessed on February 10, 2016.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Hoare Logic for Computer Arithmetic}
+\label{sssec:HoareLogicForComputerArithmetic}
+
+	Check if arithmetic and logical operations cause overflows or underflows \cite{Crowl2015,Crowl2012}. When faced with a constrained range for representing real numbers with bits in computer hardware, a constrained resolution such that a representation smaller than single-precision floating-point numbers is required, or low-cost and/or low-power electronic/computer systems that do not have floating-point arithmetic circuits, use a circuit-based implementation of fixed-point arithmetic.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Debugging {\it C++} Software}
+\label{ssec:DebuggingCppSoftware}
+
+	This section covers debugging syntax errors (in \S\ref{sssec:InterpretingCppCompilationErrors}) that are reported by {\it C++} compilers. It also covers semantic errors that can be discovered via software testing and formal verification tools; see \cite[\S4.4, pp. 119]{Pradhan2009}. In addition, it includes performance debugging \cite[\S4.5, pp. 119--120]{Pradhan2009}, using software profilers \cite[Figure 7.1, pp. 292; and \S7.2.10, pp. 302]{Fisher2005} \cite[pp. 148]{Kernighan1999} \cite[pp. 35-9 -- 35-10]{Lee2008b} \cite[\S3.2, pp. 16--18]{Fog2014c} \cite[\S3.3.2, pp. 21--22; pp. 23; Figure 40, pp. 102; Appendix C, \S C.1.7, pp. 104]{Baik2013} and static analysis software \cite[\S5.4, 65-66; and Figure 40, pp. 102]{Baik2013} \cite{Adve1997} \cite[\S7.1, 176--183]{Bailey2007} \cite[\S5.2.4, pp. 82--83; and \S5.4.2, pp. 90--92]{Debbabi2010} \cite[Chapter 7, pp. 109--117]{Ford2008} \cite[\S35.5, pp. 35-10 -- 35-14]{Lee2008b} \cite{Boulanger2013}. These phases cannot be highly overlapped consider by more than a significant amount.
+\ \\
+
+	To  functionally debug software with success, these four steps should be carried out: ``test input generation, error detection, error diagnosis, and error correction'' \cite{Kirovski1997}. 
+	
+	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Interpreting {\it C++} Compilation Errors}
+\label{sssec:InterpretingCppCompilationErrors}
+
+	A missing semiconlon ``;'', or lack of matching curly braces ``\}'' (or parentheses ``)'', square brackets ``]'', or angle brackets ``$>$''), can cause a lot of compilation errors \cite{Husted2000}.
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Parser Development}
+\label{ssec:ParserDevelopment}
+
+Parser development via {\it Lex/Yacc}, {\it Flex/Bison}, {\it ANTLR}, {\it Parsec}, {\it Ragel}, {\it Spirit Parser Framework}, {\it JetPAG (Jet Parser Auto-Generator)}, {\it Monkey}, {\it MyParser}, {\it SableCC}, \dots \\
+
+	Reference: Wikipedia contributors, ``Comparison of parser generators,'' in {\it Wikipedia, The Free Encyclopedia: Parser generators}, Wikimedia Foundation, San Francisco, CA, February 18, 2016. Available online at: \url{https://en.wikipedia.org/wiki/Comparison_of_parser_generators}; last accessed on February 18, 2016. \\
+
+{\it Determine if {\tt LLVM} can be used for parser development.}
+
+
+An example of a {\it C++} parser is shown in \cite[Chp. 40, pp. 959--993]{Schildt1998a}.
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Parallel Programming in C++}
+\label{sec:ParallelProgrammingInCpp}
+
+
+Resources for parallel programming in C++: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item C++ -based MPI programming: \cite{Karniadakis2003}
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Numerical Computing in C++}
+\label{sec:NumericalComputingInCpp}
+
+Numerical computing resources for {\it C++}: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item Scientific computing: \cite{PittFrancis2012}
+\item 
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

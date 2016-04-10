@@ -1,0 +1,130 @@
+%	This is written by Zhiyang Ong to document numerical methods that I have implemented for my C++ -based boilerplate code repository.
+
+%	The MIT License (MIT)
+
+%	Copyright (c) <2014> <Zhiyang Ong>
+
+%	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+%	The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+%	Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" | awk '{ sub("23wU4X5M589","F.d_c_b. ") sub("Stanford","d0mA1n"); print $5, $2, $8; for (i=1; i<=1; i++) print "6\b"; print $9, $7, $6 }' | sed y/kqcbuHwM62z/gnotrzadqmC/ | tr 'q' ' ' | tr -d [:cntrl:] | tr -d 'ir' | tr y "\n"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Mathematics}
+\label{chp:Mathematics}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Mathematics}
+%\label{chp:Mathematics}
+
+
+Math symbols that I use frequently: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item $\mathbb{N}$
+\item $\displaystyle\sum^{i = 1}_{n}$
+\item $f(x) = \displaystyle\lim_{n \rightarrow \infty} \frac{f(x)}{g(x)}$
+\item $\varnothing$
+\item $q$
+\end{enumerate}
+
+A $3 \times 3$ matrix:
+$\left(
+\begin{array}{ccc}
+	11 & 12 & 13 \\
+	21 & 22 & 23 \\
+	31 & 32 & 33
+\end{array}
+\right)$
+\ \\
+\ \\
+
+Here is an equation:
+\begin{equation}
+\label{eqn:myeqnexample}
+\iint_{\Sigma} \nabla \times \mathbf{F} \cdot \mathrm{d}\mathbf{\Sigma} = \oint_{\partial\Sigma} \mathbf{F} \cdot \mathrm{d} \mathbf{r}.
+\end{equation}
+\ \\
+\ \\
+
+Here is an equation that is not numbered.
+\begin{equation*}
+\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}} {\partial t}
+\end{equation*}
+
+
+
+Here is the set of Maxwell's equations that is numbered.
+\begin{gather}
+	\nabla \cdot \mathbf{E} = \frac {\rho} {\varepsilon_0} \\
+	\nabla \cdot \mathbf{B} = 0 \\
+	\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}} {\partial t} \\
+	\nabla \times \mathbf{B} = \mu_0\left(\mathbf{J} + \varepsilon_0 \frac{\partial \mathbf{E}} {\partial t} \right)
+\end{gather}
+
+
+\begin{gather*}
+	{\rm minimize \displaystyle\sum^{c}_{i = 1} c_{i} \cdot x_{i}} \\	%	objective function defined mathematically	\\
+	\underline{x} \in S \\
+	{\rm subject\ to:} \\
+	%	constraints	\\
+	x_{1} + x_{4} = 0 \\
+	x_{3} + 7 \cdot x_{4} + 2\cdot x_{9} = 0
+\end{gather*}
+
+
+\begin{equation}
+\label{eqn:caseenv}
+f(n) = 
+	\begin{cases}
+	case-1 &: \mathrm{n\ is\ odd} \\
+	case-2 &: \mathrm{n\ is\ even} \\
+	\end{cases}
+\end{equation}
+
+\begin{proof}
+This is a proof for BLAH \dots
+\end{proof}
+
+
+
+
+\begin{theorem}{TITLE of theorem.}
+My theorem is\dots
+\end{theorem}
+
+
+
+\begin{axiom}{TITLE of axiom.}
+Blah\dots
+\end{axiom}
+
+
+
+Cases of putting a bracket/parenthesis on the right side of the equation.
+\begin{gather*}
+	\left.\begin{aligned}
+	B'&=-\partial \times E,\\
+	E'&=\partial \times B - 4\pi j,
+	\end{aligned}
+	\right\}
+	\quad\text{Maxwell's equations}
+\end{gather*}
+
+
+%Cases of putting a bracket/parenthesis on the right side of the equation.\\
+%$\begin{rcases*}
+%	E = m c^2 & foo \\
+%	\int x-3\, dx & barbaz
+%\end{rcases*} y=f(x)$
+\ \\
+\ \\
+
+Labeling an arrow: $\xrightarrow{ewq}$

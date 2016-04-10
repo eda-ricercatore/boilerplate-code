@@ -1,0 +1,278 @@
+%	This is written by Zhiyang Ong to document numerical methods that I have implemented for my C++ -based boilerplate code repository.
+
+%	The MIT License (MIT)
+
+%	Copyright (c) <2014> <Zhiyang Ong>
+
+%	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+%	The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+%	Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" | awk '{ sub("23wU4X5M589","F.d_c_b. ") sub("Stanford","d0mA1n"); print $5, $2, $8; for (i=1; i<=1; i++) print "6\b"; print $9, $7, $6 }' | sed y/kqcbuHwM62z/gnotrzadqmC/ | tr 'q' ' ' | tr -d [:cntrl:] | tr -d 'ir' | tr y "\n"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Optimization}
+\label{chp:Optimization}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Benchmarks for Optimization}
+\label{sec:BenchmarksForOptimization}
+
+A collection of ``optimization solvers'' and benchmarks are available at \cite{Dongarra2016}. \\
+
+Benchmarks for optimization problems: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item MIPLIB 2010 -- Mixed Integer Programming Library version 5 \cite{Koch2011a}. See \cite{Achterberg2015a} for publications associated with this set of benchmarks (or benchmark set).
+\item 
+\end{enumerate}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Notes on Using Optimization Tools}
+\label{sec:NotesonUsingOptimizationTools}
+
+
+Optimization problems in EDA can be solved via optimization engines that I implement or external (i.e., third-party) optimization solvers. \\
+
+Regarding external optimization solvers, some of them use {\it Algebraic Modeling Languages (AML)} \cite{WikipediaContributors2015i} to model the optimization problem computationally. These optimization solvers can solve optimization problems that are formulated as computational models in a specific AML representation. \\
+
+{\it I am avoiding the use of external optimization solvers that require paid licenses. Hence, any external optimization solvers that I would use are either open-source software (or rather, free/libre/open-source software, FLOSS) or software that have free academic licenses.} \\
+
+Solvers that use an AML, or several AMLs, in their software interface are: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item 
+\end{enumerate}
+
+{\bf For a list of optimization solvers/tools, see \S\ref{sec:OptimizationSolvers}.}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Robust Linear Programming}
+\label{sec:RobustLinearProgramming}
+
+
+During the ``lab meeting'' on Friday, December 4, 2015, Prof. Jiang Hu told me that I can transform a robust linear programming into a standard/``standard'' linear programming problem. He told me to look at \cite{Bertsimas2004} and its references.
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Discrete Optimization}
+\label{sec:DiscreteOptimization}
+
+Discrete optimization is classified into the following categories \cite{WikipediaContributors2015h,Hammer1979,Lee2004c}: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item combinatorial optimization
+\item integer programming
+\end{enumerate}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Mathematical Programming Solvers}
+%\label{sec:MathematicalProgrammingSolvers}
+\section{Optimization Solvers}
+\label{sec:OptimizationSolvers}
+
+A (brief) description of optimization solvers (not restricted to solvers for mathematical programming), including linear programming solvers, is provided as follows in \S\ref{ssec:AccessibleOptimizationSolvers} and \S\ref{ssec:NotAccessibleOptimizationSolvers}. \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Accessible Optimization Solvers}
+\label{ssec:AccessibleOptimizationSolvers}
+
+External optimization solvers that are open-source software or provide free academic licenses: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item {\it LocalSolver} \cite{Innovation24Staff2015}: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item Hybrid solver for optimization problems
+	\item Properties of the solver \cite[Product: Overview]{Innovation24Staff2015}: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item ``next-generation, hybrid mathematical programming solver''
+		\item solve ``ultra-large real-life nonlinear problems''
+		\item solve problems in a ``model-and-run fashion without any tuning''
+		\item reliable and robust solver: {\bf Define reliability and robustness for solvers of optimization problems.}
+		\item dynamically combines solutions from various optimization approaches and resolves them via a hybrid neighborhood search approach
+		\item solver engines: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item ``local search techniques''
+			\item ``constraint propagation techniques''
+			\item ``inference techniques''
+			\item linear programming solver/techniques
+			\item mixed-integer programming solver/techniques, including mixed-integer linear programming (MILP) solver/techniques; check performance comparisons on {MIPLIB} benchmarks (\url{http://www.localsolver.com/news.html?id=32})
+			\item nonlinear programming solver/techniques
+			\item combined pure and direct local search techniques
+			\end{enumerate}
+		\item is based on the {\it LocalSolver Programming language} (LSP) for mathematical modeling
+		\item has lightweight object-oriented APIs
+		\end{enumerate}
+	\item From \cite[Support Center: Example tour]{Innovation24Staff2015}, {\it LocalSolver} can solve continuous and discrete/combinatorial optimization problems: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item continuous optimization problems: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item minimization of the Branin function: find the minimal point of the Branin function, within a specified domain
+			\item optimal bucket design: minimization of a bucket encapsulating/covering the rod/cylinder
+			\item Steel mill slab design: mathematical programming
+			\end{enumerate}
+		\item discrete optimization problems: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item car sequencing: scheduling problem, or assignment problem.
+			\item Flowshop: scheduling problem
+			\item knapsack problem
+			\item max-cut problem
+			\item Quadratic Assignment Problem (QAP)
+			\item Steel mill slab design: integer programming
+			\item Travelling salesman problem
+			\item Vehicule routing problem
+			\end{enumerate}
+		\end{enumerate}
+	\item Its technical documentation can be found at: \url{http://www.localsolver.com/documentation/index.html} \cite{Innovation24Staff2015a}. 
+	\end{enumerate}
+\item Stanford University: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item Systems Optimization Laboratory researchers, ``SOL Optimization Software,'' from {\it Stanford University: School of Engineering: Department of Management Science and Engineering: Systems Optimization Laboratory}, Stanford, CA, 2015. Available online at: \url{http://web.stanford.edu/group/SOL/download.html}; last accessed on December 14, 2015. \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item ``Iterative solvers for sparse $Ax = b$: SYMMLQ, MINRES, MINRES-QLP, cgLanczos, CRAIG''
+		\item ``Iterative solvers for sparse least-squares problems: LSQR, LSMR, CGLS, covLSQR, LSRN''
+		\item ``Sparse and dense LU factorization (direct methods): LUSOL, LUMOD''
+		\item ``Sparse optimization: ASP''
+		\item ``Optimization with convex objective and linear constraints: PDCO (including sparse optimization)''
+		\item ``Convex optimization in composite form: PNOPT''
+		\item ``Fortran 90 quad-precision dotproduct of double-precision vectors: qdotdd''
+		\end{enumerate}
+%	\item Systems Optimization Laboratory researchers, ``SOL Optimization Software,'' from {\it Systems Optimization Laboratory, Department of Management Science and Engineering, School of Engineering, Stanford University}, Stanford, CA. Available online at: \url{http://web.stanford.edu/group/SOL/download.html}; last accessed on December 14, 2015.
+	\end{enumerate}
+\item 
+\item 
+\item 
+\item 
+\item 
+\item 
+\item 
+\item 
+\item 
+\item 
+\item 
+\item 
+\item 
+\item 
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Not Accessible Optimization Solvers}
+\label{ssec:NotAccessibleOptimizationSolvers} 
+
+External optimization solvers that require paid licenses: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item Stanford University: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item Systems Optimization Laboratory researchers, ``SOL Optimization Software,'' from {\it Stanford University: School of Engineering: Department of Management Science and Engineering: Systems Optimization Laboratory}, Stanford, CA, 2015. Available online at: \url{http://web.stanford.edu/group/SOL/download.html}; last accessed on December 14, 2015. \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item LSSOL
+		\item MINOS
+		\item NPSOL
+		\item QPOPT
+		\item SNOPT
+		\item SQOPT
+		\end{enumerate}
+%	\item Systems Optimization Laboratory researchers, ``SOL Optimization Software,'' from {\it Systems Optimization Laboratory, Department of Management Science and Engineering, School of Engineering, Stanford University}, Stanford, CA. Available online at: \url{http://web.stanford.edu/group/SOL/download.html}; last accessed on December 14, 2015.
+	\end{enumerate}
+\item 
+\item 
+\item 
+\item 
+\item 
+\item 
+\item 
+\item 
+\item 
+\item 
+\item 
+\item 
+\item 
+\item 
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+

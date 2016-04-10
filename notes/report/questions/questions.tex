@@ -1,0 +1,153 @@
+%	This is written by Zhiyang Ong to document my C++ questions.
+
+%	The MIT License (MIT)
+
+%	Copyright (c) <2015> <Zhiyang Ong>
+
+%	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+%	The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+%	Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" | awk '{ sub("23wU4X5M589","F.d_c_b. ") sub("Stanford","d0mA1n"); print $5, $2, $8; for (i=1; i<=1; i++) print "6\b"; print $9, $7, $6 }' | sed y/kqcbuHwM62z/gnotrzadqmC/ | tr 'q' ' ' | tr -d [:cntrl:] | tr -d 'ir' | tr y "\n"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Questions}
+\label{chp:Questions}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Unresolved C++ Questions}
+\label{sec:UnresolvedCppQuestions}
+
+Questions about {\tt C++}: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item 
+\end{enumerate}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Resolved C++ Questions}
+\label{sec:ResolvedCppQuestions}
+
+
+Difference between pointers and references: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item Yusuf Kemal {\"{O}}zcan (``BFaceCoder''), ``Is there any difference between pointers and references? [duplicate],'' Stack Exchange Inc., New York, NY, April 18, 2013. Available online from {\it Stack Exchange Inc.: Programmers Stack Exchange: Questions} at: \url{http://programmers.stackexchange.com/questions/195337/is-there-any-difference-between-pointers-and-references}; October 6, 2015 was the last accessed date. \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item Answer from {\it dan1111}, April 18, 2013: \url{http://programmers.stackexchange.com/a/195343} and \url{http://programmers.stackexchange.com/questions/195337/is-there-any-difference-between-pointers-and-references/195343#195343}. 
+	\item 
+	\end{enumerate}
+\item Macneil Shonle and Programmers Stack Exchange contributors, ``What's a nice explanation for pointers? [closed],'' Stack Exchange Inc., New York, NY, July 30, 2015. Available online from {\it Stack Exchange Inc.: Programmers Stack Exchange: Questions} at: \url{http://programmers.stackexchange.com/questions/17898/whats-a-nice-explanation-for-pointers}; October 6, 2015 was the last accessed date. \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item Answer from Kevin, November 10, 2010: \url{http://programmers.stackexchange.com/a/17919} and \url{http://programmers.stackexchange.com/questions/17898/whats-a-nice-explanation-for-pointers/17919#17919}. ``A pointer is a variable that contains an address to a variable. A pointer is both defined and dereferenced (yielding the value stored at the memory location that it points to) with the `$^{\ast}$' operator; the expression is mnemonic.'' \dots\ {\tt char ($^{\ast}$(x())[])()}
+	\item Answer from Barfield, November 10, 2010: \url{http://programmers.stackexchange.com/a/18087} and \url{http://programmers.stackexchange.com/questions/17898/whats-a-nice-explanation-for-pointers/18087#18087}. ``Pointer[s] are a bit like the application shortcuts on your desktop.''
+	\item Answer from Gulshan, November 10, 2010: \url{http://programmers.stackexchange.com/a/17915} and \url{http://programmers.stackexchange.com/questions/17898/whats-a-nice-explanation-for-pointers/17915#17915}.  Pointers point to instance and static variables. A pointer can point to different variables during the execution of the program, but must point to one variable at any instance (i.e., point in time) during execution. Also, the pointer must point to variables of the same type. Associate a pointer with a variable via the reference to the variable; e.g., {\tt int $^{\ast}$pointer; pointer = \& variable;} \dots\ According to {\it Ptolemy}, December 2, 2010: \url{http://programmers.stackexchange.com/a/23016}. {\tt int $^{\ast}$pointer = \& variable;} creates a pointer to the variable. \dots\ Dereference the pointer (add $^{\ast}$ as a prefix) to store the value of an expression (based on variables, strings, or constants). According to {\it Ptolemy}, {\tt \& variable} is the ``address of the variable'' and it ``represents the literal value for'' the pointer. ``The pointer'' refers to the data that the pointer points to, or something ``pointed to by'' the pointer.
+	\item Answer from Sridhar Iyer, November 11, 2010: \url{http://programmers.stackexchange.com/a/18529} and \url{http://programmers.stackexchange.com/questions/17898/whats-a-nice-explanation-for-pointers/18529#18529}. A ``pointer is a variable that store[s] the address of another variable (or just any variable). $^{\ast}$ is used to get the value at the memory location that is stored in the pointer variable. $\&$ operator gives the address of a memory location.''
+	\item Answer from {\it rwong}, November 2, 2010: \url{http://programmers.stackexchange.com/a/18054} and \url{http://programmers.stackexchange.com/questions/17898/whats-a-nice-explanation-for-pointers/18054#18054}. Each pointer, which is a special type of variable, must point to only one variable. Variables that are not pointers must not point to anything; however, such variables can be pointed to by any number of pointers.
+	\item Answer from {\it back2dos}, November 10, 2010: \url{http://programmers.stackexchange.com/a/18092} and \url{http://programmers.stackexchange.com/questions/17898/whats-a-nice-explanation-for-pointers/18092#18092}. The pointer [variable] interprets the value of the pointer [variable] as the address of another variable that it points to. Hence, the value of the pointer [variable] refers to a specific location in memory (specified by the address), and is called the reference. Dereferencing is the process of accessing the value of the memory location that it points/refers to. That is, $^{\ast}v$ dereferences the value of $v$, and provides the value at the memory location referred to by the address in $v$. $\&v$ provides a reference (or the address of the memory location for $v$) to the variable $v$. 
+	\item Answer from {\it Ptolemy}, December 2, 2010: \url{http://programmers.stackexchange.com/a/23016} and \url{http://programmers.stackexchange.com/questions/17898/whats-a-nice-explanation-for-pointers/23016#23016}. At a low level, the concept of memory can be viewed as a massive array. ``Any position in the array'' can be accessed ``by its index location.'' ``Passing the index location rather than copying the entire memory'' is more efficient in terms of performance and memory usage. Hence, ``pointers are useful.'' ``For [a] method to store the index location [of] where all the data [in the array] is stored,'' ``a memory index location'' can be passed in as a parameter. Pointers can be chained indefinitely; ``keep track of how many times [I] need to look at the addresses to find the actual data object.'' While pointers to heap memory are safe, ``pointers to stack memory are dangerous when passed outside the method.''
+	\item Also, see \url{http://www.udel.edu/CIS/105/pconrad/03F/2003.fall.doc} by ``P. Conrad.''
+	\end{enumerate}
+\item \cite[pp. 15, second last paragraph]{Jensen2003} \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item ``The value of a pointer is the address to which it points''; or, the ``the value of a pointer is the address.''
+	\end{enumerate}
+\item \cite{EliteHussar2010} \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item ``pointers use the $^{\ast}$ù and $->$ù operators, references use $.$''
+	\item ``Both pointers and references let you refer to other objects indirectly.''
+	\item ``there is no such thing as a null reference''
+	\item ``A reference must always refer to some object.''
+	\item {\bf ``As a result, if you have a variable whose purpose is to refer to another object, but it is possible that there might not be an object to refer to, you should make the variable a pointer, because then you can set it to null.''}
+	\item {\it ``On the other hand, if the variable must always refer to an object, i.e., if your design does not allow for the possibility that the variable is null, you should probably make the variable a reference.''}
+	\item ``Because a reference must refer to an object, C++ requires that references be initialized.'' \dots\ Pointers do not have to be initialized; i.e., pointers can be uninitialized. However, ``uninitialized pointers'' are ``valid but risky.''
+	\item Since null references do not exist, references can be used more efficiently than pointers. This is because the validity of a reference does not have to be tested prior to usage.
+	\item Before using pointers, they should be tested against null (i.e., check the validity of a reference prior to usage).
+	\item ``Pointers may be reassigned to refer to different objects.'' ``A reference \dots\ always refer to the object with which it is initialized.''
+	\item ``You should use a pointer whenever you need to take into account the possibility that there's nothing to refer to (in which case you can set the pointer to null) or whenever you need to be able to refer to different things at different times (in which case you can change where the pointer points).''
+	\item ``You should use a reference whenever you know there will always be an object to refer to and you also know that once you're referring to that object, you'll never want to refer to anything else.''
+	\item ``There is one other situation in which you should use a reference, and that's when you're implementing certain operators. The most common example is operator[]. This operator typically needs to return something that can be used as the target of an assignment.''
+	\item ``References, then, are the feature of choice when you know you have something to refer to, when you'll never want to refer to anything else, and when implementing operators whose syntactic requirements make the use of pointers undesirable. In all other cases, stick with pointers.''
+	\end{enumerate}
+\item Prakash Rajendran, Theodore Logan (Commodore Jaeger), Josh Lee, sbi, Rob$_{\varphi}$, Sudhanshu Aggarwal, lpapp, Alf, Deduplicator, Sam, and Siddhant Saraf, ``What are the differences between a pointer variable and a reference variable in C++?,'' Stack Exchange Inc., New York, NY, March 2, 2015. Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://stackoverflow.com/questions/57483/what-are-the-differences-between-a-pointer-variable-and-a-reference-variable-in}; October 8, 2015 was the last accessed date. \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item A pointer can be re-assigned any number of times while a reference can not be re-seated after binding.
+	\item Pointers can point nowhere (NULL), whereas reference always refer to an object.
+	\item You can't take the address of a reference like you can with pointers.
+	\item There's no ``reference arithmetics'' (but you can take the address of an object pointed by a reference and do pointer arithmetics on it as in \&obj + 5).
+	\item Use references in function parameters and return types to define useful and self-documenting interfaces.
+	\item Use pointers to implement algorithms and data structures.
+	\end{enumerate}
+\item  \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item 
+	\end{enumerate}
+\item  \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item 
+	\end{enumerate}
+\item  \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item 
+	\end{enumerate}
+\item  \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item 
+	\end{enumerate}
+\item  \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item 
+	\end{enumerate}
+\item  \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item 
+	\end{enumerate}
+\item  \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item 
+	\end{enumerate}
+\item  \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item 
+	\end{enumerate}
+\item  \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item 
+	\end{enumerate}
+\item  \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item 
+	\end{enumerate}
+\item  \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item 
+	\end{enumerate}
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

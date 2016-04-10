@@ -1,0 +1,703 @@
+\begin{thebibliography}{100}
+
+\bibitem{Abrahams2005}
+David Abrahams and Aleksey Gurtovoy.
+\newblock {\em {C++} Template Metaprogramming: Concepts, Tools, and Techniques
+  from Boost and Beyond}.
+\newblock {C++} In-Depth Series. Pearson Education, Boston, {MA}, 2005.
+
+\bibitem{Achterberg2015a}
+Tobias Achterberg, Erling Andersen, Oliver Bastert, Timo Berthold, Robert~E.
+  Bixby, E.~A. Boyd, Sebastian Ceria, Emilie Danna, Gerald Gamrath, Ambros~M.
+  Gleixner, Stefan Heinz, R.~R. Indovina, Thorsten Koch, Andrea Lodi, Alexander
+  Martin, Cassandra~M. {McZeal}, Hans Mittelmann, Ted Ralphs, Daniel Rehfeldt,
+  Domenico Salvagnin, Martin W.~P. Savelsbergh, Daniel~E. Steffy, and Kati
+  Wolter.
+\newblock {MIPLIB 2010} bibliography.
+\newblock Available online from {\it Konrad-Zuse-Zentrum f{\"{u}}r
+  Informationstechnik Berlin: {MIPLIB} -- Mixed Integer Problem Library} at:
+  \url{http://miplib.zib.de/biblio.html}; December 9, 2015 was the last
+  accessed date, December 1 2015.
+
+\bibitem{Adve1997}
+Sarita~V. Adve, Doug Burger, Rudolf Eigenmann, Alasdair Rawsthorne, Michael~D.
+  Smith, Catherine~H. Gebotys, Mahmut~T. Kandemir, David~J. Lilja, Alok~N.
+  Choudbary, Jesse~Z. Fang, and {Pen-Chung} Yew.
+\newblock Changing interaction of compiler and architecture.
+\newblock {\em {IEEE} Computer}, 30(12):51--58, December 1997.
+
+\bibitem{Alexandrescu2001}
+Andrei Alexandrescu.
+\newblock {\em Modern {C++} Design: Generic Programming and Design Patterns
+  Applied}.
+\newblock {C++} In-Depth Series. Addison-Wesley, Indianapolis, {IN}, 2001.
+
+\bibitem{Allain2012}
+Alex Allain.
+\newblock {\em Jumping into {C++}}.
+\newblock {Cprogramming.com}, San Francisco, {CA}, 2012.
+
+\bibitem{Arndt2010}
+J{\"{o}}rg Arndt.
+\newblock Matters computational: Ideas, algorithms, source code.
+\newblock Available online at: \url{http://www.jjj.de/fxt/} and
+  \url{http://www.jjj.de/fxt/fxtbook.pdf}; October 9, 2014 was the last
+  accessed date, September 7 2010.
+
+\bibitem{Avery2016}
+Philip Avery, Abraham Bachrach, Sebastien Barthelemy, Carlos Becker, David
+  Benjamin, Cyrille Berger, Armin Berres, Jose~Luis Blanco, Mark Borgerding,
+  Romain Bossart, Kolja Brix, Gauthier Brun, Philipp B{\"{u}}ttgenbach, Thomas
+  Capricelli, Nicolas Carre, Jean Ceccato, Vladimir Chalupecky, Benjamin
+  Chr{\'{e}}tien, Andrew Coles, Jeff {``complexzeros''}, Marton Danoczy, Jeff
+  Dean, Georg Drenkhahn, Christian Ehrlicher, Martinho Fernandes, Daniel~Gomez
+  Ferro, Rohit Garg, Mathieu Gautier, Anton Gladky, Stuart Glaser, Marc Glisse,
+  Frederic Gosselin, Ga{\"{e}}l Guennebaud, Philippe Hamelin, Marcus~D.
+  Hanwell, David Harmon, {Chen-Pang} He, Hauke Heibel, Christoph Hertzberg,
+  Pavel Holoborodko, Tim Holy, {Intel staff}, Trevor Irons, Beno{\^{i}}t Jacob,
+  Bram {de Jong}, Kibeom Kim, Moritz Klammler, Claas K{\"{o}}hler, Alexey
+  Korepanov, Igor Krivenko, Marijn Kruisselbrink, Abhijit Kundu, Moritz Lenz,
+  Bo~Li, Sebastian Lipponer, Daniel Lowenberg, David~J. Luitz, Naumov Maks,
+  Angelos Mantzaflaris, D.~J. Marcin, Konstantinos~A. Margaritis, Roger Martin,
+  Ricard Marxer, Vincenzo {Di Massa}, Christian Mayer, Frank
+  {Meier-D{\"{o}}rnberg}, Keir Mierle, Laurent Montel, Eamon Nerbonne,
+  Alexander Neundorf, Jason Newton, Jitse Niesen, Desire Nuentsa, Jan
+  Oberl{\"{a}}nder, Jos {van den Oever}, Michael Olbrich, Simon Pilgrim, Bjorn
+  Piltz, Benjamin Piwowarski, Zach Ploskey, Giacomo Po, Sergey Popov, Manoj
+  Rajagopalan, Stjepan Rajko, Jure Repinc, Kenneth~Frank Riddile, Richard
+  Roberts, Adolfo Rodriguez, Peter Rom{\'{a}}n, Oliver Ruepp, Radu~Bogdan Rusu,
+  Guillaume Saupin, Olivier Saut, Benjamin Schindler, Michael Schmidt, Dennis
+  Schridde, Jakob Schwendner, Christian Seiler, Martin Senst, Sameer Sheorey,
+  Andy Somerville, Alex Stapleton, Benoit Steiner, Sven Strothoff, Leszek
+  Swirski, Adam Szalkowski, Silvio Traversaro, Piotr Trojanek, Anthony Truchet,
+  Adolfo~Rodriguez Tsourouksdissian, James~Richard Tyrer, Rhys Ulerich, Henry
+  {de Valence}, Ingmar Vanhassel, Michiel {Van Dyck}, Scott Wheeler, Freddie
+  Witherden, Urs Wolfer, Manuel Yguel, and Pierre Zoppitelli.
+\newblock Eigen.
+\newblock Available online at:
+  \url{http://eigen.tuxfamily.org/index.php?title=Main_Page}; February 15, 2016
+  was the last accessed date, February 12 2016.
+
+\bibitem{Baik2013}
+Hyunki Baik, Fran{\c{c}}ois Bodin, Ross Dickson, Max Domeika, Scott~A. Hissam,
+  Skip Hovsmith, James Ivers, Ian Lintault, Stephen Olsen, and David Stewart.
+\newblock Multicore programming practices guide.
+\newblock Technical report, {The Multicore Association}, El Dorado Hills, {CA},
+  2013.
+
+\bibitem{Bailey2007}
+Brian Bailey, Grant Martin, and Andrew Piziali.
+\newblock {\em {ESL} Design and Verification: A Prescription for Electronic
+  System-Level Methodology}.
+\newblock The Morgan Kaufmann Series in Systems on Silicon. Morgan Kaufmann,
+  San Francisco, {CA}, 2007.
+
+\bibitem{Ben2013}
+Ben.
+\newblock answer to the question `why can templates only be implemented in the
+  header file?'.
+\newblock Available online from {\it Stack Exchange Inc.: Stack Overflow:
+  Questions} at: \url{http://stackoverflow.com/a/16493574/1531728}; March 30,
+  2016 was the last accessed date, May 11 2013.
+
+\bibitem{Benoit2009}
+{Beno{\^{\i}}t}.
+\newblock answer to the question `why can templates only be implemented in the
+  header file?'.
+\newblock Available online from {\it Stack Exchange Inc.: Stack Overflow:
+  Questions} at: \url{http://stackoverflow.com/a/495128/1531728}; edited by
+  Evan Teran, February 10, 2009; March 31, 2016 was the last accessed date,
+  January 30 2009.
+
+\bibitem{Bertsimas2004}
+Dimitris Bertsimas and Melvyn Sim.
+\newblock The price of robustness.
+\newblock {\em Operations Research}, 52(1):35--53, January--February 2004.
+
+\bibitem{Boulanger2013}
+Jean-Louis Boulanger.
+\newblock {\em Static Analysis of Software: The Abstract Interpretation}.
+\newblock John Wiley {\rm \&} Sons, Hoboken, {NJ}, 2013.
+
+\bibitem{Bulka2000}
+Dov Bulka and David Mayhew.
+\newblock {\em Efficient {C++}: Performance Programming Techniques}.
+\newblock Addison Wesley Longman, Inc., Indianapolis, {IN}, 2000.
+
+\bibitem{Cline2000}
+Marshall Cline.
+\newblock {C++ FAQ Lite}: Frequently asked questions.
+\newblock Available online from the course web page of {\it CS210 Data
+  Structures and Abstractions Lab}(Spring 2015), Department of Computer
+  Science, Faculty of Science, University of Regina at:
+  \url{http://www.cs.uregina.ca/Links/class-info/210/C++FAQ/}; July 10, 2015
+  was the last accessed date, July 10 2000.
+
+\bibitem{Cline2003}
+Marshall Cline.
+\newblock {C++ FAQ Lite}: Frequently asked questions.
+\newblock Available online from the Computer Science Department, B. Thomas
+  Golisano College of Computing and Information Sciences, Rochester Institute
+  of Technology at: \url{http://www.cs.rit.edu/~mjh/docs/c++-faq/}; July 10,
+  2015 was the last accessed date, May 2 2003.
+
+\bibitem{Cline2011}
+Marshall Cline.
+\newblock {C++ FAQ Lite}: Frequently asked questions.
+\newblock Available online from the web page of Laura Mensi and Paolo Copello,
+  {\it Tiscali Italia S.p.A.: Tiscali Webspace: Fanelia Italy -- Computer
+  Programming, Psychiatry, Escaflowne, and much more} at:
+  \url{http://web.tiscali.it/fanelia/cpp-faq-en/}; July 10, 2015 was the last
+  accessed date, July 28 2011.
+
+\bibitem{CplusplusCom2014}
+{cplusplus.com}.
+\newblock The {C++} resources network.
+\newblock Available online at: \url{http://www.cplusplus.com/}; April 2, 2014
+  was the last accessed date, 2014.
+
+\bibitem{CplusplusCom2015b}
+{cplusplus.com}.
+\newblock {C++} language.
+\newblock Available online from {\it The {C++} Resources Network: Tutorials}
+  at: \url{http://www.cplusplus.com/doc/tutorial/}; February 5, 2016 was the
+  last accessed date, 2015.
+
+\bibitem{CplusplusCom2015}
+{cplusplus.com}.
+\newblock Reference: {C++} reference.
+\newblock Available online at: \url{http://www.cplusplus.com/reference/};
+  November 2, 2015 was the last accessed date, 2015.
+
+\bibitem{CplusplusCom2015a}
+{cplusplus.com}.
+\newblock Tutorials.
+\newblock Available online from {\it The {C++} Resources Network} at:
+  \url{http://www.cplusplus.com/doc/}; February 5, 2016 was the last accessed
+  date, 2015.
+
+\bibitem{cppreference2015}
+{cppreference.com contributors}.
+\newblock {C++} reference.
+\newblock Available online at: \url{http://en.cppreference.com/w/cpp};
+  September 17, 2015 was the last accessed date, June 16 2015.
+
+\bibitem{Crowl2012}
+Lawrence Crowl.
+\newblock {C++} binary {Fixed-Point} arithmetic.
+\newblock Technical Report N3352, International Organization for
+  Standardization and International Electrotechnical Commission, Gen{\`{e}}va,
+  Switzerland, January 15 2012.
+
+\bibitem{Crowl2015}
+Lawrence Crowl.
+\newblock {C++} binary {Fixed-Point} arithmetic.
+\newblock Technical Report P0106R0, International Organization for
+  Standardization and International Electrotechnical Commission, Gen{\`{e}}va,
+  Switzerland, September 27 2015.
+
+\bibitem{Debbabi2010}
+Mourad Debbabi, Fawzi Hassa{\"{i}}ne, Yosr Jarraya, Andrei Soeanu, and Luay
+  Alawneh.
+\newblock {\em Verification and Validation in Systems Engineering: Assessing
+  {UML/SysML} Design Models}.
+\newblock Springer-Verlag Berlin Heidelberg, Heidelberg, Germany, 2010.
+
+\bibitem{DevSolar2009}
+{DevSolar}.
+\newblock answer to the question `why can templates only be implemented in the
+  header file?'.
+\newblock Available online from {\it Stack Exchange Inc.: Stack Overflow:
+  Questions} at: \url{http://stackoverflow.com/a/495511/1531728}; March 30,
+  2016 was the last accessed date, January 30 2009.
+
+\bibitem{Pradhan2009}
+Ian G.~Harris Dhiraj K.~Pradhan.
+\newblock {\em Practical Design Verification}.
+\newblock Cambridge University Press, New York, {NY}, 2009.
+
+\bibitem{Diago2013}
+Germ{\'{a}}n Diago.
+\newblock answer to the question `why can templates only be implemented in the
+  header file?'.
+\newblock Available online from {\it Stack Exchange Inc.: Stack Overflow:
+  Questions} at: \url{http://stackoverflow.com/a/16509701/1531728}; March 31,
+  2016 was the last accessed date, May 12 2013.
+
+\bibitem{DictionaryDotComStaff2016}
+{Dictionary.com staff}.
+\newblock Dictionary.com: Find the meanings and definitions of words at
+  dictionary.com.
+\newblock Available online at: \url{http://dictionary.reference.com/}; February
+  5, 2016 was the last accessed date, 2016.
+
+\bibitem{Dongarra2016}
+Jack Dongarra and Eric Grosse.
+\newblock Netlib repository.
+\newblock Available online at: \url{http://www.netlib.org/}; February 3, 2016
+  was the last accessed date, 2016.
+
+\bibitem{Eckel2000}
+Bruce Eckel.
+\newblock {\em Thinking in C++: Introduction to Standard C++}, volume~1.
+\newblock Prentice Hall, Upper Saddle River, {NJ}, second edition, 2000.
+
+\bibitem{Eckel2003}
+Bruce Eckel and Chuck Allison.
+\newblock {\em Thinking in {C++}: Practical Programming}, volume~2.
+\newblock Prentice Hall, Upper Saddle River, {NJ}, 2003.
+
+\bibitem{EliteHussar2010}
+{EliteHussar}.
+\newblock Distinguish between pointers and references in {C++}.
+\newblock Available online from {\it cplusplus.com -- The C++ Resources
+  Network} at: \url{http://www.cplusplus.com/articles/ENywvCM9/}; October 8,
+  2015 was the last accessed date, August 20 2010.
+
+\bibitem{Fisher2005}
+Joseph~A. Fisher, Paolo Faraboschi, and Cliff Young.
+\newblock {\em Embedded Computing: A {VLIW} Approach to Architecture,
+  Compilers, and Tools}.
+\newblock Morgan Kaufmann, San Francisco, {CA}, 2005.
+
+\bibitem{Fog2014c}
+Agner Fog.
+\newblock Optimizing software in {C++}: An optimization guide for {Windows},
+  {Linux} and {Mac} platforms.
+\newblock Available online at:
+  \url{http://www.agner.org/optimize/optimizing_cpp.pdf}; July 1, 2015 was the
+  last accessed date, August 7 2014.
+
+\bibitem{Ford2008}
+Neal Ford.
+\newblock {\em The Productive Programmer: Theory in Practice}.
+\newblock O'Reilly Media, Sebastopol, {CA}, 2008.
+
+\bibitem{Gaddis2010}
+Tony Gaddis.
+\newblock {\em Starting Out With {C++}: From Control Structures Through
+  Objects}.
+\newblock Pearson Education, Boston, {MA}, sixth (brief) edition, 2010.
+
+\bibitem{Gaddis2012}
+Tony Gaddis.
+\newblock {\em Starting Out With {C++}: From Control Structures Through
+  Objects}.
+\newblock Addison-Wesley, Boston, {MA}, seventh edition, 2012.
+
+\bibitem{Gaddis2011}
+Tony Gaddis, Judy Walters, and Godfrey Muganda.
+\newblock {\em Starting Out With {C++}: Early Objects}.
+\newblock Addison-Wesley, Boston, {MA}, seventh edition, 2011.
+
+\bibitem{Gogolev2009}
+Anton Gogolev.
+\newblock answer to the question `why can templates only be implemented in the
+  header file?'.
+\newblock Available online from {\it Stack Exchange Inc.: Stack Overflow:
+  Questions} at: \url{http://stackoverflow.com/a/495032/1531728}; edited by
+  Jonathan Henly, September 19, 2013; March 30, 2016 was the last accessed
+  date, January 30 2009.
+
+\bibitem{Gregoire2014}
+Marc Gregoire.
+\newblock {\em Professional {C++}}.
+\newblock John Wiley {\rm \&} Sons, Indianapolis, {IN}, third edition, 2014.
+
+\bibitem{Hammer1979}
+P.~L. Hammer, E.~L. Johnson, and B.~H. Korte.
+\newblock Conclusive remarks.
+\newblock In {\em Discrete Optimization {II}, Proceedings of the Advanced
+  Research Institute on Discrete Optimization and Systems Applications of the
+  Systems Science Panel of {NATO} and of the Discrete Optimization Symposium},
+  volume~5 of {\em Annals of Discrete Mathematics}, pages 427--453.
+  North-Holland, Banff, Alberta, Canada and Vancouver, {B.C.}, Canada, August
+  1979.
+
+\bibitem{Heller2003}
+Steve Heller.
+\newblock {\em C++: A Dialog: Programming with the C++ Standard Library}.
+\newblock Pearson Education, Upper Saddle River, {NJ}, 2003.
+
+\bibitem{HewlettPackardCompanyStaff1994}
+{Hewlett-Packard Company staff}.
+\newblock Standard template library programmer's guide.
+\newblock Available online in {\it {SGI} -- The Trusted Leader in High
+  Performance Computing: Tech Archive: Standard xTemplate Library Programmer's
+  Guide} at: \url{http://www.sgi.com/tech/stl/}; September 30, 2015 was the
+  last accessed date, 1994.
+
+\bibitem{HewlettPackardCompanyStaff2014}
+{Hewlett-Packard Company staff}.
+\newblock {STL} complexity specifications.
+\newblock Available online in {\it {SGI} -- The Trusted Leader in High
+  Performance Computing: Tech Archive: Standard Template Library Programmer's
+  Guide: Design documents: {STL} Complexity Specifications} at:
+  \url{http://www.sgi.com/tech/stl/complexity.html}; September 30, 2015 was the
+  last accessed date, http://www.sgi.com/tech/stl/complexity.html 2014.
+
+\bibitem{Horstmann2012}
+Cay~S. Horstmann.
+\newblock {\em {C++} for Everyone}.
+\newblock John Wiley {\rm \&} Sons, Hoboken, {NJ}, second edition, 2012.
+
+\bibitem{Husted2000}
+Justin Husted.
+\newblock Fixing some common compiler problems.
+\newblock Available online from the {\it UW ACM's (University of Washington's
+  chapter of the Association for Computing Machinery) web page: Tutorials:
+  [Development] in {UNIX}} at:
+  \url{http://www.cs.washington.edu/acm/tutorials/dev-in-unix/compiler-problems.html};
+  February 17, 2016 was the last accessed date, May 19 2000.
+
+\bibitem{Innovation24Staff2015a}
+{Innovation 24 staff}.
+\newblock {\em {LocalSolver} 5.5 documentation: Overview}.
+\newblock {Innovation 24}, Paris, France, 2015.
+
+\bibitem{Innovation24Staff2015}
+{Innovation 24 staff}.
+\newblock Localsolver: Mathematical optimization solver.
+\newblock Available online at: \url{http://www.localsolver.com/}; December 7,
+  2015 was the last accessed date, 2015.
+
+\bibitem{Jensen2003}
+Ted Jensen.
+\newblock A tutorial on pointers and arrays in {C}.
+\newblock Available online as Version 1.2 at:
+  \url{http://pweb.netcom.com/~tjensen/ptr/cpoint.htm},
+  \url{http://pweb.netcom.com/~tjensen/ptr/pointers.htm}, and
+  \url{http://home.earthlink.net/~momotuk/pointers.pdf}; October 8, 2015 was
+  the last accessed date, September 2003.
+
+\bibitem{Josuttis1999a}
+Nicolai~M. Josuttis.
+\newblock {\em The {C++} Standard Library: A Tutorial and Reference}.
+\newblock Addison-Wesley, Reading, {MA}, 1999.
+
+\bibitem{Josuttis1999}
+Nicolai~M. Josuttis.
+\newblock Josuttis' summary of {STL} algorithms.
+\newblock Available online at:
+  \url{http://www.josuttis.com/libbook/algolist.pdf}; July 1, 2015 was the last
+  accessed date, 1999.
+
+\bibitem{Josuttis2012}
+Nicolai~M. Josuttis.
+\newblock {\em The {C++} Standard Library: A Tutorial and Reference}.
+\newblock Pearson Education, Upper Saddle River, {NJ}, second edition, 2012.
+
+\bibitem{Karlsson2006a}
+Bj{\"{o}}rn Karlsson.
+\newblock {\em Beyond the {C++} Standard Library: An Introduction to Boost}.
+\newblock Pearson Education, Boston, {MA}, 2006.
+
+\bibitem{Karniadakis2003}
+George~Em Karniadakis and Robert M.~Kirby {II}.
+\newblock {\em Parallel Scientific Computing in {C++} and {MPI}: A Seamless
+  Approach to Parallel Algorithms and Their Implementation}.
+\newblock Cambridge University Press, Cambridge, {U.K.}, 2003.
+
+\bibitem{Katupitiya2006}
+Jayantha Katupitiya and Kim Bentley.
+\newblock {\em Interfacing with {C++}: Programming Real-World Applications}.
+\newblock Springer-Verlag Berlin Heidelberg, Heidelberg, Germany, 2006.
+
+\bibitem{Kernighan1999}
+Brian~W. Kernighan and Rob Pike.
+\newblock {\em The Practice of Programming}.
+\newblock Addison-Wesley Professional Computing Series. Addison-Wesley,
+  Reading, {MA}, 1999.
+
+\bibitem{Kirovski1997}
+Darko Kirovski and Miodrag Potkonjak.
+\newblock A quantitative approach to functional debugging.
+\newblock In {\em Proceedings of the {IEEE/ACM} International Conference on
+  Computer-Aided Design ({ICCAD 1997})}, pages 170--173, San Jose, {CA},
+  November 9--13 1997. {IEEE} Computer Society, {IEEE} Press.
+
+\bibitem{Koch2011a}
+Thorsten Koch, Tobias Achterberg, Erling Andersen, Oliver Bastert, Timo
+  Berthold, Robert~E. Bixby, Emilie Danna, Gerald Gamrath, Ambros~M. Gleixner,
+  Stefan Heinz, Andrea Lodi, Hans Mittelmann, Ted Ralphs, Domenico Salvagnin,
+  Daniel~E. Steffy, and Kati Wolter.
+\newblock {MIPLIB 2010}: Mixed integer programming library version 5.
+\newblock {\em Mathematical Programming Computation}, 3(2):103--163, June 2011.
+
+\bibitem{Koenig2000}
+Andrew Koenig and Barbara Moo.
+\newblock {\em Accelerated C++: Practical Programming by Example}.
+\newblock {C++} In-Depth Series. Addison-Wesley, Boston, {MA}, 2000.
+
+\bibitem{Lee2008b}
+Insup Lee, Joseph Y-T. Leung, and Sang~H. Son.
+\newblock {\em Handbook of Real-Time and Embedded Systems}.
+\newblock Chapman {\rm \&} Hall/{CRC} Computer {\rm \&} Information Science.
+  Chapman {\rm \&} Hall/{CRC}, Boca Raton, {FL}, 2008.
+
+\bibitem{Lee2004c}
+Jon Lee.
+\newblock {\em A First Course in Combinatorial Optimization}, volume~36 of {\em
+  Cambridge Texts in Applied Mathematics}.
+\newblock Cambridge University Press, New York, {NY}, 2004.
+
+\bibitem{Lippman2013}
+Stanley~B. Lippman, Jos{\'{e}}e Lajoie, and Barbara~E. Moo.
+\newblock {\em {C++} Primer}.
+\newblock Addison-Wesley, Upper Saddle River, {NJ}, fifth edition, 2013.
+
+\bibitem{Lu2004}
+Mi~Lu.
+\newblock {\em Arithmetic and Logic in Computer Systems}.
+\newblock John Wiley {\rm \&} Sons, Hoboken, {NJ}, 2004.
+
+\bibitem{McMahon20XY}
+Kurt {McMahon}.
+\newblock {C} strings and {C++} strings.
+\newblock Available online from {\it Kurt McMahon's web page: Notes} at:
+  \url{https://www.prismnet.com/~mcmahon/Notes/strings.html}; November 3, 2015
+  was the last accessed date.
+
+\bibitem{Meyers2005}
+Scott Meyers.
+\newblock {\em Effective {C++}: 55 Specific Ways to Improve Your Programs and
+  Designs}.
+\newblock Addison-Wesley Professional Computing Series. Pearson Education,
+  Upper Saddle River, {NJ}, third edition, 2005.
+
+\bibitem{Mohtashim2015a}
+Mohtashim.
+\newblock {C++ STL} tutorial.
+\newblock Available online at {\it Tutorials Point: {C++} Tutorial: {C++ STL}
+  Tutorial}:
+  \url{http://www.tutorialspoint.com/cplusplus/cpp_stl_tutorial.htm}; September
+  17, 2015 was the last accessed date, 2015.
+
+\bibitem{Mortensen2015}
+Peter Mortensen.
+\newblock What is the difference between const int$^{\ast}$, const int
+  $^{\ast}$ const, and int const $^{\ast}$?
+\newblock Available online from {\it Stack Exchange Inc.: Stack Overflow:
+  Questions} at:
+  \url{http://stackoverflow.com/questions/1143262/what-is-the-difference-between-const-int-const-int-const-and-int-const};
+  October 1, 2015 was the last accessed date, March 13 2015.
+
+\bibitem{Moses2016}
+Black Moses.
+\newblock answer to the question `why is the discrepancy in these two cases of
+  using {C++} templates?'.
+\newblock Available online from {\it Stack Exchange Inc.: Stack Overflow:
+  Questions} at: \url{http://stackoverflow.com/a/36319466/1531728} and
+  \url{http://stackoverflow.com/questions/36319028/why-is-the-discrepancy-in-these-two-cases-of-using-c-templates/36319466#36319466};
+  edited by Kuba Ober, on March 30, 2016; March 30, 2016 was the last accessed
+  date, March 30 2016.
+
+\bibitem{Mukherjee2015}
+Arindam Mukherjee.
+\newblock {\em Learning {Boost C++} Libraries: Solve Practical Programming
+  Problems Using Powerful, Portable, and Expressive Libraries from {Boost}}.
+\newblock Packt Publishing, Birmingham, West Midlands, England, {U.K.}, July
+  2015.
+
+\bibitem{Oualline2003}
+Steve Oualline.
+\newblock {\em Practical {C++} Programming}.
+\newblock Programming Style Guidelines. O'Reilly Media, Sebastopol, {CA},
+  second edition, 2003.
+
+\bibitem{Ozcan2013}
+Yusuf~Kemal {\"{O}}zcan.
+\newblock Is there any difference between pointers and references?
+\newblock Available online from {\it Stack Exchange Inc.: Programmers Stack
+  Exchange: Questions} at:
+  \url{http://programmers.stackexchange.com/questions/195337/is-there-any-difference-between-pointers-and-references};
+  October 28, 2015 was the last accessed date, April 18 2013.
+
+\bibitem{Pierce2016}
+Rod Pierce.
+\newblock Maths is fun: Maths resources.
+\newblock Available online at: \url{https://www.mathsisfun.com/}; February 5,
+  2016 was the last accessed date, 2016.
+
+\bibitem{PittFrancis2012}
+Joe {Pitt-Francis} and Jonathan Whiteley.
+\newblock {\em Guide to Scientific Computing in {C++}}.
+\newblock Undergraduate Topics in Computer Science. Springer-Verlag London,
+  London, {U.K.}, 2012.
+
+\bibitem{Polukhin2013}
+Antony Polukhin.
+\newblock {\em Boost {C++} Application Development Cookbook: Over 80 practical,
+  task-based recipes to create applications using Boost libraries}.
+\newblock Packt Publishing, Birmingham, West Midlands, England, {U.K.}, 2013.
+
+\bibitem{Pozrikidis2007}
+Constantine Pozrikidis.
+\newblock {\em Introduction to {C++} Programming and Graphics}.
+\newblock Springer Science+Business Media, {LCC}, New York, {NY}, 2007.
+
+\bibitem{Prata2005}
+Stephen Prata.
+\newblock {\em {C++} Primer Plus}.
+\newblock Sams Publishing, Indianapolis, {IN}, fifth edition, 2005.
+
+\bibitem{Prata2012}
+Stephen Prata.
+\newblock {\em {C++} Primer Plus: Developer's Library}.
+\newblock Pearson Education, Upper Saddle River, {NJ}, sixth edition, 2012.
+
+\bibitem{Reese2006a}
+Greg Reese.
+\newblock {\em {C++} Standard Library Practical Tips}.
+\newblock Charles River Media Programming Series. Charles River Media, Hingham,
+  {MA}, 2006.
+
+\bibitem{Riesbeck2009}
+Chris Riesbeck.
+\newblock Standard {C++} containers.
+\newblock Available online from {\it Prof. Chris Riesbeck's web page:
+  Programming: Useful {C++ / Unix} Resources}, Computer Science Division,
+  Department of Electrical Engineering and Computer Science, Robert R.
+  McCormick School of Engineering and Applied Science, Northwestern University
+  at:
+  \url{http://www.cs.northwestern.edu/~riesbeck/programming/c++/stl-summary.html};
+  September 30, 2015 was the last accessed date, July 3 2009.
+
+\bibitem{Riesbeck2009a}
+Chris Riesbeck.
+\newblock Useful {C++ / Unix} resources.
+\newblock Available online from {\it Prof. Chris Riesbeck's web page:
+  Programming}, Computer Science Division, Department of Electrical Engineering
+  and Computer Science, Robert R. McCormick School of Engineering and Applied
+  Science, Northwestern University at:
+  \url{http://www.cs.northwestern.edu/~riesbeck/programming/c++/}; September
+  30, 2015 was the last accessed date, July 2 2009.
+
+\bibitem{Robson2000}
+Robert Robson.
+\newblock {\em Using the {STL}: The {C++} Standard Template Library}.
+\newblock Springer-Verlag Berlin Heidelberg New York, Heidelberg, Germany,
+  second edition, 2000.
+
+\bibitem{Romanik2003}
+Philip Romanik and Amy Muntz.
+\newblock {\em Applied {C++}: Practical Techniques for Building Better
+  Software}.
+\newblock {C++} In-Depth Series. Addison-Wesley, Boston, {MA}, 2003.
+
+\bibitem{Saks2001}
+Dan Saks.
+\newblock An introduction to references.
+\newblock Available online from {\it {UBM Electronics: UBM Canon Electronics
+  Engineering Communities: Embedded -- Cracking the Code to Systems
+  Development}} at: \url{http://www.embedded.com/print/4024641}; October 8,
+  2015 was the last accessed date, February 26 2001.
+
+\bibitem{Saks2001a}
+Dan Saks.
+\newblock References vs. pointers.
+\newblock Available online from {\it {UBM Electronics: UBM Canon Electronics
+  Engineering Communities: Embedded -- Cracking the Code to Systems
+  Development}} at:
+  \url{http://www.embedded.com/electronics-blogs/programming-pointers/4023307/References-vs-Pointers}
+  and \url{http://www.embedded.com/print/4023307}; October 28, 2015 was the
+  last accessed date, March 15 2001.
+
+\bibitem{Savitch2009}
+Walter Savitch.
+\newblock {\em Problem Solving with {C++}}.
+\newblock Pearson Education, Boston, {MA}, seventh edition, 2009.
+
+\bibitem{Schaling2012}
+Boris Sch{\"{a}}ling.
+\newblock {\em The Boost {C++} Libraries}.
+\newblock Self-published, 2012.
+
+\bibitem{Scheinerman2006}
+Edward Scheinerman.
+\newblock {\em {C++} for Mathematicians: An Introduction for Students and
+  Professionals}.
+\newblock Chapman {\rm \&} Hall/{CRC}, Boca Raton, {FL}, 2006.
+
+\bibitem{Schildt1998a}
+Herbert Schildt.
+\newblock {\em {C++}: The Complete Reference}.
+\newblock McGraw-Hill, Berkeley, {CA}, third edition, 1998.
+
+\bibitem{Schildt2003a}
+Herbert Schildt.
+\newblock {\em {C++} from the Ground Up}.
+\newblock {McGraw-Hill}/Osborne, Berkeley, {CA}, third edition, 2003.
+
+\bibitem{Schildt2003}
+Herbert Schildt.
+\newblock {\em {C++}: The Complete Reference}.
+\newblock Osborne Complete Reference Series. {McGraw-Hill}/Osborne, Berkeley,
+  {CA}, fourth edition, 2003.
+
+\bibitem{Schildt2004a}
+Herbert Schildt.
+\newblock {\em The Art of {C++}}.
+\newblock {McGraw-Hill}/Osborne, Emeryville, {CA}, 2004.
+
+\bibitem{sdsmith2016}
+sdsmith.
+\newblock comment to the question `why is the discrepancy in these two cases of
+  using {C++} templates?'.
+\newblock Available online from {\it Stack Exchange Inc.: Stack Overflow:
+  Questions} at: \url{http://stackoverflow.com/q/36319028/1531728}; March 30,
+  2016 was the last accessed date, March 30 2016.
+
+\bibitem{Soulie2007}
+Juan Souli{\'{e}}.
+\newblock {\em {C++} Language Tutorial}.
+\newblock cplusplus.com, June 2007.
+
+\bibitem{Stroustrup2009}
+Bjarne Stroustrup.
+\newblock {\em Programming: Principles and Practice Using {C++}}.
+\newblock Pearson Education, Boston, {MA}, 2009.
+
+\bibitem{Stroustrup2014}
+Bjarne Stroustrup.
+\newblock {\em Programming: Principles and Practice Using {C++}}.
+\newblock Pearson Education, Upper Saddle River, {NJ}, second edition, 2014.
+
+\bibitem{Vandevoorde2003}
+David Vandevoorde and Nicolai~M. Josuttis.
+\newblock {\em {C++} Templates: The Complete Guide}.
+\newblock Pearson Education, Boston, {MA}, 2003.
+
+\bibitem{Vermeir2001}
+Dirk Vermeir.
+\newblock {\em Multi-Paradigm Programming using {C++}}.
+\newblock Springer-Verlag London Berlin Heidelberg, London, {U.K.}, 2001.
+
+\bibitem{WikipediaContributors2015i}
+{Wikipedia contributors}.
+\newblock Algebraic modeling language.
+\newblock Available online in {\it Wikipedia, The Free Encyclopedia:
+  Specification languages} at:
+  \url{https://en.wikipedia.org/wiki/Algebraic_modeling_language}; December 11,
+  2015 was the last accessed date, May 3 2015.
+
+\bibitem{WikipediaContributors2015h}
+{Wikipedia contributors}.
+\newblock Discrete optimization.
+\newblock Available online in {\it Wikipedia, The Free Encyclopedia:
+  Mathematical optimization} at:
+  \url{https://en.wikipedia.org/wiki/Discrete_optimization}; December 9, 2015
+  was the last accessed date, May 17 2015.
+
+\bibitem{Wilson2007}
+Matthew Wilson.
+\newblock {\em Extended {STL}: Collections and Iterators}, volume~1.
+\newblock Addison-Wesley, Upper Saddle River, {NJ}, 2007.
+
+\bibitem{WolframResearchStaff2016}
+{Wolfram Research staff}.
+\newblock {Wolfram MathWorld}: The web's most extensive mathematics resource.
+\newblock Available online at: \url{http://mathworld.wolfram.com/}; February 5,
+  2016 was the last accessed date, January 29 2016.
+
+\end{thebibliography}
