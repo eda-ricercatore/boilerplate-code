@@ -2,7 +2,44 @@
 
 """
 	This Python script is written by Zhiyang Ong to set up the
-		benchmark repository.
+		computational environment for "in silico"/computational
+		experiments.
+
+	@author Zhiyang Ong
+	@version 1.0
+	@since 1.0: April 12, 2016.
+
+
+	Synopsis:
+		./experimental_preparations.py
+
+
+	Summary:
+		Check if the set of benchmarks for experimentations with
+			my EDA, or formal verification, tool is there.
+		If the benchmarks are not available for experimentation,
+			download the benchmarks from The Internet, uncompress
+			and unarchive the benchmarks-containing compressed
+			tar balls.
+		Check if the benchmarks are valid.
+			If the benchmarks are invalid, report this existence of
+				invalid benchmarks.
+		Create a logfile to record a transcript of the Terminal
+			session during experimentation.
+			This logfile shall be named according for the following
+				format.
+
+			[[month]-[date]-[year]-[time]-logfile.text]
+
+	Since GitHub has restrictions on the memory size of free GitHub
+		accounts, I cannot download large benchmarks for conducting
+		experiments for EDA and formal verification tools that I
+		develop.
+	Hence, users of my EDA and formal verification tools should set
+		up a benchmark repository, and place their sets of EDA, or
+		formal verification, benchmarks in that location/path.
+		
+	
 	
 	Firstly, it checks if the benchmark repository exists.
 	If not, create a directory for the benchmark repository.

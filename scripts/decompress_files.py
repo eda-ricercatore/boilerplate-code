@@ -230,7 +230,8 @@ output_string_in_binary = decompress(input_string_in_binary)
 	This method can directly uncompress and unarchive Gzip and bzip2
 		compressed tar balls.
 """
-print "	>>	'Un'-tar tar balls (or tar archive files)."
+#print "	>>	'Un'-tar tar balls (or tar archive files)."
+print "	>>	Uncompressing and unarchiving Gzip & bzip2 compressed tar balls."
 
 tar_file_m = tarfile.open(ispd2013_contest_benchmarks_most)
 tar_file_m.extractall()
