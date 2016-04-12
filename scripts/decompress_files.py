@@ -187,7 +187,7 @@ if not isfile(ispd2013_contest_benchmarks_final):
 """
 
 #	Decompress Gzip compressed tar balls.
-print "	>>	Decompress Gzip compressed tar balls."
+#print "	>>	Decompress Gzip compressed tar balls."
 """
 with open(ispd2013_contest_benchmarks_most, 'rb') as most_fh_gzip:
 	with open(ispd2013_contest_benchmarks_most_tar, 'wb') as most_fh_tar:
@@ -213,7 +213,7 @@ output_string_in_binary = decompress(input_string_in_binary)
 """
 
 #	Decompress bzip2 compressed tar balls.
-print "	>>	Decompress bzip2 compressed tar balls."
+#print "	>>	Decompress bzip2 compressed tar balls."
 #call(["tar", "xvfj", ispd2013_contest_benchmarks_final])
 
 
@@ -223,49 +223,23 @@ print "	>>	Decompress bzip2 compressed tar balls."
 
 #	Data stream is invalid.
 #ispd2013_contest_benchmarks_final_tar = decompress(ispd2013_contest_benchmarks_final)
-"""
-#with readline(ispd2013_contest_benchmarks_final, 'rb') as final_fh_bzip2:
-with BZ2File(ispd2013_contest_benchmarks_final, 'rb') as final_fh_bzip2:
-	with open(ispd2013_contest_benchmarks_final_tar, 'wb') as final_fh_tar:
-		#final_fh_tar.write(final_fh_bzip2.read())
-		final_fh_tar.write(final_fh_bzip2.readline())
-		final_fh_bzip2.close()
-		final_fh_tar.close()
 
-Go Trojans >time -p ../../scripts/uncompress_files.py 
-=============================================================
-==	Decompress and unarchive selected benchmarks for the
-	boilerplate code base.
-Traceback (most recent call last):
-  File "../../scripts/uncompress_files.py", line 213, in <module>
-    final_fh_tar.write(final_fh_bzip2.read())
-  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/gzip.py", line 241, in write
-    self.fileobj.write(self.compress.compress(data))
-OverflowError: size does not fit in an int
-real 130.22
-user 124.32
-sys 3.55
-Go Trojans >
-"""
 """
 	"Un"-tar tar balls (or tar archive files).
 
-	This method can directly uncompress and unarchive Gzip
+	This method can directly uncompress and unarchive Gzip and bzip2
 		compressed tar balls.
 """
 print "	>>	'Un'-tar tar balls (or tar archive files)."
-"""
-#tar_file_m = tarfile.open(ispd2013_contest_benchmarks_most_tar)
+
 tar_file_m = tarfile.open(ispd2013_contest_benchmarks_most)
 tar_file_m.extractall()
 tar_file_m.close()
 
-#tar_file_n = tarfile.open(ispd2013_contest_benchmarks_netcard_tar)
 tar_file_n = tarfile.open(ispd2013_contest_benchmarks_netcard)
 tar_file_n.extractall()
 tar_file_n.close()
-"""
-#	Try to: Uncompress and unarchive bzip2 compressed tar balls.
+
 tar_file_f = tarfile.open(ispd2013_contest_benchmarks_final)
 tar_file_f.extractall()
 tar_file_f.close()
