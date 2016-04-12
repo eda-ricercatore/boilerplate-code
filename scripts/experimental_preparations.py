@@ -26,10 +26,11 @@
 				invalid benchmarks.
 		Create a logfile to record a transcript of the Terminal
 			session during experimentation.
-			This logfile shall be named according for the following
-				format.
+		Store the logfile and output file for each experiment in
+			another repository (of such files).
 
-			[[month]-[date]-[year]-[time]-logfile.text]
+
+
 
 	Since GitHub has restrictions on the memory size of free GitHub
 		accounts, I cannot download large benchmarks for conducting
@@ -56,7 +57,16 @@
 	If not, download the required evaluation scripts (if any).
 
 
+This logfile shall be named according for the following
+				format.
 
+	[[month]-[date]-[year]-[time]-[Name of software]-logfile.text]
+
+			This logfile shall be stored in:
+	[prefix of path]/boilerplate-code/binaries/logfile_db/[[month]-[year]]/
+
+		Output files of the EDA, or formal verification, software
+			shall be 
 
 
 
