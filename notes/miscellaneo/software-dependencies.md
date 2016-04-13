@@ -78,6 +78,13 @@ E.g., when I try to "*push*" EDA benchmarks that are larger than 100 MB, the fol
 	remote: error: See http://git.io/iEPt8g for more information.
 	remote: error: File benchmarks/extra/ispd2013_final.tar.bz2 is 470.70 MB; this exceeds GitHub's file size limit of 100.00 MB
 
+To notify *Git LFS* of the file types that you want *Git LFS* to manage, try: 
+
+	git lfs track "*.psd"
+
+To find out the file types that *Git LFS* is managing, use: 
+
+	git lfs track
 
 
 

@@ -22,7 +22,7 @@ To add an SSH agent:						ssh-add ~/.ssh/[name-of-ssh-key]
 
 To list all (added/active) SSH agents:		ssh-add -l
 
-To delete all (added/active) SSH agents:	ssh-add -l
+To delete all (added/active) SSH agents:	ssh-add -D
 
 
 
