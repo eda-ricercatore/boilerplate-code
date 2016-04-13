@@ -1,16 +1,18 @@
 # To-Do List for Developing my Boilerplate Code Base
 
 
-- Develop *Python* script to ensure that benchmark repository exists.
-	Ensure that each benchmark in the benchmark repository is valid. 
-	+ Instead of making system calls (for UNIX-like operating systems)
-		to uncompress files, I can use Python commands/functions to
-		do that.
-	+ Find out if the file handler/stream obtained from the Python
-		command/function to download a file can be used to uncompress
-		files in Python, instead of having to obtain the path to that
-		file (so that I can use a Python command/function to
-		uncompress it). 
+- Develop *Python* script for automated regression testing and backing
+	up of logfiles from these automated regression tests and output
+	files from the software.
+
+- Determine how to back up large files, from automated regression
+	testing and output files of my EDA and formal verification tools.
+
+  I can only keep so many files from automated regression tests and
+	past experimental runs, in GitHub or elsewhere.
+
+  Therefore, I should only keep files pertinent to good experimental
+  	results.
 
 - Refactor the Utility package
 	+ Place "include guards above your includes"
