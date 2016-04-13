@@ -141,6 +141,12 @@ Reference: /Applications/apps/others/comune/lamiera-per-caldaie/binaries/doxygen
 
 
 
+#	Background Information on Software Porting
+
+This boilerplate code base is ported from: https://github.com/eda-globetrotter/lamiera-per-caldaie.
+
+I have to port the software from my *eda-globetrotter* GitHub account to my *eda-ricercatore* GitHub account. This is because I had exceeded the maximum limits for free GitHub accounts, via Git Large File Storage (LFS).
+
 
 
 

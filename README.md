@@ -23,7 +23,6 @@
 
 
 ## Organization of the Repository
-- benchmarks: Benchmarks (synthetic) or otherwise
 - binaries: Build and run software here.
 - docs:
 	* Automatically generated API (using *Doxygen*) for software in *HTML*.
@@ -35,6 +34,11 @@
 - README.md: Readme file to describe the software project, and organization of the repository.
 - scripts: Scripts to perform miscellaneous tasks for the software project.
 - src: Source code of the software project, including test suites for automated regression testing and a "sandbox" for testing concepts in EDA programming or VLSI design.
+
+###	Benchmarking EDA Software
+
+Sets of EDA benchmarks for benchmarking EDA software have to be specified by users of the boilerplate code, and other EDA software that I develop. This is because the EDA benchmarks, synthetic or otherwise, can be very large in size (>1 GB). Therefore, I cannot load benchmarks for all EDA problems that I work on.
+
 
 
 
@@ -143,7 +147,9 @@ Daniel Greenfeld, "Markdown Basics," Revision 0dfc38d3, from the *Read the Docs*
 
 
 
-GitHub Repository for this project: https://github.com/eda-globetrotter/lamiera-per-caldaie
+GitHub Repository for this project: https://github.com/eda-ricercatore/boilerplate-code.
+
+Previously, it was located at: https://github.com/eda-globetrotter/lamiera-per-caldaie.
 
 
 
