@@ -28,9 +28,9 @@
 		take to implement each function.
 		Report which method is the best way of measuring the
 		temporal performance of the implemented methods.
-	
 
-
+- Develop *R* script to process results from automated regression
+	testing and experimentation.
 - Test graph module.
 - Test parser module.
 	+ Use ISPD contest parser.

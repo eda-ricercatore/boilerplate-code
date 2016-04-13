@@ -131,6 +131,8 @@ MULTITHREADING=	multithreading/
 STLOTHERS=		others/
 # Module for testing miscellaneous concepts.
 CPPMISC=		misc/
+# Module containing a parser for ISPD 2013 Contest benchmarks
+PARSERHELP=		parser_helper/
 
 
 # UNIX commands/utilities that are used
@@ -716,7 +718,35 @@ template4:
 
 
 
-
+#####################################################################
+#	Target for testing the given parser, from ISPD 2013 Contest.
+#####################################################################
+# Build & run C++ parser, from ISPD 2013 Contest, for experimention.
+parserhelp:
+	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
+	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
+	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
+	$(DATE)
+	@echo === Compiling C++ source code...
+	@echo === parser_helper Directory
+	$(GPLUSPLUS)	$(CPP14)	$(COMPILE)	$(PARSERHELP)$(SOURCE)
+	@echo === Link the C++ object files...
+	$(GPLUSPLUS)	$(CPP14)	$(LINK)		$(EXECUTABLE)	$(OBJFILES)
+	@echo === Executing the software...
+	$(TIME) $(EXECUTABLE)
+	@echo
+	@echo
+	@echo
+	@echo
+	@echo "The code is rather buggy; use is at own risk."
+	@echo "-- Donald Chai"
+	@echo
+	@echo "Beware of bugs in the above code."
+	@echo "I have only proved it correct, not tried it."
+	@echo "-- Donald E. Knuth"
+	@echo
+	@echo
+	@echo
 
 
 
