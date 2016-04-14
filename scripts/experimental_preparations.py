@@ -72,6 +72,14 @@ This logfile shall be named according for the following
 
 
 
+
+
+
+
+
+
+
+
 	Notes:
 		The solution from [Damian2010] manually enumerates all files
 			and directories in the specified directory. This is slow
