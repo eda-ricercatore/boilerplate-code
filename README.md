@@ -32,15 +32,15 @@ It will include implementations of common data structures and
 - evaluation:
 	* Code (scripts and C++ code) to facilitate research contest
 		organizers in their quantitative evaluation of our code.
-- docs:
-	* Automatically generated API (using *Doxygen*) for software
-		in *HTML*.
 - notes:
 	* Software license(s).
 	* Software documentation for project, written in *LaTeX*.
 	* Guidelines for collaborating on open source software and/or
 		hardware projects.
 	* *BibTeX* database for the documentation.
+	* docs:
+		+ Automatically generated API (using *Doxygen*) for software
+			in *HTML*.
 - README.md: Readme file to describe the software project, and
 	organization of the repository.
 - scripts: Scripts to perform miscellaneous tasks for the software
@@ -71,23 +71,32 @@ Therefore, I cannot load benchmarks for all EDA problems that I
 
 ## Building Static Binaries for Boilerplate Code
 
-UNIX command for determining if a binary is statically linked: ldd <binary>. If dynamic libraries show up, the binary/software is not statically linked. 
+UNIX command for determining if a binary is statically linked:
+	ldd <binary>.
+If dynamic libraries show up, the binary/software is not statically
+	linked. 
 
-Produce statically linked binaries to meet requirements of research contests.
+Produce statically linked binaries to meet requirements of research
+	contests.
 
 Statically linked binaries:
 - Advantages:
-	* Can optimize library code that is not available via pre-compiled object files.
+	* Can optimize library code that is not available via
+		pre-compiled object files.
 	* guarantee
 - Disadvantages:
 	* S
 
 Dynamically linked binaries:
 - Advantages:
-	* "Reduce total resource consumption" for sharing libraries with multiple processes. The resources include: disk space, RAM, and cache space.
-	* Enable bug fixes and library upgrades to propagate without requiring actions from the developers.
+	* "Reduce total resource consumption" for sharing libraries with
+		multiple processes.
+		The resources include: disk space, RAM, and cache space.
+	* Enable bug fixes and library upgrades to propagate without
+		requiring actions from the developers.
 - Disadvantages:
-	* Risk of suffering in DLL hell (dependency hell for dynamic link libraries).
+	* Risk of suffering in DLL hell (dependency hell for dynamic
+		link libraries).
 - Required by plugins.
 
 
