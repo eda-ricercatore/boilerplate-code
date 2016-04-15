@@ -26,6 +26,10 @@
 		Search for the "#### FIX THIS" flag to manually enter the
 			time zone for the filename of the logfiles and output
 			files of automated regression testing.
+	@Modified by Zhiyang Ong, April 15, 2016.
+		This is because I currently do not know how to extract the
+			time zone from the functions provided by the Python
+			Standard Library. 
 		Time zones of interest:
 			College Station, TX
 				CDT - Central Daylight Time (Daylight Saving Time)
