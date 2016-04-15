@@ -96,6 +96,18 @@
 	the boilerplate code that the EDA tool uses, and the "micro" test
 	suites in the *sandbox*.
 
+- Get ".gitignore" files for:
+	+ Scala
+	+ Ruby
+	+ R
+	+ Perl
+	+ OCaml
+	+ LabVIEW
+	+ Haskell
+	+ Fortran
+	+ Erlang
+	+ Clojure
+- Obtained
 
 
 # Doxygen Shortcuts
@@ -133,6 +145,10 @@
 
 
 Reference: /Applications/apps/others/comune/lamiera-per-caldaie/binaries/doxygen.config
+
+
+
+
 
 
 

@@ -21,6 +21,31 @@
 	[prefix of path]/boilerplate-code/binaries/logfile_db/[[month]-[year]]/
 
 
+
+	IMPORTANT:
+		Search for the "#### FIX THIS" flag to manually enter the
+			time zone for the filename of the logfiles and output
+			files of automated regression testing.
+		Time zones of interest:
+			College Station, TX
+				CDT - Central Daylight Time (Daylight Saving Time)
+				CST – Central Standard Time			
+			Los Angeles, CA (or Silicon Valley)
+				PDT - Pacific Daylight Time (Daylight Saving Time)
+				PST – Pacific Standard Time
+			Trento, Italy
+				CEST – Central European Summer Time (Daylight Saving Time)
+				CET – Central European Time
+			Taipei, Taiwan
+				CST – China Standard Time
+			Singapore
+				SGT – Singapore Time
+			Adelaide, Australia
+				ACST – Australian Central Standard Time
+				ACDT – Australian Central Daylight Time (Daylight Saving Time)
+
+
+
 	Notes:
 	
 	\cite[\S8.1.7 strftime() and strptime() Behavior]{DrakeJr2016e}
@@ -105,18 +130,44 @@ print "	>"+filename+"==="
 		provide a table of directives (e.g., %Y), their meanings,
 		examples of their usage and related information. 
 """
-filename2 = now.strftime("%B-%d-%Y-%Hhr%Mmin%S_%fsec-logfile.text")
+
+"""
+	For the next two strftime() statements, the usage of the "%Z"
+		directive to get the time zone currently fails, since the
+		datetime object is "naive".
+"""
+#filename2 = now.strftime("%B-%d-%Y-%Hhr%Mmin%S_%fsec%Z-logfile.text")
+#	#### FIX THIS
+#filename2 = now.strftime("%B-%d-%Y-%Hhr%Mmin%S_%fsecTIMEZONE-logfile.text")
+filename2 = now.strftime("%B-%d-%Y-%Hhr%Mmin%S_%fsecCST-logfile.text")
 
 #	[[month]-[date]-[year]-[time]-[Name of software]-[logfile].text]
-filename3 = now.strftime("%B-%d-%Y-%Hhr%Mmin%S_%fsec-logfile.text") 
+#filename3 = now.strftime("%B-%d-%Y-%Hhr%Mmin%S_%fsec%Z-logfile.text")
+#	#### FIX THIS
+#filename3 = now.strftime("%B-%d-%Y-%Hhr%Mmin%S_%fsecTIMEZONE-logfile.text")
+filename3 = now.strftime("%B-%d-%Y-%Hhr%Mmin%S_%fsecCST-logfile.text")
 print "	>"+filename3+"==="
 
 #	[prefix of path]/boilerplate-code/binaries/logfile_db/[[month]-[year]]/
-dir_name = now.strftime("%B-%Y") 
+dir_name = now.strftime("%B-%Y")
 print "	>"+dir_name+"==="
 
 
+
 """
+	\todo
+	@todo Script may fail when used across multiple time zones,
+		within any 24-hour period, such as when I am traveling or
+		when multiple engineers or software developers are using this
+		script (or a derivation of it) for their project.
+		
+		While the "%Z" directive for strftime() allows the developer
+			to determine the local time zone, it may not be
+			judiciously used to name the logfiles.
+	#### TO BE COMPLETED
+
+
+
 	I should include information about the date and time in my
 		normal.txt and error.txt logfiles.
 	Methods that I can use to do this:
