@@ -43,6 +43,13 @@
 
 
 
+	@author Zhiyang Ong
+	@version 1.1.
+	@since 1.1: April 15, 2016.
+	@todo	Finish the for-loop sweep of the UNIX system calls, which
+				are Makefile invocations.
+	#### TO BE COMPLETED
+
 	The MIT License (MIT)
 
 	Copyright (c) <2016> <Zhiyang Ong>
@@ -97,7 +104,7 @@ print "==	Begin extensive torturing the boilerplate code base."
 
 
 
-
+#	### Modified by Zhiyang Ong, April 15,2016. 
 #	Path to the boilerplate code base's binaries subdirectory.
 boilerplate_code_dir = "/Applications/apps/eda/boilerplate-code/binaries"
 #	Path to the boilerplate code base's sandbox.
