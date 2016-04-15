@@ -99,13 +99,13 @@ print "==	Begin extensive torturing the boilerplate code base."
 
 
 #	Path to the boilerplate code base's binaries subdirectory.
-boilerplate_code_dir = "/Applications/apps/others/comune/lamiera-per-caldaie/binaries"
+boilerplate_code_dir = "/Applications/apps/eda/boilerplate-code/binaries"
 #	Path to the boilerplate code base's sandbox.
-sandbox_dir = "/Applications/apps/others/comune/lamiera-per-caldaie/src/sandbox"
+sandbox_dir = "/Applications/apps/eda/boilerplate-code/src/sandbox"
 #	Path to the boilerplate code base's LaTeX report.
-boilerplate_LaTeX_report = "/Applications/apps/others/comune/lamiera-per-caldaie/notes/report"
+boilerplate_LaTeX_report = "/Applications/apps/eda/boilerplate-code/notes/report"
 #	Path to the boilerplate code base's LaTeX guidelines.
-boilerplate_LaTeX_guidelines = "/Applications/apps/others/comune/lamiera-per-caldaie/notes/guidelines"
+boilerplate_LaTeX_guidelines = "/Applications/apps/eda/boilerplate-code/notes/guidelines"
 
 
 """
