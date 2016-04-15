@@ -54,7 +54,13 @@ It will include implementations of common data structures and
 
 ###	Benchmarking EDA Software
 
-Sets of EDA benchmarks for benchmarking EDA software have to be specified by users of the boilerplate code, and other EDA software that I develop. This is because the EDA benchmarks, synthetic or otherwise, can be very large in size (>1 GB). Therefore, I cannot load benchmarks for all EDA problems that I work on.
+Sets of EDA benchmarks for benchmarking EDA software have to be
+	specified by users of the boilerplate code, and other EDA
+	software that I develop.
+This is because the EDA benchmarks, synthetic or otherwise, can be
+	very large in size (>1 GB).
+Therefore, I cannot load benchmarks for all EDA problems that I
+	work on.
 
 
 
