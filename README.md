@@ -27,18 +27,24 @@
 - evaluation:
 	*
 - docs:
-	* Automatically generated API (using *Doxygen*) for software in *HTML*.
+	* Automatically generated API (using *Doxygen*) for software
+		in *HTML*.
 - notes:
 	* Software license(s).
 	* Software documentation for project, written in *LaTeX*.
-	* Guidelines for collaborating on open source software and/or hardware projects.
+	* Guidelines for collaborating on open source software and/or
+		hardware projects.
 	* *BibTeX* database for the documentation.
-- README.md: Readme file to describe the software project, and organization of the repository.
-- scripts: Scripts to perform miscellaneous tasks for the software project.
+- README.md: Readme file to describe the software project, and
+	organization of the repository.
+- scripts: Scripts to perform miscellaneous tasks for the software
+	project.
 - solver_interfaces:
 	* Scripts to enable the EDA tool, or this boilerplate code, to
 		interact with interfaces
-- src: Source code of the software project, including test suites for automated regression testing and a "sandbox" for testing concepts in EDA software development or VLSI design.
+- src: Source code of the software project, including test suites
+	for automated regression testing and a "sandbox" for testing
+	concepts in EDA software development or VLSI design.
 
 ###	Benchmarking EDA Software
 
