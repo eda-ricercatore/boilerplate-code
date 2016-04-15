@@ -30,7 +30,8 @@ It will include implementations of common data structures and
 ## Organization of the Repository
 - binaries: Build and run software here.
 - evaluation:
-	*
+	* Code (scripts and C++ code) to facilitate research contest
+		organizers in their quantitative evaluation of our code.
 - docs:
 	* Automatically generated API (using *Doxygen*) for software
 		in *HTML*.
