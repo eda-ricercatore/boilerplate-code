@@ -1,13 +1,18 @@
 # boilerplate-code
 
-*C++1y* boilerplate code for my open source software projects. It will include implementations of common data structures and algorithms, including those for electronic design automation (such as AND-Inverter Graphs and Binary Decision Diagrams)
+*C++1y* boilerplate code for my open source software projects.
+It will include implementations of common data structures and
+	algorithms, including those for electronic design automation
+	(such as AND-Inverter Graphs and Binary Decision Diagrams).
 
 
 
 ## Currently Implemented Data Structures and Algorithms
 - Graph: Directed graphs, such as AIGs and BDDs.
-- Heap: min heap, max heap, Fibonacci heap (important for fast implementations of graph algorithms), and binomial heaps.
-- Trees: binary search trees, self-balancing trees, and combinations thereof (e.g., AVL trees and red-black trees)
+- Heap: min heap, max heap, Fibonacci heap (important for fast
+	implementations of graph algorithms), and binomial heaps.
+- Trees: binary search trees, self-balancing trees, and combinations
+	thereof (e.g., AVL trees and red-black trees)
 - Stack
 
 [Note: The priority queue is available from the C++ STL.]
