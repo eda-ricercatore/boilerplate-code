@@ -1,0 +1,1 @@
+File I/O stream for standard output is OK.

@@ -42,7 +42,7 @@
 
 
 // Import Header files from the other modules of lamiera-per-caldaie.
-//#include "conversion_alphanumeric_ut.hpp"
+#include "conversion_alphanumeric_ut.hpp"
 //#include "../../utilities/conversion_alphanumeric.hpp"
 
 // Import packages from the C++ STL
@@ -52,7 +52,7 @@
 #include <cstring>
 */
 
-using namespace std;
+//using namespace std;
 
 // ==================================================================
 

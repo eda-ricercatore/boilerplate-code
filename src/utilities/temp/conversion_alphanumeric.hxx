@@ -1,7 +1,7 @@
 // Get the header from its corresponding .hpp file.
 
 // Import packages from the software
-#include "conversion_alphanumeric.hpp"
+//#include "conversion_alphanumeric.hpp"
 
 // Import packages from the C++ STL
 #include <iostream>
@@ -20,11 +20,11 @@ using namespace std;
 
 // Default constructor.
 template<typename T>
-conversion_alphanumeric<T>::conversion_alphanumeric() {
+//conversion_alphanumeric<T>::conversion_alphanumeric() {
+conversion_alphanumeric::conversion_alphanumeric() {
 	string err_msg = "==u	conversion_alphanumeric shouldn't be instantiated!";
 	throw new violated_assertion(err_msg);
 }
-
 
 // Default destructor.
 template<typename T>

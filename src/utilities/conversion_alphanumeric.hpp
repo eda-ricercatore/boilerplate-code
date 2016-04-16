@@ -369,4 +369,74 @@ class conversion_alphanumeric {
 		// Define headers for private functions...
 
 };
+
+
+
+
+
+
+
+
+//#include "conversion_alphanumeric.hxx"
+
+
+
+
+
+
+
+
+
+// Default constructor.
+template<typename T>
+//conversion_alphanumeric<T>::conversion_alphanumeric() {
+conversion_alphanumeric<T>::conversion_alphanumeric() {
+	string err_msg = "==u	conversion_alphanumeric shouldn't be instantiated!";
+	throw new violated_assertion(err_msg);
+}
+
+// Default destructor.
+template<typename T>
+conversion_alphanumeric<T>::~conversion_alphanumeric() {
+	string err_msg = "==u	conversion_alphanumeric destructor is faulty!";
+	throw new violated_assertion(err_msg);
+}
+
+template<typename T>
+string conversion_alphanumeric<T>::number_to_string_cpp_stl_to_string(T a_num) {
+	return to_string(a_num);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #endif

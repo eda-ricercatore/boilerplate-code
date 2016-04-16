@@ -1,6 +1,25 @@
 # To-Do List for Developing my Boilerplate Code Base
 
 
+- Refactor and check the following files:
+	+ /Applications/apps/eda/boilerplate-code/src/sandbox/python-code/get-date-time.py
+	+ /Applications/apps/eda/boilerplate-code/scripts/decompress_files.py
+	+ /Applications/apps/eda/boilerplate-code/scripts/experimental_preparations.py
+	+ /Applications/apps/eda/boilerplate-code/scripts/setup_benchmarks.py
+	+ /Applications/apps/eda/boilerplate-code/notes/miscellaneo/software-dependencies.md
+	+ /Applications/apps/eda/boilerplate-code/src/sandbox/python-code/for-loop-test.py
+	+ /Applications/apps/eda/boilerplate-code/src/sandbox/makefile
+	+ 
+	+ 
+	+ 
+	+ 
+	+ 
+	+ 
+	+ 
+	+ 
+	+
+	
+	
 - Develop *Python* script for automated regression testing and backing
 	up of logfiles from these automated regression tests and output
 	files from the software.
