@@ -84,7 +84,7 @@ void conversion_alphanumeric_ut::test_numbers_to_strings() {
 	printer::debug_std_op_ln("==tu	Testing: conversion_alphanumeric ...");
 	
 	// Test the default constructor of conversion_alphanumeric.
-//	test_conversion_alphanumeric_constructor();
+	test_conversion_alphanumeric_constructor();
 	
 	/**
 	 * Test function to convert numbers to strings, using a function
