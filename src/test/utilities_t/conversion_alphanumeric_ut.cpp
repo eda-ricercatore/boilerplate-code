@@ -90,7 +90,7 @@ void conversion_alphanumeric_ut::test_numbers_to_strings() {
 	 * Test function to convert numbers to strings, using a function
 	 *	template, via the C++11 STL to_string() function.
 	 */
-//	test_numbers_to_strings_fn_template();
+	test_numbers_to_strings_fn_template();
 
 /**
 	// Test if I can use "simple_template". 
