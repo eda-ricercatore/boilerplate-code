@@ -170,7 +170,19 @@ Reference: /Applications/apps/others/comune/lamiera-per-caldaie/binaries/doxygen
 
 
 
+#	Research Needs from the Semiconductor Research Corporation
 
+Research needs from the Semiconductor Research Corporation are referenced as follows.
+
+##	Referencing Research Needs in Electronic Design Automation
+
+###	Needs in Verification
+
+\cite{Joyner2016} and \cite{Yeh2016} indicate research needs that have to (or should) be addressed
+
+###	Needs in Electronic System-Level Design
+
+\cite{Yeh2016} indicated the research neds of have to (or should) be addressed
 
 
 
