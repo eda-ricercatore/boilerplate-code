@@ -191,7 +191,12 @@ Research needs from the Semiconductor Research Corporation are referenced as fol
 	+ S1.3, High-level synthesis for AMS/RF circuits and systems.
 		* For SystemC-AMS
 		* For AMS/RF extensions to Chisel. Requires creation of a new HDL.
-	
+- System-Level Architectures for Implementation and Validation
+	+ S2.5, Microarchitecture synthesis, including customized 
+		reconfigurable accelerators (**awesome for approximate
+		computing**)
+
+
 ##	Unmet Research Needs
 
 From \cite{Yeh2016}, the unmet research needs are:
@@ -204,7 +209,7 @@ From \cite{Yeh2016}, the unmet research needs are:
 	+ Use communication synthesis.
 	+ Based on composable platform- and contract- based design; see composability.
 	+ See https://en.wikipedia.org/wiki/Composability.
-	+ Also, search for "contract-based design".
+	+ Also, search for "contract-based design."
 
 
 #	Background Information on Software Porting
