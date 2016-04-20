@@ -182,8 +182,20 @@ Research needs from the Semiconductor Research Corporation are referenced as fol
 
 ###	Needs in Electronic System-Level Design
 
-\cite{Yeh2016} indicated the research neds of have to (or should) be addressed
+\cite{Yeh2016} indicated the research needs in ESL design:
+- Design space exploration:
+	+ S1.1, Especially for new memory devices, packaging options, 
+		interconnect technologies.  
+	+ S1.2, Run-time/Online solutions for adaptive heterogeneous 
+		systems.
+	+ S1.3, High-level synthesis for AMS/RF circuits and systems.
+	
+##	Unmet Research Needs
 
+From \cite{Yeh2016}, the unmet research needs are:
+- **S1.4, Design space exploration with different memory devices/types**
+	+ Require development of compiler for RISC-V ISA.
+	+ Require extension of gem5 to support RISC-V ISA.
 
 
 
