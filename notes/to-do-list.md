@@ -185,7 +185,9 @@ Research needs from the Semiconductor Research Corporation are referenced as fol
 \cite{Yeh2016} indicated the research needs in ESL design:
 - Design space exploration:
 	+ S1.1, Especially for new memory devices, packaging options, 
-		interconnect technologies.  
+		interconnect technologies.
+		* **Coupled with S2.10, to address post-silicon validation
+			issues and design/implementation cost.**
 	+ S1.2, Run-time/Online solutions for adaptive heterogeneous 
 		systems.
 	+ S1.3, High-level synthesis for AMS/RF circuits and systems.
@@ -193,9 +195,13 @@ Research needs from the Semiconductor Research Corporation are referenced as fol
 		* For AMS/RF extensions to Chisel. Requires creation of a new HDL.
 - System-Level Architectures for Implementation and Validation
 	+ S2.5, Microarchitecture synthesis, including customized 
-		reconfigurable accelerators (**awesome for approximate
-		computing**)
-
+		reconfigurable accelerators
+		* **awesome for approximate computing**
+	+ S2.9, Design space exploration of microarchitectures, or VLSI
+		architectures, to integrate reconfigurable hardware and
+		interconnects at different levels of granularity.
+		* **awesome for approximate computing**
+- 
 
 ##	Unmet Research Needs
 
@@ -203,6 +209,8 @@ From \cite{Yeh2016}, the unmet research needs are:
 - **S1.4, Design space exploration with different memory devices/types**
 	+ Require development of compiler for RISC-V ISA.
 	+ Require extension of gem5 to support RISC-V ISA.
+	+ **Coupled with S2.7, via the use of non-volatile memories
+		(e.g., NVRAM).**
 - **S2.1, ESL hardware/software co-validation**
 - **S2.3, Rapid and effective tur-around design flows, via IP blocks.**
 	+ Use interface synthesis.
@@ -210,6 +218,7 @@ From \cite{Yeh2016}, the unmet research needs are:
 	+ Based on composable platform- and contract- based design; see composability.
 	+ See https://en.wikipedia.org/wiki/Composability.
 	+ Also, search for "contract-based design."
+- S2.8, gem5 revisited.
 
 
 #	Background Information on Software Porting
