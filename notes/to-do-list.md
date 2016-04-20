@@ -201,7 +201,7 @@ Research needs from the Semiconductor Research Corporation are referenced as fol
 		architectures, to integrate reconfigurable hardware and
 		interconnects at different levels of granularity.
 		* **awesome for approximate computing**
-- 
+- Design robustness
 
 ##	Unmet Research Needs
 
