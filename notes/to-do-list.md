@@ -133,6 +133,42 @@
 - Obtained
 
 
+
+
+
+#	Statistical Analysis of Experimental Data
+
+##	Data Analytics with *R*
+
+
+##	Data Analytics with *R* and *Scala*
+
+
+
+##	Data Analytics with *Scala*
+
+
+#	*Scala*-Based, Computer-Aided Source Code Generation 
+
+##	References for *Scala*
+
+[Obtain references for Scala using my BibTeX database.] 
+
+Use the tags in the "keyword" BibTeX field to obtain a list of BibTeX
+	entries that are relevant to *Scala*, and filter the results from
+	there.
+
+Find a set of books on *Scala* to teach me *Scala*.
+
+Next, find a Scala-based distributed programming textbook to teach
+	me concepts relevant to parallel programming, especially for a
+	distributed network of computers. 
+
+
+
+
+
+
 # Doxygen Shortcuts
 
 
@@ -239,6 +275,10 @@ From \cite{Yeh2016}, the unmet research needs are:
 This boilerplate code base is ported from: https://github.com/eda-globetrotter/lamiera-per-caldaie.
 
 I have to port the software from my *eda-globetrotter* GitHub account to my *eda-ricercatore* GitHub account. This is because I had exceeded the maximum limits for free GitHub accounts, via Git Large File Storage (LFS).
+
+
+
+
 
 
 
