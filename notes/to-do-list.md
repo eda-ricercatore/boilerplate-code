@@ -1,6 +1,10 @@
 # To-Do List for Developing my Boilerplate Code Base
 
-
+- Whenever I look at a publication that is not a book,
+	(journal/magazine) article, thesis/dissertation, conference paper, 
+	part of a book (i.e., "incollection" BibTeX entry type), 
+	proceedings, search for the "suggested citation" in the 
+	publication. E.g., do this for *manuals* and *reports*.
 - Refactor and check the following files:
 	+ /Applications/apps/eda/boilerplate-code/src/sandbox/python-code/get-date-time.py
 	+ /Applications/apps/eda/boilerplate-code/scripts/decompress_files.py
