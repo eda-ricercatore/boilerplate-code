@@ -207,6 +207,15 @@ Research needs from the Semiconductor Research Corporation are referenced as fol
 		* **awesome for approximate computing**
 - Design robustness
 
+
+###	Needs in VLSI Testing
+
+\cite{Rearick2013} indicated a number of research needs in VLSI testing:
+- Test cost and quality improvement
+	+ Design-for-testability (DFT) methods
+Finish entering keywords for \cite{Rearick2013}.
+
+
 ##	Unmet Research Needs
 
 From \cite{Yeh2016}, the unmet research needs are:
