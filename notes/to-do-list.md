@@ -165,6 +165,37 @@ Next, find a Scala-based distributed programming textbook to teach
 	distributed network of computers. 
 
 
+#	References to look up.
+
+##	Find publications for the following authors.
+
+- Michael A. Arbib
+- Krzysztof R. Apt
+
+
+
+##	Tasks Related to Building Up My BibTeX Database
+
+###	Determine the Genesis and Seminal Publications of Reachability Analysis.
+- ???
+
+
+###	Determine the Seminal Publications of Quantum Design Automation
+- http://vlsicad.eecs.umich.edu/Quantum/
+- https://www.eecs.umich.edu/eecs/research/group.html?r_id=9&g_id=46
+
+## BibTeX Publisher Field for Self-Published
+
+A subset of self-published books are sold by: Amazon Digital Services LLC. I do not know if all books in this subset are considered to be published by Amazon Digital Services LLC.
+
+
+
+
+
+
+
+
+
 
 
 

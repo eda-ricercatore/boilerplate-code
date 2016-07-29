@@ -5,6 +5,8 @@ It will include implementations of common data structures and
 	algorithms, including those for electronic design automation
 	(such as AND-Inverter Graphs and Binary Decision Diagrams).
 
+Note: This *C++1y* library of boilerplate code is not guaranteed to
+	be thread safe.
 
 
 ## Currently Implemented Data Structures and Algorithms

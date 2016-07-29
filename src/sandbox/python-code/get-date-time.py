@@ -33,7 +33,7 @@
 		Time zones of interest:
 			College Station, TX
 				CDT - Central Daylight Time (Daylight Saving Time)
-				CST – Central Standard Time			
+				CST – Central Standard Time
 			Los Angeles, CA (or Silicon Valley)
 				PDT - Pacific Daylight Time (Daylight Saving Time)
 				PST – Pacific Standard Time
