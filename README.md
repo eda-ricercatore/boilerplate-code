@@ -181,6 +181,25 @@ Daniel Greenfeld, "Markdown Basics," Revision 0dfc38d3, from the *Read the Docs*
 
 
 
+
+
+To-dos for my BibTeX repository
++ merge "communication" with "communications"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 GitHub Repository for this project: https://github.com/eda-ricercatore/boilerplate-code.
 
 Previously, it was located at: https://github.com/eda-globetrotter/lamiera-per-caldaie.
