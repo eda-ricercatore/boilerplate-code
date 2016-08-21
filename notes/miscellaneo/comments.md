@@ -31,11 +31,11 @@ Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" |
 
 
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| Symbols		| Names of Symbols	|
+| :------------:|:-----------------:|
+| col 3 is		| right-aligned 	|
+| col 2 is		| centered      	|
+| zebra stripes	| are neat      	|
 
 
 
