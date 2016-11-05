@@ -15,6 +15,50 @@ In addition, changes made to other types of components/entities in
 ##	Repositories That Can Be Affected
 
 
+### Ricercatore in Italia (eda-ricercatore) GitHub Repositories
+
+Repositories that can be affected by my primary *GitHub* account,
+	*Ricercatore in Italia (eda-ricercatore)* are:
++
+
+
+###	EDA Globetrotter (eda-globetrotter) GitHub Repositories
+
+Repositories that can be affected by my primary *GitHub* account,
+	*EDA Globetrotter (eda-globetrotter)* are:
++ [sardegna-scala](https://github.com/eda-ricercatore/sardegna-scala)
+
+
+
+##	Repositories That Can Be Affected In The Future
+
++ [ispd2013contest-benchmarks](https://github.com/eda-globetrotter/ispd2013contest-benchmarks)
++ [ispd2013contest-benchmarks](https://github.com/eda-ricercatore/ispd2013contest-benchmarks)
+
+
+
+
+
+###	Benchmark Repositories
+
+
+
+
+
+
+*************
+Put the benchmarks in the Open Data repository.
+
+
+
+
+##	Repositories That Will Not Be Affected In The Future
+
+The following repositories are dead.
++ []()
+
+
+
 
 
 ##	Disclaimer

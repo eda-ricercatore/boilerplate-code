@@ -63,6 +63,9 @@ Revision history: \vspace{-0.3cm}
 \item Version 1.1, December 23, 2014. Version ported for this boilerplate code project.
 \item Version 2, October 20, 2015. Added guidelines for {\tt Doxygen}-supported, {\tt Javadoc}-based coding standard. This coding standard is also known as coding style, coding style guide, coding guideline, coding scheme, code convention, code documentation guideline, programming guideline, or programming style.
 \item Version 2.1, October 21, 2015. Finished guidelines for {\tt Doxygen}-supported, {\tt Javadoc}-based coding standard for {\it C++}.
+\item Version 2.2, June 4, 2016. Finished section for additional guidelines: to include documentation using {\tt Markdown}, and tools for software development, integrated circuit and cyber-physical system design, and documentation.
+\item Version 3, November 3, 2016. Added guidelines for: documenting {\it GNU Octave} and {\sc Matlab} code, in order to facilitate documentation generation using {\it Texinfo} \cite{WikipediaContributors2016h,Stallman2016,Stallman2016a,Stallman2016b}; sharing of source code, design files, sets of benchmarks, data sets, and documentation on online repositories \cite{figshareLLPstaff2016,GitHubStaff2016}; and added section on exception safety.
+\item Version 3.1, November 4, 2016. Fixed references for indent style conventions.
 \end{enumerate}
 
 
@@ -79,7 +82,7 @@ Revision history: \vspace{-0.3cm}
 \section{Guidelines for Conduct}
 \label{sec:GuidelinesforConduct}
 
-Members of the open source software and/or hardware projects should follow the {\it Code of Conduct} of the {\tt Institute of Electrical and Electronics Engineers (IEEE)} and the {\tt Association for Computing Machinery (ACM)} \cite{IEEE2014b,IEEE2014a,IEEE2014,ACMCouncil1992}. Also, actions of discrimination are not acceptable \cite{IEEE2014c}. An additional guideline is ``Dave Packard's 11 simple rules'' \cite{HewlettPackardCompany2012}. \\
+Members of the open source software and/or hardware projects should follow the {\it Code of Conduct} of the {\tt Institute of Electrical and Electronics Engineers (IEEE)} \cite{IEEE2014b,IEEE2014a,IEEE2014} and the {\tt Association for Computing Machinery (ACM)} \cite{ACMCouncil1992}. Also, actions of discrimination are not acceptable \cite{IEEE2014c}. An additional guideline is ``Dave Packard's 11 simple rules'' \cite{HewlettPackardCompany2012}. \\
 
 %There are a significant amount of references for helping people to learn \LaTeX \cite{Voss2011,vanDongen2012,Syropoulos2003,Raymond2004,Mittelbach2004,Lamport1994,Krishnan2003,Krantz2001,Kottwitz2011,Koranne2011,Kopka2004,Knuth1999,Hoenig1998,Higham1998,Haralambous2007,Griffiths1997,Gratzer2007,Goossens2007,Goossens1999,Goossens1997,Diller1999,Bindner2011,Berry2009,UITCambridge2011,Scharrer2011,Pakin2008,Cormen2010,Syropoulos2004,Hamalainen2006} and related information/technologies.
 
@@ -279,11 +282,12 @@ The recommended fields for {\sc Bib}\TeX\ entries are: \vspace{-0.3cm}
 \section{Coding Standard}
 \label{sec:CodingStandard}
 
-This is a guideline for {\it Doxygen}-supported, {\it Javadoc}-based coding standard that shall be used for this boilerplate code project. This coding standard is also known as the coding style, coding style guide, coding guideline, coding scheme, code convention, code documentation guideline, programming guideline, or programming style. The documentation generator that shall be supported is: {\it Doxygen}. Since I am using {\it Doxygen} for generating documentation, I can use \LaTeX\ to provide richer markup. \\
+This is a guideline for {\it Doxygen}-supported \cite{vanHeesch2016}, {\it Javadoc}-based coding standard that shall be used for this boilerplate code project. This coding standard is also known as the coding style, coding style guide, coding guideline, coding scheme, code convention, code documentation guideline, programming guideline, or programming style. The documentation generator that shall be supported is: {\it Doxygen}. Since I am using {\it Doxygen} for generating documentation, I can use \LaTeX\ to provide richer markup. \\
 
 {\bf Document the known bugs for each function/method.} \\
 
-My indent style would be the {\it 1TBS} variant of the {\it K{\rm \&}R} style, which is an abbreviation of ``{\it The One True Brace Style}''. It is also equivalent to the {\it Kernel Normal Form style} (or {\it BSD KNF style}). \\
+%	My indent style would be the {\it 1TBS} variant of the {\it K{\rm \&}R} style \cite{WikipediaContributors2016j}, which is an abbreviation of ``{\it The One True Brace Style}'' \cite{WikipediaContributors2016j}. It is also equivalent to the {\it Kernel Normal Form style} (or {\it BSD KNF style}) \cite{WikipediaContributors2016j}. \\
+My indent style would be the {\it 1TBS} variant of the {\it K{\rm \&}R} style, which is an abbreviation of ``{\it The One True Brace Style}''. It is also equivalent to the {\it Kernel Normal Form style} (or {\it BSD KNF style}) \cite{WikipediaContributors2016j}. \\
 
 Classes, functions/methods, constants, macros, and static and instance variables shall be named using complete words or well-known abbreviations that are concatenated with an underscore in {\it C++}; this is a deviation from the {\it Hungarian notation} that uses an upper case letter to distinguish words/abbreviations in the name (i.e., the Start case style of writing; see letter case). \\
 
@@ -318,7 +322,36 @@ The order of tags in different sections of the {\it C++} code is given as follow
 \item The @deprecated tag can be used for headers/interfaces, classes, constructors, functions/methods, and variables.
 \end{enumerate}
 
-For a suggested coding style for {\tt Python} and {\it Ruby} scripts, see \cite{vanRossum2013} and \cite{Macdonald20XY}, respectively.
+For a suggested coding style for {\tt Python} and {\it Ruby} scripts, see \cite{vanRossum2013} and \cite{Macdonald20XY}, respectively. \\
+
+
+
+While well-documented source code is desired, natural language programming \cite{WikipediaContributors2016i} is usually infeasible due to the choices of programming/computer languages used. Also, while literate programming \cite{Knuth1984,Knuth1992a,McConnell2004,Subramaniam2006,Schach2007,Oram2007,MullerHannemann2010}
+ is encouraged, I am currently not following it due to the tedious process of developing software using literate programming. Hence, a short development time for well-commented, functionally correct, and efficient source code is prioritized over code written according to the literate programming approach.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Exception Safety}
+\label{sec:ExceptionSafety}
+
+When developing software using programming/scripting languages that enable exceptions or errors to be thrown and caught, adopt "a set of contractual guidelines" \cite{WikipediaContributors2016f} to support exception/error management. This ``set of contractual guidelines'' is based on exception safety guarantees in {\it C++} \cite{Abrahams1998,Abrahams2001,WikipediaContributors2016f} \cite[Subsection \S4.4 on ``Writing exception safe code'']{WikibooksContributors2016}. \\
+
+%\cite{Abrahams1998,Abrahams2001,WikibooksContributors2016,WikipediaContributors2016f}
+
+The levels of exception/error safety listed in descending order of safety guarantees are \cite{Abrahams1998,Abrahams2001,WikibooksContributors2016,WikipediaContributors2016f}: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item no throw guarantee, or failure transparency: ``Best level of exception safety.''
+\item strong exception safety, commit/rollback semantics, or no-change guarantee
+\item basic exception safety
+\item minimal exception safety, no-leak guarantee
+\item no exception safety: ``No guarantees are made. (Worst level of exception safety)''
+\end{enumerate}
+
+These aforementioned levels of exception/error safety can be partially handled. Also, the use of guards is strongly recommended for making the software and library (or, circuit or system) exception safe. \\
+
+Please judiciously consider what to do with the semipredicate problem \cite{WikipediaContributors2016e}.
+
+
 
 
 
@@ -327,7 +360,7 @@ For a suggested coding style for {\tt Python} and {\it Ruby} scripts, see \cite{
 \section{Additional Guidelines}
 \label{sec:AdditionalGuidelines}
 
-Please kindly use the Markdown language for writing text documents. This is because Bitbucket will treat my text file as a file written in the Markdown syntax. That said, the raw file looks a lot better than the represented Markdown files. Their (Bitbucket) formatting for Markdown is messed up. \\
+Please kindly use the {\tt Markdown} language for writing text documents. This is because Bitbucket will treat my text file as a file written in the {\tt Markdown} syntax. That said, the raw file looks a lot better than the represented {\tt Markdown} files. Their ({\it Bitbucket}) formatting for {\tt Markdown} is messed up. {\it GitHub}'s formatting for {\tt Markdown} works as expected. \\
 
 In addition, tools for working with source code and \LaTeX\ source files include: \vspace{-0.3cm}
 \begin{enumerate} \itemsep -4pt
@@ -336,13 +369,24 @@ In addition, tools for working with source code and \LaTeX\ source files include
 	\begin{enumerate} \itemsep -2pt
 	\item Evan Driscoll, ``Latexdiff notes,'' from {\it Evan Driscoll's web page: Writings on Software: \LaTeX}, the Department of Computer Sciences, University of Wisconsin-Madison College of Engineering, University of Wisconsin-Madison, Madison, WI. Available online at: \url{http://pages.cs.wisc.edu/~driscoll/software/latex/latexdiff.html}; last accessed on February 15, 2016 \cite{Driscoll20XYa}.
 	\end{enumerate}
-\item {\tt SCons}: \cite{Driscoll20XY}
+\item documentation generators: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item {\it Doxygen} \cite{vanHeesch2016}
+	\item {\tt Texinfo}-based generators \cite{WikipediaContributors2016h,Stallman2016,Stallman2016a,Stallman2016b}: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item 
+		\end{enumerate}
+	\end{enumerate}
+\item Build automation: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item {\tt SCons} \cite{Driscoll20XY}
+	\end{enumerate}
 \end{enumerate}
 
 
+Data sets and sets of benchmarks for experiments shall be publicly published using an online repository, via {\it figshare LLP} \cite{figshareLLPstaff2016}. For each data set, or each set of benchmarks, create a unique Digital Object Identifier (DOI) to identify it. \\
 
-
-
+Repositories for software as well as designs of integrated circuits and cyber-physical systems shall be stored online, using online repositories such as {\it GitHub} \cite{GitHubStaff2016}. Each repository shall have a unique DOI to identify it, and include all source code, documentation, and design files. \\
 
 
 

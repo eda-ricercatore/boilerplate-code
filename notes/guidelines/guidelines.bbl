@@ -1,0 +1,272 @@
+\begin{thebibliography}{10}
+
+\bibitem{Abrahams1998}
+David Abrahams.
+\newblock Exception-safety in generic components: Lessons learned from
+  specifying exception-safety for the {C++} standard library.
+\newblock In {\em Proceedings of the International Seminar on Generic
+  Programming}, volume 1766 of {\em Lecture Notes in Computer Science}, pages
+  69--79, Wadern, Merzig-Wadern, Saarland, Germany, April 27 -- May 1 1998.
+  Springer-Verlag Berlin Heidelberg.
+
+\bibitem{Abrahams2001}
+David Abrahams.
+\newblock Exception-safety in generic components: Lessons learned from
+  specifying exception-safety for the {C++} standard library.
+\newblock Available online from {\it Boost C++ Libraries: Community} at:
+  \url{http://www.boost.org/community/exception_safety.html}; self-published;
+  October 27, 2016 was the last accessed date, 2001.
+
+\bibitem{ACMCouncil1992}
+{ACM Council}.
+\newblock {ACM} code of ethics and professional conduct.
+\newblock Available online at: \url{http://www.acm.org/about/code-of-ethics};
+  September 27, 2014 was the last accessed date, October 16 1992.
+
+\bibitem{HewlettPackardCompany2012}
+Hewlett-Packard Company.
+\newblock Dave packard's 11 simple rules.
+\newblock Available online in {\it Hewlett-Packard Company: Retiree Home:
+  History: Founders {\rm \&} early contributors--Dave Packard} at:
+  \url{http://www.hp.com/retiree/history/founders/packard/11rules.html}; March
+  15, 2014 was the last accessed date, 2012.
+
+\bibitem{Driscoll20XYa}
+Evan Driscoll.
+\newblock A description of the c++ {\tt typename} keyword.
+\newblock Available online from {\it Evan Driscoll's web page: Writings on
+  Software: C++}, the Department of Computer Sciences, University of
+  Wisconsin--Madison College of Engineering, University of Wisconsin--Madison
+  at: \url{http://pages.cs.wisc.edu/~driscoll/typename.html}; February 15, 2016
+  was the last accessed date.
+
+\bibitem{Driscoll20XY}
+Evan Driscoll.
+\newblock Scons documentation recommendatitons.
+\newblock Available online from {\it Evan Driscoll's web page: Writings on
+  Software: SCons}, the Department of Computer Sciences, University of
+  Wisconsin--Madison College of Engineering, University of Wisconsin--Madison
+  at: \url{http://pages.cs.wisc.edu/~driscoll/software/scons/index.html};
+  February 15, 2016 was the last accessed date.
+
+\bibitem{Driscoll2012}
+Evan Driscoll.
+\newblock Version control.
+\newblock Available online from {\it Evan Driscoll's web page: Writings on
+  Software}, the Department of Computer Sciences, University of
+  Wisconsin--Madison College of Engineering, University of Wisconsin--Madison
+  at: \url{http://pages.cs.wisc.edu/~driscoll/software/vcs/}; February 15, 2016
+  was the last accessed date, February 22 2012.
+
+\bibitem{Evangelista2012}
+Benny Evangelista.
+\newblock Facebook's hacker way -- ``move fast and break things''.
+\newblock Available online in {\it The San Francisco Chronicle: {The SF Gate}:
+  Blogs at SFGate.com: The Technology Chronicles} at:
+  \url{http://blog.sfgate.com/techchron/2012/02/01/facebooks-hacker-way-move-fast-and-break-things/};
+  October 9, 2014 was the last accessed date, February 1 2012.
+
+\bibitem{figshareLLPstaff2016}
+{figshare LLP staff}.
+\newblock figshare: credit for all your research.
+\newblock Available online at: \url{https://figshare.com/}; November 4, 2016
+  was the last accessed date, 2016.
+
+\bibitem{Fong2011}
+Rachel Fong.
+\newblock Move fast and break things.
+\newblock Available online in {\it {MIT} Admissions: Blogs: Academics {\rm \&}
+  Research} at:
+  \url{http://mitadmissions.org/blogs/entry/move_fast_and_break_things};
+  October 9, 2014 was the last accessed date, June 25 2011.
+
+\bibitem{GitHubStaff2016}
+{GitHub staff}.
+\newblock {GitHub}.
+\newblock Available online at: \url{https://github.com/}; November 4, 2016 was
+  the last accessed date, 2016.
+
+\bibitem{IEEE2014b}
+{IEEE Board of Directors}.
+\newblock {IEEE} code of ethics.
+\newblock Available online at:
+  \url{http://www.ieee.org/about/ieee_code_of_conduct.pdf}; October 2, 2014 was
+  the last accessed date, June 2014.
+
+\bibitem{IEEE2014a}
+{IEEE Board of Directors}.
+\newblock {IEEE} code of ethics.
+\newblock In {\em {IEEE} Policies}, page 7.3. Institute of Electrical and
+  Electronics Engineers, New York, {NY}, 2014.
+
+\bibitem{IEEE2014}
+{IEEE Board of Directors}.
+\newblock {IEEE} policies.
+\newblock Technical report, Institute of Electrical and Electronics Engineers,
+  New York, {NY}, August 2014.
+
+\bibitem{IEEE2014c}
+{IEEE Board of Directors}.
+\newblock Nondiscrimination policy.
+\newblock In {\em {IEEE} Policies}, page 9.8. Institute of Electrical and
+  Electronics Engineers, New York, {NY}, 2014.
+
+\bibitem{Knuth1984}
+Donald~E. Knuth.
+\newblock Literate programming.
+\newblock {\em The Computer Journal}, 27(2):97--111, 1984.
+
+\bibitem{Knuth1992a}
+Donald~E. Knuth.
+\newblock {\em Literate Programming}.
+\newblock Center for the Study of Language and Information -- Lecture Notes.
+  The University of Chicago Press, Chicago, {IL}, 1992.
+
+\bibitem{Kopka2004}
+Helmut Kopka and Patrick~W. Daly.
+\newblock {\em Guide to {\LaTeX}}.
+\newblock Addison-Wesley Series on Tools and Techniques for Computer
+  Typesetting. Addison-Wesley, Boston, {MA}, fourth edition, 2004.
+
+\bibitem{Kushner2011}
+David Kushner.
+\newblock {Facebook} philosophy: Move fast and break things -- hacker culture
+  is alive and well at {Facebook}.
+\newblock Available online in {\it {IEEE Spectrum}} at:
+  \url{http://spectrum.ieee.org/at-work/innovation/facebook-philosophy-move-fast-and-break-things/0};
+  October 9, 2014 was the last accessed date, June 1 2011.
+
+\bibitem{Macdonald20XY}
+Ian Macdonald.
+\newblock The unofficial {Ruby} usage guide.
+\newblock Available online from {\it Caliban -- Opinion and Righteous Anger:
+  Ruby Projects: Recommended Tutorials} at:
+  \url{http://www.caliban.org/ruby/rubyguide.shtml}; self-published; October
+  20, 2015 was the last accessed date.
+
+\bibitem{McConnell2004}
+Steve {McConnell}.
+\newblock {\em Code Complete: A Practical Handbook of Software Construction}.
+\newblock Microsoft Press, Redmond, {WA}, second edition, 2004.
+
+\bibitem{MullerHannemann2010}
+Matthias M{\"{u}}ller-Hannemann and Stefan Schirra.
+\newblock {\em Algorithm Engineering: Bridging the Gap between Algorithm Theory
+  and Practice}, volume 5971 of {\em Lecture Notes in Computer Science}.
+\newblock Springer-Verlag Berlin Heidelberg, Heidelberg, Germany, 2010.
+
+\bibitem{Oram2007}
+Andy Oram and Greg Wilson.
+\newblock {\em Beautiful Code: Leading Programmers Explain How They Think}.
+\newblock O'Reilly Media, Sebastopol, {CA}, 2007.
+
+\bibitem{Patashnik1988}
+Oren Patashnik.
+\newblock {\sc Bib}{\TeX}ing.
+\newblock Available online at:
+  \url{http://mirrors.ctan.org/biblio/bibtex/base/btxdoc.pdf}; September 24,
+  2014 was the last accessed date, February 8 1988.
+
+\bibitem{Schach2007}
+Stephen~R. Schach.
+\newblock {\em Object-Oriented and Classical Software Engineering}.
+\newblock McGraw-Hill, New York, {NY}, seventh edition, 2007.
+
+\bibitem{Stallman2016a}
+Richard Stallman and Bob Chassell.
+\newblock {GNU Texinfo} 6.3.
+\newblock Available online from {\it The GNU Operating System and the Free
+  Software Movement: {GNU} Software: {Texinfo} -- The {GNU} Documentation
+  System: {Texinfo} manuals: {GNU Texinfo} manual} at:
+  \url{https://www.gnu.org/software/texinfo/manual/texinfo/texinfo.html};
+  November 4, 2016 was the last accessed date, September 11 2016.
+
+\bibitem{Stallman2016b}
+Richard Stallman and Bob Chassell.
+\newblock {GNU Texinfo} manual.
+\newblock Available online from {\it The GNU Operating System and the Free
+  Software Movement: {GNU} Software: {Texinfo} -- The {GNU} Documentation
+  System: {Texinfo} manuals} at:
+  \url{https://www.gnu.org/software/texinfo/manual/texinfo/}; November 4, 2016
+  was the last accessed date, September 11 2016.
+
+\bibitem{Stallman2016}
+Richard Stallman and Bob Chassell.
+\newblock {Texinfo}: The {GNU} documentation system.
+\newblock Available online from {\it The GNU Operating System and the Free
+  Software Movement: {GNU} Software} at:
+  \url{https://www.gnu.org/software/texinfo/}; November 4, 2016 was the last
+  accessed date, September 11 2016.
+
+\bibitem{Subramaniam2006}
+Venkat Subramaniam and Andy Hunt.
+\newblock {\em Practices of an Agile Developer: Working in the Real World}.
+\newblock The Pragmatic Programmers, Raleigh, {NC}, 2006.
+
+\bibitem{vanHeesch2016}
+Dimitri {van Heesch}.
+\newblock Doxygen.
+\newblock Available online at {M.C.G.V. Stack}:
+  \url{http://www.stack.nl/~dimitri/doxygen/} and \url{http://doxygen.org/};
+  November 4, 2016 was the last accessed date, September 11 2016.
+
+\bibitem{vanRossum2013}
+Guido {van Rossum}, Barry Warsaw, and Nick Coghlan.
+\newblock Style guide for {Python} code.
+\newblock Available online as {\it {Python}: {Python} Developer's Guide:
+  {Python} Enhancement Proposals: {Python} Enhancement Proposal 0} at:
+  \url{https://www.python.org/dev/peps/pep-0008/}; October 20, 2015 was the
+  last accessed date, August 1 2013.
+
+\bibitem{WikibooksContributors2016}
+{Wikibooks contributors}.
+\newblock Exception handling.
+\newblock In {\em {C++} Programming}, chapter~4. Wikimedia Foundation, San
+  Francisco, {CA}, February 11 2016.
+
+\bibitem{WikipediaContributors2016f}
+{Wikipedia contributors}.
+\newblock Exception safety.
+\newblock Available online from {\it Wikipedia, The Free Encyclopedia:
+  CATEGORY} at: \url{https://en.wikipedia.org/wiki/Exception_safety}; October
+  29, 2016 was the last accessed date, September 26 2016.
+
+\bibitem{WikipediaContributors2016j}
+{Wikipedia contributors}.
+\newblock Indent style.
+\newblock Available online in {\it Wikipedia, The Free Encyclopedia: Source
+  code} at: \url{https://en.wikipedia.org/wiki/Indent_style}; November 4, 2016
+  was the last accessed date, October 30 2016.
+
+\bibitem{WikipediaContributors2016i}
+{Wikipedia contributors}.
+\newblock Natural language programming.
+\newblock Available online in {\it Wikipedia, The Free Encyclopedia: Computer
+  programming} at:
+  \url{https://en.wikipedia.org/wiki/Natural_language_programming}; November 4,
+  2016 was the last accessed date, November 2 2016.
+
+\bibitem{WikipediaContributors2016e}
+{Wikipedia contributors}.
+\newblock Semipredicate problem.
+\newblock Available online from {\it Wikipedia, The Free Encyclopedia:
+  Programming language topics} at:
+  \url{https://en.wikipedia.org/wiki/Semipredicate_problem}; October 29, 2016
+  was the last accessed date, October 23 2016.
+
+\bibitem{WikipediaContributors2016h}
+{Wikipedia contributors}.
+\newblock {Texinfo}.
+\newblock Available online in {\it Wikipedia, The Free Encyclopedia: Markup
+  languages} at: \url{https://en.wikipedia.org/wiki/Texinfo}; November 4, 2016
+  was the last accessed date, April 29 2016.
+
+\bibitem{Zuckerberg2012}
+Mark Zuckerberg.
+\newblock Letter from {Mark Zuckerberg}.
+\newblock Available online as {\it {Form S-1} REGISTRATION STATEMENT Under The
+  Securities Act of 1933, {Facebook, Inc.}} at:
+  \url{http://www.sec.gov/Archives/edgar/data/1326801/000119312512034517/d287954ds1.htm#toc287954_10};
+  October 9, 2014 was the last accessed date, February 1 2012.
+
+\end{thebibliography}
