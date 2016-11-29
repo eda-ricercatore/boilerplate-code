@@ -12,21 +12,80 @@ In addition, changes made to other types of components/entities in
 	this repository can also affect components/entities (of the same
 	types) in the following repositories.
 
-##	Repositories That Can Be Affected
+##	Repositories That Would Be Affected
+
+List of repositories that are affected by the *boilerplate* repository,
+	including its code base and notes:
+
++ [boilerplate-code](https://github.com/eda-ricercatore/boilerplate-code)
+	- Notes
+	- Scripts
+	- **Successor of the deprecated *lamiera-per-caldaie* repository.**
++ [lamiera-per-caldaie](https://github.com/eda-globetrotter/lamiera-per-caldaie)
+	- Notes
+	- Scripts
+	- **Deprecated repository.**
 
 
-### Ricercatore in Italia (eda-ricercatore) GitHub Repositories
-
-Repositories that can be affected by my primary *GitHub* account,
-	*Ricercatore in Italia (eda-ricercatore)* are:
-+
 
 
-###	EDA Globetrotter (eda-globetrotter) GitHub Repositories
+#	List of Notes
 
-Repositories that can be affected by my primary *GitHub* account,
-	*EDA Globetrotter (eda-globetrotter)* are:
-+ [sardegna-scala](https://github.com/eda-ricercatore/sardegna-scala)
+List of notes:
++ Guidelines for collaboration: [boilerplate-code](https://github.com/eda-ricercatore/boilerplate-code)
++ List of software dependencies:
+	- [boilerplate-code](https://github.com/eda-ricercatore/boilerplate-code)
+	- [gulyas-scripts](https://github.com/eda-ricercatore/gulyas-scripts)
++ List of dependencies between repositories:
+	- [boilerplate-code](https://github.com/eda-ricercatore/boilerplate-code)
+	- [gulyas-scripts](https://github.com/eda-ricercatore/gulyas-scripts)
+	- All respositories that are affected by changes in these
+		repositories are listed in this document. 
++ *BibTeX* file, database of *BibTeX* references/entries.
+	- Placed in repository, as needed.
++ Report (of data structures and algorithms implemented).
+	- [boilerplate-code](https://github.com/eda-ricercatore/boilerplate-code)
++ Programming/Computer languages:
+	- *Scala*: [sardegna-scala](https://github.com/eda-ricercatore/sardegna-scala)
+	- *R*: [gulyas-scripts](https://github.com/eda-ricercatore/gulyas-scripts) 
+	- *GNU Octave*: [gulyas-scripts](https://github.com/eda-ricercatore/gulyas-scripts)
+	- *LaTeX*: [SienaLaTeX, for *LaTeX*](https://github.com/eda-globetrotter/SienaLaTeX)
++ Libraries, API, ... that support interoperability between programming/computer languages: [gulyas-scripts](https://github.com/eda-ricercatore/gulyas-scripts)
++ Coding style, and guidelines for commenting:
+	- *Texinfo*: [gulyas-scripts](https://github.com/eda-ricercatore/gulyas-scripts)
++ *UNIX*-like Operating Systems:
+	- [boilerplate-code](https://github.com/eda-ricercatore/boilerplate-code)
+	- Generic information for using *UNIX*-like operating systems.
+	- Information for SSH connections, via the aforementioned OSes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Repositories Can Be Affected By Externalities
+
+Repositories that can be affected are:
++ [sardegna-scala, Scala code base](https://github.com/eda-ricercatore/sardegna-scala)
++ [scafati-presentazioni, Presentation Slides](https://github.com/eda-globetrotter/scafati-presentazioni)
++ [Computer Architecture Notes](https://github.com/eda-globetrotter/Treviso-Arch)
++ [SienaLaTeX, for *LaTeX*](https://github.com/eda-globetrotter/SienaLaTeX)
+	- *LaTeX* templates for:
+		* Articles
+		* Resume and curriculum vitae
+		* Presentation slides
+		* Report
+
+
 
 
 
@@ -41,13 +100,16 @@ Repositories that can be affected by my primary *GitHub* account,
 
 ###	Benchmark Repositories
 
++ [ispd2013contest-benchmarks](https://github.com/eda-globetrotter/ispd2013contest-benchmarks)
++ [ispd2013contest-benchmarks](https://github.com/eda-ricercatore/ispd2013contest-benchmarks)
 
 
 
 
 
-*************
-Put the benchmarks in the Open Data repository.
+
+
+# Benchmarks in the Open Data repository.
 
 
 
@@ -55,6 +117,13 @@ Put the benchmarks in the Open Data repository.
 ##	Repositories That Will Not Be Affected In The Future
 
 The following repositories are dead.
++ []()
++ []()
++ []()
++ []()
++ []()
++ []()
++ []()
 + []()
 
 
