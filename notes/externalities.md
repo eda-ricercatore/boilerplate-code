@@ -29,50 +29,10 @@ List of repositories that are affected by the *boilerplate* repository,
 
 
 
-#	List of Notes
-
-List of notes:
-+ Guidelines for collaboration: [boilerplate-code](https://github.com/eda-ricercatore/boilerplate-code)
-+ List of software dependencies:
-	- [boilerplate-code](https://github.com/eda-ricercatore/boilerplate-code)
-	- [gulyas-scripts](https://github.com/eda-ricercatore/gulyas-scripts)
-+ List of dependencies between repositories:
-	- [boilerplate-code](https://github.com/eda-ricercatore/boilerplate-code)
-	- [gulyas-scripts](https://github.com/eda-ricercatore/gulyas-scripts)
-	- All respositories that are affected by changes in these
-		repositories are listed in this document. 
-+ *BibTeX* file, database of *BibTeX* references/entries.
-	- Placed in repository, as needed.
-+ Report (of data structures and algorithms implemented).
-	- [boilerplate-code](https://github.com/eda-ricercatore/boilerplate-code)
-+ Programming/Computer languages:
-	- *Scala*: [sardegna-scala](https://github.com/eda-ricercatore/sardegna-scala)
-	- *R*: [gulyas-scripts](https://github.com/eda-ricercatore/gulyas-scripts) 
-	- *GNU Octave*: [gulyas-scripts](https://github.com/eda-ricercatore/gulyas-scripts)
-	- *LaTeX*: [SienaLaTeX, for *LaTeX*](https://github.com/eda-globetrotter/SienaLaTeX)
-+ Libraries, API, ... that support interoperability between programming/computer languages: [gulyas-scripts](https://github.com/eda-ricercatore/gulyas-scripts)
-+ Coding style, and guidelines for commenting:
-	- *Texinfo*: [gulyas-scripts](https://github.com/eda-ricercatore/gulyas-scripts)
-+ *UNIX*-like Operating Systems:
-	- [boilerplate-code](https://github.com/eda-ricercatore/boilerplate-code)
-	- Generic information for using *UNIX*-like operating systems.
-	- Information for SSH connections, via the aforementioned OSes.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-# Repositories Can Be Affected By Externalities
+## Repositories Can Be Affected By Externalities
 
 Repositories that can be affected are:
 + [sardegna-scala, Scala code base](https://github.com/eda-ricercatore/sardegna-scala)
@@ -98,7 +58,7 @@ Repositories that can be affected are:
 
 
 
-###	Benchmark Repositories
+##	Benchmark Repositories
 
 + [ispd2013contest-benchmarks](https://github.com/eda-globetrotter/ispd2013contest-benchmarks)
 + [ispd2013contest-benchmarks](https://github.com/eda-ricercatore/ispd2013contest-benchmarks)
@@ -108,13 +68,46 @@ Repositories that can be affected are:
 
 
 
+#	List of Notes
 
-# Benchmarks in the Open Data repository.
+List of notes:
++ Guidelines for collaboration: [boilerplate-code](https://github.com/eda-ricercatore/boilerplate-code)
++ List of software dependencies:
+	- [boilerplate-code](https://github.com/eda-ricercatore/boilerplate-code)
+	- [gulyas-scripts](https://github.com/eda-ricercatore/gulyas-scripts)
++ List of dependencies between repositories:
+	- [boilerplate-code](https://github.com/eda-ricercatore/boilerplate-code)
+	- [gulyas-scripts](https://github.com/eda-ricercatore/gulyas-scripts)
+	- All respositories that are affected by changes in these
+		repositories are listed in this document. 
++ *BibTeX* file, database of *BibTeX* references/entries.
+	- Placed in repository, as needed.
++ Report (of implemented data structures and algorithms).
+	- [boilerplate-code](https://github.com/eda-ricercatore/boilerplate-code)
++ Programming/Computer languages:
+	- *Scala*: [sardegna-scala](https://github.com/eda-ricercatore/sardegna-scala)
+	- *R*: [gulyas-scripts](https://github.com/eda-ricercatore/gulyas-scripts) 
+	- *GNU Octave*: [gulyas-scripts](https://github.com/eda-ricercatore/gulyas-scripts)
+	- *LaTeX*: [SienaLaTeX, for *LaTeX*](https://github.com/eda-globetrotter/SienaLaTeX)
++ Libraries, API, ... that support interoperability between programming/computer languages: [gulyas-scripts](https://github.com/eda-ricercatore/gulyas-scripts)
++ Coding style, and guidelines for commenting:
+	- *Texinfo*: [gulyas-scripts](https://github.com/eda-ricercatore/gulyas-scripts)
++ *UNIX*-like Operating Systems:
+	- [boilerplate-code](https://github.com/eda-ricercatore/boilerplate-code)
+	- Generic information for using *UNIX*-like operating systems.
+	- Information for SSH connections, via the aforementioned OSes.
 
 
 
 
-##	Repositories That Will Not Be Affected In The Future
+
+
+#	Benchmarks in the Open Data repository.
+
+
+
+
+#	Repositories That Will Not Be Affected In The Future
 
 The following repositories are dead.
 + []()
@@ -125,6 +118,42 @@ The following repositories are dead.
 + []()
 + []()
 + []()
+
+
+
+
+
+
+
+#	Repositories: Revision Material
+
+Repositories that contain material to help me revise for the
+	Ph.D. qualifying examination, job/internship interviews, ...:
++ [Analog Circuits](https://github.com/eda-globetrotter/genova-circuiti-analogici)
++ [Electrical Circuit Analysis](https://github.com/eda-globetrotter/como-analisi-del-circuito)
++ [Digital VLSI design + Logic Design](https://github.com/eda-globetrotter/puglia-circuiti-digitali)
++ [Computer Architecture](https://github.com/eda-globetrotter/lucca-architettura-del-computer)
+	- Include the material from: [Treviso-Arch, Report about computer architecture](https://github.com/eda-globetrotter/Treviso-Arch) 
++ [Signals and Systems](https://github.com/eda-globetrotter/bergamo-segnali-e-sistemi)
++ [Engineering Electromagnetics](https://github.com/eda-globetrotter/bolzano-elettromagnetismo)
++ [Probability and Statistics](https://github.com/eda-globetrotter/bologna-probabilita-e-statistica)
++ *Scientific Computation*
++ *Decision Procedures*
++ *Formal Verification*
++ *Device Engineering*
++ *Material Science*
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -142,8 +171,13 @@ Other repositories/projects that Zhiyang Ong is involved, currently
 
 
 
+#	Zhiyang Ong's web page
+
+[Zhiyang Ong's web page](https://github.com/eda-ricercatore/eda-globetrotter.github.io)
+
 
 #	Author Information
+
 
 The MIT License (MIT)
 
