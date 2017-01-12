@@ -220,7 +220,7 @@ Input/output of compilers are specified, and implement the compiler/interpreter 
 
 - \cite{Adve2001}:		Adve, V., and Sakellariou, R. Compiler synthesis of task graphs for parallel program performance prediction. In Proceedings of the 13th International Workshop on Languages and Compilers for Parallel Computing (LCPC 2000) (Yorktown Heights, NY, August 10–12 2001), vol. 2017 of Lecture Notes in Computer Science, Springer-Verlag Berlin Heidelberg, pp. 208–226.
 
-- \cite{Wolfe1995}:		Wolfe, M. High-Performance Compilers for Parallel Computing. Addison-Wesley, Reading, MA, 1995.
+- \cite{Wolfe1996}:		Wolfe, M. High-Performance Compilers for Parallel Computing. Addison-Wesley, Reading, MA, 1996.
 
 - \cite{Haghighat1995}:	Haghighat, M. R. Symbolic Analysis for Parallelizing Compilers. Kluwer Academic Publishers, Nor- well, MA, 1995.
 
