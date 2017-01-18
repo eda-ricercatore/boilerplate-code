@@ -36,9 +36,10 @@ To uncompress/unarchive "*.tar.xz" files, try:
 
 ##	Making Files Executable
 
-`chmod 744 *[filename]*` makes the file *[filename]* executable 
-
-
+`chmod 744 *[filename]*` makes the file *[filename]* executable, via
+	invoking its filename.
+	That is, it enables the file *[filename]* to be executed as a
+	computer program.
 
 
 
