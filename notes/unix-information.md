@@ -33,6 +33,16 @@ To uncompress/unarchive "*.tar.xz" files, try:
 
 
 
+
+##	Making Files Executable
+
+`chmod 744 *[filename]*` makes the file *[filename]* executable 
+
+
+
+
+
+
 #	References
 
 
