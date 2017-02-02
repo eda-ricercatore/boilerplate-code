@@ -8,7 +8,8 @@ The following can be used to draw horizontal rules/lines \cite{Gruber2004}:
 + Five consecutive asterisks: *`*****`*
 + Three consecutive dashes: *`---`*
 
-
+Note that these horizontal rules/lines cannot be drawn to partition
+	a list.
 
 
 
