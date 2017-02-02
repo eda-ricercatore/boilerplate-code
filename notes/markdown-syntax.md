@@ -3,10 +3,10 @@
 ##	Notes About Horizontal Rules/Lines
 
 The following can be used to draw horizontal rules/lines \cite{Gruber2004}:
-+ *`***`*
-+ *`* * *`*
-+ *`*****`*
-+ *`---`*
++ Three consecutive asterisks: *`***`*
++ Three asterisks, with a character space in between them: *`* * *`*
++ Five consecutive asterisks: *`*****`*
++ Three consecutive dashes: *`---`*
 
 
 
