@@ -185,6 +185,8 @@ int main(int argc, char *argv[]) {
 	utilities_mt::test_utilities();
 	// Switch on debugging mode to test other modules.
 	printer::set_debugging_mode(true);
+	printer::debug_std_op_ln("");
+	printer::debug_std_op_ln("");
 	
 	
 	// Testing the graph package

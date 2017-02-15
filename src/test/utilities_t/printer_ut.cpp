@@ -48,6 +48,8 @@ printer_ut::printer_ut() {
 // Function to test the constructor and functions of printer
 void printer_ut::test_printer() {
 	printer::set_debugging_mode(true);
+	printer::debug_std_op_ln("");
+	printer::debug_std_op_ln("");
 	printer::debug_std_op_ln("==tu	Testing: printer...");
 	
 	//	Test the default and standard constructors of printer.
@@ -59,7 +61,7 @@ void printer_ut::test_printer() {
 	// Test the output print functions
 	test_print_fn();
 	
-	printer::debug_std_op_ln("");
+//	printer::debug_std_op_ln("");
 	printer::set_debugging_mode(false);
 }
 

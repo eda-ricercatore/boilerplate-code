@@ -52,8 +52,6 @@ void violated_postcondition_ut::test_violated_postcondition() {
 		throw new violated_postcondition("==tu	>>	Tested: violated_postcondition.");
 	}catch(violated_postcondition *err) {
 		printer::debug_std_op_ln("==tu	==>	violated_postcondition works.");
-		printer::debug_std_op_ln("");
-		printer::debug_std_op_ln("");
 		printer::num_passed_test_cases_eval();
 	}
 	printer::set_debugging_mode(false);
