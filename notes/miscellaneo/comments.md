@@ -63,92 +63,75 @@ An object has attributes/fields, and behaviors captured by
 	procedures/methods/functions.
 
 Other references about the basics of object-oriented programming are:
++ \cite[Scala]{Alexander2013a}
++ \cite{Anderson1998}
++ \cite{Ashrafi2009}
++ \cite[UML, Java]{Barclay2004}
 + \cite{BenAri1996}
++ \cite[UML]{Bennett2010}
 + \cite{Berman2016}
++ \cite{Booch2007}
 + \cite[C++]{Bronson2013}
++ \cite{Bruce2002}
++ \cite[UML, Java]{Bruegge2010}
++ \cite{Capretz1996}
 + \cite[C++]{Carrano2013}
 + \cite[Java]{Carrano2012}
 + \cite{Chapman1996}
-
-
-
-
-
-
-
++ \cite[Java]{Dale2012}
++ \cite{Deacon2005}
++ \cite[UML]{Dennis2012a}
++ \cite[C++]{Duffy2006}
++ \cite[C++]{Farrell2008}
++ \cite{Friedman2008}
++ \cite{Gabbrielli2010}
 + \cite[Design patterns]{Gamma1995}
++ \cite{Ghezzi1998}
++ \cite{Haigh2001}
 + \cite{Heileman1996}
++ \cite{Horstmann2006}
++ \cite[C++]{Johnsonbaugh1999}
++ \cite[C++]{Josuttis2003}
 + \cite[Java]{Koffman2010}
-
++ \cite[C++]{Lafore1997}
 + \cite[UML]{Larman2005}
++ \cite[Python]{Lott2014}
++ \cite{Louden2012}
++ \cite[Python]{Lutz2013}
++ \cite[Python]{Lutz2006}
++ \cite{MacLennan1999}
 + \cite[C++]{Malik2010}
 + \cite{Martin1995}
++ \cite{McIver2003}
++ \cite{McLaughlin2007}
++ \cite{Meyer1997a}
++ \cite{ODocherty2005}
 + \cite[UML]{Oestereich2002}
++ \cite{PageJones2000}
++ \cite{Phillips2015}
 + \cite{Pierce2002}
-
++ \cite[C++]{Pohl1996}
 + \cite[C++, Java, Python, and Ruby]{Preiss1999,Preiss1999a,Preiss2003,Preiss2004b}
++ \cite{Ramnath2011}
++ \cite{Satzinger2004}
++ \cite{Schach2011}
++ \cite{Schach2008}
++ \cite[UML]{Schach2004}
 + \cite{Schmidt1994}
-
++ \cite{Scott2009}
 + \cite[C++]{Seed2001} 
++ \cite[C++]{Shapira2009}
++ \cite{Shelly2012}
++ \cite{Tucker2007}
 + \cite{Turbak2008}
++ \cite[Scala]{Wampler2015}
++ \cite{Watt2004}
++ \cite{Webber2003}
 + \cite{Weisfeld2013}
 + \cite[C++]{Weiss2003}
++ \cite{Wiener2000}
 + \cite[Comparisons of different programming languages]{Wilson2001}
 + \cite[C++]{Yang2001}
-
-+ \cite[UML]{Dennis2012a}
-+ \cite{Shelly2012}
-+ \cite[Scala]{Alexander2013a}
-+ \cite[Python]{Lutz2006}
-+ \cite[Scala]{Wampler2015}
-+ \cite{Phillips2015}
-+ \cite{McIver2003}
-+ \cite{Gabbrielli2010}
-+ \cite{Tucker2007}
-+ \cite{Louden2012}
-+ \cite{Scott2009}
-+ \cite{Watt2004}
-+ \cite{Ghezzi1998}
-+ \cite{MacLennan1999}
-+ \cite[UML]{Bennett2010}
-+ \cite{Ashrafi2009}
-+ \cite[UML, Java]{Bruegge2010}
-+ \cite{Schach2008}
-+ \cite{Capretz1996}
-+ \cite{Meyer1997a}
-+ \cite[C++]{Farrell2008}
-+ \cite[C++]{Pohl1996}
-+ \cite[C++]{Josuttis2003}
-+ \cite[C++]{Johnsonbaugh1999}
-+ \cite[C++]{Lafore1997}
-+ \cite[UML, Java]{Barclay2004}
-+ \cite{Horstmann2006}
-+ \cite[Java]{Dale2012}
-+ \cite{Schach2011}
-+ \cite{Satzinger2004}
-+ \cite{Booch2007}
-+ \cite{ODocherty2005}
-+ \cite{Deacon2005}
-+ \cite{Haigh2001}
-+ \cite{Ramnath2011}
-+ \cite{Anderson1998}
-+ \cite{Webber2003}
-+ \cite[C++]{Shapira2009}
-+ \cite[Python]{Lott2014}
-+ \cite[Python]{Lutz2013}
-+ \cite[UML]{Schach2004}
-+ \cite[C++]{Duffy2006}
-+ \cite{McLaughlin2007}
-+ 
-+ 
-+ 
-+ 
-+ 
-+ 
-+ 
-+ 
-+ 
-+ 
 
 
 
