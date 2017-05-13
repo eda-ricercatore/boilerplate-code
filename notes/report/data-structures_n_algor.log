@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  12 MAY 2017 15:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  12 MAY 2017 19:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1339,7 +1339,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 283.
 Here is how much of TeX's memory you used:
  16984 strings out of 493089
  238037 string characters out of 6134842
- 349552 words of memory out of 5000000
+ 348552 words of memory out of 5000000
  19294 multiletter control sequences out of 15000+600000
  20883 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1366,7 +1366,7 @@ exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/20
 15/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on data-structures_n_algor.pdf (48 pages, 400239 bytes).
+Output written on data-structures_n_algor.pdf (48 pages, 400247 bytes).
 PDF statistics:
  1889 PDF objects out of 2073 (max. 8388607)
  1800 compressed objects within 18 object streams
