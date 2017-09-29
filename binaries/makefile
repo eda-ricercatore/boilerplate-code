@@ -115,8 +115,9 @@ NORMALTXT=			normal_output.txt
 ERRORTXT=			error_output.txt
 #	Used when testing and debugging.
 COVERAGE=			-coverage
-CPP11=				-std=c++0x
-CPP14=				-Wc++14-extensions
+CPP11=				-std=c++11
+CPP14=				-std=c++14
+CPP17=				-std=c++17
 
 
 
