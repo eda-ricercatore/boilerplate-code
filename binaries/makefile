@@ -131,7 +131,7 @@ CPP17=				-std=c++17
 # The modules are located in the "src" directory.
 # This is because I am building and testing the software in a
 #	separate directory, so that I can isolate the object files
-#	and theexecutable from the source code.
+#	and the executable from the source code.
 # Such isolation would make it easier to clean up the directory where
 #	the software resides, so that it is easier to maintain.
 #
