@@ -54,7 +54,7 @@
 directed_graph_node_ut::directed_graph_node_ut() {
 	cerr << "==tu	Don't instantiate the tester for directed_graph_node";
 	cerr << endl;
-	string err_msg = "==tu	Don't use directed_graph_node's default constructor";
+	string err_msg = "==tu	Don't use directed_graph_node_ut's default constructor";
 	throw new violated_assertion(err_msg);
 }
 
