@@ -27,7 +27,7 @@
 \contentsline {subsubsection}{\numberline {6.4.1.1}Hoare Logic for Computer Arithmetic}{28}{subsubsection.6.4.1.1}
 \contentsline {subsection}{\numberline {6.4.2}Debugging {\it C++} Software}{28}{subsection.6.4.2}
 \contentsline {subsubsection}{\numberline {6.4.2.1}Interpreting {\it C++} Compilation Errors}{28}{subsubsection.6.4.2.1}
-\contentsline {subsection}{\numberline {6.4.3}Parser Development}{28}{subsection.6.4.3}
+\contentsline {subsection}{\numberline {6.4.3}Parser Development}{29}{subsection.6.4.3}
 \contentsline {section}{\numberline {6.5}Parallel Programming in C++}{29}{section.6.5}
 \contentsline {section}{\numberline {6.6}Numerical Computing in C++}{29}{section.6.6}
 \contentsline {chapter}{\numberline {7}Questions}{30}{chapter.7}

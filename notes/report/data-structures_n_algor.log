@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  12 MAY 2017 19:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  6 OCT 2017 20:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1069,100 +1069,100 @@ nts templates
  []
 
 [14] [15] [16]
-Overfull \hbox (6.61278pt too wide) in paragraph at lines 346--347
+Overfull \hbox (6.61278pt too wide) in paragraph at lines 353--354
 [][]$\OT1/cmtt/m/n/12 http : / / faculty . cs . niu . edu / []mcmahon / CS241 /
  Notes / pass _ by _ address . html$[][]\OT1/cmr/m/n/12 ; last
  []
 
 
-Overfull \hbox (6.61278pt too wide) in paragraph at lines 352--353
+Overfull \hbox (6.61278pt too wide) in paragraph at lines 359--360
 [][]$\OT1/cmtt/m/n/12 http : / / faculty . cs . niu . edu / []mcmahon / CS241 /
  Notes / pass _ by _ address . html$[][]\OT1/cmr/m/n/12 ; last
  []
 
-
-Overfull \hbox (252.03519pt too wide) in paragraph at lines 378--379
+[17]
+Overfull \hbox (252.03519pt too wide) in paragraph at lines 385--386
 [][][]$\OT1/cmtt/m/n/12 http : / / stackoverflow . com / questions / 1143262 / 
 what-[]is-[]the-[]difference-[]between-[]const-[]int-[]const-[]int-[]const-[]an
 d-[]int-[]const$[][]
  []
 
-[17] [18] [19] [20]
-Underfull \hbox (badness 10000) in paragraph at lines 551--552
+[18] [19] [20]
+Underfull \hbox (badness 10000) in paragraph at lines 558--559
 
  []
 
 
-Overfull \hbox (31.64459pt too wide) in paragraph at lines 558--581
+Overfull \hbox (31.64459pt too wide) in paragraph at lines 565--588
  [] 
  []
 
 [21]
-Overfull \hbox (0.14946pt too wide) in paragraph at lines 652--653
+Overfull \hbox (0.14946pt too wide) in paragraph at lines 659--660
 \OT1/cmr/m/it/12 tions \OT1/cmr/m/n/12 and \OT1/cmr/m/it/12 Re-lated asymp-toti
 c no-ta-tions: Fam-ily of Bach-mann?Landau no-ta-tions\OT1/cmr/m/n/12 , in \OT1
 /cmr/m/it/12 Wikipedia,
  []
 
-
-Overfull \hbox (16.01257pt too wide) in paragraph at lines 653--654
+[22]
+Overfull \hbox (16.01257pt too wide) in paragraph at lines 660--661
 \OT1/cmtt/m/n/12 wikipedia . org / wiki / Time _ complexity # Table _ of _ comm
 on _ time _ complexities$[][]\OT1/cmr/m/n/12 ; last ac-cessed
  []
 
-[22]
-Underfull \hbox (badness 10000) in paragraph at lines 719--720
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 726--727
 
  []
 
-[23]
-Underfull \hbox (badness 10000) in paragraph at lines 721--722
+
+Underfull \hbox (badness 10000) in paragraph at lines 728--729
 
  []
 
 [24] [25] [26]
-Underfull \hbox (badness 10000) in paragraph at lines 915--916
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 917--919
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 920--921
-
- []
-
-[27]
 Underfull \hbox (badness 10000) in paragraph at lines 922--923
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 941--943
+Underfull \hbox (badness 10000) in paragraph at lines 924--926
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 952.
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 927--928
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 929--930
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 948--950
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 959.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 952.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 959.
 
-Underfull \hbox (badness 10000) in paragraph at lines 963--964
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 965--966
+Underfull \hbox (badness 10000) in paragraph at lines 970--971
 
  []
 
-[28]) (./questions/questions.tex [29]
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 972--973
+
+ []
+
+) (./questions/questions.tex [29]
 Chapter 7.
 
 Overfull \hbox (230.5794pt too wide) in paragraph at lines 51--53
@@ -1325,25 +1325,25 @@ erences$[][]\OT1/cmr/m/n/12 ; Oc-to-ber 28, 2015 was
  []
 
 [41] [42])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 283.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 284.
  [43]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 283.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 284.
  (./data-structures_n_algor.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 283.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 283.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 284.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 284.
 Package rerunfilecheck Info: File `data-structures_n_algor.out' has not changed
 .
 (rerunfilecheck)             Checksum: 3872A00CB721D4C00D47611D36C4E248;2367.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 283.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 284.
  ) 
 Here is how much of TeX's memory you used:
- 16984 strings out of 493089
- 238037 string characters out of 6134842
- 348552 words of memory out of 5000000
+ 16989 strings out of 493089
+ 238077 string characters out of 6134842
+ 349552 words of memory out of 5000000
  19294 multiletter control sequences out of 15000+600000
  20883 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,15n,96p,1262b,709s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,15n,96p,1262b,668s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
@@ -1366,10 +1366,10 @@ exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/20
 15/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on data-structures_n_algor.pdf (48 pages, 400247 bytes).
+Output written on data-structures_n_algor.pdf (48 pages, 400803 bytes).
 PDF statistics:
- 1889 PDF objects out of 2073 (max. 8388607)
- 1800 compressed objects within 18 object streams
- 852 named destinations out of 1000 (max. 500000)
+ 1892 PDF objects out of 2073 (max. 8388607)
+ 1802 compressed objects within 19 object streams
+ 857 named destinations out of 1000 (max. 500000)
  281 words of extra memory for PDF output out of 10000 (max. 10000000)
 

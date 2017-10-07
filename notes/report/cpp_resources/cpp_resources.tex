@@ -233,6 +233,13 @@ C++ topics: \vspace{-0.3cm}
 		\begin{enumerate} \itemsep -2pt
 		\item {\tt vector$<$int$>$ v(10);} \hspace{0.2in} //{\it\ Create an int vector of size 10.}
 		\item {\tt v[5] = 10;} //{\it\ Target of this assignment is the return value of operator[].}
+		\item Determine how to operate with a pointer to a vector of pointers: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item vector$<$object$^{\ast}>$ $^{\ast}$connections;
+			\item object$^{\ast}$ oneObject = new object;
+			\item connections--$>$push\_back(oneObject);
+			\item ($^{\ast}$connections)[0]--$>$Initialize(index);
+			\end{enumerate}
 		\end{enumerate}
 	\item \cite[\S18.2, pp. 960--977]{Savitch2009}
 	\item \cite{Reese2006a}, book
@@ -473,7 +480,7 @@ C++ topics: \vspace{-0.3cm}
 	\item From \cite[API documentation for Eigen3: The template and typename keywords in C++]{Avery2016}, or \url{http://eigen.tuxfamily.org/dox/TopicTemplateKeyword.html}.
 	\item Wikipedia contributors, ``typename,'' in {\it Wikipedia, The Free Encyclopedia: C++}, Wikimedia Foundation, San Francisco, CA, April 13, 2015. Available online at: \url{https://en.wikipedia.org/wiki/Typename}; last accessed on February 15, 2016.: \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
-		\item Usage \#1: ``A synonym for "class" in template parameters''
+		\item Usage \#1: ``A synonym for `class' in template parameters''
 		\item Usage \#2: ``A method for indicating that a dependent name is a type''
 		\end{enumerate}
 	\item \cite[pp. 916]{Savitch2009}
