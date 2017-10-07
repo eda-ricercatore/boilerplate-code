@@ -108,9 +108,10 @@ DYNDIRINC=			-L
 DYNINCLUDE=			-l
 #	Used when testing and debugging.
 COVERAGE=			-coverage
-CPP11=				-std=c++0x
-CPP14=				-Wc++14-extensions
-
+#CPP11=				-std=c++0x
+#CPP14=				-Wc++14-extensions
+CPP11=				-std=c++11
+CPP14=				-std=c++14
 
 
 # Module containing scripts used for file processing/management
@@ -580,6 +581,9 @@ template:
 
 #####################################################################
 #	Target for testing templates. (2)
+#
+#	[FIX THIS!!! Has compilation errors.]
+#
 #####################################################################
 # Build and run C++ program to experiment with templates.
 template1:
@@ -617,6 +621,10 @@ template1:
 
 #####################################################################
 #	Target for testing templates. (3)
+#
+#
+#	Good working example to follow: Uses typename, instead of classes.
+#
 #####################################################################
 # Build and run C++ program to experiment with templates.
 template2:

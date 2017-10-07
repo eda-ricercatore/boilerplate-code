@@ -2,7 +2,7 @@ template<typename T>
 class Foo
 {
     T bar;
-    static void doSomething(T param) {/* do stuff using T */}
+    static void doSomething(T param); // {/* do stuff using T */}
 };
 
 // somewhere in a .cpp
