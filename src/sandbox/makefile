@@ -694,6 +694,9 @@ template3:
 
 #####################################################################
 #	Target for testing templates. (5)
+#
+#	This works...
+#
 #####################################################################
 # Build and run C++ program to experiment with templates.
 template4:

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  15 AUG 2017 10:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  9 OCT 2017 14:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1487,77 +1487,24 @@ Package nag Warning: Command \it is an old LaTeX 2.09 command.
 (nag)                Use \itshape or \textit instead on input line 67.
 
 
-LaTeX Warning: Citation `WikipediaContributors2016h' on page 1 undefined on inp
-ut line 67.
-
-
-LaTeX Warning: Citation `Stallman2016' on page 1 undefined on input line 67.
-
-
-LaTeX Warning: Citation `Stallman2016a' on page 1 undefined on input line 67.
-
-
-LaTeX Warning: Citation `Stallman2016b' on page 1 undefined on input line 67.
-
-
-LaTeX Warning: Citation `figshareLLPstaff2016' on page 1 undefined on input lin
-e 67.
-
-
-LaTeX Warning: Citation `GitHubStaff2016' on page 1 undefined on input line 67.
-
-
-
 Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 88.
+(nag)                Use \itshape or \textit instead on input line 89.
 
 
 Package nag Warning: Command \tt is an old LaTeX 2.09 command. 
-(nag)                Use \ttfamily or \texttt instead on input line 88.
-
-
-LaTeX Warning: Citation `IEEE2014b' on page 1 undefined on input line 88.
-
-
-LaTeX Warning: Citation `IEEE2014a' on page 1 undefined on input line 88.
-
-
-LaTeX Warning: Citation `IEEE2014' on page 1 undefined on input line 88.
+(nag)                Use \ttfamily or \texttt instead on input line 89.
 
 
 Package nag Warning: Command \tt is an old LaTeX 2.09 command. 
-(nag)                Use \ttfamily or \texttt instead on input line 88.
+(nag)                Use \ttfamily or \texttt instead on input line 89.
 
 
-LaTeX Warning: Citation `ACMCouncil1992' on page 1 undefined on input line 88.
-
-
-LaTeX Warning: Citation `IEEE2014c' on page 1 undefined on input line 88.
-
-
-LaTeX Warning: Citation `HewlettPackardCompany2012' on page 1 undefined on inpu
-t line 88.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 88--89
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
 
 
-LaTeX Warning: Citation `Kushner2011' on page 1 undefined on input line 92.
-
-
-LaTeX Warning: Citation `Zuckerberg2012' on page 1 undefined on input line 92.
-
-
-LaTeX Warning: Citation `Fong2011' on page 1 undefined on input line 92.
-
-
-LaTeX Warning: Citation `Evangelista2012' on page 1 undefined on input line 92.
-
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
 
@@ -1566,135 +1513,127 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--93
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
 Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
-(nag)                Use \scshape or \textsc instead on input line 97.
+(nag)                Use \scshape or \textsc instead on input line 98.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 97.
+(hyperref)                removing `\<let>-command' on input line 98.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\calc@A' on input line 97.
+(hyperref)                removing `\calc@A' on input line 98.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\calc@Acount' on input line 97.
+(hyperref)                removing `\calc@Acount' on input line 98.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 97.
+(hyperref)                removing `\<let>-command' on input line 98.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\calc@B' on input line 97.
+(hyperref)                removing `\calc@B' on input line 98.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\calc@Bcount' on input line 97.
+(hyperref)                removing `\calc@Bcount' on input line 98.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\begingroup' on input line 97.
+(hyperref)                removing `\begingroup' on input line 98.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\aftergroup' on input line 97.
+(hyperref)                removing `\aftergroup' on input line 98.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\calc@B' on input line 97.
+(hyperref)                removing `\calc@B' on input line 98.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\calc@A' on input line 97.
+(hyperref)                removing `\calc@A' on input line 98.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\begingroup' on input line 97.
+(hyperref)                removing `\begingroup' on input line 98.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\aftergroup' on input line 97.
+(hyperref)                removing `\aftergroup' on input line 98.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\calc@B' on input line 97.
+(hyperref)                removing `\calc@B' on input line 98.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\calc@A' on input line 97.
+(hyperref)                removing `\calc@A' on input line 98.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\afterassignment' on input line 97.
+(hyperref)                removing `\afterassignment' on input line 98.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 97.
+(hyperref)                removing `\<def>-command' on input line 98.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\calc@next' on input line 97.
+(hyperref)                removing `\calc@next' on input line 98.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\calc@next' on input line 97.
+(hyperref)                removing `\calc@next' on input line 98.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\calc@A' on input line 97.
+(hyperref)                removing `\calc@A' on input line 98.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 97.
+(hyperref)                removing `\global' on input line 98.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\calc@A' on input line 97.
+(hyperref)                removing `\calc@A' on input line 98.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\calc@B' on input line 97.
+(hyperref)                removing `\calc@B' on input line 98.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\endgroup' on input line 97.
+(hyperref)                removing `\endgroup' on input line 98.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 97.
+(hyperref)                removing `\global' on input line 98.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\advance' on input line 97.
+(hyperref)                removing `\advance' on input line 98.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\c@nag@sins' on input line 97.
+(hyperref)                removing `\c@nag@sins' on input line 98.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\calc@B' on input line 97.
+(hyperref)                removing `\calc@B' on input line 98.
 
 
 Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
-(nag)                Use \scshape or \textsc instead on input line 100.
+(nag)                Use \scshape or \textsc instead on input line 101.
 
 
 Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
-(nag)                Use \scshape or \textsc instead on input line 100.
+(nag)                Use \scshape or \textsc instead on input line 101.
 
 
 Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
-(nag)                Use \scshape or \textsc instead on input line 102.
-
-
-Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
-(nag)                Use \scshape or \textsc instead on input line 104.
-
-
-Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
-(nag)                Use \scshape or \textsc instead on input line 104.
+(nag)                Use \scshape or \textsc instead on input line 103.
 
 
 Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
@@ -1709,24 +1648,12 @@ Package nag Warning: Command \sc is an old LaTeX 2.09 command.
 (nag)                Use \scshape or \textsc instead on input line 106.
 
 
-Package nag Warning: Command \bf is an old LaTeX 2.09 command. 
-(nag)                Use \bfseries or \textbf instead on input line 106.
-
-
 Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
 (nag)                Use \scshape or \textsc instead on input line 106.
 
 
 Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
-(nag)                Use \scshape or \textsc instead on input line 106.
-
-
-Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
-(nag)                Use \scshape or \textsc instead on input line 106.
-
-
-Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
-(nag)                Use \scshape or \textsc instead on input line 106.
+(nag)                Use \scshape or \textsc instead on input line 107.
 
 
 Package nag Warning: Command \bf is an old LaTeX 2.09 command. 
@@ -1738,7 +1665,19 @@ Package nag Warning: Command \sc is an old LaTeX 2.09 command.
 
 
 Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
-(nag)                Use \scshape or \textsc instead on input line 108.
+(nag)                Use \scshape or \textsc instead on input line 107.
+
+
+Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
+(nag)                Use \scshape or \textsc instead on input line 107.
+
+
+Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
+(nag)                Use \scshape or \textsc instead on input line 107.
+
+
+Package nag Warning: Command \bf is an old LaTeX 2.09 command. 
+(nag)                Use \bfseries or \textbf instead on input line 108.
 
 
 Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
@@ -1749,63 +1688,61 @@ Package nag Warning: Command \sc is an old LaTeX 2.09 command.
 (nag)                Use \scshape or \textsc instead on input line 109.
 
 
-Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 111.
-
-
-Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 111.
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 117.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 117.
+Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
+(nag)                Use \scshape or \textsc instead on input line 109.
 
 
 Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
-(nag)                Use \scshape or \textsc instead on input line 117.
+(nag)                Use \scshape or \textsc instead on input line 110.
+
+
+Package nag Warning: Command \it is an old LaTeX 2.09 command. 
+(nag)                Use \itshape or \textit instead on input line 112.
+
+
+Package nag Warning: Command \it is an old LaTeX 2.09 command. 
+(nag)                Use \itshape or \textit instead on input line 112.
 
 
 Package nag Warning: Command \sl is an old LaTeX 2.09 command. 
-(nag)                Use \slshape or \textsl instead on input line 118.
+(nag)                Use \slshape or \textsl instead on input line 114.
+
+
+Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
+(nag)                Use \scshape or \textsc instead on input line 114.
+
+[2]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 118.
+
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 118.
 
 
 Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
 (nag)                Use \scshape or \textsc instead on input line 118.
 
-[2]
 
 Package nag Warning: Command \tt is an old LaTeX 2.09 command. 
-(nag)                Use \ttfamily or \texttt instead on input line 119.
+(nag)                Use \ttfamily or \texttt instead on input line 120.
 
 
 Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
-(nag)                Use \scshape or \textsc instead on input line 120.
-
-
-LaTeX Warning: Citation `Patashnik1988' on page 3 undefined on input line 120.
+(nag)                Use \scshape or \textsc instead on input line 121.
 
 
 Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
-(nag)                Use \scshape or \textsc instead on input line 120.
+(nag)                Use \scshape or \textsc instead on input line 121.
 
 
 Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 120.
-
-
-LaTeX Warning: Citation `Kopka2004' on page 3 undefined on input line 120.
+(nag)                Use \itshape or \textit instead on input line 121.
 
 
 Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
-(nag)                Use \scshape or \textsc instead on input line 120.
-
-
-Package nag Warning: Command \tt is an old LaTeX 2.09 command. 
-(nag)                Use \ttfamily or \texttt instead on input line 121.
+(nag)                Use \scshape or \textsc instead on input line 121.
 
 
 Package nag Warning: Command \tt is an old LaTeX 2.09 command. 
@@ -1816,23 +1753,27 @@ Package nag Warning: Command \tt is an old LaTeX 2.09 command.
 (nag)                Use \ttfamily or \texttt instead on input line 123.
 
 
-Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
-(nag)                Use \scshape or \textsc instead on input line 123.
+Package nag Warning: Command \tt is an old LaTeX 2.09 command. 
+(nag)                Use \ttfamily or \texttt instead on input line 124.
 
 
 Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
-(nag)                Use \scshape or \textsc instead on input line 126.
+(nag)                Use \scshape or \textsc instead on input line 124.
 
 
 Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
-(nag)                Use \scshape or \textsc instead on input line 130.
+(nag)                Use \scshape or \textsc instead on input line 127.
+
+
+Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
+(nag)                Use \scshape or \textsc instead on input line 131.
 
 
 Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 132.
+(nag)                Use \itshape or \textit instead on input line 133.
 
 
-Overfull \hbox (1.34326pt too wide) in paragraph at lines 135--136
+Overfull \hbox (1.34326pt too wide) in paragraph at lines 136--137
 []\OT1/cmr/m/n/12 Wikibooks con-trib-u-tors, ``CHAP-TER[]NAME,'' in \OMS/cmsy/m
 /n/12 f$n$\OT1/cmr/m/n/12 it TI-TLE[]OF[]THE[]BOOK\OMS/cmsy/m/n/12 g\OT1/cmr/m/
 n/12 , Wik-i-books:
@@ -1840,258 +1781,239 @@ n/12 , Wik-i-books:
 
 
 Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
-(nag)                Use \scshape or \textsc instead on input line 140.
+(nag)                Use \scshape or \textsc instead on input line 141.
 
 
 Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
-(nag)                Use \scshape or \textsc instead on input line 140.
+(nag)                Use \scshape or \textsc instead on input line 141.
+
+
+Package nag Warning: Command \sl is an old LaTeX 2.09 command. 
+(nag)                Use \slshape or \textsl instead on input line 142.
 
 
 Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
 (nag)                Use \scshape or \textsc instead on input line 142.
 
-
-Package nag Warning: Command \sl is an old LaTeX 2.09 command. 
-(nag)                Use \slshape or \textsl instead on input line 143.
-
+[3]
 
 Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
 (nag)                Use \scshape or \textsc instead on input line 143.
 
-[3]
 
 Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
-(nag)                Use \scshape or \textsc instead on input line 148.
+(nag)                Use \scshape or \textsc instead on input line 149.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 148.
+(hyperref)                removing `\<let>-command' on input line 149.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\calc@A' on input line 148.
+(hyperref)                removing `\calc@A' on input line 149.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\calc@Acount' on input line 148.
+(hyperref)                removing `\calc@Acount' on input line 149.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 148.
+(hyperref)                removing `\<let>-command' on input line 149.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\calc@B' on input line 148.
+(hyperref)                removing `\calc@B' on input line 149.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\calc@Bcount' on input line 148.
+(hyperref)                removing `\calc@Bcount' on input line 149.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\begingroup' on input line 148.
+(hyperref)                removing `\begingroup' on input line 149.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\aftergroup' on input line 148.
+(hyperref)                removing `\aftergroup' on input line 149.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\calc@B' on input line 148.
+(hyperref)                removing `\calc@B' on input line 149.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\calc@A' on input line 148.
+(hyperref)                removing `\calc@A' on input line 149.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\begingroup' on input line 148.
+(hyperref)                removing `\begingroup' on input line 149.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\aftergroup' on input line 148.
+(hyperref)                removing `\aftergroup' on input line 149.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\calc@B' on input line 148.
+(hyperref)                removing `\calc@B' on input line 149.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\calc@A' on input line 148.
+(hyperref)                removing `\calc@A' on input line 149.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\afterassignment' on input line 148.
+(hyperref)                removing `\afterassignment' on input line 149.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 148.
+(hyperref)                removing `\<def>-command' on input line 149.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\calc@next' on input line 148.
+(hyperref)                removing `\calc@next' on input line 149.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\calc@next' on input line 148.
+(hyperref)                removing `\calc@next' on input line 149.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\calc@A' on input line 148.
+(hyperref)                removing `\calc@A' on input line 149.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 148.
+(hyperref)                removing `\global' on input line 149.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\calc@A' on input line 148.
+(hyperref)                removing `\calc@A' on input line 149.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\calc@B' on input line 148.
+(hyperref)                removing `\calc@B' on input line 149.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\endgroup' on input line 148.
+(hyperref)                removing `\endgroup' on input line 149.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 148.
+(hyperref)                removing `\global' on input line 149.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\advance' on input line 148.
+(hyperref)                removing `\advance' on input line 149.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\c@nag@sins' on input line 148.
+(hyperref)                removing `\c@nag@sins' on input line 149.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\calc@B' on input line 148.
+(hyperref)                removing `\calc@B' on input line 149.
 
 
 Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
-(nag)                Use \scshape or \textsc instead on input line 152.
+(nag)                Use \scshape or \textsc instead on input line 153.
 
 
 Package nag Warning: Command \sl is an old LaTeX 2.09 command. 
-(nag)                Use \slshape or \textsl instead on input line 204.
+(nag)                Use \slshape or \textsl instead on input line 199.
 
 
 Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
-(nag)                Use \scshape or \textsc instead on input line 204.
+(nag)                Use \scshape or \textsc instead on input line 199.
 
 [4]
 
 Package nag Warning: Command \sl is an old LaTeX 2.09 command. 
-(nag)                Use \slshape or \textsl instead on input line 256.
+(nag)                Use \slshape or \textsl instead on input line 251.
 
 
 Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
-(nag)                Use \scshape or \textsc instead on input line 256.
+(nag)                Use \scshape or \textsc instead on input line 251.
 
 [5]
 
 Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 295.
-
-
-LaTeX Warning: Citation `vanHeesch2016' on page 6 undefined on input line 295.
+(nag)                Use \itshape or \textit instead on input line 296.
 
 
 Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 295.
+(nag)                Use \itshape or \textit instead on input line 296.
 
 
 Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 295.
+(nag)                Use \itshape or \textit instead on input line 296.
 
 
 Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 295.
+(nag)                Use \itshape or \textit instead on input line 296.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 295--296
+Underfull \hbox (badness 10000) in paragraph at lines 296--297
 
  []
 
 
 Package nag Warning: Command \bf is an old LaTeX 2.09 command. 
-(nag)                Use \bfseries or \textbf instead on input line 297.
+(nag)                Use \bfseries or \textbf instead on input line 298.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 297--298
+Underfull \hbox (badness 10000) in paragraph at lines 298--299
 
  []
 
 
 Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 300.
+(nag)                Use \itshape or \textit instead on input line 301.
 
 
 Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 300.
+(nag)                Use \itshape or \textit instead on input line 301.
 
 
 Package nag Warning: Command \rm is an old LaTeX 2.09 command. 
-(nag)                Use \rmfamily or \textrm instead on input line 300.
+(nag)                Use \rmfamily or \textrm instead on input line 301.
 
 
 Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 300.
+(nag)                Use \itshape or \textit instead on input line 301.
 
 
 Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 300.
+(nag)                Use \itshape or \textit instead on input line 301.
 
 
 Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 300.
+(nag)                Use \itshape or \textit instead on input line 301.
 
 
-LaTeX Warning: Citation `WikipediaContributors2016j' on page 6 undefined on inp
-ut line 300.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 300--301
+Underfull \hbox (badness 10000) in paragraph at lines 301--302
 
  []
 
 
 Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 302.
+(nag)                Use \itshape or \textit instead on input line 303.
 
 
 Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 302.
+(nag)                Use \itshape or \textit instead on input line 303.
 
 
-LaTeX Warning: Citation `WikipediaContributors2017' on page 6 undefined on inpu
-t line 302.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 302--303
+Underfull \hbox (badness 10000) in paragraph at lines 303--304
 
  []
-
-
-Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 304.
 
 
 Package nag Warning: Command \sl is an old LaTeX 2.09 command. 
-(nag)                Use \slshape or \textsl instead on input line 305.
+(nag)                Use \slshape or \textsl instead on input line 304.
 
 [6]
 
 Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 306.
-
-
-Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 306.
+(nag)                Use \itshape or \textit instead on input line 305.
 
 
 Package nag Warning: Command \it is an old LaTeX 2.09 command. 
@@ -2111,11 +2033,11 @@ Package nag Warning: Command \it is an old LaTeX 2.09 command.
 
 
 Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 308.
+(nag)                Use \itshape or \textit instead on input line 309.
 
 
 Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 308.
+(nag)                Use \itshape or \textit instead on input line 309.
 
 
 Package nag Warning: Command \it is an old LaTeX 2.09 command. 
@@ -2139,11 +2061,7 @@ Package nag Warning: Command \it is an old LaTeX 2.09 command.
 
 
 Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 312.
-
-
-Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 312.
+(nag)                Use \itshape or \textit instead on input line 311.
 
 
 Package nag Warning: Command \it is an old LaTeX 2.09 command. 
@@ -2167,272 +2085,304 @@ Package nag Warning: Command \it is an old LaTeX 2.09 command.
 
 
 Package nag Warning: Command \it is an old LaTeX 2.09 command. 
+(nag)                Use \itshape or \textit instead on input line 314.
+
+
+Package nag Warning: Command \it is an old LaTeX 2.09 command. 
+(nag)                Use \itshape or \textit instead on input line 314.
+
+
+Package nag Warning: Command \it is an old LaTeX 2.09 command. 
 (nag)                Use \itshape or \textit instead on input line 315.
 
 
-Package nag Warning: Command \tt is an old LaTeX 2.09 command. 
-(nag)                Use \ttfamily or \texttt instead on input line 320.
-
-
 Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 326.
+(nag)                Use \itshape or \textit instead on input line 316.
 
 
 Package nag Warning: Command \tt is an old LaTeX 2.09 command. 
-(nag)                Use \ttfamily or \texttt instead on input line 335.
+(nag)                Use \ttfamily or \texttt instead on input line 321.
 
 
 Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 335.
+(nag)                Use \itshape or \textit instead on input line 327.
 
 
-LaTeX Warning: Citation `vanRossum2013' on page 7 undefined on input line 335.
+Package nag Warning: Command \tt is an old LaTeX 2.09 command. 
+(nag)                Use \ttfamily or \texttt instead on input line 336.
 
 
-LaTeX Warning: Citation `Macdonald20XY' on page 7 undefined on input line 335.
+Package nag Warning: Command \it is an old LaTeX 2.09 command. 
+(nag)                Use \itshape or \textit instead on input line 336.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 335--336
+Underfull \hbox (badness 10000) in paragraph at lines 336--337
 
  []
-
-
-LaTeX Warning: Citation `WikipediaContributors2016i' on page 7 undefined on inp
-ut line 339.
-
-
-LaTeX Warning: Citation `Knuth1984' on page 7 undefined on input line 339.
-
-
-LaTeX Warning: Citation `Knuth1992a' on page 7 undefined on input line 339.
-
-
-LaTeX Warning: Citation `McConnell2004' on page 7 undefined on input line 339.
-
-
-LaTeX Warning: Citation `Subramaniam2006' on page 7 undefined on input line 339
-.
-
-
-LaTeX Warning: Citation `Schach2007' on page 7 undefined on input line 339.
-
-
-LaTeX Warning: Citation `Oram2007' on page 7 undefined on input line 339.
-
-
-LaTeX Warning: Citation `MullerHannemann2010' on page 7 undefined on input line
- 339.
 
 
 Package nag Warning: Command \sl is an old LaTeX 2.09 command. 
-(nag)                Use \slshape or \textsl instead on input line 341.
+(nag)                Use \slshape or \textsl instead on input line 337.
 
 [7]
 
-LaTeX Warning: Citation `WikipediaContributors2016f' on page 8 undefined on inp
-ut line 347.
-
-
 Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 347.
+(nag)                Use \itshape or \textit instead on input line 348.
 
 
-LaTeX Warning: Citation `Abrahams1998' on page 8 undefined on input line 347.
-
-
-LaTeX Warning: Citation `Abrahams2001' on page 8 undefined on input line 347.
-
-
-LaTeX Warning: Citation `WikipediaContributors2016f' on page 8 undefined on inp
-ut line 347.
-
-
-LaTeX Warning: Citation `WikibooksContributors2016' on page 8 undefined on inpu
-t line 347.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 347--348
+Underfull \hbox (badness 10000) in paragraph at lines 348--349
 
  []
 
 
-LaTeX Warning: Citation `Abrahams1998' on page 8 undefined on input line 351.
-
-
-LaTeX Warning: Citation `Abrahams2001' on page 8 undefined on input line 351.
-
-
-LaTeX Warning: Citation `WikibooksContributors2016' on page 8 undefined on inpu
-t line 351.
-
-
-LaTeX Warning: Citation `WikipediaContributors2016f' on page 8 undefined on inp
-ut line 351.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 360--361
-
- []
-
-
-LaTeX Warning: Citation `WikipediaContributors2016e' on page 8 undefined on inp
-ut line 362.
-
-
-Package nag Warning: Command \tt is an old LaTeX 2.09 command. 
-(nag)                Use \ttfamily or \texttt instead on input line 373.
-
-
-Package nag Warning: Command \tt is an old LaTeX 2.09 command. 
-(nag)                Use \ttfamily or \texttt instead on input line 373.
-
-
-Package nag Warning: Command \tt is an old LaTeX 2.09 command. 
-(nag)                Use \ttfamily or \texttt instead on input line 373.
-
-
-Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 373.
-
-
-Package nag Warning: Command \tt is an old LaTeX 2.09 command. 
-(nag)                Use \ttfamily or \texttt instead on input line 373.
-
-
-Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 373.
-
-
-Package nag Warning: Command \tt is an old LaTeX 2.09 command. 
-(nag)                Use \ttfamily or \texttt instead on input line 373.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 373--374
+Underfull \hbox (badness 10000) in paragraph at lines 361--362
 
  []
 
 
 Package nag Warning: Command \tt is an old LaTeX 2.09 command. 
-(nag)                Use \ttfamily or \texttt instead on input line 377.
+(nag)                Use \ttfamily or \texttt instead on input line 374.
 
 
-LaTeX Warning: Citation `Driscoll2012' on page 8 undefined on input line 377.
+Package nag Warning: Command \tt is an old LaTeX 2.09 command. 
+(nag)                Use \ttfamily or \texttt instead on input line 374.
+
+
+Package nag Warning: Command \tt is an old LaTeX 2.09 command. 
+(nag)                Use \ttfamily or \texttt instead on input line 374.
+
+
+Package nag Warning: Command \it is an old LaTeX 2.09 command. 
+(nag)                Use \itshape or \textit instead on input line 374.
+
+
+Package nag Warning: Command \tt is an old LaTeX 2.09 command. 
+(nag)                Use \ttfamily or \texttt instead on input line 374.
+
+
+Package nag Warning: Command \it is an old LaTeX 2.09 command. 
+(nag)                Use \itshape or \textit instead on input line 374.
+
+
+Package nag Warning: Command \tt is an old LaTeX 2.09 command. 
+(nag)                Use \ttfamily or \texttt instead on input line 374.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 374--375
+
+ []
 
 
 Package nag Warning: Command \tt is an old LaTeX 2.09 command. 
 (nag)                Use \ttfamily or \texttt instead on input line 378.
 
 
-Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 380.
-
-
-LaTeX Warning: Citation `Driscoll20XYa' on page 8 undefined on input line 380.
+Package nag Warning: Command \tt is an old LaTeX 2.09 command. 
+(nag)                Use \ttfamily or \texttt instead on input line 379.
 
 
 Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 384.
+(nag)                Use \itshape or \textit instead on input line 381.
 
 
-LaTeX Warning: Citation `vanHeesch2016' on page 8 undefined on input line 384.
-
-
-Package nag Warning: Command \tt is an old LaTeX 2.09 command. 
-(nag)                Use \ttfamily or \texttt instead on input line 385.
-
-
-LaTeX Warning: Citation `WikipediaContributors2016h' on page 8 undefined on inp
-ut line 385.
-
-
-LaTeX Warning: Citation `Stallman2016' on page 8 undefined on input line 385.
-
-
-LaTeX Warning: Citation `Stallman2016a' on page 8 undefined on input line 385.
-
-
-LaTeX Warning: Citation `Stallman2016b' on page 8 undefined on input line 385.
-
-
-Package nag Warning: Command \tt is an old LaTeX 2.09 command. 
-(nag)                Use \ttfamily or \texttt instead on input line 392.
-
-
-LaTeX Warning: Citation `Driscoll20XY' on page 8 undefined on input line 392.
+Package nag Warning: Command \it is an old LaTeX 2.09 command. 
+(nag)                Use \itshape or \textit instead on input line 385.
 
 
 Package nag Warning: Command \sl is an old LaTeX 2.09 command. 
-(nag)                Use \slshape or \textsl instead on input line 393.
+(nag)                Use \slshape or \textsl instead on input line 386.
 
 [8]
 
+Package nag Warning: Command \tt is an old LaTeX 2.09 command. 
+(nag)                Use \ttfamily or \texttt instead on input line 386.
+
+
+Package nag Warning: Command \tt is an old LaTeX 2.09 command. 
+(nag)                Use \ttfamily or \texttt instead on input line 393.
+
+
 Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 397.
+(nag)                Use \itshape or \textit instead on input line 398.
 
 
-LaTeX Warning: Citation `figshareLLPstaff2016' on page 9 undefined on input lin
-e 397.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 397--398
+Underfull \hbox (badness 10000) in paragraph at lines 398--399
 
  []
 
 
 Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 399.
+(nag)                Use \itshape or \textit instead on input line 400.
 
 
-LaTeX Warning: Citation `GitHubStaff2016' on page 9 undefined on input line 399
-.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 399--400
+Underfull \hbox (badness 10000) in paragraph at lines 400--401
 
  []
 
 
 Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 401.
-
-
-LaTeX Warning: Citation `GitHubStaff2016' on page 9 undefined on input line 401
-.
+(nag)                Use \itshape or \textit instead on input line 402.
 
 
 Package nag Warning: Command \it is an old LaTeX 2.09 command. 
-(nag)                Use \itshape or \textit instead on input line 403.
+(nag)                Use \itshape or \textit instead on input line 404.
 
-No file guidelines.bbl.
+(./guidelines.bbl
 
-Package nag Warning: 120 complaints in total.
+Package nag Warning: Command \it is an old LaTeX 2.09 command. 
+(nag)                Use \itshape or \textit instead on input line 16.
+
+
+Package nag Warning: Command \it is an old LaTeX 2.09 command. 
+(nag)                Use \itshape or \textit instead on input line 29.
+
+
+Package nag Warning: Command \rm is an old LaTeX 2.09 command. 
+(nag)                Use \rmfamily or \textrm instead on input line 30.
+
+
+Package nag Warning: Command \tt is an old LaTeX 2.09 command. 
+(nag)                Use \ttfamily or \texttt instead on input line 36.
+
+
+Package nag Warning: Command \it is an old LaTeX 2.09 command. 
+(nag)                Use \itshape or \textit instead on input line 37.
+
+
+Package nag Warning: Command \it is an old LaTeX 2.09 command. 
+(nag)                Use \itshape or \textit instead on input line 46.
 
 
 Package nag Warning: Command \sl is an old LaTeX 2.09 command. 
-(nag)                Use \slshape or \textsl instead on input line 436.
+(nag)                Use \slshape or \textsl instead on input line 51.
 
 [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 436.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 436.
+
+Package nag Warning: Command \it is an old LaTeX 2.09 command. 
+(nag)                Use \itshape or \textit instead on input line 55.
+
+
+Package nag Warning: Command \it is an old LaTeX 2.09 command. 
+(nag)                Use \itshape or \textit instead on input line 64.
+
+
+Underfull \hbox (badness 2065) in paragraph at lines 62--68
+[]\OT1/cmr/m/n/12 Benny Evan-ge-lista.  Face-book's hacker way -- ``move fast a
+nd break things''.  Avail-
+ []
+
+
+Underfull \hbox (badness 3895) in paragraph at lines 62--68
+\OT1/cmr/m/n/12 able on-line in \OT1/cmr/m/it/12 The San Fran-cisco Chron-i-cle
+: The SF Gate: Blogs at SF-Gate.com:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--68
+\OT1/cmr/m/it/12 The Tech-nol-ogy Chron-i-cles \OT1/cmr/m/n/12 at: [][]$\OT1/cm
+tt/m/n/12 http : / / blog . sfgate . com / techchron / 2012 / 02 / 01 /
+ []
+
+
+Package nag Warning: Command \it is an old LaTeX 2.09 command. 
+(nag)                Use \itshape or \textit instead on input line 78.
+
+
+Package nag Warning: Command \rm is an old LaTeX 2.09 command. 
+(nag)                Use \rmfamily or \textrm instead on input line 78.
+
+
+Package nag Warning: Command \it is an old LaTeX 2.09 command. 
+(nag)                Use \itshape or \textit instead on input line 135.
+
+
+Package nag Warning: Command \it is an old LaTeX 2.09 command. 
+(nag)                Use \itshape or \textit instead on input line 142.
+
+
+Package nag Warning: Command \sl is an old LaTeX 2.09 command. 
+(nag)                Use \slshape or \textsl instead on input line 147.
+
+[10]
+
+Package nag Warning: Command \sc is an old LaTeX 2.09 command. 
+(nag)                Use \scshape or \textsc instead on input line 165.
+
+
+Package nag Warning: Command \it is an old LaTeX 2.09 command. 
+(nag)                Use \itshape or \textit instead on input line 178.
+
+
+Package nag Warning: Command \it is an old LaTeX 2.09 command. 
+(nag)                Use \itshape or \textit instead on input line 187.
+
+
+Package nag Warning: Command \it is an old LaTeX 2.09 command. 
+(nag)                Use \itshape or \textit instead on input line 196.
+
+
+Package nag Warning: Command \it is an old LaTeX 2.09 command. 
+(nag)                Use \itshape or \textit instead on input line 216.
+
+
+Package nag Warning: Command \it is an old LaTeX 2.09 command. 
+(nag)                Use \itshape or \textit instead on input line 230.
+
+
+Package nag Warning: Command \it is an old LaTeX 2.09 command. 
+(nag)                Use \itshape or \textit instead on input line 237.
+
+
+Package nag Warning: Command \sl is an old LaTeX 2.09 command. 
+(nag)                Use \slshape or \textsl instead on input line 240.
+
+[11]
+
+Package nag Warning: Command \it is an old LaTeX 2.09 command. 
+(nag)                Use \itshape or \textit instead on input line 244.
+
+
+Package nag Warning: Command \it is an old LaTeX 2.09 command. 
+(nag)                Use \itshape or \textit instead on input line 252.
+
+
+Package nag Warning: Command \it is an old LaTeX 2.09 command. 
+(nag)                Use \itshape or \textit instead on input line 260.
+
+
+Package nag Warning: Command \it is an old LaTeX 2.09 command. 
+(nag)                Use \itshape or \textit instead on input line 267.
+
+
+Package nag Warning: Command \it is an old LaTeX 2.09 command. 
+(nag)                Use \itshape or \textit instead on input line 275.
+
+)
+
+Package nag Warning: 147 complaints in total.
+
+
+Package nag Warning: Command \sl is an old LaTeX 2.09 command. 
+(nag)                Use \slshape or \textsl instead on input line 438.
+
+[12]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 438.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 438.
  (./guidelines.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 436.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 436.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 438.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 438.
 Package rerunfilecheck Info: File `guidelines.out' has not changed.
 (rerunfilecheck)             Checksum: 6D638ECF1B511714724DA31B2FB25E29;367.
-
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 436.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 438.
  ) 
 Here is how much of TeX's memory you used:
- 33139 strings out of 493089
- 624399 string characters out of 6134842
- 642179 words of memory out of 5000000
- 35889 multiletter control sequences out of 15000+600000
+ 33187 strings out of 493089
+ 625263 string characters out of 6134842
+ 648579 words of memory out of 5000000
+ 35891 multiletter control sequences out of 15000+600000
  20298 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,12n,96p,10411b,902s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,12n,96p,10411b,975s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
@@ -2452,10 +2402,10 @@ e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive
 015/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/201
 5/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2015/
 texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on guidelines.pdf (9 pages, 213739 bytes).
+Output written on guidelines.pdf (12 pages, 233719 bytes).
 PDF statistics:
- 389 PDF objects out of 1000 (max. 8388607)
- 356 compressed objects within 4 object streams
- 209 named destinations out of 1000 (max. 500000)
+ 549 PDF objects out of 1000 (max. 8388607)
+ 511 compressed objects within 6 object streams
+ 253 named destinations out of 1000 (max. 500000)
  61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
