@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  6 OCT 2017 20:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  18 OCT 2017 14:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1333,14 +1333,14 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 284.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 284.
 Package rerunfilecheck Info: File `data-structures_n_algor.out' has not changed
 .
-(rerunfilecheck)             Checksum: 3872A00CB721D4C00D47611D36C4E248;2367.
+(rerunfilecheck)             Checksum: 5CB794A6874C50BA1A276CB20234851C;2434.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 284.
  ) 
 Here is how much of TeX's memory you used:
- 16989 strings out of 493089
- 238077 string characters out of 6134842
- 349552 words of memory out of 5000000
- 19294 multiletter control sequences out of 15000+600000
+ 16994 strings out of 493089
+ 238149 string characters out of 6134842
+ 349632 words of memory out of 5000000
+ 19297 multiletter control sequences out of 15000+600000
  20883 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,15n,96p,1262b,668s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1366,10 +1366,10 @@ exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/20
 15/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on data-structures_n_algor.pdf (48 pages, 400803 bytes).
+Output written on data-structures_n_algor.pdf (48 pages, 402137 bytes).
 PDF statistics:
- 1892 PDF objects out of 2073 (max. 8388607)
- 1802 compressed objects within 19 object streams
- 857 named destinations out of 1000 (max. 500000)
- 281 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1901 PDF objects out of 2073 (max. 8388607)
+ 1811 compressed objects within 19 object streams
+ 859 named destinations out of 1000 (max. 500000)
+ 289 words of extra memory for PDF output out of 10000 (max. 10000000)
 

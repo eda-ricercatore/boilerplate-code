@@ -1,12 +1,13 @@
 \contentsline {chapter}{Revision History}{i}{chapter*.1}
 \contentsline {chapter}{\numberline {1}Algorithms}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Data Structures}{2}{chapter.2}
-\contentsline {section}{\numberline {2.1}Graphs}{2}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Directed Graphs}{2}{subsection.2.1.1}
-\contentsline {subsubsection}{\numberline {2.1.1.1}Functions that need to be implemented}{2}{subsubsection.2.1.1.1}
-\contentsline {subsubsection}{\numberline {2.1.1.2}Binary Decision Diagrams (BDDs)}{2}{subsubsection.2.1.1.2}
-\contentsline {subsubsection}{\numberline {2.1.1.3}AND-Inverter Graphs (AIGs)}{2}{subsubsection.2.1.1.3}
-\contentsline {subsection}{\numberline {2.1.2}Undirected Graphs}{2}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.1}Basic Data Structures}{2}{section.2.1}
+\contentsline {section}{\numberline {2.2}Graphs}{2}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Directed Graphs}{2}{subsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.1.1}Functions that need to be implemented}{2}{subsubsection.2.2.1.1}
+\contentsline {subsubsection}{\numberline {2.2.1.2}Binary Decision Diagrams (BDDs)}{2}{subsubsection.2.2.1.2}
+\contentsline {subsubsection}{\numberline {2.2.1.3}AND-Inverter Graphs (AIGs)}{2}{subsubsection.2.2.1.3}
+\contentsline {subsection}{\numberline {2.2.2}Undirected Graphs}{2}{subsection.2.2.2}
 \contentsline {chapter}{\numberline {3}Optimization}{3}{chapter.3}
 \contentsline {section}{\numberline {3.1}Benchmarks for Optimization}{3}{section.3.1}
 \contentsline {section}{\numberline {3.2}Notes on Using Optimization Tools}{3}{section.3.2}

@@ -670,6 +670,12 @@ Bjarne Stroustrup.
 \newblock {\em Programming: Principles and Practice Using {C++}}.
 \newblock Pearson Education, Upper Saddle River, {NJ}, second edition, 2014.
 
+\bibitem{Tate2010}
+Bruce~A. Tate.
+\newblock {\em Seven Languages in Seven Weeks: A Pragmatic Guide to Learning
+  Programming Languages}.
+\newblock Pragmatic Bookshelf, Raleigh, {NC}, 2010.
+
 \bibitem{Vandevoorde2003}
 David Vandevoorde and Nicolai~M. Josuttis.
 \newblock {\em {C++} Templates: The Complete Guide}.
