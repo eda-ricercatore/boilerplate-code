@@ -5,7 +5,11 @@
 ssh-keygen -f ~/.ssh/[name-of-ssh-key] -C "[Description for the use of this SSH key]"
 
 
+###	Starting the SSH Agent
 
+Use the following to start the SSH agent.
+
+	eval `ssh-agent -s`
 
 
 
