@@ -25,8 +25,9 @@ List of repositories that are affected by the *boilerplate* repository,
 	- Notes
 	- Scripts
 	- **Deprecated repository.**
-
-
++ [gulyas-scripts](https://github.com/eda-ricercatore/gulyas-scripts)
+	- Notes
+	- Scripts
 
 
 
@@ -45,7 +46,7 @@ Repositories that can be affected are:
 		* Presentation slides
 		* Report
 + [Software Analysis](https://github.com/eda-ricercatore/caprese-sw-analy)
-
++ [BibTeX Analytics](https://github.com/eda-ricercatore/bibtex-analytics)
 
 
 
@@ -87,6 +88,7 @@ List of notes:
 + Programming/Computer languages:
 	- *Scala*: [sardegna-scala](https://github.com/eda-ricercatore/sardegna-scala)
 	- *R*: [gulyas-scripts](https://github.com/eda-ricercatore/gulyas-scripts) 
+	- *Python*: [gulyas-scripts](https://github.com/eda-ricercatore/gulyas-scripts) 
 	- *GNU Octave*: [gulyas-scripts](https://github.com/eda-ricercatore/gulyas-scripts)
 	- *LaTeX*: [SienaLaTeX, for *LaTeX*](https://github.com/eda-globetrotter/SienaLaTeX)
 + Libraries, API, ... that support interoperability between programming/computer languages: [gulyas-scripts](https://github.com/eda-ricercatore/gulyas-scripts)
