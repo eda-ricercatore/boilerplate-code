@@ -36,12 +36,17 @@ Note: This *C++1y* library of boilerplate code is not guaranteed to
 + evaluation:
 	- Code (scripts and C++ code) to facilitate research contest organizers in
 		their quantitative evaluation of our code.
-+ notes:
-	- Software license(s).
-	- Software documentation for project, written in *LaTeX*.
++ [notes](https://github.com/eda-ricercatore/boilerplate-code/tree/master/notes):
+	- Software license(s): GNU GPL, and MIT License
+	- Software documentation for project, written in *LaTeX*; i.e., project report.
 	- Guidelines for collaborating on open source software and/or hardware
 		projects.
 	- *BibTeX* database for the documentation.
+	- [Shortcuts for *Doxygen*, and Research Needs from the Semiconductor Research Corporation](https://github.com/eda-ricercatore/boilerplate-code/blob/master/notes/to-do-list.md)
+	- [Help document for SSH access](https://github.com/eda-ricercatore/boilerplate-code/blob/master/notes/ssh_unix_cmds.md)
+	- [Notes about *Markdown*](https://github.com/eda-ricercatore/boilerplate-code/blob/master/notes/markdown-syntax.md)
+	- [List of (software) dependencies and externalities](https://github.com/eda-ricercatore/boilerplate-code/blob/master/notes/externalities.md)
+	- Notes about [object-oriented programming, and object-oriented analysis and design](https://github.com/eda-ricercatore/boilerplate-code/blob/master/notes/miscellaneo/comments.md)
 + README.md: Readme file to describe the software project, and organization of
 	the repository.
 + scripts: Scripts to perform miscellaneous tasks for the software project.
