@@ -142,7 +142,7 @@ Eric Zhiqiang Ma, "How to Statically Link C and C++ Programs on Linux with gcc,"
 
 
 
-### References for Markdown:
+### References for Markdown
 Stack Overflow staff, "Markdown help," in *Stack Overflow*, Stack Exchange Inc., New York, NY, 2015. Available as *Stack Exchange: Stack Overflow (rev 2015.10.13.2885)* at: http://stackoverflow.com/editing-help; last viewed on October 14, 2015.
 
 John Gruber, "Markdown," The Daring Fireball Company LLC, December 17, 2004. Available as *The Daring Fireball Company LLC: Projects: Markdown, Version 1.0.1* at: http://daringfireball.net/projects/markdown/; last viewed on October 14, 2015.
