@@ -175,7 +175,7 @@ Other repositories/projects that Zhiyang Ong is involved, currently
 
 #	Zhiyang Ong's web page
 
-[Zhiyang Ong's web page](https://github.com/eda-ricercatore/eda-globetrotter.github.io)
+[Zhiyang Ong's web page](https://eda-ricercatore.github.io)
 
 
 #	Author Information
