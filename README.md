@@ -56,11 +56,10 @@ Note: This *C++1y* library of boilerplate code is not guaranteed to
 		* [*Ruby*](https://github.com/eda-ricercatore/gulyas-scripts/blob/master/notes/ruby.md)
 		* [*Texinfo*](https://github.com/eda-ricercatore/gulyas-scripts/blob/master/notes/texinfo.md)
 		* [*Unified Modeling Language* (UML)](https://github.com/eda-ricercatore/gulyas-scripts/blob/master/notes/uml.md)
-		* Notes located in other repositories:
-			+ [*Scala*](https://github.com/eda-ricercatore/sardegna-scala/blob/master/notes/scala-notes.md)
-			+ [*R* programming language](https://github.com/eda-ricercatore/rosario-r/blob/master/notes/data_analytics_with_r.md). Also, see [resources for learning *R*](https://github.com/eda-ricercatore/rosario-r).
-			+ [Declaratively draw pictures and figures](https://github.com/eda-ricercatore/gulyas-scripts/blob/master/notes/drawing-graphics.md)
-				- See my [repository for declaratively drawing graphics more information](https://github.com/eda-ricercatore/baklava-graphics)
+		* [*Scala*](https://github.com/eda-ricercatore/sardegna-scala/blob/master/notes/scala-notes.md)
+		* [*R* programming language](https://github.com/eda-ricercatore/rosario-r/blob/master/notes/data_analytics_with_r.md). Also, see [resources for learning *R*](https://github.com/eda-ricercatore/rosario-r).
+		* [Declaratively draw pictures and figures](https://github.com/eda-ricercatore/gulyas-scripts/blob/master/notes/drawing-graphics.md)
+		* See my [repository for declaratively drawing graphics more information](https://github.com/eda-ricercatore/baklava-graphics)
 + README.md: Readme file to describe the software project, and organization of
 	the repository.
 + scripts: Scripts to perform miscellaneous tasks for the software project.
