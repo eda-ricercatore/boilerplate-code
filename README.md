@@ -39,6 +39,8 @@ Note: This *C++1y* library of boilerplate code is not guaranteed to
 + [notes](https://github.com/eda-ricercatore/boilerplate-code/tree/master/notes):
 	- Software license(s): GNU GPL, and MIT License
 	- Software documentation for project, written in *LaTeX*; i.e., project report.
+		* This report effectively serves as revision notes about *C++*, data
+			structures, and algorithms.
 	- Guidelines for collaborating on open source software and/or hardware
 		projects.
 	- *BibTeX* database for the documentation.
@@ -47,6 +49,18 @@ Note: This *C++1y* library of boilerplate code is not guaranteed to
 	- [Notes about *Markdown*](https://github.com/eda-ricercatore/boilerplate-code/blob/master/notes/markdown-syntax.md)
 	- [List of (software) dependencies and externalities](https://github.com/eda-ricercatore/boilerplate-code/blob/master/notes/externalities.md)
 	- Notes about [object-oriented programming, and object-oriented analysis and design](https://github.com/eda-ricercatore/boilerplate-code/blob/master/notes/miscellaneo/comments.md)
+	- Notes about other computer languages and technologies in other
+		repositories:
+		* [*GNU Octave*](https://github.com/eda-ricercatore/gulyas-scripts/blob/master/notes/gnu-octave.md)
+		* [*Python*](https://github.com/eda-ricercatore/gulyas-scripts/blob/master/notes/python.md)
+		* [*Ruby*](https://github.com/eda-ricercatore/gulyas-scripts/blob/master/notes/ruby.md)
+		* [*Texinfo*](https://github.com/eda-ricercatore/gulyas-scripts/blob/master/notes/texinfo.md)
+		* [*Unified Modeling Language* (UML)](https://github.com/eda-ricercatore/gulyas-scripts/blob/master/notes/uml.md)
+		* Notes located in other repositories:
+			+ [*Scala*](https://github.com/eda-ricercatore/sardegna-scala/blob/master/notes/scala-notes.md)
+			+ [*R* programming language](https://github.com/eda-ricercatore/rosario-r/blob/master/notes/data_analytics_with_r.md). Also, see [resources for learning *R*](https://github.com/eda-ricercatore/rosario-r).
+			+ [Declaratively draw pictures and figures](https://github.com/eda-ricercatore/gulyas-scripts/blob/master/notes/drawing-graphics.md)
+				- See my [repository for declaratively drawing graphics more information](https://github.com/eda-ricercatore/baklava-graphics)
 + README.md: Readme file to describe the software project, and organization of
 	the repository.
 + scripts: Scripts to perform miscellaneous tasks for the software project.
