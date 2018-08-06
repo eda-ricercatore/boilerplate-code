@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  4 AUG 2018 13:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  4 AUG 2018 13:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1082,7 +1082,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--78
 
 [2
 
-] [3] [4]) (./optimization/optimization.tex [5]
+]
+Overfull \hbox (1.7386pt too wide) in paragraph at lines 172--173
+[]\T1/lmr/m/n/12 max-flow min-cut the-o-rem: [][]$\T1/lmtt/m/n/12 https : / / e
+n . wikipedia . org / wiki / Max-[]flow _ min-[]cut _ theorem$[][] 
+ []
+
+[3] [4]) (./optimization/optimization.tex [5]
 Chapter 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 28--29
@@ -1534,8 +1540,8 @@ Package rerunfilecheck Info: File `data-structures_n_algor.out' has not changed
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 284.
  ) 
 Here is how much of TeX's memory you used:
- 17429 strings out of 493089
- 245878 string characters out of 6134842
+ 17433 strings out of 493089
+ 245910 string characters out of 6134842
  357020 words of memory out of 5000000
  19521 multiletter control sequences out of 15000+600000
  125350 words of font info for 91 fonts, out of 8000000 for 9000
@@ -1564,10 +1570,10 @@ msy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><
 /texlive/2015/texmf-dist/fonts/type1/public/marvosym/marvosym.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on data-structures_n_algor.pdf (58 pages, 529424 bytes).
+Output written on data-structures_n_algor.pdf (58 pages, 530057 bytes).
 PDF statistics:
- 2257 PDF objects out of 2487 (max. 8388607)
- 2155 compressed objects within 22 object streams
- 1025 named destinations out of 1200 (max. 500000)
+ 2267 PDF objects out of 2487 (max. 8388607)
+ 2165 compressed objects within 22 object streams
+ 1029 named destinations out of 1200 (max. 500000)
  297 words of extra memory for PDF output out of 10000 (max. 10000000)
 
