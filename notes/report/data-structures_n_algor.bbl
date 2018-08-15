@@ -92,6 +92,11 @@ Brian Bailey, Grant Martin, and Andrew Piziali.
 \newblock The Morgan Kaufmann Series in Systems on Silicon. Morgan Kaufmann,
   San Francisco, {CA}, 2007.
 
+\bibitem{Barber2012}
+David Barber.
+\newblock {\em Bayesian Reasoning and Machine Learning}.
+\newblock Cambridge University Press, New York, {NY}, 2012.
+
 \bibitem{Barlas2015}
 Gerassimos Barlas.
 \newblock {\em Multicore and {GPU} Programming: An Integrated Approach}.
@@ -131,6 +136,12 @@ Ben.
 Dimitris Bertsimas and Melvyn Sim.
 \newblock The price of robustness.
 \newblock {\em Operations Research}, 52(1):35--53, January--February 2004.
+
+\bibitem{Bishop2006}
+Christopher~M. Bishop.
+\newblock {\em Pattern Recognition and Machine Learning}.
+\newblock Information Science and Statistics. Springer Science+Business Media,
+  {LCC}, New York, {NY}, 2006.
 
 \bibitem{Boulanger2013}
 Jean-Louis Boulanger.
@@ -627,6 +638,12 @@ Ray Lischner.
 \newblock {\em Exploring {C++ 11}: Problems and Solutions Handbook}.
 \newblock Apress Media, {LLC}, Berkeley, {CA}, 2013.
 
+\bibitem{Lovasz2012}
+L{\'{a}}szl{\'{o}} Lov{\'{a}}sz.
+\newblock {\em Large Networks and Graph Limits}, volume~60 of {\em Colloquium
+  Publications}.
+\newblock American Mathematical Society, Providence, {RI}, 2012.
+
 \bibitem{Lu2004}
 Mi~Lu.
 \newblock {\em Arithmetic and Logic in Computer Systems}.
@@ -753,7 +770,7 @@ Mohtashim.
 \bibitem{Mortensen2015}
 Peter Mortensen.
 \newblock What is the difference between const int$^{\ast}$, const int
-  $^{\ast}$ const, and int const $^{\ast}$?
+  $^{\ast}$\ const, and int const $^{\ast}$?
 \newblock Available online from {\it Stack Exchange Inc.: Stack Overflow:
   Questions} at:
   \url{http://stackoverflow.com/questions/1143262/what-is-the-difference-between-const-int-const-int-const-and-int-const};
