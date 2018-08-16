@@ -591,6 +591,13 @@ Darko Kirovski and Miodrag Potkonjak.
   Computer-Aided Design ({ICCAD 1997})}, pages 170--173, San Jose, {CA},
   November 9--13 1997. {IEEE} Computer Society, {IEEE} Press.
 
+\bibitem{Knuth1993}
+Donald~E. Knuth.
+\newblock {\em The {Stanford GraphBase}: A Platform for Combinatorial
+  Computing}.
+\newblock {ACM} Press and Addison-Wesley, New York, {NY} and Reading, {MA},
+  1993.
+
 \bibitem{Koch2011a}
 Thorsten Koch, Tobias Achterberg, Erling Andersen, Oliver Bastert, Timo
   Berthold, Robert~E. Bixby, Emilie Danna, Gerald Gamrath, Ambros~M. Gleixner,
@@ -1018,6 +1025,11 @@ Yair Shapira.
   Object-Oriented Approach}.
 \newblock {SIAM} Computational Science and Engineering. Society for Industrial
   and Applied Mathematics, Philadelphia, {PA}, second edition, 2006.
+
+\bibitem{Skiena2008}
+Steven~S. Skiena.
+\newblock {\em The Algorithm Design Manual}.
+\newblock Springer-Verlag London, London, {U.K.}, second edition, 2008.
 
 \bibitem{Smith2017b}
 Richard Smith.
