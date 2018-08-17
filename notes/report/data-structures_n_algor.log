@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  16 AUG 2018 15:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  17 AUG 2018 15:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1051,11 +1051,6 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 32.
 
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 71.
-
-
 Overfull \hbox (12.46811pt too wide) in paragraph at lines 78--79
 []\T1/lmr/m/n/12 ``The Stony Brook Al-go-rithm Repos-i-tory'' by Steven Skiena 
 [[][]158[][]]: [][]$\T1/lmtt/m/n/12 http : / / algorist . com / algorist .
@@ -1554,13 +1549,13 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 284.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 284.
 Package rerunfilecheck Info: File `data-structures_n_algor.out' has not changed
 .
-(rerunfilecheck)             Checksum: 58221828AC81B0409B99ECBCC66B1B7A;2656.
+(rerunfilecheck)             Checksum: 9A3A8902E90806B276889F9BE0062AD3;2651.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 284.
  ) 
 Here is how much of TeX's memory you used:
  17515 strings out of 493089
- 246691 string characters out of 6134842
- 358305 words of memory out of 5000000
+ 246680 string characters out of 6134842
+ 358298 words of memory out of 5000000
  19530 multiletter control sequences out of 15000+600000
  125350 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1588,7 +1583,7 @@ msy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><
 /texlive/2015/texmf-dist/fonts/type1/public/marvosym/marvosym.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on data-structures_n_algor.pdf (60 pages, 539867 bytes).
+Output written on data-structures_n_algor.pdf (60 pages, 539667 bytes).
 PDF statistics:
  2411 PDF objects out of 2487 (max. 8388607)
  2305 compressed objects within 24 object streams
