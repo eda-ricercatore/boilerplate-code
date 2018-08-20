@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  19 AUG 2018 15:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  20 AUG 2018 16:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1553,10 +1553,10 @@ Package rerunfilecheck Info: File `data-structures_n_algor.out' has not changed
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 284.
  ) 
 Here is how much of TeX's memory you used:
- 17525 strings out of 493089
- 246787 string characters out of 6134842
- 358323 words of memory out of 5000000
- 19531 multiletter control sequences out of 15000+600000
+ 17531 strings out of 493089
+ 246874 string characters out of 6134842
+ 358395 words of memory out of 5000000
+ 19532 multiletter control sequences out of 15000+600000
  125350 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,15n,96p,1261b,668s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1583,10 +1583,10 @@ msy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><
 /texlive/2015/texmf-dist/fonts/type1/public/marvosym/marvosym.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on data-structures_n_algor.pdf (61 pages, 541305 bytes).
+Output written on data-structures_n_algor.pdf (61 pages, 541546 bytes).
 PDF statistics:
- 2433 PDF objects out of 2487 (max. 8388607)
- 2326 compressed objects within 24 object streams
- 1111 named destinations out of 1200 (max. 500000)
+ 2441 PDF objects out of 2487 (max. 8388607)
+ 2334 compressed objects within 24 object streams
+ 1116 named destinations out of 1200 (max. 500000)
  321 words of extra memory for PDF output out of 10000 (max. 10000000)
 
