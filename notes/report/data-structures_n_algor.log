@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  20 AUG 2018 16:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  21 AUG 2018 16:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1067,11 +1067,6 @@ l.79 \item C
 ]) (./data_structures/data_structures.tex [2]
 Chapter 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--72
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
  []
@@ -1086,21 +1081,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--78
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+
+ []
+
 [3
 
 ]
-Overfull \hbox (23.97346pt too wide) in paragraph at lines 137--138
+Overfull \hbox (23.97346pt too wide) in paragraph at lines 139--140
 \T1/lmr/m/n/12 or ID-DFS: [][]$\T1/lmtt/m/n/12 https : / / en . wikipedia . org
  / wiki / Iterative _ deepening _ depth-[]first _ search$[][] 
  []
 
 [4]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 176.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 179.
 
  (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (1.7386pt too wide) in paragraph at lines 204--205
+Overfull \hbox (1.7386pt too wide) in paragraph at lines 207--208
 []\T1/lmr/m/n/12 max-flow min-cut the-o-rem: [][]$\T1/lmtt/m/n/12 https : / / e
 n . wikipedia . org / wiki / Max-[]flow _ min-[]cut _ theorem$[][] 
  []
@@ -1387,6 +1387,13 @@ fferences-[]between-[]a-[]pointer-[]variable-[]and-[]a-[]reference-[]variable-[
 
 [40]) (./misc/misc.tex [41]
 Chapter 8.
+
+Overfull \hbox (35.7866pt too wide) in paragraph at lines 27--28
+[]\T1/lmr/m/n/12 List of im-por-tant pub-li-ca-tions in math-e-mat-ics: [][]$\T
+1/lmtt/m/n/12 https : / / en . wikipedia . org / wiki / List _ of _ important _
+
+ []
+
 ) [42
 
 ] (./data-structures_n_algor.bbl [43
@@ -1553,9 +1560,9 @@ Package rerunfilecheck Info: File `data-structures_n_algor.out' has not changed
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 284.
  ) 
 Here is how much of TeX's memory you used:
- 17531 strings out of 493089
- 246874 string characters out of 6134842
- 358395 words of memory out of 5000000
+ 17540 strings out of 493089
+ 246946 string characters out of 6134842
+ 359395 words of memory out of 5000000
  19532 multiletter control sequences out of 15000+600000
  125350 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1583,10 +1590,10 @@ msy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><
 /texlive/2015/texmf-dist/fonts/type1/public/marvosym/marvosym.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on data-structures_n_algor.pdf (61 pages, 541546 bytes).
+Output written on data-structures_n_algor.pdf (61 pages, 542778 bytes).
 PDF statistics:
- 2441 PDF objects out of 2487 (max. 8388607)
- 2334 compressed objects within 24 object streams
- 1116 named destinations out of 1200 (max. 500000)
+ 2469 PDF objects out of 2487 (max. 8388607)
+ 2362 compressed objects within 24 object streams
+ 1125 named destinations out of 1200 (max. 500000)
  321 words of extra memory for PDF output out of 10000 (max. 10000000)
 
