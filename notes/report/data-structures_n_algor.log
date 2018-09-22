@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  12 SEP 2018 08:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  22 SEP 2018 08:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1081,14 +1081,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
  []
 
+[3
 
+]
 Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
  []
 
-[3
 
-]
 Overfull \hbox (23.97346pt too wide) in paragraph at lines 140--141
 \T1/lmr/m/n/12 or ID-DFS: [][]$\T1/lmtt/m/n/12 https : / / en . wikipedia . org
  / wiki / Iterative _ deepening _ depth-[]first _ search$[][] 
@@ -1602,10 +1602,10 @@ msy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><
 /texlive/2015/texmf-dist/fonts/type1/public/marvosym/marvosym.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on data-structures_n_algor.pdf (62 pages, 547697 bytes).
+Output written on data-structures_n_algor.pdf (62 pages, 547862 bytes).
 PDF statistics:
- 2547 PDF objects out of 2984 (max. 8388607)
- 2438 compressed objects within 25 object streams
+ 2554 PDF objects out of 2984 (max. 8388607)
+ 2445 compressed objects within 25 object streams
  1156 named destinations out of 1200 (max. 500000)
  321 words of extra memory for PDF output out of 10000 (max. 10000000)
 
