@@ -47,9 +47,17 @@
 
 
 \begin{abstract} 
-This is a set of guidelines for conduct while collaborating on open source projects. It also includes guidelines for creating a shared {\sc Bib}\TeX\ database.
+This is a set of guidelines for development/design processes and practices, and conduct while collaborating on open source projects. It also includes guidelines for creating a shared {\sc Bib}\TeX\ database.
 \end{abstract}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Create the table of contents
+\tableofcontents
+%	Start the numbering of chapters from 1, instead of 0.
+%\setcounter{chapter}{1}
+%	Increase the depth of each section in the Table of Contents to 4.
+\setcounter{secnumdepth}{4}
 
 
 
@@ -76,6 +84,8 @@ Revision history: \vspace{-0.3cm}
 \item Version 3.9, February 1, 2018. Added information about developing software in a {\it Python}ic style.
 \item Version 4.0, June 8, 2018. Added information about specifying (co-)authors' full name, and research reproducibility, and other best practices from software development, and embedded/cyber-physical system and integrated circuit design.
 \item Version 4.1, September 19, 2018. Updated ACM Code of Ethics and Professional Conduct; added The Joint {ACM/IEEE-CS} Software Engineering Code of Ethics and Professional Practice; and updated guidelines on exception handling.
+\item Version 4.2, September 21, 2018. Added acknowledgements, shout outs, for people who helped me with automated regression testing. And, refactored document.
+\item Version 4.3, September 22-25, 2018. Added references on agile SoC design, and hardware/VLSI/RTL/HDL refactoring.
 \end{enumerate}
 
 
@@ -90,13 +100,13 @@ Revision history: \vspace{-0.3cm}
 \section{Guidelines for Conduct}
 \label{sec:GuidelinesforConduct}
 
-Members of the open source software and/or hardware projects should follow the {\it Code of Conduct} of the {\it Institute of Electrical and Electronics Engineers (IEEE)} \cite{IEEE2014b,IEEE2014a,IEEE2014} and the {\it Association for Computing Machinery (ACM)} \cite{Gotterbarn2018b,Gotterbarn2018a,Gotterbarn2018,Brinkman2016a,ACMCouncil1992,Brinkman2017,Brinkman2016,Wolf2016,Anderson1993}, including the ``The Joint {ACM/IEEE-CS} Software Engineering Code of Ethics and Professional Practice'' \cite{Gotterbarn1999,Gotterbarn1997}. Also, actions of discrimination are not acceptable \cite{IEEE2014c}; we should intentionally commit to inclusive diversity. An additional guideline is ``Dave Packard's 11 simple rules'' \cite{HewlettPackardCompany2012}. \\
+Members of the open source software and/or hardware projects should follow the {\it Code of Conduct} of the {\it Institute of Electrical and Electronics Engineers} (IEEE) \cite{IEEE2014b,IEEE2014a,IEEE2014} and the {\it Association for Computing Machinery} (ACM) \cite{Gotterbarn2018b,Gotterbarn2018a,Gotterbarn2018,Brinkman2016a,ACMCouncil1992,Brinkman2017,Brinkman2016,Wolf2016,Anderson1993}, including the ``The Joint {ACM/IEEE-CS} Software Engineering Code of Ethics and Professional Practice'' \cite{Gotterbarn1999,Gotterbarn1997}. Also, actions of discrimination are not acceptable \cite{IEEE2014c}; we should intentionally commit to inclusive diversity. An additional guideline is ``Dave Packard's 11 simple rules'' \cite{HewlettPackardCompany2012}. \\
 
 %There are a significant amount of references for helping people to learn \LaTeX \cite{Voss2011,vanDongen2012,Syropoulos2003,Raymond2004,Mittelbach2004,Lamport1994,Krishnan2003,Krantz2001,Kottwitz2011,Koranne2011,Kopka2004,Knuth1999,Hoenig1998,Higham1998,Haralambous2007,Griffiths1997,Gratzer2007,Goossens2007,Goossens1999,Goossens1997,Diller1999,Bindner2011,Berry2009,UITCambridge2011,Scharrer2011,Pakin2008,Cormen2010,Syropoulos2004,Hamalainen2006} and related information/technologies.
 
 In addition, when there is a dispute about which technology, algorithm, design paradigm/style/pattern, process, or methodology to use, follow the ``Code Wins Arguments'' philosophy \cite{Kushner2011,Zuckerberg2012}. Also, when considerable effort has been invested in an automated regression testing/verification infrastructure, do not be afraid to ``move fast and break things'' \cite{Fong2011,Evangelista2012}. \\
 
-Lastly, we should adopt a mission-focused and value-based approach to participate in meetings and discussions for the project(s). We should be flexible/liberal enough to consider and explore viable alternate approaches to do things and solve problems. Where disputes occur, a data-driven, fact-based approach based on the ``Code Wins Arguments'' philosophy should be used to resolve conflicts.
+Lastly, we should adopt a mission-focused and value-based approach to participate in meetings and discussions for the project(s). We should be flexible/liberal enough to consider and explore viable alternate approaches to do things and solve problems \cite{Beedle2001,Beedle2001a}. Where disputes occur, a data-driven, fact-based approach based on the ``Code Wins Arguments'' philosophy should be used to resolve conflicts.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Guidelines for Creating a Shared {\sc Bib}\TeX\ Database}
@@ -151,8 +161,8 @@ Guidelines for creating {\sc Bib}\TeX\ entries and the {\sc Bib}\TeX\ database, 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Recommended Fields for {\sc Bib}\TeX\ Entries}
-\label{sec:RecommendedFieldsforBibTeXEntries}
+\subsection{Recommended Fields for {\sc Bib}\TeX\ Entries}
+\label{ssec:RecommendedFieldsforBibTeXEntries}
 
 
 The recommended fields for {\sc Bib}\TeX\ entries are: \vspace{-0.3cm}
@@ -298,14 +308,14 @@ The recommended fields for {\sc Bib}\TeX\ entries are: \vspace{-0.3cm}
 \section{Coding Standard}
 \label{sec:CodingStandard}
 
-This is a guideline for {\tt Doxygen}-supported \cite{vanHeesch2016}, {\tt Javadoc}-based \cite{Long1995} coding standard that shall be used for this boilerplate code project. The term ``coding standard'' is used interchangeably/synonymously with coding style, coding style guide, coding guideline, coding scheme, code convention, code documentation guideline, programming guideline, or programming style. My coding style/standard shall be self-documenting. The documentation generator that shall be supported is: {\tt Doxygen}. Since I am using {\tt Doxygen} for generating documentation, I can use \LaTeX\ to provide richer markup. \\
+This is a guideline for {\tt Doxygen}-supported \cite{vanHeesch2016}, {\tt Javadoc}-based \cite{Long1995} coding standard that shall be used for this boilerplate code project and other projects. The term ``coding standard'' is used interchangeably/synonymously with coding style, coding style guide, coding guideline, coding scheme, code convention, code documentation guideline, programming guideline, or programming style. My coding style/standard shall be self-documenting. The documentation generator that shall be supported is: {\tt Doxygen}. Since I am using {\tt Doxygen} for generating documentation, I can use \LaTeX\ to provide richer markup. \\
 
 {\bf Document the known bugs for each function/method.} \\
 
 %	My indent style would be the {\it 1TBS} variant of the {\it K{\rm \&}R} style \cite{WikipediaContributors2016j}, which is an abbreviation of ``{\it The One True Brace Style}'' \cite{WikipediaContributors2016j}. It is also equivalent to the {\it Kernel Normal Form style} (or {\it BSD KNF style}) \cite{WikipediaContributors2016j}. \\
 My indent style would be the {\it 1TBS} variant of the {\it K{\rm \&}R} style, which is an abbreviation of ``{\it The One True Brace Style}''. It is also equivalent to the {\it Kernel Normal Form style} (or {\it BSD KNF style}) \cite{WikipediaContributors2016j}. \\
 
-Classes, functions/methods, constants, macros, and static and instance variables shall be named using complete words or well-known abbreviations that are concatenated with an underscore in {\it C++}; this is a deviation from the {\it Hungarian notation} that uses an upper case letter to distinguish words/abbreviations in the name (i.e., the Start case style of writing; see letter case). That is, the naming convention followed is using multiple-word identifiers, via delimiter-separated words rather than letter-case separated words (e.g., Hungarian notation) \cite{WikipediaContributors2017}. \\
+Classes, functions/methods, constants, macros, and static and instance variables shall be named using complete words or well-known abbreviations that are concatenated with an underscore in {\it C++}; this is a deviation from the {\it Hungarian notation} that uses an upper case letter to distinguish words/abbreviations in the name (i.e., the {\it Start case style of writing}; see letter case). That is, the naming convention followed is using multiple-word identifiers, via delimiter-separated words rather than letter-case separated words (e.g., {\it Hungarian notation}) \cite{WikipediaContributors2017}. \\
 
 For {\it C++} programs, the following tags shall be used in the comments: \vspace{-0.3cm}
 \begin{enumerate} \itemsep -4pt
@@ -383,12 +393,12 @@ Please judiciously consider what to do with the semipredicate problem \cite{Wiki
 
 At the software system level, the software architecture can be described by the following modules/components: \vspace{-0.3cm}
 \begin{enumerate} \itemsep -4pt
+\item parser(s): \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item For input benchmarks
+	\end{enumerate}
 \item utilities: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
-	\item parser(s): \vspace{-0.2cm}
-		\begin{enumerate} \itemsep -2pt
-		\item For input benchmarks
-		\end{enumerate}
 	\item output generator(s)
 	\item flag/switch -based printing information to standard output/error: \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
@@ -449,14 +459,36 @@ Lastly, suggestions are not available for digital and mixed-signal integrated ci
 %	References for ``reproducible workflow'' are also references for ``research reproducibility'' and ``reproducible research.''
 %	version control system, revision control, revision control system, configuration management, software configuration management...
 %	References for version/revision control with the design process of ICs, cyber-physical systems, and embedded systems: \cite{Chen2012,Stringham2010,Andrews2005,Pottie2005,Singh2004}
-Where possible, we shall try to adopt multiple best practices from leading product teams (i.e., R\&D teams) in the semiconductor and IT industries, and also good researchers spanning electrical engineering and computer science. These practices include: research reproducibility and reproducible research \cite{Schiermeier2018,Baumer2017,CodeOceanstaff2017,DatopianAtomaticLtdIncStaff2017,Kim2017,Mailund2017,Barba2016,Gandrud2015,Liberman2015,Creswell2014,Gandrud2014,Stodden2014,RunMyCodeAssociationMembers2013,Blackburn20XY,Geier20XY,Krishnamurthi20XY}, build automation \cite{Hagelberg2017,Suereth2016,Keiter2013a,Collier2012,Crookshanks2012,Humble2011,Schach2011,Fingeroff2010,Riesbeck2009a,Schach2007,Raymond2004,Schach2002,Oram1991,Driscoll20XY}, distributed version/revision control (or software configuration management) \cite{Cady2017,Olson2016,Paarsch2016,Chacon2014,GitHubContributors2014,GitHubContributors2014a,GitHubTeam2014,GitHubTrainingTeam2014,GitHubTrainingTeam2014a,GitHubTrainingTeam2014b,GitHubTrainingTeam2014c,Hamano2014,Fox2013,Wiegers2013,Collier2012,Crookshanks2012,Driscoll2012,Humble2011,Savage2011,Swicegood2010,Chacon2009,OSullivan2009,Shore2008,Albing2007,Masters2007,Oram2007,Schach2007,Raymond2004,Pressman2001,Capretz1996,McConnell1996}, regression testing \cite{Vucevic2012,Pugh2011,Schach2011,Agans2006,Schach2002}, automated software testing \cite{Cady2017,Pajankar2017b,Rother2017,Mili2015,Sale2014,Coverity2012,Humble2011,Pugh2011,Rady2011,Schach2011,Turnquist2011,Laakmann2009,Whittaker2009,Zeller2009,Jalote2008,Dasso2007,Sommerville2007,Ong2006,Subramaniam2006,Mosley2002,Schach2002,Bentley2000,Stevens2000,Fewster1999,Kernighan1999}, and automated regression testing \cite{Rierson2013,Pugh2011}. \\
+Where possible, we shall try to adopt multiple best practices from leading product teams (i.e., R\&D teams) in the semiconductor and IT industries, sand also good researchers spanning electrical engineering and computer science. These practices include: research reproducibility and reproducible research \cite{Schiermeier2018,Baumer2017,CodeOceanstaff2017,DatopianAtomaticLtdIncStaff2017,Kim2017,Mailund2017,Barba2016,Gandrud2015,Liberman2015,Creswell2014,Gandrud2014,Stodden2014,RunMyCodeAssociationMembers2013,Blackburn20XY,Geier20XY,Krishnamurthi20XY}, build automation \cite{Hagelberg2017,Suereth2016,Keiter2013a,Collier2012,Crookshanks2012,Humble2011,Schach2011,Fingeroff2010,Riesbeck2009a,Schach2007,Raymond2004,Schach2002,Oram1991,Driscoll20XY}, distributed version/revision control (or software configuration management) \cite{Cady2017,Olson2016,Paarsch2016,Chacon2014,GitHubContributors2014,GitHubContributors2014a,GitHubTeam2014,GitHubTrainingTeam2014,GitHubTrainingTeam2014a,GitHubTrainingTeam2014b,GitHubTrainingTeam2014c,Hamano2014,Fox2013,Wiegers2013,Collier2012,Crookshanks2012,Driscoll2012,Humble2011,Savage2011,Swicegood2010,Chacon2009,OSullivan2009,Shore2008,Albing2007,Masters2007,Oram2007,Schach2007,Raymond2004,Pressman2001,Capretz1996,McConnell1996}, regression testing \cite{Vucevic2012,Pugh2011,Schach2011,Agans2006,Schach2002}, automated software testing \cite{Cady2017,Pajankar2017b,Rother2017,Mili2015,Sale2014,Coverity2012,Humble2011,Pugh2011,Rady2011,Schach2011,Turnquist2011,Laakmann2009,Whittaker2009,Zeller2009,Jalote2008,Dasso2007,Sommerville2007,Ong2006,Subramaniam2006,Mosley2002,Schach2002,Bentley2000,Stevens2000,Fewster1999,Kernighan1999}, and automated regression testing \cite{Rierson2013,Pugh2011}. \\
 
 
 
 %	Agile Manifesto, agile methodologies, agile methods, agile development
-In addition, try to use agile (software development and VLSI design) methodologies \cite{Cady2017,Rothman2017,AltSimmons2016,Ghani2016,Jeffries2015,Jensen2015,Kelly2015,Olsen2015,Stellman2015,Babar2014,Goncalves2014,Laplante2014,Fox2013,Ambler2012,Collier2012,Crookshanks2012,Valacich2012,Appelo2011,Corr2011,Larsen2011a,Leffingwell2011,Meinel2011,Pugh2011,Eckstein2010,Larman2010,Pressman2010,Rasmusson2010,Rothman2009,Stober2010,Davies2009,Larman2009,Martin2009a,DeLucia2008,Kelly2008,Shore2008,Younker2008,Cockburn2007,Martin2007,Rothman2007,Schach2007,37signals2006,Derby2006,Hunt2006a,Subramaniam2006,Beck2005,Coplien2005,Larman2005,Boehm2004,Larman2004,Ambler2003,Larman2003,Martin2002,Beedle2001,Beedle2001a} to develop software, and design circuits, electronic designs, and cyber-physical systems (or embedded systems).
+In addition, try to use agile (software development and VLSI design) methodologies \cite{Cady2017,Rothman2017,AltSimmons2016,Ghani2016,Jeffries2015,Jensen2015,Kelly2015,Olsen2015,Stellman2015,Babar2014,Goncalves2014,Laplante2014,Fox2013,Ambler2012,Collier2012,Crookshanks2012,Valacich2012,Appelo2011,Corr2011,Larsen2011a,Leffingwell2011,Meinel2011,Pugh2011,Eckstein2010,Larman2010,Pressman2010,Rasmusson2010,Rothman2009,Stober2010,Davies2009,Larman2009,Martin2009a,DeLucia2008,Kelly2008,Shore2008,Younker2008,Cockburn2007,Martin2007,Rothman2007,Schach2007,37signals2006,Derby2006,Hunt2006a,Subramaniam2006,Beck2005,Coplien2005,Larman2005,Boehm2004,Larman2004,Ambler2003,Larman2003,Martin2002,Beedle2001,Beedle2001a} to develop software as well as design electronic circuits and systems \cite{Hennessy2018,Johnson2018a,McLellan2014a,Wilson2011a,Black2010a,Goering2010} \cite[Chapter 6, \S6.2.2.3, pp. 243]{Gerstlauer2001}, and cyber-physical systems (or embedded systems) \cite{MondragonTorres2013,MondragonTorres2011}. A strong motivation for using these methodologies and their associated practices is to reduce technical debt \cite{Tornhill2018,Brahma2017,Guo2016,Collier2012,Kruchten2012,Sterling2011,Rothman2007,37signals2006,Read2003,Myers1998}. \\
+
+Also, carry out refactoring \cite{Fields2010,Fowler1999} on an ad-hoc basis to improve the software \cite{Dooley2017,Jeffries2015,Babar2014,Fox2013,Crookshanks2012,Bender2011,DiGennaro2011,Koopman2010,Shore2008,Spolsky2008,Meszaros2007,37signals2006,Feathers2005,Kerievsky2005,Evans2004,McConnell2004,Stevens2000,Brown1998}, hardware \cite{WikipediaContributors2018m,Faes2010,Faes2008,Haynal2008,Haynal2008a,Zeng2006,Zeng2005,Keating2002,Keating1999,Haynal20XY}, and/or system \cite{Collier2012,Rothman2007,Laplante2004} architecture as well as databases \cite{Ambler2006}. In terms of personal and professional development, collaborators are strongly encouraged to refactor their wetware \cite{Hunt2008} and reduce their personal technical debt \cite{Levin2017,Aboulafia2016,Davis2013a,Prause2011,Gadoury2010}, too.
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Practice of Automated Regression Testing}
+\label{ssec:PracticeOfAutomatedRegressionTesting}
+
+Regarding the practice of automated regression testing, Mr. Heiko Maurer (then a lecturer at the University of Adelaide) and Dr./Mr. Tishampati Dhar (a former classmate at the University of Adelaide) suggests printing information regarding passed test cases to a file (or to standard output) and printing information regarding failed test cases to another file (or to standard error). During build automation of software, such as {\tt gem5} \cite{gem5developers2014,Binkert2011}, carry out automated (regression) testing during the last stage of the build/installation process to ensure that the build/installation was done correctly. When performing automated software testing (or software test automation), list the the test cases and their test results (i.e., ``OK''/``Fail''), just like {\tt gem5} during the testing phase of build automation. At the end of each automated software testing run (or round/run of automated software testing), indicate the total number of test cases used, the total number of test cases passed, and the percentage of test cases passed (with respect to the total number of test cases used).
 
 
 
@@ -498,7 +530,7 @@ Repositories for software as well as designs of integrated circuits and cyber-ph
 
 Please kindly note that {\it GitHub} \cite{GitHubStaff2016}: \vspace{-0.3cm}
 \begin{enumerate} \itemsep -4pt
-\item Does not allow a {\it GitHub}-based page to be refreshed/reloaded many times in a few seconds. Else, it would report the following: x\vspace{-0.3cm}
+\item Does not allow a {\it GitHub}-based page to be refreshed/reloaded many times in a few seconds. Else, it would report the following: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
 	\item ``Whoa there!''
 	\item ``You have triggered an abuse detection mechanism.''
@@ -513,6 +545,15 @@ If possible, develop software in a {\it Python}ic style \cite[Chapter 1, pp. 1--
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Acknowledgments}
+\label{sec:Acknowledgments}
+
+
+Mr. David Knight (then a lecturer at the University of Adelaide) and Dr. Charles Lakos (then a senior lecturer at the University of Adelaide) introduced me to regression testing and automated software testing during their introductory course on software engineering. During programming assignments and projects for this course, Dr. Nikolay Stoimenov helped me honed my skills in regression testing and automated software testing, via the practice of pair programming \cite{DeOrio2016,Fox2013,Oram2011,Jalote2008,Shore2008,Wiegers2002}. Subsequently, Mr. Heiko Maurer (then a lecturer at the University of Adelaide) planted the seeds of automated regression testing with his suggestion of separating the results of test cases that passed from the results of test cases that failed. Shortly after, Dr./Mr. Tishampati Dhar (a former classmate at the University of Adelaide) suggests printing information regarding passed test cases to a file (or to standard output) and printing information regarding failed test cases to another file (or to standard error). Months later, Dr. Francis Vaughan (then a senior lecturer at the University of Adelaide), Mr. Kevin J. Maciunas (then a lecturer at the University of Adelaide), and Dr. Robert Esser (then a senior lecturer at the University of Adelaide) helped me develop a sound methodology towards automated regression testing. In addition, Dr. Lakos and Dr. Esser introduced me to using formal methods and software formal verification in the software development process.
+
+% [Redacted for clarity; removed references for pair programming]
+%	Mr. David Knight (then a lecturer at the University of Adelaide) and Dr. Charles Lakos (then a senior lecturer at the University of Adelaide) introduced me to regression testing and automated software testing during their introductory course on software engineering. During programming assignments and projects for this course, Dr. Nikolay Stoimenov helped me honed my skills in regression testing and automated software testing, via the practice of pair programming. Subsequently, Mr. Heiko Maurer (then a lecturer at the University of Adelaide) planted the seeds of automated regression testing with his suggestion of separating the results of test cases that passed from the results of test cases that failed. Shortly after, Dr./Mr. Tishampati Dhar (a former classmate at the University of Adelaide) suggests printing information regarding passed test cases to a file (or to standard output) and printing information regarding failed test cases to another file (or to standard error). Months later, Dr. Francis Vaughan (then a senior lecturer at the University of Adelaide), Mr. Kevin J. Maciunas (then a lecturer at the University of Adelaide), and Dr. Robert Esser (then a senior lecturer at the University of Adelaide) helped me develop a sound methodology towards automated regression testing. In addition, Dr. Lakos and Dr. Esser introduced me to using formal methods and software formal verification in the software development process.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
