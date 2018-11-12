@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  10 NOV 2018 15:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  3 JUL 2018 09:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1062,7 +1062,7 @@ l.20 \chapter
 Chapter 2.
 ) (./optimization/optimization.tex [2
 
-]
+] [3]
 Chapter 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 28--29
@@ -1084,20 +1084,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
  []
 
-[3
+[4
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 104--105
 
  []
 
-[4]
+[5]
 Overfull \hbox (7.34369pt too wide) in paragraph at lines 168--169
 []\T1/lmr/m/n/12 Its tech-ni-cal doc-u-men-ta-tion can be found at: [][]$\T1/lm
 tt/m/n/12 http : / / www . localsolver . com / documentation /
  []
 
-[5]) (./numerical_comp/numerical_comp.tex [6]
+[6]) (./numerical_comp/numerical_comp.tex [7]
 Chapter 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 38--48
@@ -1119,7 +1119,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--56
 
  []
 
-[7
+[8
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 127--129
@@ -1131,9 +1131,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 127--129
 
  []
 
-) (./statistics/statistical_comp.tex [8]
+) (./statistics/statistical_comp.tex [9]
 Chapter 5.
-) (./cpp_resources/cpp_resources.tex [9
+) (./cpp_resources/cpp_resources.tex [10
 
 ]
 Chapter 6.
@@ -1166,10 +1166,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--29
 LaTeX Font Info:    Try loading font information for TS1+lmr on input line 34.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [10
+) [11
 
-] [11] [12]
-[13] [14] [15]
+] [12] [13]
+[14] [15] [16]
 Overfull \hbox (39.2348pt too wide) in paragraph at lines 315--316
 \T1/lmr/m/it/12 C++ \T1/lmtt/m/n/12 template definition and implementation sepa
 rately into different files,
@@ -1181,20 +1181,20 @@ Overfull \hbox (37.53482pt too wide) in paragraph at lines 315--316
 ts templates
  []
 
-[16] [17] [18] [19]
+[17] [18] [19] [20]
 Overfull \hbox (252.02818pt too wide) in paragraph at lines 496--497
 [][][]$\T1/lmtt/m/n/12 http : / / stackoverflow . com / questions / 1143262 / w
 hat-[]is-[]the-[]difference-[]between-[]const-[]int-[]const-[]int-[]const-[]and
 -[]int-[]const$[][]
  []
 
-[20]
+[21]
 Overfull \hbox (20.27704pt too wide) in paragraph at lines 590--591
 \T1/lmr/m/n/12 Wisconsin-Madison, Madi-son, WI. Avail-able on-line at: [][]$\T1
 /lmtt/m/n/12 http : / / pages . cs . wisc . edu / ~driscoll /
  []
 
-[21] [22]
+[22] [23]
 Underfull \hbox (badness 10000) in paragraph at lines 669--670
 
  []
@@ -1204,20 +1204,20 @@ Overfull \hbox (31.64955pt too wide) in paragraph at lines 676--699
  [] 
  []
 
-[23]
+[24]
 Overfull \hbox (0.14552pt too wide) in paragraph at lines 770--771
 \T1/lmr/m/it/12 tions \T1/lmr/m/n/12 and \T1/lmr/m/it/12 Re-lated asymp-totic n
 o-ta-tions: Fam-ily of Bach-mann?Landau no-ta-tions\T1/lmr/m/n/12 , in \T1/lmr/
 m/it/12 Wikipedia,
  []
 
-[24]
+[25]
 Overfull \hbox (16.01239pt too wide) in paragraph at lines 771--772
 \T1/lmtt/m/n/12 wikipedia . org / wiki / Time _ complexity # Table _ of _ commo
 n _ time _ complexities$[][]\T1/lmr/m/n/12 ; last ac-cessed
  []
 
-[25]
+[26]
 Underfull \hbox (badness 10000) in paragraph at lines 837--838
 
  []
@@ -1227,7 +1227,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 839--840
 
  []
 
-[26] [27] [28]
+[27] [28] [29]
 Overfull \hbox (3.32965pt too wide) in paragraph at lines 986--987
 []\T1/lmr/m/n/12 Create as-sem-bly code: \T1/lmtt/m/n/12 c++ -S -fverbose-asm -
 g -02 \T1/lmr/m/it/12 [source_code.cpp] \T1/lmtt/m/n/12 -o \T1/lmr/m/it/12 [una
@@ -1244,7 +1244,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1035--1037
 
  []
 
-[29]
+[30]
 Underfull \hbox (badness 10000) in paragraph at lines 1038--1039
 
  []
@@ -1264,12 +1264,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 1081--1082
 
  []
 
-[30]
+[31]
 Underfull \hbox (badness 10000) in paragraph at lines 1083--1084
 
  []
 
-) (./questions/questions.tex [31]
+) (./questions/questions.tex [32]
 Chapter 7.
 
 Overfull \hbox (230.57298pt too wide) in paragraph at lines 51--53
@@ -1310,7 +1310,7 @@ rogrammers . stackexchange . com / questions / 17898 / whats-[]a-[]nice-[]expla
 nation-[]for-[]pointers /
  []
 
-[32
+[33
 
 ]
 Overfull \hbox (158.07701pt too wide) in paragraph at lines 59--60
@@ -1339,22 +1339,22 @@ rogrammers . stackexchange . com / questions / 17898 / whats-[]a-[]nice-[]expla
 nation-[]for-[]pointers /
  []
 
-[33]
+[34]
 Overfull \hbox (207.47728pt too wide) in paragraph at lines 86--87
 \T1/lmtt/m/n/12 stackoverflow . com / questions / 57483 / what-[]are-[]the-[]di
 fferences-[]between-[]a-[]pointer-[]variable-[]and-[]a-[]reference-[]variable-[
 ]in$[][]\T1/lmr/m/n/12 ;
  []
 
-[34]) (./misc/misc.tex [35]
+[35]) (./misc/misc.tex [36]
 Chapter 8.
-) [36
+) [37
 
-] (./data-structures_n_algor.bbl [37
+] (./data-structures_n_algor.bbl [38
 
-] [38
+] [39
 
-] [39] [40]
+] [40] [41]
 
 LaTeX Warning: Command \textregistered invalid in math mode on input line 264.
 
@@ -1379,27 +1379,27 @@ LaTeX Warning: Command \textregistered invalid in math mode on input line 300.
 
 LaTeX Warning: Command \textregistered invalid in math mode on input line 300.
 
-[41] [42]
+[42] [43]
 Underfull \hbox (badness 6961) in paragraph at lines 529--536
 [][]$\T1/lmtt/m/n/12 http : / / pweb . netcom . com / ~tjensen / ptr / cpoint .
  htm$[][]\T1/lmr/m/n/12 , [][]$\T1/lmtt/m/n/12 http : / / pweb . netcom . com /
  ~tjensen /
  []
 
-[43]
+[44]
 Underfull \hbox (badness 1173) in paragraph at lines 577--582
 []\T1/lmr/m/n/12 Darko Kirovski and Mio-drag Potkon-jak.  A quan-ti-ta-tive ap-
 proach to func-tional de-bug-
  []
 
-[44]
+[45]
 Underfull \hbox (badness 5274) in paragraph at lines 723--732
 \T1/lmtt/m/n/12 JSC / EN / slides / cplusplus / cplusplus . pdf$[][] \T1/lmr/m/
 n/12 and [][]$\T1/lmtt/m/n/12 https : / / www . fz-[]juelich . de / SharedDocs 
 /
  []
 
-[45]
+[46]
 Underfull \hbox (badness 1038) in paragraph at lines 734--744
 \T1/lmr/m/n/12 ( and a pre-view of C++17 ).  Avail-able on-line from \T1/lmr/m/
 it/12 Forschungszen-trum Jülich GmbH:
@@ -1501,23 +1501,33 @@ Underfull \hbox (badness 6927) in paragraph at lines 810--816
 rences$[][]\T1/lmr/m/n/12 ; Oc-to-ber 28, 2015 was
  []
 
-[46] [47] [48] [49])
+[47] [48] [49] [50])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 284.
- [50]
+ [51]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 284.
  (./data-structures_n_algor.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 284.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 284.
-Package rerunfilecheck Info: File `data-structures_n_algor.out' has not changed
-.
-(rerunfilecheck)             Checksum: 5CB794A6874C50BA1A276CB20234851C;2434.
+
+
+Package rerunfilecheck Warning: File `data-structures_n_algor.out' has changed.
+
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `data-structures_n_algor.out':
+(rerunfilecheck)             Before: 5CB794A6874C50BA1A276CB20234851C;2434
+(rerunfilecheck)             After:  842B3B3AEB3DE5C93334F797938C5ED3;2508.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 284.
  ) 
 Here is how much of TeX's memory you used:
- 17345 strings out of 493089
- 245172 string characters out of 6134842
+ 17360 strings out of 493089
+ 245318 string characters out of 6134842
  356961 words of memory out of 5000000
- 19519 multiletter control sequences out of 15000+600000
+ 19520 multiletter control sequences out of 15000+600000
  125350 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,15n,96p,1261b,668s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1544,10 +1554,10 @@ msy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><
 /texlive/2015/texmf-dist/fonts/type1/public/marvosym/marvosym.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on data-structures_n_algor.pdf (55 pages, 520328 bytes).
+Output written on data-structures_n_algor.pdf (56 pages, 521737 bytes).
 PDF statistics:
- 2135 PDF objects out of 2487 (max. 8388607)
- 2037 compressed objects within 21 object streams
- 943 named destinations out of 1000 (max. 500000)
+ 2154 PDF objects out of 2487 (max. 8388607)
+ 2055 compressed objects within 21 object streams
+ 957 named destinations out of 1000 (max. 500000)
  289 words of extra memory for PDF output out of 10000 (max. 10000000)
 
