@@ -49,13 +49,57 @@ Types of finite graphs: \vspace{-0.3cm}
 \begin{enumerate} \itemsep -4pt
 \item undirected graph: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
-	\item simple graph: \vspace{-0.2cm}
+	\item simple graph, or undirected simple finite graph: \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
-		\item Does not allow multiple edges nor loops.
-		\item Therefore, the edges of a simple graph form a set, as opposed to multigraphs that have multisets.
-		\item An edge is a two-element subset of $V$; other graphs (i.e., multiple graphs) can have more than two nodes.
+		\item Does not allow multiple edges (or, parallel edges, or multi-edges) between any pair of vertices/nodes in the graph, nor (self-)loops.
+		\item Symmetric loopless directed graph
+		\item Therefore, the edges of a simple graph form a set, as opposed to multigraphs that have multisets of edges.
+		\item An edge is a two-element subset of $V$; other graphs (i.e., hypergraphs) can have edges with more than two nodes.
 		\end{enumerate}
-	\item hypergraph
+	\item multigraph: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item A multigraph allows multiple edges (or, parallel edges, or multi-edges) to exist between any pair of vertices/nodes in the graph. Alternatively, for any pair of vertices/nodes in the multiple graph, they allow multiple edges to be incident to them.
+		
+		\item pseudograph: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item Some authors/people use pseudographs and multigraphs interchangeably/synonymously.
+			\item Other people use pseudographs to refer to multigraphs that allow self-loops (or loops).
+			\end{enumerate}
+		\item A planar graph remains planar, or preserves its planarity, when its edges become multiple edges by the addition of edges to edges in the original graph.
+		\item Representations for different types of multigraphs: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item undirected multigraph, which edges have no identity, and can be defined as an ordered pair (or 2-tuple) $G = (V, E)$, where $V$ is a set of vertices/nodes, $E$ is a multi-set of undirected edges (or unordered pairs of vertices).
+			\item undirected multigraph, which edges have an identity each (or, where each edge has an identity), and can be defined as an ordered triple (or 3-tuple) $G = (V, E, r)$, such that $r: E \rightarrow \{\{x, y\} : x, y \in V\}$ is a function that assigns each edge to an unordered pair of vertices (i.e., endpoint nodes).
+			\item directed multigraph, which edges have no identity, and can be defined as an ordered pair (or 2-tuple) $G = (V,E)$. Here, $V$ is a set of vertices, nodes, and $E$ is a multi-set of ordered pairs of vertices (i.e., directed edges, directed arcs, or arrows)
+			\item A mixed multigraph is a(n) (ordered) 3-tuple $G = (V, E, A)$, where $V$ is a set of vertices/nodes, $E$ is a set of undirected edges, and $A$ is a multi-set of directed edges/arcs.
+			\item 
+			\end{enumerate}
+		\item References: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item Multiple edges: \url{https://en.wikipedia.org/wiki/Multiple_edges}
+			\item Multigraph: \url{https://en.wikipedia.org/wiki/Multigraph}
+			\end{enumerate}
+		\end{enumerate}
+	\item hypergraph: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item 
+		\end{enumerate}
+	\item multidimensional networks: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item One of the distinguishing features of multi-dimensional edges is multiple edges.
+		\end{enumerate}
+	\item planar graph: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item 
+		\end{enumerate}
+	\item dipole graph: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item A dipole graph has a set of only two vertices, and a set of edges between these edges.
+		\item References: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item Multiple edges: \url{https://en.wikipedia.org/wiki/Multiple_edges}
+			\end{enumerate}
+		\end{enumerate}
 	\end{enumerate}
 \item directed graph: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
