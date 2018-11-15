@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  14 NOV 2018 16:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  15 NOV 2018 15:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1068,51 +1068,51 @@ l.79 \item C
 Chapter 2.
 [3
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 128--129
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 130--131
-
- []
-
-
+] [4]
 Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
-[4]
-Overfull \hbox (23.97346pt too wide) in paragraph at lines 192--193
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
+
+ []
+
+
+Overfull \hbox (23.97346pt too wide) in paragraph at lines 198--199
 \T1/lmr/m/n/12 or ID-DFS: [][]$\T1/lmtt/m/n/12 https : / / en . wikipedia . org
  / wiki / Iterative _ deepening _ depth-[]first _ search$[][] 
  []
 
 [5]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 234.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 240.
 
  (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (1.7386pt too wide) in paragraph at lines 265--266
+Overfull \hbox (1.7386pt too wide) in paragraph at lines 271--272
 []\T1/lmr/m/n/12 max-flow min-cut the-o-rem: [][]$\T1/lmtt/m/n/12 https : / / e
 n . wikipedia . org / wiki / Max-[]flow _ min-[]cut _ theorem$[][] 
  []
 
 [6]
-Overfull \hbox (1.45274pt too wide) in paragraph at lines 306--307
+Overfull \hbox (1.45274pt too wide) in paragraph at lines 312--313
 []\T1/lmr/m/n/12 Covering/packing-problem pairs, or cov-er-ing/-pack-ing du-al-
 i-ties: [][]$\T1/lmtt/m/n/12 https : / / en . wikipedia .
  []
 
 [7] [8]
-Overfull \hbox (0.79832pt too wide) in paragraph at lines 423--424
+Overfull \hbox (0.79832pt too wide) in paragraph at lines 429--430
 []\T1/lmr/m/n/12 Homeomorphism: [][]$\T1/lmtt/m/n/12 https : / / en . wikipedia
  . org / wiki / Homeomorphism _ (graph _ theory )
  []
@@ -1569,16 +1569,12 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 284.
 Package rerunfilecheck Info: File `data-structures_n_algor.out' has not changed
 .
 (rerunfilecheck)             Checksum: 6BBFA47150CF68B5AB499236F6C03889;2770.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 284.
  ) 
 Here is how much of TeX's memory you used:
- 17600 strings out of 493089
- 247424 string characters out of 6134842
- 359399 words of memory out of 5000000
+ 17605 strings out of 493089
+ 247464 string characters out of 6134842
+ 360404 words of memory out of 5000000
  19532 multiletter control sequences out of 15000+600000
  125350 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1587,8 +1583,8 @@ Here is how much of TeX's memory you used:
 texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/20
 15/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2015/texmf-dist/
 fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/
-dvips/lm/lm-mathex.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/l
-m-ts1.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmbx12.pfb>
+dvips/lm/lm-ts1.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-m
+athex.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmbx12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive
 /2015/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2015/texm
@@ -1606,10 +1602,10 @@ msy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><
 /texlive/2015/texmf-dist/fonts/type1/public/marvosym/marvosym.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on data-structures_n_algor.pdf (63 pages, 551776 bytes).
+Output written on data-structures_n_algor.pdf (63 pages, 554391 bytes).
 PDF statistics:
- 2591 PDF objects out of 2984 (max. 8388607)
- 2481 compressed objects within 25 object streams
- 1185 named destinations out of 1200 (max. 500000)
+ 2598 PDF objects out of 2984 (max. 8388607)
+ 2488 compressed objects within 25 object streams
+ 1190 named destinations out of 1200 (max. 500000)
  321 words of extra memory for PDF output out of 10000 (max. 10000000)
 

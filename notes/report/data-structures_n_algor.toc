@@ -4,12 +4,12 @@
 \contentsline {chapter}{\numberline {2}Data Structures}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Basic Data Structures}{3}{section.2.1}
 \contentsline {section}{\numberline {2.2}Graphs}{3}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Graph Representations}{4}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.1}Graph Representations}{5}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Functions that need to be implemented}{5}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}Directed Graphs, and Directed Acyclic Graphs}{9}{subsection.2.2.3}
-\contentsline {subsubsection}{\numberline {2.2.3.1}Binary Decision Diagrams (BDDs)}{9}{subsubsection.2.2.3.1}
-\contentsline {subsubsection}{\numberline {2.2.3.2}AND-Inverter Graphs (AIGs)}{9}{subsubsection.2.2.3.2}
-\contentsline {subsubsection}{\numberline {2.2.3.3}Majority-Inverter Graphs (MIGs)}{9}{subsubsection.2.2.3.3}
+\contentsline {subsubsection}{\numberline {2.2.3.1}Binary Decision Diagrams (BDDs)}{10}{subsubsection.2.2.3.1}
+\contentsline {subsubsection}{\numberline {2.2.3.2}AND-Inverter Graphs (AIGs)}{10}{subsubsection.2.2.3.2}
+\contentsline {subsubsection}{\numberline {2.2.3.3}Majority-Inverter Graphs (MIGs)}{10}{subsubsection.2.2.3.3}
 \contentsline {subsection}{\numberline {2.2.4}Undirected Graphs}{10}{subsection.2.2.4}
 \contentsline {subsection}{\numberline {2.2.5}Resources for Graphs}{10}{subsection.2.2.5}
 \contentsline {chapter}{\numberline {3}Optimization}{11}{chapter.3}

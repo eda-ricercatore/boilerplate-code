@@ -58,8 +58,7 @@ Types of finite graphs: \vspace{-0.3cm}
 		\end{enumerate}
 	\item multigraph: \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
-		\item A multigraph allows multiple edges (or, parallel edges, or multi-edges) to exist between any pair of vertices/nodes in the graph. Alternatively, for any pair of vertices/nodes in the multiple graph, they allow multiple edges to be incident to them.
-		
+		\item A multigraph allows multiple edges (or, parallel edges, or multi-edges) to exist between any pair of vertices (or, nodes) in the graph. Alternatively, for any pair of vertices (or, nodes) in the multigraph, they allow multiple edges to be incident to them.
 		\item pseudograph: \vspace{-0.1cm}
 			\begin{enumerate} \itemsep -1pt
 			\item Some authors/people use pseudographs and multigraphs interchangeably/synonymously.
@@ -68,16 +67,23 @@ Types of finite graphs: \vspace{-0.3cm}
 		\item A planar graph remains planar, or preserves its planarity, when its edges become multiple edges by the addition of edges to edges in the original graph.
 		\item Representations for different types of multigraphs: \vspace{-0.1cm}
 			\begin{enumerate} \itemsep -1pt
-			\item undirected multigraph, which edges have no identity, and can be defined as an ordered pair (or 2-tuple) $G = (V, E)$, where $V$ is a set of vertices/nodes, $E$ is a multi-set of undirected edges (or unordered pairs of vertices).
-			\item undirected multigraph, which edges have an identity each (or, where each edge has an identity), and can be defined as an ordered triple (or 3-tuple) $G = (V, E, r)$, such that $r: E \rightarrow \{\{x, y\} : x, y \in V\}$ is a function that assigns each edge to an unordered pair of vertices (i.e., endpoint nodes).
-			\item directed multigraph, which edges have no identity, and can be defined as an ordered pair (or 2-tuple) $G = (V,E)$. Here, $V$ is a set of vertices, nodes, and $E$ is a multi-set of ordered pairs of vertices (i.e., directed edges, directed arcs, or arrows)
-			\item A mixed multigraph is a(n) (ordered) 3-tuple $G = (V, E, A)$, where $V$ is a set of vertices/nodes, $E$ is a set of undirected edges, and $A$ is a multi-set of directed edges/arcs.
-			\item 
+			\item undirected multigraph, which edges have no identity, is an ordered pair (or 2-tuple) $G = (V, E)$, where $V$ is a set of vertices (or, nodes), $E$ is a multi-set of undirected edges (or unordered pairs of vertices).
+			\item undirected multigraph, which edges have an identity each (or, where each edge has an identity), is an ordered triple (or 3-tuple) $G = (V, E, r)$, such that $r: E \rightarrow \{\{x, y\} : x, y \in V\}$ is a function that assigns each edge to an unordered pair of vertices (i.e., endpoint nodes).
+			\item directed multigraph (or multidigraph), which edges have no identity, is an ordered pair (or 2-tuple) $G = (V,E)$. Here, $V$ is a set of vertices (or, nodes), and $E$ is a multi-set of ordered pairs of vertices (i.e., directed edges, directed arcs, or arrows)
+			\item A mixed multigraph is a(n) (ordered) 3-tuple $G = (V, E, A)$, where $V$ is a set of vertices (or, nodes), $E$ is a set of undirected edges, and $A$ is a multi-set of directed edges/arcs.
+			\item A directed multigraph (or multidigraph), which edges have an identity each (or, where each edge has an identity), is a 4-tuple $G = (V, E, s, t)$. Here, $V$ is a set of vertices (or nodes), $E$ is a multi-set of ordered pairs of vertices (i.e., directed edges, directed arcs, or arrows), $s : E \rightarrow V$ so that each edge is assigned to its source node, and $t : E \rightarrow V$ so that each edge is assigned to its destination/target node.
 			\end{enumerate}
+		\item A labeled multigraph is a 6-tuple $G = (\sum_{V}, \sum_{E}, V, E, l_{V}, l_{E})$. Here, $V$ is a set of vertices (or, nodes), and $E$ is a multi-set of ordered pairs of vertices (i.e., directed edges, directed arcs, or arrows), $\sum_{V}$ is the finite alphabet of available vertex labels, $\sum_{E}$ is the finite alphabet of available edge labels, $l_{V} : V \rightarrow \sum_{V}$ is a map describing the labeling of the vertices, and $l_{E} : E \rightarrow \sum_{E}$ is a map describing the labeling of the vertices.
+		\item A labeled multidigraph is also known as a labeled, directed multigraph. It is a 8-tuple $G = (\sum_{V}, \sum_{E}, V, E, s, t, l_{V}, l_{E})$. Here, $V$ is a set of vertices (or, nodes), and $E$ is a multi-set of ordered pairs of vertices (i.e., directed edges, directed arcs, or arrows), $\sum_{V}$ is the finite alphabet of available vertex labels, $\sum_{E}$ is the finite alphabet of available edge labels, $s : E \rightarrow V$ so that each edge is assigned to its source node (or, is a map that assigns each edge to its source node), $t : E \rightarrow V$ so that each edge is assigned to its destination/target node (or, is a map that assigns each edge to its destination/target node), $l_{V} : V \rightarrow \sum_{V}$ is a map describing the labeling of the vertices, and $l_{E} : E \rightarrow \sum_{E}$ is a map describing the labeling of the vertices.
 		\item References: \vspace{-0.1cm}
 			\begin{enumerate} \itemsep -1pt
 			\item Multiple edges: \url{https://en.wikipedia.org/wiki/Multiple_edges}
 			\item Multigraph: \url{https://en.wikipedia.org/wiki/Multigraph}
+			\item Graph labeling: \vspace{-0.1cm}
+				\begin{itemize} \itemsep -1pt
+				\item \url{https://en.wikipedia.org/wiki/Graph_labeling}
+				\item ``Graph labeling is the assignment of labels,'' which can be represented by numbers and/or strings, to edges and/or vertices of a graph.
+				\end{itemize}
 			\end{enumerate}
 		\end{enumerate}
 	\item hypergraph: \vspace{-0.2cm}
@@ -87,6 +93,10 @@ Types of finite graphs: \vspace{-0.3cm}
 	\item multidimensional networks: \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
 		\item One of the distinguishing features of multi-dimensional edges is multiple edges.
+		\end{enumerate}
+	\item mixed graph: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item 
 		\end{enumerate}
 	\item planar graph: \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
