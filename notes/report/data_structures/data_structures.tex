@@ -87,7 +87,7 @@ Types of finite graphs: \vspace{-0.3cm}
 				\item A vertex-labeled graph is a graph with a defined vertex labeling function.
 				\item Edge labeling is a function of $E$\ that assigns a set of labels to $E$; or, it is a function of $E$that assigns a label to each edge.
 				\item An edge-labeled graph is a graph with a defined edge labeling function.
-				\item A weighted graph is an edge-labeled graph, such that the edge labels are members of an ordered set (e.g., the set of real numbers $\mathbb{R}$).
+				\item A {\bf weighted graph} is an edge-labeled graph, such that the edge labels are members of an ordered set (e.g., the set of real numbers $\mathbb{R}$).
 				\item The term labeled graph generally refers to a vertex-labeled graphs with unique labels (e.g., $\{1, \dots, |V|\}$, where $|V|$ is the number of vertices in the graph or the cardinality of $V$), unless otherwise specified.
 				\end{itemize}
 			\end{enumerate}
@@ -136,8 +136,11 @@ Additional resources about graphs: \vspace{-0.3cm}
 	\end{enumerate}
 \item Multi-dimensional networks: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
-	\item Multi-dimensional networks belong to type of multi-layer networks that have multiple types/kinds of relations
+	\item Multi-dimensional networks belong to type of multi-layer networks that have multiple types/kinds of relations.
+	\item A multi-dimensional network can be modeled with a multipartite edge-labeled multigraph.
+	\item An unweighted multi-layer network can be represented as a triple $G = (V, E, D)$, where (or, in which) $V$ is a set of vertices, $E$ is a dimension-specific set of edges connecting the vertices and is represented by the triple $(u, v, d)$ such that $u, v, \in V$ and $d \in D$, and $D$ is a set of dimensions or layers.
 	\item Multidimensional network: \url{https://en.wikipedia.org/wiki/Multidimensional_network}.
+	\item Multipartite graph: \url{https://en.wikipedia.org/wiki/Multipartite_graph}
 	\end{enumerate}
 \item extremal graphs: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
@@ -464,6 +467,9 @@ Solvers for the following problems (or to perform the following functions) regar
 		\item Community structure: \url{https://en.wikipedia.org/wiki/Community_structure}
 		\item Distance (graph theory): \url{https://en.wikipedia.org/wiki/Distance_(graph_theory)}
 		\item Assortativity: \url{https://en.wikipedia.org/wiki/Assortativity}
+		\item Degree distribution: \url{https://en.wikipedia.org/wiki/Degree_distribution}
+		\item Centrality: \url{https://en.wikipedia.org/wiki/Centrality#Closeness_centrality}
+		\item Betweenness centrality: \url{https://en.wikipedia.org/wiki/Betweenness_centrality}
 		\end{enumerate}
 	\end{enumerate}
 \end{enumerate}

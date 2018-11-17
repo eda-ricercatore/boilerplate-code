@@ -9,7 +9,7 @@
 \contentsline {subsection}{\numberline {2.2.3}Directed Graphs, and Directed Acyclic Graphs}{10}{subsection.2.2.3}
 \contentsline {subsubsection}{\numberline {2.2.3.1}Binary Decision Diagrams (BDDs)}{10}{subsubsection.2.2.3.1}
 \contentsline {subsubsection}{\numberline {2.2.3.2}AND-Inverter Graphs (AIGs)}{10}{subsubsection.2.2.3.2}
-\contentsline {subsubsection}{\numberline {2.2.3.3}Majority-Inverter Graphs (MIGs)}{10}{subsubsection.2.2.3.3}
+\contentsline {subsubsection}{\numberline {2.2.3.3}Majority-Inverter Graphs (MIGs)}{11}{subsubsection.2.2.3.3}
 \contentsline {subsection}{\numberline {2.2.4}Undirected Graphs}{11}{subsection.2.2.4}
 \contentsline {subsection}{\numberline {2.2.5}Resources for Graphs}{11}{subsection.2.2.5}
 \contentsline {chapter}{\numberline {3}Optimization}{12}{chapter.3}
