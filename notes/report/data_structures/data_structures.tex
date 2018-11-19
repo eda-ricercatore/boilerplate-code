@@ -124,6 +124,7 @@ Types of finite graphs: \vspace{-0.3cm}
 	\end{enumerate}
 \item directed graph: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
+	\item directed multigraphs: see aforementioned notes on ``directed multigraph (or multidigraph), which edges have no identity'' and ``directed multigraph (or multidigraph), which edges have an identity each (or, where each edge has an identity)''
 	\item directed acyclic graphs (DAGs)
 	\end{enumerate}
 \end{enumerate}
@@ -139,6 +140,14 @@ Additional resources about graphs: \vspace{-0.3cm}
 \item Graph property, or graph invariant: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
 	\item \url{https://en.wikipedia.org/wiki/Graph_property}
+	\item Notes about vertices/nodes: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item If the graph contains an edge connecting vertices $u$ and $v$, $e = (u, v)$, the vertices $u$ and $v$ are {\bf adjacent} to each other \cite{WikipediaContributors2017a11}.
+		\item The {\bf degree of vertex} $v$, which is denoted by $\delta(v)$, is the number of edges that are incident to $v$ \cite{WikipediaContributors2017a11}.
+		\item An {\it isolated vertex} is a vertex with degree zero, $\delta(v) = 0$. It does not an endpoint of any edge; or, no edge in a (or, any) graph is defined with an isolated vertex.
+		\item A {\bf left vertex}, or {\bf pendent vertex}, is a vertex of degree one, and is an endpoint of only one edge in the graph.
+		\item For a vertex $v$ of a directed graph, the {\bf outdegree} of $v$ (denoted by $\delta^{+}(v)$) is its number of outgoing edges, and the {\bf indegree} of $v$ (denoted by $\delta^{-}(v)$) is its number of incoming edges. A source vertex is a vertex with a zero indegree ($\delta^{-}(v) = 0$), and a sink vertex is a vertex with a zero outdegree ($\delta^{+}(v) = 0$).
+		\end{enumerate}
 	\end{enumerate}
 \item Multi-dimensional networks: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
