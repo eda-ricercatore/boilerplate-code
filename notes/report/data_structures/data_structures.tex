@@ -144,14 +144,22 @@ Additional resources about graphs: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
 	\item Multi-dimensional networks belong to type of multi-layer networks that have multiple types/kinds of relations.
 	\item A multi-dimensional network can be modeled with a multipartite edge-labeled multigraph.
-	\item An unweighted multi-layer network can be represented as a triple $G = (V, E, D)$, where (or, in which) $V$ is a set of vertices, $E$ is a dimension-specific set of edges connecting the vertices and is represented by the triple $(u, v, d)$ such that $u, v, \in V$ and $d \in D$, and $D$ is a set of dimensions or layers. \vspace{-0.2cm}
+	\item An unweighted multi-layer network can be represented as a triple $G = (V, E, D)$, where (or, in which) $V$ is a set of vertices, $E$ is a dimension-specific set of edges connecting the vertices and each edge is represented by the triple $(u, v, d)$ such that $u, v, \in V$ and $d \in D$ (or, $E = \{(u, v, d); u, v \in V, d \in D$), and $D$ is a set of dimensions or layers. \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
 		\item For an unweighted, undirected multi-layer network, the edges/links $(u, v, d)$ and $(v, u, d)$ are equivalent.
 		\item For an unweighted, directed multi-layer network, the edges/links $(u, v, d)$ and $(v, u, d)$ are different/distinct.
-		\item By convention, unweighted multi-layer network are not multigraphs in a given dimension; hence, ``the number of $\[$edges/$\]$links between two nodes in a given dimension is either zero or one''. ``However, the total number of $\[$edges/$\]$links between two nodes across all dimensions is less than or equal to $| D |$.''
+		\item By convention, unweighted multi-layer network are not multigraphs in a given dimension; hence, ``the number of $[$edges/$]$links between two nodes in a given dimension is either zero or one''. ``However, the total number of $[$edges/$]$links between two nodes across all dimensions is less than or equal to $| D |$.''
+		\end{enumerate}
+	\item An edge of a weighted multi-layer network can be represented as a 4-tuple (or, quadruplet) $e = (u, v, d, w)$, ``where $w$ is the weight of the $[$edge/$]$link between $[$vertex$]$ $u$ and $[$vertex$]$ $v$ in the dimension $d$'' \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item Weighted multi-layer networks, like unweighted multi-layer networks, can also be represented as a triple $G = (V, E, D)$, where $V$ is the set of vertices, $E$ is the set of edges (each edge is represented by $e = (u, v, d, w)$), or $E = \{(u, v, d, w); u, v \in V, d \in D, w \in W\}$, $W$ is a set of weights, and $D$ is a set of dimensions or layers.
+		\item A temporal network, or time-varying network, can model edges in weighted multi-layer networks, where an edge is defined as $e = (u, v, d_{1}, \dots, d_{n}, w)$, where $d_{1}, \dots, d_{n} \in D$
 		\end{enumerate}
 	\item Multidimensional network: \url{https://en.wikipedia.org/wiki/Multidimensional_network}.
 	\item Multipartite graph: \url{https://en.wikipedia.org/wiki/Multipartite_graph}
+	\item Temporal network, or time-varying network: \url{https://en.wikipedia.org/wiki/Temporal_network}
+	\item A 1-dimensional (1-D) network has a 2-dimensional (2-D) adjacency matrix with the size $V \times V$; $A^{i}_{j}$ is an adjacency matrix that encodes edges/links/connections between vertices $i$ and $j$.
+	\item For a multi-dimensional network with $| D |$ dimensions, it has a multi-layer adjacency tensor (or, 4-dimensional matrix, or 4-D matrix) with the size $(V \times D) \times (V \times D)$; $M^{i\alpha}_{j\beta}$ is an multi-layer adjacency tensor that encodes edges/links/connections between vertices $i$ in layer $\alpha$ and $j$ in layer $\beta$.
 	\end{enumerate}
 \item extremal graphs: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
