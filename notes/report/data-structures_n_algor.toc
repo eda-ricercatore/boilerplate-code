@@ -8,7 +8,7 @@
 \contentsline {subsection}{\numberline {2.2.2}Functions that need to be implemented}{7}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}Directed Graphs, and Directed Acyclic Graphs}{11}{subsection.2.2.3}
 \contentsline {subsubsection}{\numberline {2.2.3.1}Binary Decision Diagrams (BDDs)}{11}{subsubsection.2.2.3.1}
-\contentsline {subsubsection}{\numberline {2.2.3.2}AND-Inverter Graphs (AIGs)}{11}{subsubsection.2.2.3.2}
+\contentsline {subsubsection}{\numberline {2.2.3.2}AND-Inverter Graphs (AIGs)}{12}{subsubsection.2.2.3.2}
 \contentsline {subsubsection}{\numberline {2.2.3.3}Majority-Inverter Graphs (MIGs)}{12}{subsubsection.2.2.3.3}
 \contentsline {subsection}{\numberline {2.2.4}Undirected Graphs}{12}{subsection.2.2.4}
 \contentsline {subsection}{\numberline {2.2.5}Resources for Graphs}{12}{subsection.2.2.5}
@@ -42,4 +42,4 @@
 \contentsline {section}{\numberline {8.1}Setting Up Software Development Environment}{46}{section.8.1}
 \contentsline {section}{\numberline {8.2}Software Dependencies of The Boilerplate Code Project}{46}{section.8.2}
 \contentsline {chapter}{Acknowledgments}{47}{chapter*.4}
-\contentsline {chapter}{Bibliography}{60}{appendix*.5}
+\contentsline {chapter}{Bibliography}{61}{appendix*.5}

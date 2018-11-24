@@ -1,0 +1,627 @@
+%	This is written by Zhiyang Ong to document data structures that I have implemented for my C++ -based boilerplate code repository.
+
+%	The MIT License (MIT)
+
+%	Copyright (c) <2014> <Zhiyang Ong>
+
+%	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+%	The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+%	Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" | awk '{ sub("23wU4X5M589","F.d_c_b. ") sub("Stanford","d0mA1n"); print $5, $2, $8; for (i=1; i<=1; i++) print "6\b"; print $9, $7, $6 }' | sed y/kqcbuHwM62z/gnotrzadqmC/ | tr 'q' ' ' | tr -d [:cntrl:] | tr -d 'ir' | tr y "\n"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Graphs}
+\label{sec:Graphs}
+
+A graph $G$ is an ordered pair, $G = (V,E)$, of a vertex/node set and an edge set \cite{WikipediaContributors2018a38}.
+
+Types of finite graphs \cite{WikipediaContributors2018a38}: \vspace{-0.2cm}
+\begin{enumerate} \itemsep -4pt
+\item undirected graph \cite{WikipediaContributors2018a38}: \vspace{-0.2cm}
+	\begin{enumerate} \itemsep -2pt
+	\item simple graph, or undirected simple finite graph \cite{WikipediaContributors2018a38}: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item Does not allow multiple edges (or, parallel edges, or multi-edges) between any pair of vertices/nodes in the graph, nor (self-)loops.
+		\item A symmetric loopless directed graph is a graph that has an edge $(v_{2}, v_{1})$ for each edge $(v_{1}, v_{2})$.
+		\item Therefore, the edges of a simple graph form a set, as opposed to multigraphs that have multisets of edges.
+		\item An edge is a two-element subset of $V$; other graphs (i.e., hypergraphs) can have edges with more than two nodes.
+		\end{enumerate}
+	\item multigraph \cite{WikipediaContributors2018a39}: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item A multigraph allows multiple edges (or, parallel edges, or multi-edges) to exist between any pair of vertices (or, nodes) in the graph. Alternatively, for any pair of vertices (or, nodes) in the multigraph, they allow multiple edges to be incident to them \cite{WikipediaContributors2018a39}.
+		\item pseudograph \cite{WikipediaContributors2018a39}: \vspace{-0.1cm}
+			\begin{itemize} \itemsep -1pt
+			\item Some authors/people use pseudographs and multigraphs interchangeably/synonymously.
+			\item Other people use pseudographs to refer to multigraphs that allow self-loops (or loops).
+			\end{itemize}
+		\item A planar graph remains planar, or preserves its planarity, when its edges become multiple edges by the addition of edges to edges in the original graph {\Huge Reference this!!!}.
+		\item Representations for different types of multigraphs \cite{WikipediaContributors2018a39}: \vspace{-0.1cm}
+			\begin{itemize} \itemsep -1pt
+			\item A multidigraph is also known as quiver \cite{WikipediaContributors2018a40}.
+			\item undirected multigraph, which edges have no identity, is an ordered pair (or 2-tuple) $G = (V, E)$, where $V$ is a set of vertices (or, nodes), $E$ is a multi-set of undirected edges (or unordered pairs of vertices).
+			\item undirected multigraph, which edges have an identity each (or, where each edge has an identity), is an ordered triple (or 3-tuple) $G = (V, E, r)$, such that $r: E \rightarrow \{\{x, y\} : x, y \in V\}$ is a function that assigns each edge to an unordered pair of vertices (i.e., endpoint nodes).
+			\item directed multigraph (or multidigraph or quiver), which edges have no identity, is an ordered pair (or 2-tuple) $G = (V,E)$. Here, $V$ is a set of vertices (or, nodes), and $E$ is a multi-set of ordered pairs of vertices (i.e., directed edges, directed arcs, or arrows)
+			\item A mixed multigraph is a(n) (ordered) 3-tuple $G = (V, E, A)$, where $V$ is a set of vertices (or, nodes), $E$ is a set of undirected edges, and $A$ is a multi-set of directed edges/arcs.
+			\item A directed multigraph (or multidigraph or quiver), which edges have an identity each (or, where each edge has an identity), is a 4-tuple $G = (V, E, s, t)$. Here, $V$ is a set of vertices (or nodes), $E$ is a multi-set of ordered pairs of vertices (i.e., directed edges, directed arcs, or arrows), $s : E \rightarrow V$ so that each edge is assigned to its source node, and $t : E \rightarrow V$ so that each edge is assigned to its destination/target node.
+			\end{itemize}
+		\item A labeled multigraph is a 6-tuple $G = (\sum_{V}, \sum_{E}, V, E, l_{V}, l_{E})$. Here, $V$ is a set of vertices (or, nodes), and $E$ is a multi-set of ordered pairs of vertices (i.e., directed edges, directed arcs, or arrows), $\sum_{V}$ is the finite alphabet of available vertex labels, $\sum_{E}$ is the finite alphabet of available edge labels, $l_{V} : V \rightarrow \sum_{V}$ is a map describing the labeling of the vertices, and $l_{E} : E \rightarrow \sum_{E}$ is a map describing the labeling of the vertices.
+		\item A labeled multidigraph is also known as a labeled, directed multigraph. It is a 8-tuple $G = (\sum_{V}, \sum_{E}, V, E, s, t, l_{V}, l_{E})$. Here, $V$ is a set of vertices (or, nodes), and $E$ is a multi-set of ordered pairs of vertices (i.e., directed edges, directed arcs, or arrows), $\sum_{V}$ is the finite alphabet of available vertex labels, $\sum_{E}$ is the finite alphabet of available edge labels, $s : E \rightarrow V$ so that each edge is assigned to its source node (or, is a map that assigns each edge to its source node), $t : E \rightarrow V$ so that each edge is assigned to its destination/target node (or, is a map that assigns each edge to its destination/target node), $l_{V} : V \rightarrow \sum_{V}$ is a map describing the labeling of the vertices, and $l_{E} : E \rightarrow \sum_{E}$ is a map describing the labeling of the vertices.
+		\item References: \vspace{-0.1cm}
+			\begin{itemize} \itemsep -1pt
+			\item Multiple edges: \url{https://en.wikipedia.org/wiki/Multiple_edges}
+			\item Multigraph \cite{WikipediaContributors2018a39}: \url{https://en.wikipedia.org/wiki/Multigraph}
+			\item Graph labeling \cite{WikipediaContributors2017a12}: \vspace{-0.1cm}
+				\begin{itemize} \itemsep -1pt
+				\item \url{https://en.wikipedia.org/wiki/Graph_labeling}
+				\item ``Graph labeling is the assignment of labels,'' which can be represented by numbers and/or strings, to edges and/or vertices of a graph.
+				\item Vertex labeling is a function of $V$\ that assigns a set of labels to $V$; or, it is a function of $V$that assigns a label to each vertex.
+				\item A vertex-labeled graph is a graph with a defined vertex labeling function.
+				\item Edge labeling is a function of $E$\ that assigns a set of labels to $E$; or, it is a function of $E$that assigns a label to each edge.
+				\item An edge-labeled graph is a graph with a defined edge labeling function.
+				\item A {\bf weighted graph} is an edge-labeled graph, such that the edge labels are members of an ordered set (e.g., the set of real numbers $\mathbb{R}$).
+				\item The term labeled graph generally refers to a vertex-labeled graphs with unique labels (e.g., $\{1, \dots, |V|\}$, where $|V|$ is the number of vertices in the graph or the cardinality of $V$), unless otherwise specified.
+				\end{itemize}
+			\end{itemize}
+		\end{enumerate}
+	\item hypergraph: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item 
+		\end{enumerate}
+	\item multidimensional networks: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item One of the distinguishing features of multi-dimensional edges is multiple edges.
+		\end{enumerate}
+	\item mixed graph: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item 
+		\end{enumerate}
+	\item planar graph: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item 
+		\end{enumerate}
+	\item dipole graph: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item A dipole graph (or bond graph -- not that kind of bond graph) has a set of only two vertices, and a set of (parallel) edges between these vertices.: \vspace{-0.1cm}
+			\begin{itemize} \itemsep -1pt
+			\item A bond graph is a graphical representation of a physical dynamic system, and represents exchanges of physical energy; see \url{https://en.wikipedia.org/wiki/Bond_graph}.
+			\end{itemize}
+		\item An order-$n$ dipole graph $Dn$ is a dipole graph with $n$ edges, and is a dual to the cycle graph $C_{n}$.
+		\item References: \vspace{-0.1cm}
+			\begin{itemize} \itemsep -1pt
+			\item Multiple edges: \url{https://en.wikipedia.org/wiki/Multiple_edges}
+			\item Dipole graph: \url{https://en.wikipedia.org/wiki/Dipole_graph}
+			\end{itemize}
+		\end{enumerate}
+	\end{enumerate}
+\item directed graph: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item directed multigraphs: see aforementioned notes on ``directed multigraph (or multidigraph), which edges have no identity'' and ``directed multigraph (or multidigraph), which edges have an identity each (or, where each edge has an identity)''
+	\item directed acyclic graphs (DAGs)
+	\end{enumerate}
+\end{enumerate}
+
+
+
+
+
+
+
+Additional resources about graphs: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item Graph property, or graph invariant: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item \url{https://en.wikipedia.org/wiki/Graph_property}
+	\item Notes about vertices/nodes: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item If the graph contains an edge connecting vertices $u$ and $v$, $e = (u, v)$, the vertices $u$ and $v$ are {\bf adjacent} to each other \cite{WikipediaContributors2017a11}.
+		\item The {\bf degree (or valency) of vertex} $v$, which is denoted by $\delta(v)$ (or, ${\rm deg}(v)$ or ${\rm deg}\ v$), is the number of edges that are incident to $v$ \cite{WikipediaContributors2017a11}.
+		\item An {\it isolated vertex} is a vertex with degree zero, $\delta(v) = 0$. It does not an endpoint of any edge; or, no edge in a (or, any) graph is defined with an isolated vertex \cite{WikipediaContributors2017a11}.
+		\item A {\bf leaf vertex}, or {\bf pendent vertex}, is a vertex of degree one, and is an endpoint of only one edge in the graph \cite{WikipediaContributors2017a11}.
+		\item For a vertex $v$ of a directed graph, the {\bf outdegree} of $v$ (denoted by $\delta^{+}(v)$) is its number of outgoing edges, and the {\bf indegree} of $v$ (denoted by $\delta^{-}(v)$) is its number of incoming edges. A source vertex is a vertex with a zero indegree ($\delta^{-}(v) = 0$), and a sink vertex is a vertex with a zero outdegree ($\delta^{+}(v) = 0$) \cite{WikipediaContributors2017a11}.
+		\item A vertex $v$, which has no incident edges apart from a(n) (undirected) loop from $v$ to itself, has a degree of two; i.e., ${\rm deg}(v) = 0$ \cite{WikipediaContributors2018a37}.
+		\item For a graph $G$, its maximum degree $\Delta(G)$ and its minimum degree $\delta(G)$ are the maximum and minimum degree of its vertices \cite{WikipediaContributors2018a37}.
+		\end{enumerate}
+	\end{enumerate}
+\item Multi-dimensional networks: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item Multi-dimensional networks belong to type of multi-layer networks that have multiple types/kinds of relations.
+	\item A multi-dimensional network can be modeled with a multipartite edge-labeled multigraph.
+	\item An unweighted multi-layer network can be represented as a triple $G = (V, E, D)$, where (or, in which) $V$ is a set of vertices, $E$ is a dimension-specific set of edges connecting the vertices and each edge is represented by the triple $(u, v, d)$ such that $u, v, \in V$ and $d \in D$ (or, $E = \{(u, v, d); u, v \in V, d \in D$), and $D$ is a set of dimensions or layers. \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item For an unweighted, undirected multi-layer network, the edges/links $(u, v, d)$ and $(v, u, d)$ are equivalent.
+		\item For an unweighted, directed multi-layer network, the edges/links $(u, v, d)$ and $(v, u, d)$ are different/distinct.
+		\item By convention, unweighted multi-layer network are not multigraphs in a given dimension; hence, ``the number of $[$edges/$]$links between two nodes in a given dimension is either zero or one''. ``However, the total number of $[$edges/$]$links between two nodes across all dimensions is less than or equal to $| D |$.''
+		\end{enumerate}
+	\item An edge of a weighted multi-layer network can be represented as a 4-tuple (or, quadruplet) $e = (u, v, d, w)$, ``where $w$ is the weight of the $[$edge/$]$link between $[$vertex$]$ $u$ and $[$vertex$]$ $v$ in the dimension $d$'' \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item Weighted multi-layer networks, like unweighted multi-layer networks, can also be represented as a triple $G = (V, E, D)$, where $V$ is the set of vertices, $E$ is the set of edges (each edge is represented by $e = (u, v, d, w)$), or $E = \{(u, v, d, w); u, v \in V, d \in D, w \in W\}$, $W$ is a set of weights, and $D$ is a set of dimensions or layers.
+		\item A temporal network, or time-varying network, can model edges in weighted multi-layer networks, where an edge is defined as $e = (u, v, d_{1}, \dots, d_{n}, w)$, where $d_{1}, \dots, d_{n} \in D$
+		\end{enumerate}
+	\item Multidimensional network: \url{https://en.wikipedia.org/wiki/Multidimensional_network}.
+	\item Multipartite graph: \url{https://en.wikipedia.org/wiki/Multipartite_graph}
+	\item Temporal network, or time-varying network: \url{https://en.wikipedia.org/wiki/Temporal_network}
+	\item A 1-dimensional (1-D) network has a 2-dimensional (2-D) adjacency matrix with the size $V \times V$; $A^{i}_{j}$ is an adjacency matrix that encodes edges/links/connections between vertices $i$ and $j$.
+	\item For a multi-dimensional network with $| D |$ dimensions, it has a multi-layer adjacency tensor (or, 4-dimensional matrix, or 4-D matrix) with the size $(V \times D) \times (V \times D)$; $M^{i\alpha}_{j\beta}$ is an multi-layer adjacency tensor that encodes edges/links/connections between vertices $i$ in layer $\alpha$ and $j$ in layer $\beta$.
+	\end{enumerate}
+\item infinite graph: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item An infinite graph is a graph that is not finite. This can be worded better.
+	\end{enumerate}
+\item extremal graphs: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item ``Extremal graph theory studies extremal (maximal or minimal) graphs which satisfy a certain property. Extremality can be taken with respect to different graph invariants, such as order, size or girth.''
+	\item \url{https://en.wikipedia.org/wiki/Extremal_graph_theory}
+	\end{enumerate}
+\end{enumerate}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Graph Representations}
+\label{ssec:GraphRepresentations}
+
+Focus on sparse graph representations, which are common in modeling digital integrated circuits and neural networks (certain types), and dense graphs (e.g., neural networks). \\
+
+For sparse graphs, use list or map -based graph representations for better memory efficiency. \\
+
+For dense graphs, use matrix-based graph representation for faster access time at the expense of worse member efficiency; see \url{https://en.wikipedia.org/wiki/Dense_graph}. Also, see \url{https://en.wikipedia.org/wiki/Dense_subgraph} regarding dense subgraphs. \\
+
+Hence, there exists a trade-off between access time and member efficiency in graph representations.\\
+
+The ways to represent graphs are listed as follows: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item adjacency matrix: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item 
+	\end{enumerate}
+\item adjacency list: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item 
+	\end{enumerate}
+\item adjacency map: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item 
+	\end{enumerate}
+\item edge list: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item Is this equivalent to the ``incidence list'' graph representation? {\Huge Cite this!!!}
+	\item 
+	\end{enumerate}
+\end{enumerate}
+
+
+Alternate graph representations that I am not exploring: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item distance matrix: \url{https://en.wikipedia.org/wiki/Distance_matrix}
+\item incidence matrix
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Functions that need to be implemented}
+\label{ssec:FunctionsThatNeedToBeImplemented}
+
+
+
+
+Solvers for the following problems (or to perform the following functions) regarding: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item graph traversal: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item breadth-first search: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item \url{https://en.wikipedia.org/wiki/Breadth-first_search	}
+		\item Also, see BFS ordering: \url{https://en.wikipedia.org/wiki/Breadth-first_search}
+		\end{enumerate}
+	\item depth-first search: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item \url{https://en.wikipedia.org/wiki/Depth-first_search}
+		\item iterative deepening search, or more specifically iterative deepening depth-first search (IDS or IDDFS: \url{https://en.wikipedia.org/wiki/Iterative_deepening_depth-first_search}
+		\end{enumerate}
+	\item graph factorization: \url{}
+	\item References: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item \url{https://en.wikipedia.org/wiki/Graph_theory}
+		\end{enumerate}
+	\end{enumerate}
+\item graph coloring: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item vertex coloring
+	\item edge coloring: \url{https://en.wikipedia.org/wiki/Edge_coloring}
+	\item four color theorem, or the four color map theorem: \url{https://en.wikipedia.org/wiki/Four_color_theorem}
+	\item References: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item \url{https://en.wikipedia.org/wiki/Graph_coloring}
+		\end{enumerate}
+	\end{enumerate}
+\item routing problems: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item shortest path problem: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item Dijkstra's algorithm: \url{https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm}
+		\item Bellman-Ford algorithm (or, Bellman-Ford-Moore algorithm): \url{https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm}
+		\item Ford-Fulkerson algorithm (FFA), or Ford-Fulkerson method: \url{https://en.wikipedia.org/wiki/Ford%E2%80%93Fulkerson_algorithm}
+		\item Categorize solutions into those for directed graphs and undirected graphs. Also, determine solutions for common variants of the problem.
+		\item \url{https://en.wikipedia.org/wiki/Shortest_path_problem}
+		\end{enumerate}
+	\item longest path problem: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item Note that the difficulty of the problem (in terms of computational time complexity) is different for different types of graphs: \vspace{-0.1cm}
+			\begin{itemize} \itemsep -1pt
+			\item E.g., for undirected graphs, it is NP-hard, while linear time solutions exist for directed acyclic graphs (DAGs).
+			\end{itemize}
+		\item \url{https://en.wikipedia.org/wiki/Longest_path_problem}
+		\end{enumerate}
+	\item minimum spanning tree: \vspace{-0.2cm}
+		\begin{itemize} \itemsep -2pt
+		\item \item Prim-Jarn{\'{i}}k algorithm: \vspace{-0.1cm}
+			\begin{itemize} \itemsep -1pt
+			\item Also, known as: \vspace{-0.1cm}
+				\begin{itemize} \itemsep -1pt
+				\item Prim's algorithm
+				\item Jarník's algorithm
+				\item Prim-Dijkstra algorithm
+				\item DJP algorithm
+				\end{itemize}
+			\item \url{https://en.wikipedia.org/wiki/Prim%27s_algorithm}
+			\end{itemize}
+		\item Kruskal's algorithm: \url{https://en.wikipedia.org/wiki/Kruskal%27s_algorithm}
+		\item \url{https://en.wikipedia.org/wiki/Minimum_spanning_tree}
+		\end{itemize}
+	\item Steiner tree: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item rectilinear minimum Steiner tree (RMST) problem: \url{https://en.wikipedia.org/wiki/Rectilinear_Steiner_tree}
+		\item \url{https://en.wikipedia.org/wiki/Steiner_tree_problem}
+		\end{enumerate}
+	\item traveling salesperson problem (NP-hard): \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item nearest neighbor algorithm: \vspace{-0.1cm}
+			\begin{itemize} \itemsep -1pt
+			\item \url{https://en.wikipedia.org/wiki/Nearest_neighbour_algorithm}
+			\item This is different from the k-nearest neighbors algorithm ($k$-NN); see \url{https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm}.
+			\end{itemize}
+		\item \url{https://en.wikipedia.org/wiki/Travelling_salesman_problem}
+		\end{enumerate}
+	\item strongly connected components: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item \url{https://en.wikipedia.org/wiki/Strongly_connected_component}
+		\end{enumerate}
+	\end{enumerate}
+\item network flow: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item max-flow min-cut theorem: \url{https://en.wikipedia.org/wiki/Max-flow_min-cut_theorem}
+	\item minimum-cost flow problem (MCFP): \url{https://en.wikipedia.org/wiki/Minimum-cost_flow_problem}
+	\item maximum flow problems: \url{https://en.wikipedia.org/wiki/Maximum_flow_problem}
+	\item circulation problem: \url{https://en.wikipedia.org/wiki/Circulation_problem}
+	\item References: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item Flow network (or transportation network): \url{https://en.wikipedia.org/wiki/Flow_network}
+		\item 
+		\end{enumerate}
+	\end{enumerate}
+\item graph partitioning: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item force-directed graph partitioning
+	\item min-cut graph partitioning
+	\item References: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item \url{https://en.wikipedia.org/wiki/Connectivity_(graph_theory)}
+		\end{enumerate}
+	\end{enumerate}
+\item graph-based floorplanning/placement: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item use constraint graphs for graph-based floorplanning/placement
+	\item References: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item \url{https://en.wikipedia.org/wiki/Constraint_graph_(layout)}
+		\end{enumerate}
+	\end{enumerate}
+\item covering problems: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item In graph theory, ``covering problems are specific instances of subgraph-finding problems''; see \url{https://en.wikipedia.org/wiki/Graph_theory}
+	\item Set cover problem: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item \url{https://en.wikipedia.org/wiki/Set_cover_problem}
+		\item hitting set problem
+		\end{enumerate}
+	\item Vertex cover problem: \url{https://en.wikipedia.org/wiki/Vertex_cover}
+	\item edge cover problem: \url{https://en.wikipedia.org/wiki/Edge_cover}
+	\item Related problems: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item clique problem: \url{https://en.wikipedia.org/wiki/Clique_problem}
+		\item independent set problem, and maximum independent set: \url{https://en.wikipedia.org/wiki/Independent_set_(graph_theory)}
+		\item Covering/packing-problem pairs, or covering/packing dualities: \url{https://en.wikipedia.org/wiki/Linear_programming#Covering/packing_dualities}
+		\item Packing problems: \url{https://en.wikipedia.org/wiki/Packing_problems}
+		\item Reconstruction conjecture: \vspace{-0.1cm}
+			\begin{itemize} \itemsep -1pt
+			\item ``Informally, the reconstruction conjecture in graph theory says that graphs are determined uniquely by their subgraphs.''
+			\item \url{https://en.wikipedia.org/wiki/Reconstruction_conjecture}
+			\end{itemize}
+		\end{enumerate}
+	\item References: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item \url{https://en.wikipedia.org/wiki/Covering_problems}
+		\end{enumerate}
+	\end{enumerate}
+\item graph decomposition problems: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item arboricity: \url{https://en.wikipedia.org/wiki/Arboricity}
+	\item cycle double cover: \url{https://en.wikipedia.org/wiki/Cycle_double_cover}
+	\item graph factorization: \url{https://en.wikipedia.org/wiki/Graph_factorization}
+	\item : \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item 
+		\end{enumerate}
+	\item References: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item \url{https://en.wikipedia.org/wiki/Graph_theory}
+		\end{enumerate}
+	\end{enumerate}
+\item closure problem: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item \url{https://en.wikipedia.org/wiki/Closure_problem}
+	\end{enumerate}
+\item spectral graph theory: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item ``In mathematics, spectral graph theory is the study of the properties of a graph in relationship to the characteristic polynomial, eigenvalues, and eigenvectors of matrices associated with the graph, such as its adjacency matrix or Laplacian matrix.''
+	\item References: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item \url{https://en.wikipedia.org/wiki/Spectral_graph_theory}
+		\end{enumerate}
+	\end{enumerate}
+\item probabilistic graphical model (PGM): \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item Also known as: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item graphical model
+		\item structured probabilistic model
+		\end{enumerate}
+	\item References: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item \url{https://en.wikipedia.org/wiki/Graphical_model}
+		\item \cite{Barber2012}
+		\item \cite{Bishop2006}
+		\item Cowell, Robert G.; Dawid, A. Philip; Lauritzen, Steffen L.; Spiegelhalter, David J. (1999). Probabilistic networks and expert systems. Berlin: Springer. A more advanced and statistically oriented book
+		\item Jensen, Finn (1996). An introduction to Bayesian networks. Berlin: Springer.
+		\item Pearl, Judea (1988). Probabilistic Reasoning in Intelligent Systems (2nd revised ed.). San Mateo, CA: Morgan Kaufmann. 
+		\end{enumerate}
+	\end{enumerate}
+\item quantum graph: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item ``In mathematics and physics, a quantum graph is a linear, network-shaped structure of vertices connected by bonds (or edges) with a differential or pseudo-differential operator acting on functions defined on the bonds.''
+	\item References: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item \url{https://en.wikipedia.org/wiki/Quantum_graph}
+		\item \cite{Lovasz2012}
+		\end{enumerate}
+	\end{enumerate}
+\end{enumerate}
+
+
+
+
+
+Solvers for the following problems (or to perform the following functions) regarding subgraphs, induced subgraphs, and minors: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item subgraph isomorphism problem: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item Find a fixed graph as a subgraph in a given graph: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item ``graph properties are hereditary for subgraphs''\dots\ ``A graph has a property if and only if all its subgraphs also have it''; see \url{https://en.wikipedia.org/wiki/Graph_theory}.
+		\item Finding a specific type/kind of maximal subgraph is an NP-complete problem, such as the largest complete subgraph.
+		\end{enumerate}
+	\item Also, see subgraph matching.
+	\item Graph isomorphism: \url{https://en.wikipedia.org/wiki/Graph_isomorphism}
+	\item \url{https://en.wikipedia.org/wiki/Subgraph_isomorphism_problem}
+	\end{enumerate}
+\item Finding induced subgraphs in a given graph: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item ``graph properties are hereditary'' for induced subgraphs\dots\ ``A graph has a property if and only if all its induced subgraphs also have it''; see \url{https://en.wikipedia.org/wiki/Graph_theory}.
+	\item Finding a specific type/kind of maximal induced subgraph is an NP-complete problem: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item Independent set problem: Finding the largest edgeless induced subgraph (or independent set); see the following references: \vspace{-0.1cm}
+			\begin{itemize} \itemsep -1pt
+			\item \url{https://en.wikipedia.org/wiki/Graph_theory}
+			\end{itemize}
+		\end{enumerate}
+	\item Induced subgraph: \url{https://en.wikipedia.org/wiki/Induced_subgraph}
+	\end{enumerate}
+\item minor containment problem: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item Find a fixed graph as a minor of a given graph.
+	\item ``A minor or subcontraction of a graph is any graph obtained by taking a subgraph and contracting some (or no) edges''\dots\ ``A graph has a property if and only if all its minors [also] have it''
+	\item ``[Minor containment] is related to graph properties such as planarity.'' See Wagner's Theorem about planar graphs.
+	\item References: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item \url{https://en.wikipedia.org/wiki/Graph_theory}
+		\item Graph minor: \url{https://en.wikipedia.org/wiki/Graph_minor}
+		\end{enumerate}
+	\end{enumerate}
+\item subdivision containment problems: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item ``Find a fixed graph as a subdivision of a given graph'': \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item ``A subdivision or homeomorphism of a graph is any graph obtained by subdividing some (or no) edges.''
+		\item ``Subdivision containment is related to graph properties such as planarity.'' See Kuratowski's Theorem and the Kelmans-Seymour conjecture about planar graphs.
+		\end{enumerate}
+	\item References: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item \url{https://en.wikipedia.org/wiki/Graph_theory}
+		\item Homeomorphism: \url{https://en.wikipedia.org/wiki/Homeomorphism_(graph_theory)#Subdivision_and_smoothing}
+		\end{enumerate}
+	\end{enumerate}
+\item common topics: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item Planar graph: \url{https://en.wikipedia.org/wiki/Planar_graph}
+	\item network science: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item \url{https://en.wikipedia.org/wiki/Network_science}
+		\item Interdependent networks: \url{https://en.wikipedia.org/wiki/Interdependent_networks}
+		\item Modularity (networks): \url{https://en.wikipedia.org/wiki/Modularity_(networks)}
+		\item Community structure: \url{https://en.wikipedia.org/wiki/Community_structure}
+		\item Distance (graph theory): \url{https://en.wikipedia.org/wiki/Distance_(graph_theory)}
+		\item Assortativity: \url{https://en.wikipedia.org/wiki/Assortativity}
+		\item Degree distribution: \url{https://en.wikipedia.org/wiki/Degree_distribution}
+		\item Centrality: \url{https://en.wikipedia.org/wiki/Centrality#Closeness_centrality}
+		\item Betweenness centrality: \url{https://en.wikipedia.org/wiki/Betweenness_centrality}
+		\end{enumerate}
+	\end{enumerate}
+\end{enumerate}
+
+
+Other problems and types of graphs, not of comparable importance: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item nearest neighbor graph (NNG): \url{https://en.wikipedia.org/wiki/Nearest_neighbor_graph}
+\end{enumerate}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Directed Graphs, and Directed Acyclic Graphs}
+\label{ssec:DirectedGraphsAndDirectedAcyclicGraphs}
+
+
+Notes on directed graphs (digraphs), and directed acyclic graphs (DAGs): \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item Functions to implement, and solves to solve the following problems: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item For DAGs: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item topological sort: \vspace{-0.1cm}
+			\begin{itemize} \itemsep -1pt
+			\item Also known as: topological sorting, or topological ordering
+			\item \url{https://en.wikipedia.org/wiki/Topological_sorting}
+			\end{itemize}
+		\item algorithms, heuristics, and meta-heuristics to optimize: \vspace{-0.1cm}
+			\begin{itemize} \itemsep -1pt
+			\item BDDs; see \S\ref{sssec:BinaryDecisionDiagramsBDDs}.
+			\item AIGs; see \S\ref{sssec:ANDInverterGraphsAIGs}
+			\item MIGs; see \S\ref{sssec:MajorityInverterGraphsMIGs}
+			\end{itemize}
+		\end{enumerate}
+	\end{enumerate}
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Binary Decision Diagrams (BDDs)}
+\label{sssec:BinaryDecisionDiagramsBDDs}
+
+
+Resources for BDDs: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item \url{https://en.wikipedia.org/wiki/Binary_decision_diagram}
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{AND-Inverter Graphs (AIGs)}
+\label{sssec:ANDInverterGraphsAIGs}
+
+
+
+
+Resources for AIGs: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item \url{https://en.wikipedia.org/wiki/And-inverter_graph}
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Majority-Inverter Graphs (MIGs)}
+\label{sssec:MajorityInverterGraphsMIGs}
+
+
+
+Resources for MIGs: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item 
+\end{enumerate}
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Undirected Graphs}
+\label{ssec:UndirectedGraphs}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Resources for Graphs}
+\label{ssec:ResourcesForGraphs}
+
+Resources for graphs: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item ``The Stanford GraphBase: A Platform for Combinatorial Computing'': \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item \cite{Knuth1993}
+	\item \url{https://www-cs-staff.stanford.edu/~knuth/sgb.html}
+	\end{enumerate}
+\item {\it Wikipedia}: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item \url{https://en.wikipedia.org/wiki/List_of_algorithms#Graph_algorithms}
+	\item Gallery of named graphs: \url{https://en.wikipedia.org/wiki/Gallery_of_named_graphs}
+	\item List of graph theory topics: \url{https://en.wikipedia.org/wiki/List_of_graph_theory_topics}
+	\item Glossary of graph theory terms: \url{https://en.wikipedia.org/wiki/Glossary_of_graph_theory_terms}
+	\item : \url{}
+	\item : \url{}
+	\item : \url{}
+	\item : \url{}
+	\item : \url{}
+	\item : \url{}
+	\item : \url{}
+	\item : \url{}
+	\item : \url{}
+	\item Graph algebra: \url{https://en.wikipedia.org/wiki/Graph_algebra}
+	\end{enumerate}
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+

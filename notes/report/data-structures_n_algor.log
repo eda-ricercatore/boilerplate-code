@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  20 NOV 2018 14:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  25 NOV 2018 00:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1066,75 +1066,76 @@ l.79 \item C
 
 ]) (./data_structures/data_structures.tex [2]
 Chapter 2.
-[3
+(./data_structures/graph.tex
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 41.
 
-]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 84.
- (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/ts1lmr.fd
+(/usr/local/texlive/2015/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [4] [5]
-Overfull \hbox (3.4114pt too wide) in paragraph at lines 169--170
+) [3
+
+] [4] [5]
+Overfull \hbox (3.4114pt too wide) in paragraph at lines 147--148
 []\T1/lmr/m/n/12 Multidimensional net-work: [][]$\T1/lmtt/m/n/12 https : / / en
  . wikipedia . org / wiki / Multidimensional _ network$[][]\T1/lmr/m/n/12 . 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--190
+Underfull \hbox (badness 10000) in paragraph at lines 171--172
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--192
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 193--194
+Underfull \hbox (badness 10000) in paragraph at lines 173--174
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 195--196
+Underfull \hbox (badness 10000) in paragraph at lines 175--176
 
  []
 
 
-Overfull \hbox (23.97346pt too wide) in paragraph at lines 255--256
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+
+ []
+
+
+Overfull \hbox (23.97346pt too wide) in paragraph at lines 237--238
 \T1/lmr/m/n/12 or ID-DFS: [][]$\T1/lmtt/m/n/12 https : / / en . wikipedia . org
  / wiki / Iterative _ deepening _ depth-[]first _ search$[][] 
  []
 
 [7]
-Overfull \hbox (1.7386pt too wide) in paragraph at lines 328--329
+Overfull \hbox (1.7386pt too wide) in paragraph at lines 310--311
 []\T1/lmr/m/n/12 max-flow min-cut the-o-rem: [][]$\T1/lmtt/m/n/12 https : / / e
 n . wikipedia . org / wiki / Max-[]flow _ min-[]cut _ theorem$[][] 
  []
 
 [8]
-Overfull \hbox (1.45274pt too wide) in paragraph at lines 369--370
+Overfull \hbox (1.45274pt too wide) in paragraph at lines 351--352
 []\T1/lmr/m/n/12 Covering/packing-problem pairs, or cov-er-ing/-pack-ing du-al-
 i-ties: [][]$\T1/lmtt/m/n/12 https : / / en . wikipedia .
  []
 
 [9] [10]
-Overfull \hbox (0.79832pt too wide) in paragraph at lines 486--487
+Overfull \hbox (0.79832pt too wide) in paragraph at lines 468--469
 []\T1/lmr/m/n/12 Homeomorphism: [][]$\T1/lmtt/m/n/12 https : / / en . wikipedia
  . org / wiki / Homeomorphism _ (graph _ theory )
  []
 
 
-Overfull \hbox (9.08885pt too wide) in paragraph at lines 495--496
+Overfull \hbox (9.08885pt too wide) in paragraph at lines 477--478
 []\T1/lmr/m/n/12 Interdependent net-works: [][]$\T1/lmtt/m/n/12 https : / / en 
 . wikipedia . org / wiki / Interdependent _ networks$[][] 
  []
 
 
-Overfull \hbox (4.35854pt too wide) in paragraph at lines 498--499
+Overfull \hbox (4.35854pt too wide) in paragraph at lines 480--481
 []\T1/lmr/m/n/12 Distance (graph the-ory): [][]$\T1/lmtt/m/n/12 https : / / en 
 . wikipedia . org / wiki / Distance _ (graph _ theory)$[][] 
  []
 
-[11]) (./optimization/optimization.tex [12]
+[11])) (./optimization/optimization.tex [12]
 Chapter 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 28--29
@@ -1576,9 +1577,9 @@ Underfull \hbox (badness 6927) in paragraph at lines 834--840
 rences$[][]\T1/lmr/m/n/12 ; Oc-to-ber 28, 2015 was
  []
 
-[57] [58] [59])
+[57] [58] [59] [60])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 284.
- [60]
+ [61]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 284.
  (./data-structures_n_algor.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 284.
@@ -1589,19 +1590,19 @@ Package rerunfilecheck Info: File `data-structures_n_algor.out' has not changed
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 284.
  ) 
 Here is how much of TeX's memory you used:
- 17650 strings out of 493089
- 247916 string characters out of 6134842
- 360509 words of memory out of 5000000
- 19534 multiletter control sequences out of 15000+600000
+ 17635 strings out of 493089
+ 248033 string characters out of 6134842
+ 360717 words of memory out of 5000000
+ 19539 multiletter control sequences out of 15000+600000
  125350 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,15n,96p,1261b,668s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,15n,96p,1261b,684s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
 texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/20
 15/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2015/texmf-dist/
 fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/
-dvips/lm/lm-ts1.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-m
-athex.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmbx12.pfb>
+dvips/lm/lm-mathex.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/l
+m-ts1.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmbx12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive
 /2015/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2015/texm
@@ -1619,10 +1620,10 @@ msy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><
 /texlive/2015/texmf-dist/fonts/type1/public/marvosym/marvosym.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on data-structures_n_algor.pdf (65 pages, 568607 bytes).
+Output written on data-structures_n_algor.pdf (66 pages, 570532 bytes).
 PDF statistics:
- 2686 PDF objects out of 2984 (max. 8388607)
- 2573 compressed objects within 26 object streams
- 1233 named destinations out of 1440 (max. 500000)
+ 2674 PDF objects out of 2984 (max. 8388607)
+ 2560 compressed objects within 26 object streams
+ 1210 named destinations out of 1440 (max. 500000)
  321 words of extra memory for PDF output out of 10000 (max. 10000000)
 
