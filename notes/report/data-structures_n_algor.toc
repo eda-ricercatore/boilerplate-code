@@ -5,41 +5,41 @@
 \contentsline {section}{\numberline {2.1}Basic Data Structures}{3}{section.2.1}
 \contentsline {section}{\numberline {2.2}Graphs}{3}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Graph Representations}{7}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Functions that need to be implemented}{7}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Directed Graphs, and Directed Acyclic Graphs}{11}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.2}Functions that need to be implemented}{8}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Directed Graphs, and Directed Acyclic Graphs}{12}{subsection.2.2.3}
 \contentsline {subsubsection}{\numberline {2.2.3.1}Binary Decision Diagrams (BDDs)}{12}{subsubsection.2.2.3.1}
 \contentsline {subsubsection}{\numberline {2.2.3.2}AND-Inverter Graphs (AIGs)}{12}{subsubsection.2.2.3.2}
 \contentsline {subsubsection}{\numberline {2.2.3.3}Majority-Inverter Graphs (MIGs)}{12}{subsubsection.2.2.3.3}
 \contentsline {subsection}{\numberline {2.2.4}Undirected Graphs}{12}{subsection.2.2.4}
 \contentsline {subsection}{\numberline {2.2.5}Resources for Graphs}{12}{subsection.2.2.5}
-\contentsline {chapter}{\numberline {3}Optimization}{13}{chapter.3}
-\contentsline {section}{\numberline {3.1}Benchmarks for Optimization}{13}{section.3.1}
-\contentsline {section}{\numberline {3.2}Notes on Using Optimization Tools}{13}{section.3.2}
-\contentsline {section}{\numberline {3.3}Robust Linear Programming}{13}{section.3.3}
-\contentsline {section}{\numberline {3.4}Discrete Optimization}{14}{section.3.4}
-\contentsline {section}{\numberline {3.5}Optimization Solvers}{14}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Accessible Optimization Solvers}{14}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Not Accessible Optimization Solvers}{15}{subsection.3.5.2}
-\contentsline {chapter}{\numberline {4}Mathematics}{17}{chapter.4}
-\contentsline {chapter}{\numberline {5}Statistics}{19}{chapter.5}
-\contentsline {chapter}{\numberline {6}C++ Resources}{20}{chapter.6}
-\contentsline {section}{\numberline {6.1}Resources for C++ and Notes About C++}{22}{section.6.1}
-\contentsline {section}{\numberline {6.2}Computational Complexity of C++ Containers}{33}{section.6.2}
-\contentsline {section}{\numberline {6.3}Additional Notes About C++}{35}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Alternate Computer Number System for Representing Fractions in C++}{36}{subsection.6.3.1}
-\contentsline {section}{\numberline {6.4}Software Development in C++}{36}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Using ``Design By Contract''}{39}{subsection.6.4.1}
-\contentsline {subsubsection}{\numberline {6.4.1.1}Hoare Logic for Computer Arithmetic}{40}{subsubsection.6.4.1.1}
-\contentsline {subsection}{\numberline {6.4.2}Debugging {\it C++} Software}{40}{subsection.6.4.2}
-\contentsline {subsubsection}{\numberline {6.4.2.1}Interpreting {\it C++} Compilation Errors}{40}{subsubsection.6.4.2.1}
-\contentsline {subsection}{\numberline {6.4.3}Parser Development}{41}{subsection.6.4.3}
-\contentsline {section}{\numberline {6.5}Parallel Programming in C++}{41}{section.6.5}
-\contentsline {section}{\numberline {6.6}Numerical Computing in C++}{41}{section.6.6}
-\contentsline {chapter}{\numberline {7}Questions}{42}{chapter.7}
-\contentsline {section}{\numberline {7.1}Unresolved C++ Questions}{42}{section.7.1}
-\contentsline {section}{\numberline {7.2}Resolved C++ Questions}{42}{section.7.2}
-\contentsline {chapter}{\numberline {8}Miscellaneous}{46}{chapter.8}
-\contentsline {section}{\numberline {8.1}Setting Up Software Development Environment}{46}{section.8.1}
-\contentsline {section}{\numberline {8.2}Software Dependencies of The Boilerplate Code Project}{46}{section.8.2}
-\contentsline {chapter}{Acknowledgments}{47}{chapter*.4}
-\contentsline {chapter}{Bibliography}{61}{appendix*.5}
+\contentsline {chapter}{\numberline {3}Optimization}{14}{chapter.3}
+\contentsline {section}{\numberline {3.1}Benchmarks for Optimization}{14}{section.3.1}
+\contentsline {section}{\numberline {3.2}Notes on Using Optimization Tools}{14}{section.3.2}
+\contentsline {section}{\numberline {3.3}Robust Linear Programming}{14}{section.3.3}
+\contentsline {section}{\numberline {3.4}Discrete Optimization}{15}{section.3.4}
+\contentsline {section}{\numberline {3.5}Optimization Solvers}{15}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Accessible Optimization Solvers}{15}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Not Accessible Optimization Solvers}{16}{subsection.3.5.2}
+\contentsline {chapter}{\numberline {4}Mathematics}{18}{chapter.4}
+\contentsline {chapter}{\numberline {5}Statistics}{20}{chapter.5}
+\contentsline {chapter}{\numberline {6}C++ Resources}{21}{chapter.6}
+\contentsline {section}{\numberline {6.1}Resources for C++ and Notes About C++}{23}{section.6.1}
+\contentsline {section}{\numberline {6.2}Computational Complexity of C++ Containers}{34}{section.6.2}
+\contentsline {section}{\numberline {6.3}Additional Notes About C++}{36}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Alternate Computer Number System for Representing Fractions in C++}{37}{subsection.6.3.1}
+\contentsline {section}{\numberline {6.4}Software Development in C++}{37}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Using ``Design By Contract''}{40}{subsection.6.4.1}
+\contentsline {subsubsection}{\numberline {6.4.1.1}Hoare Logic for Computer Arithmetic}{41}{subsubsection.6.4.1.1}
+\contentsline {subsection}{\numberline {6.4.2}Debugging {\it C++} Software}{41}{subsection.6.4.2}
+\contentsline {subsubsection}{\numberline {6.4.2.1}Interpreting {\it C++} Compilation Errors}{41}{subsubsection.6.4.2.1}
+\contentsline {subsection}{\numberline {6.4.3}Parser Development}{42}{subsection.6.4.3}
+\contentsline {section}{\numberline {6.5}Parallel Programming in C++}{42}{section.6.5}
+\contentsline {section}{\numberline {6.6}Numerical Computing in C++}{42}{section.6.6}
+\contentsline {chapter}{\numberline {7}Questions}{43}{chapter.7}
+\contentsline {section}{\numberline {7.1}Unresolved C++ Questions}{43}{section.7.1}
+\contentsline {section}{\numberline {7.2}Resolved C++ Questions}{43}{section.7.2}
+\contentsline {chapter}{\numberline {8}Miscellaneous}{47}{chapter.8}
+\contentsline {section}{\numberline {8.1}Setting Up Software Development Environment}{47}{section.8.1}
+\contentsline {section}{\numberline {8.2}Software Dependencies of The Boilerplate Code Project}{47}{section.8.2}
+\contentsline {chapter}{Acknowledgments}{48}{chapter*.4}
+\contentsline {chapter}{Bibliography}{62}{appendix*.5}
