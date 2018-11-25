@@ -124,10 +124,13 @@ Additional resources about graphs: \vspace{-0.3cm}
 		\item The {\bf degree (or valency) of vertex} $v$, which is denoted by $\delta(v)$ (or, ${\rm deg}(v)$ or ${\rm deg}\ v$), is the number of edges that are incident to $v$ \cite{WikipediaContributors2017a11}.
 		\item An {\bf isolated vertex} is a vertex with degree zero, $\delta(v) = 0$. It does not an endpoint of any edge; or, no edge in a (or, any) graph is defined with an isolated vertex \cite{WikipediaContributors2017a11}.
 		\item A {\bf leaf vertex}, or {\bf pendent vertex}, is a vertex of degree one, and is an endpoint of only one edge in the graph \cite{WikipediaContributors2017a11}.
-		\item For a vertex $v$ of a directed graph, the {\bf outdegree} of $v$ (denoted by $\delta^{+}(v)$) is its number of outgoing edges, and the {\bf indegree} of $v$ (denoted by $\delta^{-}(v)$) is its number of incoming edges. A source vertex is a vertex with a zero indegree ($\delta^{-}(v) = 0$), and a sink vertex is a vertex with a zero outdegree ($\delta^{+}(v) = 0$) \cite{WikipediaContributors2017a11}.
-		\item A vertex $v$, which has no incident edges apart from a(n) (undirected) loop from $v$ to itself, has a degree of two; i.e., ${\rm deg}(v) = 0$ \cite{WikipediaContributors2018a37}.
+		\item For a vertex $v$ of a directed graph, the {\bf outdegree} of $v$ (denoted by $\delta^{+}(v)$) is its number of outgoing edges, and the {\bf indegree} of $v$ (denoted by $\delta^{-}(v)$) is its number of incoming edges. A {\bf source vertex} is a vertex with a zero indegree ($\delta^{-}(v) = 0$), and a {\bf sink vertex} is a vertex with a zero outdegree ($\delta^{+}(v) = 0$) \cite{WikipediaContributors2017a11}.
+		\item A vertex $v$, which has no incident edges apart from a(n) (undirected) loop from $v$ to itself, has a degree of two; i.e., ${\rm deg}(v) = 2$ \cite{WikipediaContributors2018a37}.
 		\item For a graph $G$, its {\bf maximum degree} $\Delta(G)$ and its {\bf minimum degree} $\delta(G)$ are the maximum and minimum degree of its vertices \cite{WikipediaContributors2018a37}.
+		\item A {\bf cut vertex} is a vertex that would disconnect the graph when it is removed \cite{WikipediaContributors2017a11}.
+		\item A {\bf vertex cut} $S$ (or, {\bf vertex separator}, or {\bf separating set}) is a {\bf vertex subset} ($S \subset V$) for non-adjacent vertices (or subgraphs \cite{WikipediaContributors2018a44}) $a$ and $b$, if the removal of the {\bf vertex cut} $S$  disconnects/separates the subgraphs ``$a$ and $b$ into distinct connected components'' \cite{WikipediaContributors2016n}.
 		\end{enumerate}
+	\item A {\bf subgraph} $S = (V_{S}, E_{S})$ of a graph $G = (V_{G}, E_{G})$ is another graph that includes a subset of the vertices and edges of $G$, such that $S \neq G, S \not\subset G, V_{S} \subset V_{G}, E_{S} \subset E_{G}$, and $(S \cap G) = S$ \cite{WikipediaContributors2018a44}.
 	\end{enumerate}
 \item {\bf Multi-dimensional networks}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
