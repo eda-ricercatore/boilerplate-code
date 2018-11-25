@@ -20,39 +20,39 @@
 \section{Graphs}
 \label{sec:Graphs}
 
-A graph $G$ is an ordered pair, $G = (V,E)$, of a vertex/node set and an edge set \cite{WikipediaContributors2018a38}.
+A {\bf graph} $G$ is an ordered pair, $G = (V,E)$, of a vertex/node set and an edge set \cite{WikipediaContributors2018a38}.
 
-Types of finite graphs \cite{WikipediaContributors2018a38}: \vspace{-0.2cm}
+Types of {\bf finite graphs} \cite{WikipediaContributors2018a38}: \vspace{-0.2cm}
 \begin{enumerate} \itemsep -4pt
-\item undirected graph \cite{WikipediaContributors2018a38}: \vspace{-0.2cm}
+\item {\bf undirected graph} \cite{WikipediaContributors2018a38}: \vspace{-0.2cm}
 	\begin{enumerate} \itemsep -2pt
-	\item simple graph, or undirected simple finite graph \cite{WikipediaContributors2018a38}: \vspace{-0.2cm}
-		\begin{enumerate} \itemsep -2pt
-		\item Does not allow multiple edges (or, parallel edges, or multi-edges) between any pair of vertices/nodes in the graph, nor (self-)loops.
-		\item A symmetric loopless directed graph is a graph that has an edge $(v_{2}, v_{1})$ for each edge $(v_{1}, v_{2})$.
+	\item {\bf simple graph}, or {\bf undirected simple finite graph} \cite{WikipediaContributors2018a38}: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -1pt
+		\item Does not allow {\bf multiple edges} (or, {\bf parallel edges}, or {\bf multi-edges}) between any pair of vertices/nodes in the graph, nor {\bf (self-)loops}.
+		\item A {\bf symmetric loopless directed graph} is a graph that has an edge $(v_{2}, v_{1})$ for each edge $(v_{1}, v_{2})$, and it does not contain any self-loops (i.e., edges $v_{i}, v_{i}, \forall i \in V$).
 		\item Therefore, the edges of a simple graph form a set, as opposed to multigraphs that have multisets of edges.
 		\item An edge is a two-element subset of $V$; other graphs (i.e., hypergraphs) can have edges with more than two nodes.
 		\end{enumerate}
-	\item multigraph \cite{WikipediaContributors2018a39}: \vspace{-0.2cm}
-		\begin{enumerate} \itemsep -2pt
-		\item A multigraph allows multiple edges (or, parallel edges, or multi-edges) to exist between any pair of vertices (or, nodes) in the graph. Alternatively, for any pair of vertices (or, nodes) in the multigraph, they allow multiple edges to be incident to them \cite{WikipediaContributors2018a39}.
-		\item pseudograph \cite{WikipediaContributors2018a39}: \vspace{-0.1cm}
+	\item {\bf multigraph} \cite{WikipediaContributors2018a39}: \vspace{-0.2cm}
+		\begin{enumerate} %\itemsep -1pt
+		\item A {\bf multigraph} allows {\bf multiple edges} (or, {\bf parallel edges}, or {\bf multi-edges}) to exist between any pair of vertices (or, nodes) in the graph. Alternatively, for any pair of vertices (or, nodes) in the multigraph, they allow multiple edges to be incident to them \cite{WikipediaContributors2018a39}.
+		\item {\bf pseudograph} \cite{WikipediaContributors2018a39}: \vspace{-0.1cm}
 			\begin{itemize} \itemsep -1pt
 			\item Some authors/people use pseudographs and multigraphs interchangeably/synonymously.
 			\item Other people use pseudographs to refer to multigraphs that allow self-loops (or loops).
 			\end{itemize}
-		\item A planar graph remains planar, or preserves its planarity, when its edges become multiple edges by the addition of edges to edges in the original graph {\Huge Reference this!!!}.
-		\item Representations for different types of multigraphs \cite{WikipediaContributors2018a39}: \vspace{-0.1cm}
+		\item A {\bf planar graph} remains planar, or preserves its planarity, when its edges become multiple edges by the addition of edges to edges in the original graph {\Huge Reference this!!!}.
+		\item Representations for different types of {\bf multigraphs} \cite{WikipediaContributors2018a39}: \vspace{-0.1cm}
 			\begin{itemize} \itemsep -1pt
-			\item A multidigraph is also known as quiver \cite{WikipediaContributors2018a40}.
-			\item undirected multigraph, which edges have no identity, is an ordered pair (or 2-tuple) $G = (V, E)$, where $V$ is a set of vertices (or, nodes), $E$ is a multi-set of undirected edges (or unordered pairs of vertices).
-			\item undirected multigraph, which edges have an identity each (or, where each edge has an identity), is an ordered triple (or 3-tuple) $G = (V, E, r)$, such that $r: E \rightarrow \{\{x, y\} : x, y \in V\}$ is a function that assigns each edge to an unordered pair of vertices (i.e., endpoint nodes).
-			\item directed multigraph (or multidigraph or quiver), which edges have no identity, is an ordered pair (or 2-tuple) $G = (V,E)$. Here, $V$ is a set of vertices (or, nodes), and $E$ is a multi-set of ordered pairs of vertices (i.e., directed edges, directed arcs, or arrows)
-			\item A mixed multigraph is a(n) (ordered) 3-tuple $G = (V, E, A)$, where $V$ is a set of vertices (or, nodes), $E$ is a set of undirected edges, and $A$ is a multi-set of directed edges/arcs.
-			\item A directed multigraph (or multidigraph or quiver), which edges have an identity each (or, where each edge has an identity), is a 4-tuple $G = (V, E, s, t)$. Here, $V$ is a set of vertices (or nodes), $E$ is a multi-set of ordered pairs of vertices (i.e., directed edges, directed arcs, or arrows), $s : E \rightarrow V$ so that each edge is assigned to its source node, and $t : E \rightarrow V$ so that each edge is assigned to its destination/target node.
+			\item A {\bf multidigraph} is also known as {\bf quiver} \cite{WikipediaContributors2018a40}.
+			\item {\bf undirected multigraph, which edges have no identity}, is an ordered pair (or 2-tuple) $G = (V, E)$, where $V$ is a set of vertices (or, nodes), $E$ is a multi-set of undirected edges (or unordered pairs of vertices).
+			\item {\bf undirected multigraph, which edges have an identity each (or, where each edge has an identity)}, is an ordered triple (or 3-tuple) $G = (V, E, r)$, such that $r: E \rightarrow \{\{x, y\} : x, y \in V\}$ is a function that assigns each edge to an unordered pair of vertices (i.e., endpoint nodes).
+			\item {\bf directed multigraph (or multidigraph or quiver), which edges have no identity}, is an ordered pair (or 2-tuple) $G = (V,E)$. Here, $V$ is a set of vertices (or, nodes), and $E$ is a multi-set of ordered pairs of vertices (i.e., directed edges, directed arcs, or arrows)
+			\item A {\bf mixed multigraph} is a(n) (ordered) 3-tuple $G = (V, E, A)$, where $V$ is a set of vertices (or, nodes), $E$ is a set of undirected edges, and $A$ is a multi-set of directed edges/arcs.
+			\item A {\bf directed multigraph (or multidigraph or quiver), which edges have an identity each (or, where each edge has an identity)}, is a 4-tuple $G = (V, E, s, t)$. Here, $V$ is a set of vertices (or nodes), $E$ is a multi-set of ordered pairs of vertices (i.e., directed edges, directed arcs, or arrows), $s : E \rightarrow V$ so that each edge is assigned to its source node, and $t : E \rightarrow V$ so that each edge is assigned to its destination/target node.
 			\end{itemize}
-		\item A labeled multigraph is a 6-tuple $G = (\sum_{V}, \sum_{E}, V, E, l_{V}, l_{E})$. Here, $V$ is a set of vertices (or, nodes), and $E$ is a multi-set of ordered pairs of vertices (i.e., directed edges, directed arcs, or arrows), $\sum_{V}$ is the finite alphabet of available vertex labels, $\sum_{E}$ is the finite alphabet of available edge labels, $l_{V} : V \rightarrow \sum_{V}$ is a map describing the labeling of the vertices, and $l_{E} : E \rightarrow \sum_{E}$ is a map describing the labeling of the vertices.
-		\item A labeled multidigraph is also known as a labeled, directed multigraph. It is a 8-tuple $G = (\sum_{V}, \sum_{E}, V, E, s, t, l_{V}, l_{E})$. Here, $V$ is a set of vertices (or, nodes), and $E$ is a multi-set of ordered pairs of vertices (i.e., directed edges, directed arcs, or arrows), $\sum_{V}$ is the finite alphabet of available vertex labels, $\sum_{E}$ is the finite alphabet of available edge labels, $s : E \rightarrow V$ so that each edge is assigned to its source node (or, is a map that assigns each edge to its source node), $t : E \rightarrow V$ so that each edge is assigned to its destination/target node (or, is a map that assigns each edge to its destination/target node), $l_{V} : V \rightarrow \sum_{V}$ is a map describing the labeling of the vertices, and $l_{E} : E \rightarrow \sum_{E}$ is a map describing the labeling of the vertices.
+		\item A {\bf labeled multigraph} is a 6-tuple $G = (\sum_{V}, \sum_{E}, V, E, l_{V}, l_{E})$. Here, $V$ is a set of vertices (or, nodes), and $E$ is a multi-set of ordered pairs of vertices (i.e., directed edges, directed arcs, or arrows), $\sum_{V}$ is the finite alphabet of available vertex labels, $\sum_{E}$ is the finite alphabet of available edge labels, $l_{V} : V \rightarrow \sum_{V}$ is a map describing the labeling of the vertices, and $l_{E} : E \rightarrow \sum_{E}$ is a map describing the labeling of the vertices.
+		\item A {\bf labeled multidigraph} is also known as a {\bf labeled, directed multigraph}. It is a 8-tuple $G = (\sum_{V}, \sum_{E}, V, E, s, t, l_{V}, l_{E})$. Here, $V$ is a set of vertices (or, nodes), and $E$ is a multi-set of ordered pairs of vertices (i.e., directed edges, directed arcs, or arrows), $\sum_{V}$ is the finite alphabet of available vertex labels, $\sum_{E}$ is the finite alphabet of available edge labels, $s : E \rightarrow V$ so that each edge is assigned to its source node (or, is a map that assigns each edge to its source node), $t : E \rightarrow V$ so that each edge is assigned to its destination/target node (or, is a map that assigns each edge to its destination/target node), $l_{V} : V \rightarrow \sum_{V}$ is a map describing the labeling of the vertices, and $l_{E} : E \rightarrow \sum_{E}$ is a map describing the labeling of the vertices.
 		\item References: \vspace{-0.1cm}
 			\begin{itemize} \itemsep -1pt
 			\item Multiple edges: \url{https://en.wikipedia.org/wiki/Multiple_edges}
@@ -122,7 +122,7 @@ Additional resources about graphs: \vspace{-0.3cm}
 		\begin{enumerate} \itemsep -2pt
 		\item If the graph contains an edge connecting vertices $u$ and $v$, $e = (u, v)$, the vertices $u$ and $v$ are {\bf adjacent} to each other \cite{WikipediaContributors2017a11}.
 		\item The {\bf degree (or valency) of vertex} $v$, which is denoted by $\delta(v)$ (or, ${\rm deg}(v)$ or ${\rm deg}\ v$), is the number of edges that are incident to $v$ \cite{WikipediaContributors2017a11}.
-		\item An {\it isolated vertex} is a vertex with degree zero, $\delta(v) = 0$. It does not an endpoint of any edge; or, no edge in a (or, any) graph is defined with an isolated vertex \cite{WikipediaContributors2017a11}.
+		\item An {\bf isolated vertex} is a vertex with degree zero, $\delta(v) = 0$. It does not an endpoint of any edge; or, no edge in a (or, any) graph is defined with an isolated vertex \cite{WikipediaContributors2017a11}.
 		\item A {\bf leaf vertex}, or {\bf pendent vertex}, is a vertex of degree one, and is an endpoint of only one edge in the graph \cite{WikipediaContributors2017a11}.
 		\item For a vertex $v$ of a directed graph, the {\bf outdegree} of $v$ (denoted by $\delta^{+}(v)$) is its number of outgoing edges, and the {\bf indegree} of $v$ (denoted by $\delta^{-}(v)$) is its number of incoming edges. A source vertex is a vertex with a zero indegree ($\delta^{-}(v) = 0$), and a sink vertex is a vertex with a zero outdegree ($\delta^{+}(v) = 0$) \cite{WikipediaContributors2017a11}.
 		\item A vertex $v$, which has no incident edges apart from a(n) (undirected) loop from $v$ to itself, has a degree of two; i.e., ${\rm deg}(v) = 0$ \cite{WikipediaContributors2018a37}.
@@ -131,24 +131,24 @@ Additional resources about graphs: \vspace{-0.3cm}
 	\end{enumerate}
 \item Multi-dimensional networks: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
-	\item Multi-dimensional networks belong to type of multi-layer networks that have multiple types/kinds of relations.
-	\item A multi-dimensional network can be modeled with a multipartite edge-labeled multigraph.
-	\item An unweighted multi-layer network can be represented as a triple $G = (V, E, D)$, where (or, in which) $V$ is a set of vertices, $E$ is a dimension-specific set of edges connecting the vertices and each edge is represented by the triple $(u, v, d)$ such that $u, v, \in V$ and $d \in D$ (or, $E = \{(u, v, d); u, v \in V, d \in D$), and $D$ is a set of dimensions or layers. \vspace{-0.2cm}
+	\item Multi-dimensional networks belong to type of multi-layer networks that have multiple types/kinds of relations \cite{WikipediaContributors2018a42}.
+	\item A multi-dimensional network can be modeled with a multipartite edge-labeled multigraph \cite{WikipediaContributors2018a41,WikipediaContributors2018a42}.
+	\item An unweighted multi-layer network can be represented as a triple $G = (V, E, D)$, where (or, in which) $V$ is a set of vertices, $E$ is a dimension-specific set of edges connecting the vertices and each edge is represented by the triple $(u, v, d)$ such that $u, v, \in V$ and $d \in D$ (or, $E = \{(u, v, d); u, v \in V, d \in D$), and $D$ is a set of dimensions or layers \cite{WikipediaContributors2018a42}. \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
 		\item For an unweighted, undirected multi-layer network, the edges/links $(u, v, d)$ and $(v, u, d)$ are equivalent.
 		\item For an unweighted, directed multi-layer network, the edges/links $(u, v, d)$ and $(v, u, d)$ are different/distinct.
 		\item By convention, unweighted multi-layer network are not multigraphs in a given dimension; hence, ``the number of $[$edges/$]$links between two nodes in a given dimension is either zero or one''. ``However, the total number of $[$edges/$]$links between two nodes across all dimensions is less than or equal to $| D |$.''
 		\end{enumerate}
-	\item An edge of a weighted multi-layer network can be represented as a 4-tuple (or, quadruplet) $e = (u, v, d, w)$, ``where $w$ is the weight of the $[$edge/$]$link between $[$vertex$]$ $u$ and $[$vertex$]$ $v$ in the dimension $d$'' \vspace{-0.2cm}
+	\item An edge of a weighted multi-layer network can be represented as a 4-tuple (or, quadruplet) $e = (u, v, d, w)$, ``where $w$ is the weight of the $[$edge/$]$link between $[$vertex$]$ $u$ and $[$vertex$]$ $v$ in the dimension $d$'' \cite{WikipediaContributors2018a42} \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
 		\item Weighted multi-layer networks, like unweighted multi-layer networks, can also be represented as a triple $G = (V, E, D)$, where $V$ is the set of vertices, $E$ is the set of edges (each edge is represented by $e = (u, v, d, w)$), or $E = \{(u, v, d, w); u, v \in V, d \in D, w \in W\}$, $W$ is a set of weights, and $D$ is a set of dimensions or layers.
-		\item A temporal network, or time-varying network, can model edges in weighted multi-layer networks, where an edge is defined as $e = (u, v, d_{1}, \dots, d_{n}, w)$, where $d_{1}, \dots, d_{n} \in D$
+		\item A weighted multi-layer networks, where an edge is defined as $e = (u, v, d_{1}, \dots, d_{n}, w)$, such that $d_{1}, \dots, d_{n} \in D$, can model multidimensional temporal networks, or multidimensional time-varying networks \cite{WikipediaContributors2018a42}.
 		\end{enumerate}
-	\item Multidimensional network: \url{https://en.wikipedia.org/wiki/Multidimensional_network}.
-	\item Multipartite graph: \url{https://en.wikipedia.org/wiki/Multipartite_graph}
+	\item Multidimensional network \cite{WikipediaContributors2018a42}: \url{https://en.wikipedia.org/wiki/Multidimensional_network}.
+	\item Multipartite graph \cite{WikipediaContributors2018a41}: \url{https://en.wikipedia.org/wiki/Multipartite_graph}
 	\item Temporal network, or time-varying network: \url{https://en.wikipedia.org/wiki/Temporal_network}
 	\item A 1-dimensional (1-D) network has a 2-dimensional (2-D) adjacency matrix with the size $V \times V$; $A^{i}_{j}$ is an adjacency matrix that encodes edges/links/connections between vertices $i$ and $j$.
-	\item For a multi-dimensional network with $| D |$ dimensions, it has a multi-layer adjacency tensor (or, 4-dimensional matrix, or 4-D matrix) with the size $(V \times D) \times (V \times D)$; $M^{i\alpha}_{j\beta}$ is an multi-layer adjacency tensor that encodes edges/links/connections between vertices $i$ in layer $\alpha$ and $j$ in layer $\beta$.
+	\item For a multi-dimensional network with $| D |$ dimensions, it has a multi-layer adjacency tensor (or, 4-dimensional matrix, or 4-D matrix) with the size $(V \times D) \times (V \times D)$; $M^{i\alpha}_{j\beta}$ is an multi-layer adjacency tensor that encodes edges/links/connections between vertices $i$ in layer $\alpha$ and $j$ in layer $\beta$ \cite{WikipediaContributors2018a42}.
 	\end{enumerate}
 \item infinite graph: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
@@ -472,7 +472,7 @@ Solvers for the following problems (or to perform the following functions) regar
 	\begin{enumerate} \itemsep -2pt
 	\item Planar graph: \url{https://en.wikipedia.org/wiki/Planar_graph}
 	\item network science: \vspace{-0.2cm}
-		\begin{enumerate} \itemsep -2pt
+		\begin{itemize} \itemsep -2pt
 		\item \url{https://en.wikipedia.org/wiki/Network_science}
 		\item Interdependent networks: \url{https://en.wikipedia.org/wiki/Interdependent_networks}
 		\item Modularity (networks): \url{https://en.wikipedia.org/wiki/Modularity_(networks)}
@@ -482,7 +482,7 @@ Solvers for the following problems (or to perform the following functions) regar
 		\item Degree distribution: \url{https://en.wikipedia.org/wiki/Degree_distribution}
 		\item Centrality: \url{https://en.wikipedia.org/wiki/Centrality#Closeness_centrality}
 		\item Betweenness centrality: \url{https://en.wikipedia.org/wiki/Betweenness_centrality}
-		\end{enumerate}
+		\end{itemize}
 	\end{enumerate}
 \end{enumerate}
 
