@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  26 NOV 2018 11:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  26 NOV 2018 12:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1075,24 +1075,19 @@ File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 ] [4] [5]
 [6]
-Overfull \hbox (4.26259pt too wide) in paragraph at lines 176--177
+Overfull \hbox (4.26259pt too wide) in paragraph at lines 178--179
 []\T1/lmr/bx/n/12 Multidimensional net-work \T1/lmr/m/n/12 [[][]194[][]]: [][]$
 \T1/lmtt/m/n/12 https : / / en . wikipedia . org / wiki / Multidimensional _
  []
 
 
-Overfull \hbox (25.34761pt too wide) in paragraph at lines 178--179
+Overfull \hbox (25.34761pt too wide) in paragraph at lines 180--181
 []\T1/lmr/bx/n/12 Temporal net-work\T1/lmr/m/n/12 , or \T1/lmr/bx/n/12 time-var
 ying net-work\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 https : / / en . wikipedia .
  org / wiki / Temporal _
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 200--201
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 202--203
 
  []
@@ -1107,84 +1102,89 @@ Underfull \hbox (badness 10000) in paragraph at lines 206--207
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 208--209
+
+ []
+
 [8]
-Overfull \hbox (37.49538pt too wide) in paragraph at lines 289--290
+Overfull \hbox (37.49538pt too wide) in paragraph at lines 291--292
 []\T1/lmr/bx/n/12 Bellman-Ford al-go-rithm \T1/lmr/m/n/12 (or, \T1/lmr/bx/n/12 
 Bellman-Ford-Moore al-go-rithm\T1/lmr/m/n/12 ): [][]$\T1/lmtt/m/n/12 https : / 
 / en . wikipedia .
  []
 
 
-Overfull \hbox (28.19597pt too wide) in paragraph at lines 290--291
+Overfull \hbox (28.19597pt too wide) in paragraph at lines 292--293
 []\T1/lmr/bx/n/12 Ford-Fulkerson al-go-rithm (FFA)\T1/lmr/m/n/12 , or \T1/lmr/b
 x/n/12 Ford-Fulkerson method\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 https : / / e
 n . wikipedia .
  []
 
 [9]
-Overfull \hbox (21.96764pt too wide) in paragraph at lines 339--340
+Overfull \hbox (21.96764pt too wide) in paragraph at lines 341--342
 []\T1/lmr/bx/n/12 max-flow min-cut the-o-rem\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/
 12 https : / / en . wikipedia . org / wiki / Max-[]flow _ min-[]cut _ theorem$[
 ][] 
  []
 
 
-Overfull \hbox (13.70074pt too wide) in paragraph at lines 340--341
+Overfull \hbox (13.70074pt too wide) in paragraph at lines 342--343
 []\T1/lmr/bx/n/12 minimum-cost flow prob-lem (MCFP)\T1/lmr/m/n/12 : [][]$\T1/lm
 tt/m/n/12 https : / / en . wikipedia . org / wiki / Minimum-[]cost _
  []
 
 [10]
-Overfull \hbox (34.99174pt too wide) in paragraph at lines 387--388
+Overfull \hbox (34.99174pt too wide) in paragraph at lines 389--390
 \T1/lmr/bx/n/17.28 du-al-i-ties\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 https : / 
 / en . wikipedia . org / wiki / Linear _ programming # Covering / packing _
  []
 
 
-Overfull \hbox (30.58757pt too wide) in paragraph at lines 393--394
+Overfull \hbox (30.58757pt too wide) in paragraph at lines 395--396
 []\T1/lmr/bx/n/12 independent set prob-lem\T1/lmr/m/n/12 , and \T1/lmr/bx/n/12 
 max-i-mum in-de-pen-dent set\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 https : / / e
 n . wikipedia .
  []
 
 [11] [12]
-Overfull \hbox (14.54733pt too wide) in paragraph at lines 515--516
+Overfull \hbox (14.54733pt too wide) in paragraph at lines 517--518
 []\T1/lmr/bx/n/12 Homeomorphism\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 https : / 
 / en . wikipedia . org / wiki / Homeomorphism _ (graph _ theory )
  []
 
 
-Overfull \hbox (29.29927pt too wide) in paragraph at lines 523--524
+Overfull \hbox (29.29927pt too wide) in paragraph at lines 525--526
 []\T1/lmr/bx/n/12 Interdependent net-works\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12
  https : / / en . wikipedia . org / wiki / Interdependent _ networks$[][] 
  []
 
 
-Overfull \hbox (10.96407pt too wide) in paragraph at lines 526--527
+Overfull \hbox (10.96407pt too wide) in paragraph at lines 528--529
 []\T1/lmr/bx/n/12 Distance \T1/lmr/m/n/12 (graph the-ory): [][]$\T1/lmtt/m/n/12
  https : / / en . wikipedia . org / wiki / Distance _ (graph _ theory)$[][] 
  []
 
 
-Overfull \hbox (10.44177pt too wide) in paragraph at lines 530--531
+Overfull \hbox (10.44177pt too wide) in paragraph at lines 532--533
 []\T1/lmr/bx/n/12 Betweenness cen-tral-ity\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12
  https : / / en . wikipedia . org / wiki / Betweenness _ centrality$[][] 
  []
 
 [13]
-Overfull \hbox (2.8676pt too wide) in paragraph at lines 654--655
+Overfull \hbox (2.8676pt too wide) in paragraph at lines 656--657
 []\T1/lmr/bx/n/12 Gallery of named graphs\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 
 https : / / en . wikipedia . org / wiki / Gallery _ of _ named _ graphs$[][] 
  []
 
 
-Overfull \hbox (1.05757pt too wide) in paragraph at lines 655--656
+Overfull \hbox (1.05757pt too wide) in paragraph at lines 657--658
 []\T1/lmr/bx/n/12 List of graph the-ory top-ics\T1/lmr/m/n/12 : [][]$\T1/lmtt/m
 /n/12 https : / / en . wikipedia . org / wiki / List _ of _ graph _ theory _
  []
 
 
-Overfull \hbox (9.98303pt too wide) in paragraph at lines 656--657
+Overfull \hbox (9.98303pt too wide) in paragraph at lines 658--659
 []\T1/lmr/bx/n/12 Glossary of graph the-ory terms\T1/lmr/m/n/12 : [][]$\T1/lmtt
 /m/n/12 https : / / en . wikipedia . org / wiki / Glossary _ of _ graph _
  []
@@ -1645,8 +1645,8 @@ Package rerunfilecheck Info: File `data-structures_n_algor.out' has not changed
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 284.
  ) 
 Here is how much of TeX's memory you used:
- 17687 strings out of 493089
- 248974 string characters out of 6134842
+ 17689 strings out of 493089
+ 248990 string characters out of 6134842
  361437 words of memory out of 5000000
  19555 multiletter control sequences out of 15000+600000
  125350 words of font info for 91 fonts, out of 8000000 for 9000
@@ -1675,10 +1675,10 @@ msy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><
 /texlive/2015/texmf-dist/fonts/type1/public/marvosym/marvosym.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on data-structures_n_algor.pdf (69 pages, 592430 bytes).
+Output written on data-structures_n_algor.pdf (69 pages, 592600 bytes).
 PDF statistics:
- 2795 PDF objects out of 2984 (max. 8388607)
- 2677 compressed objects within 27 object streams
- 1246 named destinations out of 1440 (max. 500000)
+ 2798 PDF objects out of 2984 (max. 8388607)
+ 2680 compressed objects within 27 object streams
+ 1248 named destinations out of 1440 (max. 500000)
  321 words of extra memory for PDF output out of 10000 (max. 10000000)
 
