@@ -39,7 +39,7 @@ Types of {\bf finite graphs} \cite{WikipediaContributors2018a38}: \vspace{-0.2cm
 		\item {\bf pseudograph} \cite{WikipediaContributors2018a39}: \vspace{-0.1cm}
 			\begin{itemize} \itemsep -1pt
 			\item Some authors/people use pseudographs and multigraphs interchangeably/synonymously.
-			\item Other people use pseudographs to refer to multigraphs that allow self-loops (or loops).
+			\item Other people use pseudographs to refer to multigraphs that allow self-loops (or loops) \cite{WikipediaContributors2017a13}.
 			\end{itemize}
 		\item A {\bf planar graph} remains planar, or preserves its planarity, when its edges become multiple edges by the addition of edges to edges in the original graph {\Huge Reference this!!!}.
 		\item Representations for different types of {\bf multigraphs} \cite{WikipediaContributors2018a39}: \vspace{-0.1cm}
@@ -82,9 +82,15 @@ Types of {\bf finite graphs} \cite{WikipediaContributors2018a38}: \vspace{-0.2cm
 		\begin{enumerate} \itemsep -2pt
 		\item 
 		\end{enumerate}
-	\item {\bf planar graph}: \vspace{-0.2cm}
-		\begin{enumerate} \itemsep -2pt
-		\item 
+	\item {\bf Planar graph} \cite{WikipediaContributors2018a43}: %\vspace{-0.2cm}
+		\begin{enumerate} %\itemsep -2pt
+		\item \url{https://en.wikipedia.org/wiki/Planar_graph}
+		\item Are all planar graphs sparse graphs? \cite{WikipediaContributors2018a43}
+		\item ``A planar graph is a graph that can be embedded in the plane'', such that when the graph is visualized in 2-dimensions, its edges only intersect at their endpoints (or, its edges do not intersect each other) \cite{WikipediaContributors2018a43}.
+			\begin{itemize} 
+			\item Such visualizations are known as {\bf planar embeddings of the graph}, or {\bf plane graphs} \cite{WikipediaContributors2018a43}.
+			\item A planar embedding of a planar graph $G_{P} = (V_{P}, E_{P})$ is a mapping of vertices $v_{i} \in V_{P} = \{v_{1}, \dots, v_{n}\}, \forall i \in \{1, \dots, n\},$ to points on a plane, and a mapping of edges $e_{j} \in E_{P} = \{e_{1}, \dots, e_{m}\}, \forall j \in \{1, \dots, m\},$ to plane curves on that plane, such that no planar curve intersects another planar curve and planar curves are connected at points in that plane \cite{WikipediaContributors2018a43}.
+			\end{itemize}
 		\end{enumerate}
 	\item {\bf dipole graph}: \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
@@ -99,6 +105,12 @@ Types of {\bf finite graphs} \cite{WikipediaContributors2018a38}: \vspace{-0.2cm
 			\item {\bf Dipole graph}: \url{https://en.wikipedia.org/wiki/Dipole_graph}
 			\end{itemize}
 		\end{enumerate}
+	\item A {\bf dual graph} $H = \{V_{H}, E_{H}\}$ of a planar graph $G = \{V_{G}, E_{G}\}$ \cite{WikipediaContributors2018a43} is a graph that maps each vertex $v_{i} \in V_{G} = \{v_{1}, \dots, v_{n}\}, \forall i \in \{1, \dots, n\}, n \geq 3,$ to each face of $H$, and maps each vertex $v_{j} \in V_{H} = \{v_{1}, \dots, v_{m}\}, \forall j \in \{1, \dots, m\},$ to a face in $G$, and each edge $e_{k} \in E_{H} = \{e_{1}, \dots, e_{o}\}, \forall k \in \{1, \dots, o\},$ connects adjacent faces of $G$ that are separated by an edge. Hence, each edge $e_{l} \in E_{G} = \{e_{1}, \dots, e_{p}\}, \forall l \in \{1, \dots, p\},$ corresponds to a dual edge $e_{k}$ in $H$, such that the endpoints of $e_{k}$ are the dual vertices corresponding to faces on both sides of $e_{l}$ \cite{WikipediaContributors2018a48}. \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item The definition of $H$ depends on the planar embedding of $G$, since the duality property is a property of the planar embedding (as opposed to planar graphs that can be embedded, but its embedding is not known yet) \cite{WikipediaContributors2018a48}.
+		\item Hence, a planar graph can have multiple dual graphs, since it can have multiple planar embeddings \cite{WikipediaContributors2018a48}.
+		\end{enumerate}
+	\item A {\bf bouquet grap} $B_{m}$ ``is an undirected graph with one vertex and $m$'' self-loops \cite{WikipediaContributors2018a47}. That is, each edge in the undirected graph  $B_{m}$ is a self-loop \cite{WikipediaContributors2017a13}.
 	\end{enumerate}
 \item {\bf directed graph}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
@@ -121,20 +133,34 @@ Additional resources about graphs: \vspace{-0.3cm}
 	\item Notes about vertices/nodes: \vspace{-0.2cm}
 		\begin{enumerate} %\itemsep -1pt
 		\item If the graph contains an edge connecting vertices $u$ and $v$, $e = (u, v)$, the vertices $u$ and $v$ are {\bf adjacent} to each other \cite{WikipediaContributors2017a11}.
-		\item The {\bf degree (or valency) of vertex} $v$, which is denoted by $\delta(v)$ (or, ${\rm deg}(v)$ or ${\rm deg}\ v$), is the number of edges that are incident to $v$ \cite{WikipediaContributors2017a11}.
-		\item An {\bf isolated vertex} is a vertex with degree zero, $\delta(v) = 0$. It does not an endpoint of any edge; or, no edge in a (or, any) graph is defined with an isolated vertex \cite{WikipediaContributors2017a11}.
-		\item A {\bf leaf vertex}, or {\bf pendent vertex}, is a vertex of degree one, and is an endpoint of only one edge in the graph \cite{WikipediaContributors2017a11}.
+		\item The {\bf degree (or valency) of vertex} $v$, which is denoted by $\delta(v)$ (or, ${\rm deg}(v)$ or ${\rm deg}\ v$), is the number of edges that are incident to $v$ \cite{WikipediaContributors2017a11,WikipediaContributors2018a37}.: \vspace{-0.1cm}
+			\begin{itemize} \itemsep -1pt
+			\item Regarding undirected graphs, the degree of a vertex $\deg(v)$ is equal to the number of edges (i.e., $n$) \cite{WikipediaContributors2017a13}; i.e., $\deg(v) = n$.
+			\end{itemize}
+		\item An {\bf isolated vertex} is a vertex with degree zero, $\delta(v) = 0$. It is not an endpoint of any edge; or, no edge in a (or, any) graph is defined with an isolated vertex \cite{WikipediaContributors2018a37,WikipediaContributors2017a11}.
+		\item A {\bf leaf vertex}, {\bf end vertex}, or {\bf pendent vertex}, is a vertex of degree one, $\delta(v) = 1$, and is an endpoint of only one edge ({\bf pendent edge}) in the graph \cite{WikipediaContributors2018a37,WikipediaContributors2017a11}.
+		\item A {\bf dominating vertex} is ``a vertex with degree $\delta(v) = (n - 1)$ in a graph of $n$ vertices'' \cite{WikipediaContributors2018a37}.
 		\item For a vertex $v$ of a directed graph, the {\bf outdegree} of $v$ (denoted by $\delta^{+}(v)$) is its number of outgoing edges, and the {\bf indegree} of $v$ (denoted by $\delta^{-}(v)$) is its number of incoming edges. A {\bf source vertex} is a vertex with a zero indegree ($\delta^{-}(v) = 0$), and a {\bf sink vertex} is a vertex with a zero outdegree ($\delta^{+}(v) = 0$) \cite{WikipediaContributors2017a11}.
-		\item A vertex $v$, which has no incident edges apart from a(n) (undirected) loop from $v$ to itself, has a degree of two; i.e., ${\rm deg}(v) = 2$ \cite{WikipediaContributors2018a37}.
+		\item A vertex $v$, which has no incident edges apart from a(n) (undirected) loop from $v$ to itself, has a degree of two; i.e., ${\rm deg}(v) = 2$ \cite{WikipediaContributors2018a37}. \vspace{-0.1cm}
+			\begin{itemize} \itemsep -1pt
+			\item ``A {\bf loop}, {\bf self-loop}, or {\bf buckle}, is an edge that connects a vertex to itself'' \cite{WikipediaContributors2017a13}.
+			\item Regarding undirected graphs, the degree of a vertex with a loop and no other incident edges is two; i.e., $\deg(v) = 2$ \cite{WikipediaContributors2017a13}.
+			\item Regarding undirected graphs, a vertex with a loop and no other incident edges has an indegree of one $\delta^{-}(v) = 1$ and an outdegree of one $\delta^{+}(v) = 1$ \cite{WikipediaContributors2017a13}.
+			\end{itemize}
 		\item For a graph $G$, its {\bf maximum degree} $\Delta(G)$ and its {\bf minimum degree} $\delta(G)$ are the maximum and minimum degree of its vertices \cite{WikipediaContributors2018a37}.
 		\item A {\bf cut vertex} is a vertex that would disconnect the graph when it is removed \cite{WikipediaContributors2017a11}.
 		\item A {\bf vertex cut} $S$ (or, {\bf vertex separator}, or {\bf separating set}) is a {\bf vertex subset} ($S \subset V$) for non-adjacent vertices (or subgraphs \cite{WikipediaContributors2018a44}) $a$ and $b$, if the removal of the {\bf vertex cut} $S$  disconnects/separates the subgraphs ``$a$ and $b$ into distinct connected components'' \cite{WikipediaContributors2016n}.
 		\end{enumerate}
-	\item A {\bf subgraph} $S = (V_{S}, E_{S})$ of a graph $G = (V_{G}, E_{G})$ is another graph that includes a subset of the vertices and edges of $G$, such that $S \neq G, S \not\subset G, V_{S} \subset V_{G}, E_{S} \subset E_{G}$, and $(S \cap G) = S$ \cite{WikipediaContributors2018a44}.
+	\item An {\bf independent set} is a set of vertices $S$ such that no pair vertices $(v_{i}, v_{j}), \forall i \forall j \in V, V = \{v_{1}, \dots, v_{n}\}$ has an edge connecting them \cite{WikipediaContributors2017a11,WikipediaContributors2018a45}. %\vspace{-0.2cm}
+		\begin{enumerate} %\itemsep -2pt
+		\item That is, there does not exist any edge $\not\exists e = (v_{i}, v_{j}), \forall i \forall j \in V, V = \{v_{1}, \dots, v_{n}\}$.
+		\end{enumerate}
+	\item The handshaking lemma \cite{WikipediaContributors2018a46,WikipediaContributors2018a37} states that the number of vertices with odd degree in any undirected graph $G = (V, E)$ is even. $\displaystyle\sum_{v \in V} \deg(v) = 2|E|$.
 	\end{enumerate}
+\item A {\bf subgraph} $S = (V_{S}, E_{S})$ of a graph $G = (V_{G}, E_{G})$ is another graph that includes a subset of the vertices and edges of $G$, such that $S \neq G, S \not\subset G, V_{S} \subset V_{G}, E_{S} \subset E_{G}$, and $(S \cap G) = S$ \cite{WikipediaContributors2018a44}.
 \item {\bf Multi-dimensional networks}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
-	\item {\bf Multi-dimensional networks} belong to type of multi-layer networks that have multiple types/kinds of relations \cite{WikipediaContributors2018a42}.
+	\item {\bf Multi-dimensional networks} belong to type of {\bf multi-layer networks} that have multiple types/kinds of relations \cite{WikipediaContributors2018a42}.
 	\item A {\bf multi-dimensional network} can be modeled with a {\bf multipartite edge-labeled multigraph} \cite{WikipediaContributors2018a41,WikipediaContributors2018a42}.
 	\item An {\bf unweighted multi-layer network} can be represented as a triple $G = (V, E, D)$, where (or, in which) $V$ is a set of vertices, $E$ is a dimension-specific set of edges connecting the vertices and each edge is represented by the triple $(u, v, d)$ such that $u, v, \in V$ and $d \in D$ (or, $E = \{(u, v, d); u, v \in V, d \in D$), and $D$ is a set of dimensions or layers \cite{WikipediaContributors2018a42}. %\vspace{-0.2cm}
 		\begin{enumerate} %\itemsep -2pt
@@ -345,14 +371,27 @@ Solvers for the following problems (or to perform the following functions) regar
 		\item \url{https://en.wikipedia.org/wiki/Set_cover_problem}
 		\item {\bf hitting set problem}
 		\end{enumerate}
-	\item {\bf Vertex cover problem}: \url{https://en.wikipedia.org/wiki/Vertex_cover}
-	\item {\bf edge cover problem}: \url{https://en.wikipedia.org/wiki/Edge_cover}
+	\item {\bf Vertex cover problem}: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item \url{https://en.wikipedia.org/wiki/Vertex_cover}
+		\item ``A vertex cover is a set of vertices that includes at least one endpoint of each edge in the graph'' \cite{WikipediaContributors2017a11}
+		\item ``A vertex cover of a graph is a set of vertices such that each edge of the graph is incident to at least one vertex [in] the set.'' Reference: \url{https://en.wikipedia.org/wiki/Vertex_cover}.
+		\end{enumerate}
+	\item {\bf edge cover problem}: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item \url{https://en.wikipedia.org/wiki/Edge_cover}
+		\end{enumerate}
 	\item Related problems: %\vspace{-0.2cm}
 		\begin{enumerate} %\itemsep -2pt
 		\item {\bf clique problem}: \url{https://en.wikipedia.org/wiki/Clique_problem}
-		\item {\bf independent set problem}, and {\bf maximum independent set}: \url{https://en.wikipedia.org/wiki/Independent_set_(graph_theory)}
-		\item {\bf Covering/packing-problem pairs}, or {\bf covering/packing dualities}: \url{https://en.wikipedia.org/wiki/Linear_programming#Covering/packing_dualities}
-		\item {\bf Packing problems}: \url{https://en.wikipedia.org/wiki/Packing_problems}
+		\item {\Large  {\bf Covering/packing-problem pairs}, or {\bf covering/packing dualities}}: \url{https://en.wikipedia.org/wiki/Linear_programming#Covering/packing_dualities}
+		\item {\bf Packing problems}: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item \url{https://en.wikipedia.org/wiki/Packing_problems}
+			\item {\bf Maximum set packing}: \url{https://en.wikipedia.org/wiki/Set_packing}
+			\item {\bf Maximum matching} (not graph matching), or {\bf independent edge set}: \url{https://en.wikipedia.org/wiki/Matching_(graph_theory)}
+			\item {\bf independent set problem}, and {\bf maximum independent set}: \url{https://en.wikipedia.org/wiki/Independent_set_(graph_theory)}
+			\end{enumerate}
 		\item {\bf Reconstruction conjecture}: \vspace{-0.1cm}
 			\begin{itemize} \itemsep -1pt
 			\item ``Informally, the {\bf reconstruction conjecture} in graph theory says that graphs are determined uniquely by their subgraphs.''
@@ -363,6 +402,10 @@ Solvers for the following problems (or to perform the following functions) regar
 		\begin{enumerate} \itemsep -2pt
 		\item \url{https://en.wikipedia.org/wiki/Covering_problems}
 		\end{enumerate}
+	\end{enumerate}
+\item graph matching: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item \url{https://en.wikipedia.org/wiki/Graph_matching}
 	\end{enumerate}
 \item {\bf graph decomposition problems}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
@@ -433,6 +476,7 @@ Solvers for the following problems (or to perform the following functions) regar
 		\end{enumerate}
 	\item Also, see {\bf subgraph matching}.
 	\item {\bf Graph isomorphism}: \url{https://en.wikipedia.org/wiki/Graph_isomorphism}
+	\item {\bf Graph isomorphism problem}: \url{https://en.wikipedia.org/wiki/Graph_isomorphism_problem}
 	\item \url{https://en.wikipedia.org/wiki/Subgraph_isomorphism_problem}
 	\end{enumerate}
 \item {\bf Finding induced subgraphs} in a given graph: \vspace{-0.3cm}
@@ -473,11 +517,6 @@ Solvers for the following problems (or to perform the following functions) regar
 	\end{enumerate}
 \item common topics: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
-	\item {\bf Planar graph} \cite{WikipediaContributors2018a43}: %\vspace{-0.2cm}
-		\begin{enumerate} %\itemsep -2pt
-		\item \url{https://en.wikipedia.org/wiki/Planar_graph}
-		\item Are all planar graphs sparse graphs? \cite{WikipediaContributors2018a43}
-		\end{enumerate}
 	\item {\bf network science}: \vspace{-0.2cm}
 		\begin{itemize} \itemsep -2pt
 		\item \url{https://en.wikipedia.org/wiki/Network_science}
@@ -602,6 +641,12 @@ Resources for graphs: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
 	\item \cite{Knuth1993}
 	\item \url{https://www-cs-staff.stanford.edu/~knuth/sgb.html}
+	\end{enumerate}
+\item {\bf Graph analysis} using techniques from {\bf linear algebra}, or {\bf linear algebra in graph theory}: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item See references \cite{Bapat2014,Brouwer2012,Bapat2010,Hogben2007,Biggs1974}. Also, see \cite{Lovasz2014}.
+	\item E.g., ``the vertex space of a graph is [represented by] the vector space'' that has a set of basis vectors that correspond to the vertices of the graph \cite{WikipediaContributors2017a11}
+	\item For edge space and vector space, see \url{https://en.wikipedia.org/wiki/Edge_space}.
 	\end{enumerate}
 \item {\it Wikipedia}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt

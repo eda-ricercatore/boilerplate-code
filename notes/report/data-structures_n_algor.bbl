@@ -92,6 +92,18 @@ Brian Bailey, Grant Martin, and Andrew Piziali.
 \newblock The Morgan Kaufmann Series in Systems on Silicon. Morgan Kaufmann,
   San Francisco, {CA}, 2007.
 
+\bibitem{Bapat2010}
+R.~B. Bapat.
+\newblock {\em Graphs and Matrices}.
+\newblock Universitext. Hindustan Book Agency and Springer-Verlag London, New
+  Delhi, India and London, {U.K.}, 2010.
+
+\bibitem{Bapat2014}
+Ravindra~B. Bapat.
+\newblock {\em Graphs and Matrices}.
+\newblock Universitext. Hindustan Book Agency and Springer-Verlag London, New
+  Delhi, India and London, {U.K.}, second edition, 2014.
+
 \bibitem{Barber2012}
 David Barber.
 \newblock {\em Bayesian Reasoning and Machine Learning}.
@@ -137,6 +149,12 @@ Dimitris Bertsimas and Melvyn Sim.
 \newblock The price of robustness.
 \newblock {\em Operations Research}, 52(1):35--53, January--February 2004.
 
+\bibitem{Biggs1974}
+Norman Biggs.
+\newblock {\em Algebraic Graph Theory}, volume~67 of {\em Cambridge Tracts in
+  Mathematics}.
+\newblock Cambridge University Press, Cambridge, {U.K.}, 1974.
+
 \bibitem{Bishop2006}
 Christopher~M. Bishop.
 \newblock {\em Pattern Recognition and Machine Learning}.
@@ -157,6 +175,12 @@ Gary Bronson.
 Gary~J. Bronson.
 \newblock {\em {C++} for Engineers and Scientists}.
 \newblock Cengage Learning, Boston, {MA}, fourth edition, 2013.
+
+\bibitem{Brouwer2012}
+Andries~E. Brouwer and Willem~H. Haemers.
+\newblock {\em Spectra of Graphs}.
+\newblock Universitext. Springer Science+Business Media, {LCC}, New York, {NY},
+  2012.
 
 \bibitem{Bulka2000}
 Dov Bulka and David Mayhew.
@@ -487,6 +511,12 @@ Steve Heller.
   \url{http://www.sgi.com/tech/stl/complexity.html}; September 30, 2015 was the
   last accessed date, http://www.sgi.com/tech/stl/complexity.html 2014.
 
+\bibitem{Hogben2007}
+Leslie Hogben.
+\newblock {\em Handbook of Linear Algebra}.
+\newblock Discrete Mathematics and Its Applications. Chapman {\rm \&}\
+  Hall/{CRC}, Boca Raton, {FL}, 2007.
+
 \bibitem{Horstmann2012}
 Cay~S. Horstmann.
 \newblock {\em {C++} for Everyone}.
@@ -650,6 +680,12 @@ L{\'{a}}szl{\'{o}} Lov{\'{a}}sz.
 \newblock {\em Large Networks and Graph Limits}, volume~60 of {\em Colloquium
   Publications}.
 \newblock American Mathematical Society, Providence, {RI}, 2012.
+
+\bibitem{Lovasz2014}
+L{\'{a}}szl{\'{o}} Lov{\'{a}}sz.
+\newblock {\em Geometric Representations of Graphs}.
+\newblock E{\'{o}}tv{\"{o}}s Lor{\'{a}}nd University, Budapest, Hungary,
+  October 17 2014.
 
 \bibitem{Lu2004}
 Mi~Lu.
@@ -1149,6 +1185,13 @@ Mark~Allen Weiss.
   \url{https://en.wikipedia.org/wiki/Graph_labeling}; November 25, 2018 was the
   last accessed date, August 30 2017.
 
+\bibitem{WikipediaContributors2017a13}
+{Wikipedia contributors}.
+\newblock Loop (graph theory).
+\newblock Available online from {\it Wikipedia, The Free Encyclopedia: Graph
+  theory} at: \url{https://en.wikipedia.org/wiki/Loop_(graph_theory)}; November
+  25, 2018 was the last accessed date, December 16 2017.
+
 \bibitem{WikipediaContributors2017a11}
 {Wikipedia contributors}.
 \newblock Vertex (graph theory).
@@ -1156,12 +1199,27 @@ Mark~Allen Weiss.
   theory} at: \url{https://en.wikipedia.org/wiki/Vertex_(graph_theory)};
   November 20, 2018 was the last accessed date, October 24 2017.
 
+\bibitem{WikipediaContributors2018a47}
+{Wikipedia contributors}.
+\newblock Bouquet graph.
+\newblock Available online from {\it Wikipedia, The Free Encyclopedia:
+  Parametric families of graphs} at:
+  \url{https://en.wikipedia.org/wiki/Bouquet_graph}; November 25, 2018 was the
+  last accessed date, August 2 2018.
+
 \bibitem{WikipediaContributors2018a37}
 {Wikipedia contributors}.
 \newblock Degree (graph theory).
 \newblock Available online from {\it Wikipedia, The Free Encyclopedia: Graph
   theory} at: \url{https://en.wikipedia.org/wiki/Degree_(graph_theory)};
   November 20, 2018 was the last accessed date, November 12 2018.
+
+\bibitem{WikipediaContributors2018a48}
+{Wikipedia contributors}.
+\newblock Dual graph.
+\newblock Available online from {\it Wikipedia, The Free Encyclopedia: Graph
+  operations} at: \url{https://en.wikipedia.org/wiki/Dual_graph}; November 25,
+  2018 was the last accessed date, May 18 2018.
 
 \bibitem{WikipediaContributors2018a44}
 {Wikipedia contributors}.
@@ -1177,6 +1235,21 @@ Mark~Allen Weiss.
 \newblock Available online from {\it Wikipedia, The Free Encyclopedia: Graph
   theory} at: \url{https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)};
   November 25, 2018 was the last accessed date, November 19 2018.
+
+\bibitem{WikipediaContributors2018a46}
+{Wikipedia contributors}.
+\newblock Handshaking lemma.
+\newblock Available online from {\it Wikipedia, The Free Encyclopedia: Graph
+  theory} at: \url{https://en.wikipedia.org/wiki/Handshaking_lemma}; November
+  25, 2018 was the last accessed date, March 28 2018.
+
+\bibitem{WikipediaContributors2018a45}
+{Wikipedia contributors}.
+\newblock Independent set (graph theory).
+\newblock Available online from {\it Wikipedia, The Free Encyclopedia:
+  Computational problems in graph theory} at:
+  \url{https://en.wikipedia.org/wiki/Independent_set_(graph_theory)}; November
+  25, 2018 was the last accessed date, November 16 2018.
 
 \bibitem{WikipediaContributors2018a42}
 {Wikipedia contributors}.
