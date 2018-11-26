@@ -447,6 +447,11 @@ Anton Gogolev.
   Jonathan Henly, September 19, 2013; March 30, 2016 was the last accessed
   date, January 30 2009.
 
+\bibitem{Goodrich2013}
+Michael~T. Goodrich, Roberto Tamassia, and Michael~H. Goldwasser.
+\newblock {\em Data Structures and Algorithms in Python}.
+\newblock John Wiley {\rm \&}\ Sons, Hoboken, {NJ}, 2013.
+
 \bibitem{Gottschling2016}
 Peter Gottschling.
 \newblock {\em Discovering Modern {C++}: An Intensive Course for Scientists,
@@ -1228,6 +1233,14 @@ Mark~Allen Weiss.
   theory} at:
   \url{https://en.wikipedia.org/wiki/Glossary_of_graph_theory_terms}; November
   25, 2018 was the last accessed date, November 15 2018.
+
+\bibitem{WikipediaContributors2018a49}
+{Wikipedia contributors}.
+\newblock Graph (abstract data type).
+\newblock Available online from {\it Wikipedia, The Free Encyclopedia: Abstract
+  data types} at:
+  \url{https://en.wikipedia.org/wiki/Graph_(abstract_data_type)}; November 25,
+  2018 was the last accessed date, September 2 2018.
 
 \bibitem{WikipediaContributors2018a38}
 {Wikipedia contributors}.

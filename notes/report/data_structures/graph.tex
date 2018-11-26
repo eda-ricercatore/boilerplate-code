@@ -17,8 +17,12 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Graphs}
-\label{sec:Graphs}
+\section{Graph Data Structures}
+\label{sec:GraphDataStructures}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Graph Theory}
+\label{ssec:GraphTheory}
 
 A {\bf graph} $G$ is an ordered pair, $G = (V,E)$, of a vertex/node set and an edge set \cite{WikipediaContributors2018a38}.
 
@@ -110,7 +114,15 @@ Types of {\bf finite graphs} \cite{WikipediaContributors2018a38}: \vspace{-0.2cm
 		\item The definition of $H$ depends on the planar embedding of $G$, since the duality property is a property of the planar embedding (as opposed to planar graphs that can be embedded, but its embedding is not known yet) \cite{WikipediaContributors2018a48}.
 		\item Hence, a planar graph can have multiple dual graphs, since it can have multiple planar embeddings \cite{WikipediaContributors2018a48}.
 		\item ``The property of being a dual graph is symmetric,'' such ``that if $H$ is the dual of a connected graph $G$ [(the primal graph)], then $G$ is [also] a dual of $H$'' \cite{WikipediaContributors2018a48}.
-		\item 
+		\item Graph properties and structures of the primal graph $G$ have dual properties and structures in the dual graph $H$ \cite{WikipediaContributors2018a48}. Such graph properties and structures include the following \cite{WikipediaContributors2018a48}:
+			\begin{itemize}
+			\item cycles are dual to cuts
+			\item spanning trees are dual to complements of spanning trees
+			\item simple graphs are dual to 3-edge-connected graphs
+			\end{itemize}
+		\item Based on the Jordan curve theorem, the dual of the $n$-cycle graph (or, $n$-vertices graph) is the $n$-edge dipole graph \cite{WikipediaContributors2018a48}; see \url{https://en.wikipedia.org/wiki/Jordan_curve_theorem}.
+		\item ``A plane graph is said to be self-dual if it is isomorphic to its dual graph'' \cite{WikipediaContributors2018a48}.
+		\item Since a dual graph $H$ is dependent on the planar embedding of the graph $G$, there does not exist any unique dual graph for graph $G$. That is, a planar graph can have non-isomorphic dual graphs \cite{WikipediaContributors2018a48}.
 		\end{enumerate}
 	\item A {\bf bouquet grap} $B_{m}$ ``is an undirected graph with one vertex and $m$'' self-loops \cite{WikipediaContributors2018a47}. That is, each edge in the undirected graph  $B_{m}$ is a self-loop \cite{WikipediaContributors2017a13}.
 	\end{enumerate}
@@ -201,9 +213,12 @@ Additional resources about graphs: \vspace{-0.3cm}
 
 Focus on {\bf sparse graph representations}, which are common in modeling digital integrated circuits and neural networks (certain types), and {\bf dense graphs} (e.g., neural networks). \\
 
-For {\bf sparse graphs}, use {\bf list or map -based graph representations} for better {\bf memory efficiency}. \\
+For {\bf sparse graphs}, use {\bf adjacency list} (or {\bf adjacency map} \cite{Goodrich2013}) -based graph representations for {\bf better memory efficiency} \cite{WikipediaContributors2018a49}. \\
 
-For {\bf dense graphs}, use {\bf matrix-based graph representation} for faster {\bf access time} at the expense of worse {\bf member efficiency}; see \url{https://en.wikipedia.org/wiki/Dense_graph}. Also, see \url{https://en.wikipedia.org/wiki/Dense_subgraph} regarding dense subgraphs. \\
+
+
+
+For {\bf dense graphs} (i.e., $| E | \approx | V |^{2}$), use {\bf adjacency matrix-based graph representation} for {\bf faster access time} for finding edges at the expense of {\bf worse memory efficiency} \cite{WikipediaContributors2018a49}; see \url{https://en.wikipedia.org/wiki/Dense_graph}. Also, see \url{https://en.wikipedia.org/wiki/Dense_subgraph} regarding dense subgraphs. \\
 
 Hence, there exists a {\bf trade-off between access time and member efficiency in graph representations}.\\
 
@@ -212,10 +227,12 @@ The ways to represent graphs are listed as follows: \vspace{-0.3cm}
 \item {\bf adjacency matrix}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
 	\item 
+	\item References: \cite{WikipediaContributors2018a49,Savage1998}
 	\end{enumerate}
 \item {\bf adjacency list}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
 	\item 
+	\item References: \cite{WikipediaContributors2018a49}
 	\end{enumerate}
 \item {\bf adjacency map}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
@@ -226,15 +243,20 @@ The ways to represent graphs are listed as follows: \vspace{-0.3cm}
 	\item Is this equivalent to the ``{\bf incidence list}'' graph representation? {\Huge Cite this!!!}
 	\item 
 	\end{enumerate}
+\item {\bf incidence matrix}: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item 
+	\item References: \cite{WikipediaContributors2018a49}
+	\end{enumerate}
 \end{enumerate}
 
 
 Alternate graph representations that I am not exploring: \vspace{-0.3cm}
 \begin{enumerate} \itemsep -4pt
 \item {\bf distance matrix}: \url{https://en.wikipedia.org/wiki/Distance_matrix}
-\item {\bf incidence matrix}
 \end{enumerate}
 
+From \cite{WikipediaContributors2018a49}, the adjacency list graph representation is more efficient in terms of computational space complexity than the adjacency matrix and incidence matrix graph representations.
 
 
 
@@ -249,6 +271,20 @@ Alternate graph representations that I am not exploring: \vspace{-0.3cm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Functions that need to be implemented}
 \label{ssec:FunctionsThatNeedToBeImplemented}
+
+
+Common functions that need to be implemented in graph data structures\begin{enumerate}
+\item {\tt is\_adjacent($v_{x}, v_{y}$)}: $v_{x}$ and $v_{y}$ are vertices (of the graph), if $v_{x}, v_{y} \in V_{G}$ \cite{WikipediaContributors2018a49}.
+\item {\tt get\_neighbors($v_{x}$)}: $v_{x}$ is a vertex (of the graph), if $v_{x} \in V_{G}$ \cite{WikipediaContributors2018a49}.
+\item {\tt add\_vertex($v_{x}$)}: $v_{x}$ is a vertex (of the graph), and is added if $v_{x} \not\in V_{G}$ \cite{WikipediaContributors2018a49}.
+\item {\tt remove\_vertex($v_{x}$)}: $v_{x}$ is a vertex (of the graph), and is removed if $v_{x} \in V_{G}$  \cite{WikipediaContributors2018a49}.
+\item {\tt add\_edge($v_{x}, v_{y}$)}: $v_{x}$ and $v_{y}$ are vertices (of the graph), and the edge is added if $v_{x}, v_{y} \in V_{G}$ and edge $(v_{x}, v_{y}) \not\in E_{G}$ \cite{WikipediaContributors2018a49}.
+\item {\tt remove\_edge($v_{x}, v_{y}$)}: $v_{x}$ and $v_{y}$ are vertices (of the graph), and the edge is removed if $v_{x}, v_{y} \in V_{G}$ and edge $(v_{x}, v_{y}) \in E_{G}$ \cite{WikipediaContributors2018a49}.
+\item Accessor and mutator methods for properties of vertices $v_{i}, \forall i \in V_{G} = \{v_{1}, \dots, v_{m}\}$
+\item Accessor and mutator methods for properties of edges $e_{j}, \forall j \in E_{G} = \{e_{1}, \dots, e_{n}\}$
+\end{enumerate}
+
+
 
 
 
