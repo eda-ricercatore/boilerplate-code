@@ -43,7 +43,7 @@ Types of {\bf finite graphs} \cite{WikipediaContributors2018a38}: \vspace{-0.2cm
 		\item {\bf pseudograph} \cite{WikipediaContributors2018a39}: \vspace{-0.1cm}
 			\begin{itemize} \itemsep -1pt
 			\item Some authors/people use pseudographs and multigraphs interchangeably/synonymously.
-			\item Other people use pseudographs to refer to multigraphs that allow self-loops (or loops) \cite{WikipediaContributors2017a13}.
+			\item Other people use pseudographs to refer to multigraphs that allow self-loops \cite[\S B.4, pp. 1168]{Cormen2009} (or loops) \cite{WikipediaContributors2017a13}.
 			\end{itemize}
 		\item A {\bf planar graph} remains planar, or preserves its planarity, when its edges become multiple edges by the addition of edges to edges in the original graph {\Huge Reference this!!!}.
 		\item Representations for different types of {\bf multigraphs} \cite{WikipediaContributors2018a39}: \vspace{-0.1cm}
@@ -76,7 +76,16 @@ Types of {\bf finite graphs} \cite{WikipediaContributors2018a38}: \vspace{-0.2cm
 		\end{enumerate}
 	\item {\bf hypergraph}: \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
-		\item 
+		\item Related to spectral graph theory, which involves linear algebra.
+		\item References for hypergraphs:
+			\begin{itemize}
+			\item \cite{Bretto2013}
+			\item \cite{Cong2003a}
+			\item \cite{Alpert1996}
+			\item \cite{Berge1989}
+			\item \cite{Johnson2013b}
+			\item Not so good references: \cite{Basu2007,Lovasz2012,Bunke2008,Crama2011,Lecoutre2009,Carrington2005,Scheinerman1997,Sarrafzadeh1996}
+			\end{itemize}
 		\end{enumerate}
 	\item {\bf multidimensional networks}: \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
@@ -91,7 +100,7 @@ Types of {\bf finite graphs} \cite{WikipediaContributors2018a38}: \vspace{-0.2cm
 		\item \url{https://en.wikipedia.org/wiki/Planar_graph}
 		\item Are all planar graphs sparse graphs? \cite{WikipediaContributors2018a43}
 		\item ``A planar graph is a graph that can be embedded in the plane'', such that when the graph is visualized in 2-dimensions, its edges only intersect at their endpoints (or, its edges do not intersect each other) \cite{WikipediaContributors2018a43}.
-			\begin{itemize} 
+			\begin{itemize}
 			\item Such visualizations are known as {\bf planar embeddings of the graph}, or {\bf plane graphs} \cite{WikipediaContributors2018a43}.
 			\item A planar embedding of a planar graph $G_{P} = (V_{P}, E_{P})$ is a mapping of vertices $v_{i} \in V_{P} = \{v_{1}, \dots, v_{n}\}, \forall i \in \{1, \dots, n\},$ to points on a plane, and a mapping of edges $e_{j} \in E_{P} = \{e_{1}, \dots, e_{m}\}, \forall j \in \{1, \dots, m\},$ to plane curves on that plane, such that no planar curve intersects another planar curve and planar curves are connected at points in that plane \cite{WikipediaContributors2018a43}.
 			\end{itemize}
@@ -130,6 +139,7 @@ Types of {\bf finite graphs} \cite{WikipediaContributors2018a38}: \vspace{-0.2cm
 	\begin{enumerate} \itemsep -2pt
 	\item {\bf directed multigraphs}: see aforementioned notes on ``{\bf directed multigraph} (or {\bf multidigraph}), which edges have no identity'' and ``{\bf directed multigraph} (or {\bf multidigraph}), which edges have an identity each (or, where each edge has an identity)''
 	\item {\bf directed acyclic graphs} ({\bf DAGs})
+	\item See \S\ref{ssec:DirectedGraphsAndDirectedAcyclicGraphs} for notes on directed graphs (digraphs) and DAGs.
 	\end{enumerate}
 \end{enumerate}
 
@@ -157,13 +167,30 @@ Additional resources about graphs: \vspace{-0.3cm}
 		\item For a vertex $v$ of a directed graph, the {\bf outdegree} of $v$ (denoted by $\delta^{+}(v)$) is its number of outgoing edges, and the {\bf indegree} of $v$ (denoted by $\delta^{-}(v)$) is its number of incoming edges. A {\bf source vertex} is a vertex with a zero indegree ($\delta^{-}(v) = 0$), and a {\bf sink vertex} is a vertex with a zero outdegree ($\delta^{+}(v) = 0$) \cite{WikipediaContributors2017a11}.
 		\item A vertex $v$, which has no incident edges apart from a(n) (undirected) loop from $v$ to itself, has a degree of two; i.e., ${\rm deg}(v) = 2$ \cite{WikipediaContributors2018a37}. \vspace{-0.1cm}
 			\begin{itemize} \itemsep -1pt
-			\item ``A {\bf loop}, {\bf self-loop}, or {\bf buckle}, is an edge that connects a vertex to itself'' \cite{WikipediaContributors2017a13}.
+			\item ``A {\bf loop}, {\bf self-loop} \cite[\S B.4, pp. 1168]{Cormen2009}, or {\bf buckle}, is an edge that connects a vertex to itself'' \cite{WikipediaContributors2017a13}.
 			\item Regarding undirected graphs, the degree of a vertex with a loop and no other incident edges is two; i.e., $\deg(v) = 2$ \cite{WikipediaContributors2017a13}.
 			\item Regarding undirected graphs, a vertex with a loop and no other incident edges has an indegree of one $\delta^{-}(v) = 1$ and an outdegree of one $\delta^{+}(v) = 1$ \cite{WikipediaContributors2017a13}.
 			\end{itemize}
 		\item For a graph $G$, its {\bf maximum degree} $\Delta(G)$ and its {\bf minimum degree} $\delta(G)$ are the maximum and minimum degree of its vertices \cite{WikipediaContributors2018a37}.
 		\item A {\bf cut vertex} is a vertex that would disconnect the graph when it is removed \cite{WikipediaContributors2017a11}.
 		\item A {\bf vertex cut} $S$ (or, {\bf vertex separator}, or {\bf separating set}) is a {\bf vertex subset} ($S \subset V$) for non-adjacent vertices (or subgraphs \cite{WikipediaContributors2018a44}) $a$ and $b$, if the removal of the {\bf vertex cut} $S$  disconnects/separates the subgraphs ``$a$ and $b$ into distinct connected components'' \cite{WikipediaContributors2016n}.
+		\end{enumerate}
+	\item Notes about edges : \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item Edges for directed graphs are also called arcs \cite{WikipediaContributors2018a44}.
+			\begin{itemize}
+			\item Alternate names for edges of directed graphs include ordered pairs of vertices, arrows, directed edges, directed arcs, and directed lines; see \url{https://en.wikipedia.org/wiki/Directed_graph}.
+			\item A directed edge has a head and a tail; see \url{https://en.wikipedia.org/wiki/Directed_graph}. {\it What about directed hyperedges of directed hypergraphs???}
+			\end{itemize}
+		\item Alternate names for edges of undirected graphs include unordered pairs of vertices, and lines; see \url{https://en.wikipedia.org/wiki/Directed_graph}.
+		\item An endpoint is a vertex connected by an edge \cite{WikipediaContributors2018a44}. 
+		\item An edge has at least one endpoint (i.e., loop/self-loop). Hyperedges of hypergraphs can connect to more than 2 vertices; i.e., hyperedges can have more than 2 endpoints \cite{WikipediaContributors2018a44}.
+		\item A half-edge is an edge with only one end, or loose edge has no ends \cite{WikipediaContributors2018a38}.
+		\item For directed edge \cite[\S B.4, pp. 1169]{Cormen2009}
+		\item References:
+			\begin{itemize}
+			\item \cite{WikipediaContributors2018a44}
+			\end{itemize}
 		\end{enumerate}
 	\item An {\bf independent set} is a set of vertices $S$ such that no pair vertices $(v_{i}, v_{j}), \forall i \forall j \in V, V = \{v_{1}, \dots, v_{n}\}$ has an edge connecting them \cite{WikipediaContributors2017a11,WikipediaContributors2018a45}. %\vspace{-0.2cm}
 		\begin{enumerate} %\itemsep -2pt
@@ -202,6 +229,19 @@ Additional resources about graphs: \vspace{-0.3cm}
 	\item ``{\bf Extremal graph theory} studies {\bf extremal (maximal or minimal) graphs} which satisfy a certain property. Extremality can be taken with respect to different graph invariants, such as order, size or girth.''
 	\item \url{https://en.wikipedia.org/wiki/Extremal_graph_theory}
 	\end{enumerate}
+\item {\bf random graphs}: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item \url{https://en.wikipedia.org/wiki/Random_graph}
+	\item Wrongly referred to as probabilistic graph theory in \url{https://en.wikipedia.org/wiki/Graph_theory}
+	\end{enumerate}
+\item {\bf Topological graph theory}: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item \url{https://en.wikipedia.org/wiki/Topological_graph_theory}
+	\end{enumerate}
+\item {\bf Geometric graph theory}: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item \url{https://en.wikipedia.org/wiki/Geometric_graph_theory}
+	\end{enumerate}
 \end{enumerate}
 
 
@@ -227,12 +267,20 @@ The ways to represent graphs are listed as follows: \vspace{-0.3cm}
 \item {\bf adjacency matrix}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
 	\item 
-	\item References: \cite{WikipediaContributors2018a49,Savage1998}
+	\item References: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item \cite{WikipediaContributors2018a49,Savage1998}
+		\item \cite[\S54]{Goldman2008}
+		\end{enumerate}
 	\end{enumerate}
 \item {\bf adjacency list}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
 	\item 
-	\item References: \cite{WikipediaContributors2018a49}
+	\item References: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item \cite{WikipediaContributors2018a49}
+		\item \cite[\S55]{Goldman2008}
+		\end{enumerate}
 	\end{enumerate}
 \item {\bf adjacency map}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
@@ -257,6 +305,67 @@ Alternate graph representations that I am not exploring: \vspace{-0.3cm}
 \end{enumerate}
 
 From \cite{WikipediaContributors2018a49}, the adjacency list graph representation is more efficient in terms of computational space complexity than the adjacency matrix and incidence matrix graph representations.
+
+References to cover: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item \cite[\S4-\S10, \S19, \S21-24, \S25-\S29]{Atallah2009}: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item There exist a trade-off between computational time and space complexities in most data structures \cite[\S4.1.3, pp. 4-2]{Atallah2009}, including graphs.
+	\item Use a ``rooted tree with path compression'' for ``a simple and optimal'' implementation of the union-find data structure \cite[\S4.1.4, pp. 4-3]{Atallah2009}.
+	\item See \cite[\S7-\S9]{Atallah2009} regarding graph algorithms.
+	\item See \cite[\S10]{Atallah2009} regarding external-memory algorithms and data structures. 
+	\item See \cite[\S11]{Atallah2009} regarding average case analysis of algorithms, using probabilistic models and (probabilistic) techniques.
+	\item See \cite[\S12]{Atallah2009} regarding randomized algorithms.
+	\item See \cite[\S24]{Atallah2009} regarding complexity classes and measures for quantum computing.
+	\item See \cite[\S25]{Atallah2009} regarding parameterized algorithms.
+	\item See \cite[\S26]{Atallah2009} regarding machine learning.
+	\item See \cite[\S29]{Atallah2009} regarding distributed computing.
+	\end{enumerate}
+\item See \cite{Atallah2009a}: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item See \cite[\S25]{Atallah2009a} regarding parallel algorithms.
+	\item See \cite[\S24]{Atallah2009a} regarding ``Algorithmic Techniques for Regular Networks of Processors''.
+	\item See \cite[\S26]{Atallah2009a} regarding self-stabilizing algorithms.
+	\item See \cite[\S28]{Atallah2009a} regarding algorithms for implementing computing network protocols.
+	\end{enumerate}
+\item \cite{Goldman2008}: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item Information regarding graph data structures and algorithms are found in \cite[\S51-\S57]{Goldman2008}.
+	\item See \cite[\S B.4]{Goldman2008} for information regarding expected time complexity. \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item Use {\bf expected time complexity} for {\it randomized algorithms}, or for {\it measuring computational time complexity based on random input}. For the latter case, we should specify the probability distribution for the possible inputs (e.g., uniform probability distribution). 
+		\end{enumerate}
+	\item \cite[\S53.8]{Goldman2008} discusses the computational time complexity of the graph algorithms.
+	\end{enumerate}
+\item \cite{Cormen2009}: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item \cite[\S B.4]{Cormen2009} covers graphs, and \cite[\S B.5]{Cormen2009} covers trees.
+	\item \cite[\S22.1]{Cormen2009} covers graph representations
+	\item \cite[\S D]{Cormen2009} covers basic matrix theory and matrix algebra.
+	\item \cite[\S21]{Cormen2009} covers data structures for disjoint sets.
+	\end{enumerate}
+\item \cite{Cormen2013}: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item \cite{Cormen2013}
+	\end{enumerate}
+\item \cite{Goodrich2011}: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item \cite{Goodrich2011}
+	\end{enumerate}
+\item \cite{Goodrich2013}: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item \cite{Goodrich2013}
+	\end{enumerate}
+\end{enumerate}
+
+Due to the lengthy coverage of graphs in \cite[\S52-\S57]{Goldman2008}, I would read the following references \cite{Cormen2009,Cormen2013,Goodrich2011} first. Lastly, I would read \cite{Goodrich2013} to implement the adjacency map representation of graphs.
+
+
+
+
+
+
+
 
 
 
@@ -297,11 +406,16 @@ Solvers for the following problems (or to perform the following functions) regar
 		\begin{enumerate} \itemsep -2pt
 		\item \url{https://en.wikipedia.org/wiki/Breadth-first_search	}
 		\item Also, see {\bf BFS ordering}: \url{https://en.wikipedia.org/wiki/Breadth-first_search}
+		\item Used for logic simulation, so that I can propagate values from one clock cycle to the next correctly. This assumes that the clock cycle is chosen as the minimum time period for the active/inactive pulse of the clock signal. See {\it Wikipedia}'s entry on duty cycle for vocabulary terms to describe the duty cycle of the clock signal as the ratio of the pulse width (or pulse active time) to the total period of the signal; reference \url{https://en.wikipedia.org/wiki/Duty_cycle}.
+		\item \cite[\S53.4]{Goldman2008}
+		\item \cite[\S22.2]{Cormen2009}
 		\end{enumerate}
 	\item {\bf depth-first search}: \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
 		\item \url{https://en.wikipedia.org/wiki/Depth-first_search}
 		\item {\bf iterative deepening search}, or more specifically {\bf iterative deepening depth-first search (IDS or IDDFS)}: \url{https://en.wikipedia.org/wiki/Iterative_deepening_depth-first_search}
+		\item \cite[\S53.5]{Goldman2008}
+		\item \cite[\S22.3]{Cormen2009}
 		\end{enumerate}
 	\item {\bf graph factorization}: \url{}
 	\item References: \vspace{-0.2cm}
@@ -317,6 +431,7 @@ Solvers for the following problems (or to perform the following functions) regar
 	\item References: \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
 		\item \url{https://en.wikipedia.org/wiki/Graph_coloring}
+		\item \cite{Chartrand2009}
 		\end{enumerate}
 	\end{enumerate}
 \item {\bf routing problems}: \vspace{-0.3cm}
@@ -328,6 +443,9 @@ Solvers for the following problems (or to perform the following functions) regar
 		\item {\bf Ford-Fulkerson algorithm (FFA)}, or {\bf Ford-Fulkerson method}: \url{https://en.wikipedia.org/wiki/Ford%E2%80%93Fulkerson_algorithm}
 		\item {\bf Categorize solutions} into those for {\bf directed graphs} and {\bf undirected graphs}. Also, determine solutions for common variants of the problem.
 		\item \url{https://en.wikipedia.org/wiki/Shortest_path_problem}
+		\item \cite[\S55.2]{Goldman2008} references standard algorithms to find the shortest path.
+		\item In addition, \cite[\S55.3]{Goldman2008} suggests using the in-tree data structure to represent the shortest path tree.
+		\item \cite[\S24--\S25]{Cormen2009}
 		\end{enumerate}
 	\item {\bf longest path problem}: \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
@@ -352,6 +470,7 @@ Solvers for the following problems (or to perform the following functions) regar
 			\end{itemize}
 		\item {\bf Kruskal's algorithm}: \url{https://en.wikipedia.org/wiki/Kruskal%27s_algorithm}
 		\item \url{https://en.wikipedia.org/wiki/Minimum_spanning_tree}
+		\item \cite[\S23]{Cormen2009}
 		\end{itemize}
 	\item {\bf Steiner tree}: \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
@@ -367,9 +486,14 @@ Solvers for the following problems (or to perform the following functions) regar
 			\end{itemize}
 		\item \url{https://en.wikipedia.org/wiki/Travelling_salesman_problem}
 		\end{enumerate}
-	\item {\bf strongly connected components}: \vspace{-0.2cm}
+	\item {\bf strongly connected components (for directed graphs)}: \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
 		\item \url{https://en.wikipedia.org/wiki/Strongly_connected_component}
+		\item See description in \S\ref{ssec:DirectedGraphsAndDirectedAcyclicGraphs} regarding algorithms (and data structures) associated with directed graphs.
+		\end{enumerate}
+	\item {\bf connected components (for undirected graphs)}: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item \url{https://en.wikipedia.org/wiki/Connected_component_(graph_theory)}
 		\end{enumerate}
 	\end{enumerate}
 \item {\bf network flow}: \vspace{-0.3cm}
@@ -382,6 +506,10 @@ Solvers for the following problems (or to perform the following functions) regar
 		\begin{enumerate} \itemsep -2pt
 		\item {\bf Flow network} (or {\bf transportation network}): \url{https://en.wikipedia.org/wiki/Flow_network}
 		\item 
+		\item {\it maximum flow}
+			\begin{itemize}
+			\item \cite[\S26]{Cormen2009}
+			\end{itemize}
 		\end{enumerate}
 	\end{enumerate}
 \item {\bf graph partitioning}: \vspace{-0.3cm}
@@ -469,6 +597,12 @@ Solvers for the following problems (or to perform the following functions) regar
 	\item References: \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
 		\item \url{https://en.wikipedia.org/wiki/Spectral_graph_theory}
+		\item \cite{Spielman2007}
+		\item \cite{Brouwer2012}
+		\item \cite{Cvetkovic2010}
+		\item \cite{vanMieghem2011}
+		\item \cite{Thornton2001}
+		\item \cite{Gross2004}
 		\end{enumerate}
 	\end{enumerate}
 \item {\bf probabilistic graphical model} ({\bf PGM}): \vspace{-0.3cm}
@@ -553,22 +687,25 @@ Solvers for the following problems (or to perform the following functions) regar
 		\item {\bf Homeomorphism}: \url{https://en.wikipedia.org/wiki/Homeomorphism_(graph_theory)#Subdivision_and_smoothing}
 		\end{enumerate}
 	\end{enumerate}
-\item common topics: \vspace{-0.3cm}
-	\begin{enumerate} \itemsep -2pt
-	\item {\bf network science}: \vspace{-0.2cm}
-		\begin{itemize} \itemsep -2pt
-		\item \url{https://en.wikipedia.org/wiki/Network_science}
-		\item {\bf Interdependent networks}: \url{https://en.wikipedia.org/wiki/Interdependent_networks}
-		\item {\bf Modularity} (networks): \url{https://en.wikipedia.org/wiki/Modularity_(networks)}
-		\item {\bf Community structure}: \url{https://en.wikipedia.org/wiki/Community_structure}
-		\item {\bf Distance} (graph theory): \url{https://en.wikipedia.org/wiki/Distance_(graph_theory)}
-		\item {\bf Assortativity}: \url{https://en.wikipedia.org/wiki/Assortativity}
-		\item {\bf Degree distribution}: \url{https://en.wikipedia.org/wiki/Degree_distribution}
-		\item {\bf Centrality}: \url{https://en.wikipedia.org/wiki/Centrality#Closeness_centrality}
-		\item {\bf Betweenness centrality}: \url{https://en.wikipedia.org/wiki/Betweenness_centrality}
-		\end{itemize}
-	\end{enumerate}
 \end{enumerate}
+
+
+Other common topics: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item {\bf network science}: \vspace{-0.3cm}
+	\begin{itemize} \itemsep -2pt
+	\item \url{https://en.wikipedia.org/wiki/Network_science}
+	\item {\bf Interdependent networks}: \url{https://en.wikipedia.org/wiki/Interdependent_networks}
+	\item {\bf Modularity} (networks): \url{https://en.wikipedia.org/wiki/Modularity_(networks)}
+	\item {\bf Community structure}: \url{https://en.wikipedia.org/wiki/Community_structure}
+	\item {\bf Distance} (graph theory): \url{https://en.wikipedia.org/wiki/Distance_(graph_theory)}
+	\item {\bf Assortativity}: \url{https://en.wikipedia.org/wiki/Assortativity}
+	\item {\bf Degree distribution}: \url{https://en.wikipedia.org/wiki/Degree_distribution}
+	\item {\bf Centrality}: \url{https://en.wikipedia.org/wiki/Centrality#Closeness_centrality}
+	\item {\bf Betweenness centrality}: \url{https://en.wikipedia.org/wiki/Betweenness_centrality}
+	\end{itemize}
+\end{enumerate}
+
 
 
 Other problems and types of graphs, not of comparable importance: \vspace{-0.3cm}
@@ -596,6 +733,17 @@ Notes on directed graphs (digraphs), and directed acyclic graphs (DAGs): \vspace
 			\begin{itemize} \itemsep -1pt
 			\item Also known as: {\bf topological sorting}, or {\bf topological ordering}
 			\item \url{https://en.wikipedia.org/wiki/Topological_sorting}
+			\item \cite[\S53.6]{Goldman2008}
+			\item \cite[\S22.4]{Cormen2009}
+			\end{itemize}
+		\item {\bf strongly connected components}:
+			\begin{itemize}
+			\item \cite[\S22.5]{Cormen2009}
+			\end{itemize}
+		\item {\bf precedence graphs}, {\bf conflict graphs}, or {\bf serializability graphs}
+			\begin{itemize}
+			\item ``Used in the context of concurrency control in databases''; see \url{https://en.wikipedia.org/wiki/Precedence_graph}
+			\item \cite[\S53.6]{Goldman2008}
 			\end{itemize}
 		\item algorithms, heuristics, and meta-heuristics to optimize: \vspace{-0.1cm}
 			\begin{itemize} \itemsep -1pt
@@ -664,7 +812,7 @@ Resources for MIGs: \vspace{-0.3cm}
 \subsection{Undirected Graphs}
 \label{ssec:UndirectedGraphs}
 
-
+Notes about undirected graphs are available in the subsection on graph theory, \S\ref{ssec:GraphTheory}.
 
 
 
@@ -702,6 +850,11 @@ Resources for graphs: \vspace{-0.3cm}
 	\item : \url{}
 	\item : \url{}
 	\item {\bf Graph algebra}: \url{https://en.wikipedia.org/wiki/Graph_algebra}
+	\item {\bf Algebraic graph theory}: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item \url{https://en.wikipedia.org/wiki/Algebraic_graph_theory}
+		\item Can use linear algebra (includes spectral graph theory), group theory, and the study of graph invariants.
+		\end{enumerate}
 	\end{enumerate}
 \end{enumerate}
 

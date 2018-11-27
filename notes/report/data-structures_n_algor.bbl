@@ -37,12 +37,32 @@ Alex Allain.
 \newblock {\em Jumping into {C++}}.
 \newblock {Cprogramming.com}, San Francisco, {CA}, 2012.
 
+\bibitem{Alpert1996}
+Charles~J. Alpert.
+\newblock {\em Multi-way Graph and Hypergraph Partitioning}.
+\newblock PhD thesis, {University of California, Los Angeles}, Los Angeles,
+  {CA}, July 1996.
+
 \bibitem{Arndt2010}
 J{\"{o}}rg Arndt.
 \newblock Matters computational: Ideas, algorithms, source code.
 \newblock Available online at: \url{http://www.jjj.de/fxt/} and
   \url{http://www.jjj.de/fxt/fxtbook.pdf}; self-published; October 9, 2014 was
   the last accessed date, September 7 2010.
+
+\bibitem{Atallah2009}
+Mikhail~J. Atallah and Marina Blanton.
+\newblock {\em Algorithms and Theory of Computation Handbook: General Concepts
+  and Techniques}, volume~1 of {\em Chapman {\rm \&}\ Hall/{CRC} Applied
+  Algorithms and Data Structures}.
+\newblock {CRC} Press, Boca Raton, {FL}, second edition, 2009.
+
+\bibitem{Atallah2009a}
+Mikhail~J. Atallah and Marina Blanton.
+\newblock {\em Algorithms and Theory of Computation Handbook: Special Topics
+  and Techniques}, volume~2 of {\em Chapman {\rm \&}\ Hall/{CRC} Applied
+  Algorithms and Data Structures}.
+\newblock {CRC} Press, Boca Raton, {FL}, second edition, 2009.
 
 \bibitem{Avery2016}
 Philip Avery, Abraham Bachrach, Sebastien Barthelemy, Carlos Becker, David
@@ -120,6 +140,12 @@ Wojciech Basalaj and Richard Corden.
 \newblock Technical report, Programming Research Ltd., Hersham, Surrey,
   England, {U.K.}, November 2013.
 
+\bibitem{Basu2007}
+Amit Basu and Robert~W. Blanning.
+\newblock {\em Metagraphs and Their Applications}, volume~15 of {\em Integrated
+  Series in Information Systems}.
+\newblock Springer Science+Business Media, {LCC}, New York, {NY}, 2017.
+
 \bibitem{Becker2011}
 Pete Becker.
 \newblock Working draft, standard for programming language {C++}.
@@ -144,6 +170,12 @@ Ben.
   Evan Teran, February 10, 2009; March 31, 2016 was the last accessed date,
   January 30 2009.
 
+\bibitem{Berge1989}
+Claude Berge.
+\newblock {\em Hypergraphs: Combinatorics of Finite Sets}, volume~45 of {\em
+  North-Holland Mathematical Library}.
+\newblock North-Holland, Amsterdam, {The Netherlands}, 1989.
+
 \bibitem{Bertsimas2004}
 Dimitris Bertsimas and Melvyn Sim.
 \newblock The price of robustness.
@@ -166,6 +198,12 @@ Jean-Louis Boulanger.
 \newblock {\em Static Analysis of Software: The Abstract Interpretation}.
 \newblock John Wiley {\rm \&}\ Sons, Hoboken, {NJ}, 2013.
 
+\bibitem{Bretto2013}
+Alain Bretto.
+\newblock {\em Hypergraph Theory: An Introduction}.
+\newblock Mathematical Engineering. Springer International Publishing
+  Switzerland, Cham, Switzerland, 2013.
+
 \bibitem{Bronson2012}
 Gary Bronson.
 \newblock {\em A First Book of {C++}}.
@@ -187,11 +225,29 @@ Dov Bulka and David Mayhew.
 \newblock {\em Efficient {C++}: Performance Programming Techniques}.
 \newblock Addison Wesley Longman, Inc., Indianapolis, {IN}, 2000.
 
+\bibitem{Bunke2008}
+Horst Bunke, Abraham Kandel, and Mark Last.
+\newblock {\em Applied Pattern Recognition}, volume~91 of {\em Studies in
+  Computational Intelligence}.
+\newblock Springer-Verlag Berlin Heidelberg, Heidelberg, Germany, 2008.
+
 \bibitem{Carrano2013}
 Frank~M. Carrano and Timothy Henry.
 \newblock {\em Data Abstraction {\rm \&}\ Problem Solving with {C++}: Walls and
   Mirrors}.
 \newblock Prentice Hall, Upper Saddle River, {NJ}, sixth edition, 2013.
+
+\bibitem{Carrington2005}
+Peter~J. Carrington, John Scott, and Stanley Wasserman.
+\newblock {\em Models and Methods in Social Network Analysis}, volume~27 of
+  {\em Structural Analysis in the Social Sciences}.
+\newblock Cambridge University Press, New York, {NY}, 2005.
+
+\bibitem{Chartrand2009}
+Gary Chartrand and Ping Zhang.
+\newblock {\em Chromatic Graph Theory}.
+\newblock Discrete Mathematics and Its Applications. {CRC} Press, Boca Raton,
+  {FL}, 2009.
 
 \bibitem{Cline2000}
 Marshall Cline.
@@ -218,6 +274,22 @@ Marshall Cline.
   Programming, Psychiatry, Escaflowne, and much more} at:
   \url{http://web.tiscali.it/fanelia/cpp-faq-en/}; self-published; July 10,
   2015 was the last accessed date, July 28 2011.
+
+\bibitem{Cong2003a}
+Jason Cong and Joseph~R. Shinnerl.
+\newblock {\em Multilevel Optimization in {VLSICAD}}, volume~14 of {\em
+  Combinatorial Optimization}.
+\newblock Kluwer Academic Publishers, New York, {NY}, 2003.
+
+\bibitem{Cormen2013}
+Thomas~H. Cormen.
+\newblock {\em Algorithms Unlocked}.
+\newblock The {MIT} Press, Cambridge, {MA}, 2013.
+
+\bibitem{Cormen2009}
+Thomas~H. Cormen, Charles~E. Leiserson, Ronald~L. Rivest, and Clifford Stein.
+\newblock {\em Introduction to Algorithms}.
+\newblock The {MIT} Press, Cambridge, {MA}, third edition, 2009.
 
 \bibitem{CplusplusCom2014}
 {cplusplus.com}.
@@ -251,6 +323,12 @@ Marshall Cline.
 \newblock Available online at: \url{http://en.cppreference.com/w/cpp};
   September 17, 2015 was the last accessed date, June 16 2015.
 
+\bibitem{Crama2011}
+Yves Crama and Peter~L. Hammer.
+\newblock {\em Boolean Functions: Theory, Algorithms, and Applications}, volume
+  142 of {\em Encyclopedia of Mathematics and its Applications}.
+\newblock Cambridge University Press, New York, {NY}, 2011.
+
 \bibitem{Crowl2012}
 Lawrence Crowl.
 \newblock {C++} binary {Fixed-Point} arithmetic.
@@ -264,6 +342,12 @@ Lawrence Crowl.
 \newblock Technical Report P0106R0, International Organization for
   Standardization and International Electrotechnical Commission, Gen{\`{e}}ve,
   Switzerland, September 27 2015.
+
+\bibitem{Cvetkovic2010}
+Drago{\u{s}} Cvetkovi{\'{c}}, Peter Rowlinson, and Slobodan Simi{\'{c}}.
+\newblock {\em An Introduction to the Theory of Graph Spectra}, volume~75 of
+  {\em London Mathematical Society Student Texts}.
+\newblock Cambridge University Press, Cambridge, {U.K.}, 2010.
 
 \bibitem{Dale2013}
 Nell Dale.
@@ -447,10 +531,21 @@ Anton Gogolev.
   Jonathan Henly, September 19, 2013; March 30, 2016 was the last accessed
   date, January 30 2009.
 
+\bibitem{Goldman2008}
+Sally~A. Goldman and Kenneth~J. Goldman.
+\newblock {\em A Practical Guide to Data Structures and Algorithms using
+  {Java}}.
+\newblock Chapman {\rm \&}\ Hall/{CRC}, Boca Raton, {FL}, 2008.
+
 \bibitem{Goodrich2013}
 Michael~T. Goodrich, Roberto Tamassia, and Michael~H. Goldwasser.
 \newblock {\em Data Structures and Algorithms in Python}.
 \newblock John Wiley {\rm \&}\ Sons, Hoboken, {NJ}, 2013.
+
+\bibitem{Goodrich2011}
+Michael~T. Goodrich, Roberto Tamassia, and David~M. Mount.
+\newblock {\em Data Structures and Algorithms in {C++}}.
+\newblock John Wiley {\rm \&}\ Sons, Hoboken, {NJ}, second edition, 2011.
 
 \bibitem{Gottschling2016}
 Peter Gottschling.
@@ -478,6 +573,12 @@ Marc Gregoire, Nicholas~A. Solter, and Scott~J. Kleper.
 Richard Groff.
 \newblock {\em {C++} Tutorial}.
 \newblock Wiffletree World, {LLC}, Arlington, {TX}, 2012.
+
+\bibitem{Gross2004}
+Jonathan~L. Gross and Jay Yellen.
+\newblock {\em Handbook of Graph Theory}.
+\newblock Discrete Mathematics and Its Applications. {CRC} Press, Boca Raton,
+  {FL}, 2004.
 
 \bibitem{Guntheroth2016}
 Kurt Guntheroth.
@@ -580,6 +681,12 @@ Ted Jensen.
   \url{http://home.earthlink.net/~momotuk/pointers.pdf}; self-published;
   October 8, 2015 was the last accessed date, September 2003.
 
+\bibitem{Johnson2013b}
+Jeffrey Johnson.
+\newblock {\em Hypernetworks in the Science of Complex Systems}, volume~3 of
+  {\em Series on Complexity Science}.
+\newblock Imperial College Press, London, {U.K.}, 2013.
+
 \bibitem{Josuttis1999a}
 Nicolai~M. Josuttis.
 \newblock {\em The {C++} Standard Library: A Tutorial and Reference}.
@@ -657,6 +764,12 @@ Jeff Langr.
 \newblock {\em Modern {C++} Programming with Test-Driven Development: Code
   Better, Sleep Better}.
 \newblock The Pragmatic Programmers, Raleigh, {NC}, October 2013.
+
+\bibitem{Lecoutre2009}
+Christophe Lecoutre.
+\newblock {\em Constraint Networks: Targeting Simplicity for Techniques and
+  Algorithms}.
+\newblock {Wiley-ISTE}. {ISTE} Ltd, London, {U.K.}, 2009.
 
 \bibitem{Lee2008b}
 Insup Lee, Joseph Y-T. Leung, and Sang~H. Son.
@@ -998,6 +1111,17 @@ Dan Saks.
   and \url{http://www.embedded.com/print/4023307}; October 28, 2015 was the
   last accessed date, March 15 2001.
 
+\bibitem{Sarrafzadeh1996}
+Majid Sarrafzadeh and C.~K. Wong.
+\newblock {\em An Introduction to {VLSI} Physical Design}.
+\newblock McGraw-Hill Series in Computer Science. McGraw-Hill, New York, {NY},
+  1996.
+
+\bibitem{Savage1998}
+John~E. Savage.
+\newblock {\em Models of Computation: Exploring the Power of Computing}.
+\newblock Addison-Wesley, Reading, {MA}, 1998.
+
 \bibitem{Savitch2009}
 Walter Savitch.
 \newblock {\em Problem Solving with {C++}}.
@@ -1024,6 +1148,13 @@ Edward Scheinerman.
 \newblock {\em {C++} for Mathematicians: An Introduction for Students and
   Professionals}.
 \newblock Chapman {\rm \&}\ Hall/{CRC}, Boca Raton, {FL}, 2006.
+
+\bibitem{Scheinerman1997}
+Edward~R. Scheinerman and Daniel~H. Ullman.
+\newblock {\em Fractional Graph Theory: A Rational Approach to the Theory of
+  Graphs}.
+\newblock Wiley-Interscience Series in Discrete Mathematics and Optimization.
+  John Wiley {\rm \&}\ Sons, New York, {NY}, 1997.
 
 \bibitem{Schildt1998a}
 Herbert Schildt.
@@ -1084,6 +1215,13 @@ Juan Souli{\'{e}}.
 \newblock {\em {C++} Language Tutorial}.
 \newblock cplusplus.com, June 2007.
 
+\bibitem{Spielman2007}
+Daniel~A. Spielman.
+\newblock Spectral graph theory and its applications.
+\newblock In {\em Proceedings of the $48^{th}$\ {IEEE} Symposium on Foundations
+  of Computer Science ({FOCS '07})}, pages 29--38, Providence, {RI}, October
+  21--23 2007. {IEEE} Computer Society Press.
+
 \bibitem{Stevanovic2014}
 Milan Stevanovic.
 \newblock {\em Advanced {C} and {C++} Compiling: An engineering guide to
@@ -1131,6 +1269,16 @@ Bruce~A. Tate.
 \newblock {\em Seven Languages in Seven Weeks: A Pragmatic Guide to Learning
   Programming Languages}.
 \newblock Pragmatic Bookshelf. The Pragmatic Programmers, Raleigh, {NC}, 2010.
+
+\bibitem{Thornton2001}
+Mitchell~Aaron Thornton, Rolf Drechsler, and D.~Michael Miller.
+\newblock {\em Spectral Techniques in {VLSI CAD}}.
+\newblock Kluwer Academic Publishers, Boston, {MA}, 2001.
+
+\bibitem{vanMieghem2011}
+Piet {van Mieghem}.
+\newblock {\em Graph Spectra for Complex Networks}.
+\newblock Cambridge University Press, New York, {NY}, 2011.
 
 \bibitem{Vandevoorde2003}
 David Vandevoorde and Nicolai~M. Josuttis.
