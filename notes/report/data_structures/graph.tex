@@ -275,6 +275,9 @@ The ways to represent graphs are listed as follows: \vspace{-0.3cm}
 		\item \cite[\S54]{Goldman2008}
 		\item An adjacency matrix is a preferred representation for dense graphs, which have the property $|E| \approx |V|^{2}$. It is also preferred if there exists a need to frequently determine if there is an edge connecting any given pair of vertices (fast lookup, or fast access time) \cite[\S22.1, pp. 589]{Cormen2009}. \cite[\S22.1, pp. 589-590]{Cormen2009} covers {\bf adjacency matrix} graph representation.
 		\item \cite[\S5, pp. 78]{Cormen2013}
+		\item Its computational space complexity is $O(|V|^{2})$ \cite[\S13.2, pp. 600]{Goodrich2011} \cite[\S14.2, pp. 627]{Goodrich2013} \cite{WikipediaContributors2018a49}.
+		\item \cite[\S13.2.3, pp. 605--606]{Goodrich2011}
+		\cite[\S14.2, pp. 627; \S14.2.4, pp. 633]{Goodrich2013}
 		\end{enumerate}
 	\end{enumerate}
 \item {\bf adjacency list}: \vspace{-0.3cm}
@@ -286,21 +289,31 @@ The ways to represent graphs are listed as follows: \vspace{-0.3cm}
 		\item \cite[\S55]{Goldman2008}
 		\item An adjacency list is a compact representation for sparse graphs, which have the property $|E| \ll |V|^{2}$ \cite[\S22.1, pp. 589]{Cormen2009}. \cite[\S22.1, pp. 589,591--592]{Cormen2009} covers {\bf adjacency matrix} graph representation.
 		\item \cite[\S5, pp. 79]{Cormen2013}
+		\item Its computational space complexity is $O(|V|+|E|)$ \cite[\S13.2, pp. 600]{Goodrich2011} \cite[\S14.2, pp. 627]{Goodrich2013} \cite{WikipediaContributors2018a49}.
+		\item \cite[\S13.2.2, pp. 603--604]{Goodrich2011}
+		\item \cite[\S14.2, pp. 627; \S14.2.2, pp. 630--631]{Goodrich2013}
 		\end{enumerate}
 	\end{enumerate}
 \item {\bf adjacency map}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
-	\item 
+	\item Its computational space complexity is $O(|V|+|E|)$ \cite[\S14.2, pp. 627]{Goodrich2013}.
+	\item \cite[\S14.2, pp. 627; \S14.2.3, pp. 632; \S14.2.5, pp. 634--637]{Goodrich2013}
 	\end{enumerate}
 \item {\bf edge list}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
 	\item Is this equivalent to the ``{\bf incidence list}'' graph representation? {\Huge Cite this!!!}
 	\item \cite[\S5, pp. 78]{Cormen2013} describes the use of an unordered list to store the set of edges in the graph.
+	\item Its computational space complexity is $O(|V|+|E|)$ \cite[\S13.2, pp. 600]{Goodrich2011} \cite[\S14.2, pp. 627]{Goodrich2013}.
+	\item \cite[\S13.2.1, pp. 600--602]{Goodrich2011}
+	\item \cite[\S14.2, pp. 627; \S14.2.1, pp. 628--629]{Goodrich2013}
 	\end{enumerate}
 \item {\bf incidence matrix}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
-	\item 
-	\item References: \cite{WikipediaContributors2018a49}
+	\item Its computational space complexity is $O(|V| \cdot |E|)$ \cite{WikipediaContributors2018a49}.
+	\item References: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item \cite{WikipediaContributors2018a49}
+		\end{enumerate}
 	\end{enumerate}
 \end{enumerate}
 
@@ -350,20 +363,21 @@ References to cover: \vspace{-0.3cm}
 	\item \cite[\S B.4]{Cormen2009} covers graphs, and \cite[\S B.5]{Cormen2009} covers trees.
 	\item \cite[\S22.1]{Cormen2009} covers graph representations
 	\item \cite[\S D]{Cormen2009} covers basic matrix theory and matrix algebra.
-	\item \cite[\S21]{Cormen2009} covers data structures for disjoint sets.
+	\item \cite[\S21]{Cormen2009} and \cite[\S14.7]{Goodrich2013} cover data structures for disjoint sets.
 	\end{enumerate}
 \item \cite{Cormen2013}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
-	\item \cite[\S13.1]{Cormen2013} covers information on graph theory. {\bf Update references in graph theory with this section.}
+	\item \cite[\S13.1]{Cormen2013} covers information on graph theory. {\bf Update references in graph theory with this section!!!}
 	\item 
 	\end{enumerate}
 \item \cite{Goodrich2011}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
-	\item \cite{Goodrich2011}
+	\item \cite[\S13.1]{Goodrich2011} covers information on graph theory. {\bf Update references in graph theory with this section!!!}
 	\end{enumerate}
 \item \cite{Goodrich2013}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
-	\item \cite{Goodrich2013}
+	\item \cite[\S14.1]{Goodrich2013} covers information on graph theory. {\bf Update references in graph theory with this section!!!}
+	\item \cite[\S14.7.3]{Goodrich2013} covers union-find data structures.
 	\end{enumerate}
 \end{enumerate}
 
@@ -443,6 +457,8 @@ Solvers for the following problems (or to perform the following functions) regar
 		\item Used for logic simulation, so that I can propagate values from one clock cycle to the next correctly. This assumes that the clock cycle is chosen as the minimum time period for the active/inactive pulse of the clock signal. See {\it Wikipedia}'s entry on duty cycle for vocabulary terms to describe the duty cycle of the clock signal as the ratio of the pulse width (or pulse active time) to the total period of the signal; reference \url{https://en.wikipedia.org/wiki/Duty_cycle}.
 		\item \cite[\S53.4]{Goldman2008}
 		\item \cite[\S22.2]{Cormen2009}
+		\item \cite[\S13.3--\S13.4]{Goodrich2011}
+		\item \cite[\S14.3.3]{Goodrich2013}
 		\end{enumerate}
 	\item {\bf depth-first search}: \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
@@ -450,8 +466,10 @@ Solvers for the following problems (or to perform the following functions) regar
 		\item {\bf iterative deepening search}, or more specifically {\bf iterative deepening depth-first search (IDS or IDDFS)}: \url{https://en.wikipedia.org/wiki/Iterative_deepening_depth-first_search}
 		\item \cite[\S53.5]{Goldman2008}
 		\item \cite[\S22.3]{Cormen2009}
+		\item \cite[\S13.3--\S13.4]{Goodrich2011}
+		\item \cite[\S14.3.1--\S14.3.2]{Goodrich2013}
 		\end{enumerate}
-	\item {\bf graph factorization}: \url{}
+	\item {\bf graph factorization}: \url{???}
 	\item References: \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
 		\item \url{https://en.wikipedia.org/wiki/Graph_theory}
@@ -481,6 +499,8 @@ Solvers for the following problems (or to perform the following functions) regar
 		\item In addition, \cite[\S55.3]{Goldman2008} suggests using the in-tree data structure to represent the shortest path tree.
 		\item \cite[\S24--\S25]{Cormen2009}
 		\item \cite[\S6]{Cormen2013}
+		\item \cite[\S13.5]{Goodrich2011}
+		\item \cite[\S14.6]{Goodrich2013}
 		\end{enumerate}
 	\item {\bf longest path problem}: \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
@@ -507,6 +527,8 @@ Solvers for the following problems (or to perform the following functions) regar
 		\item {\bf Kruskal's algorithm}: \url{https://en.wikipedia.org/wiki/Kruskal%27s_algorithm}
 		\item \url{https://en.wikipedia.org/wiki/Minimum_spanning_tree}
 		\item \cite[\S23]{Cormen2009}
+		\item \cite[\S13.6]{Goodrich2011}
+		\item \cite[\S14.7]{Goodrich2013}
 		\end{itemize}
 	\item {\bf Steiner tree}: \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
@@ -765,6 +787,11 @@ Notes on directed graphs (digraphs), and directed acyclic graphs (DAGs): \vspace
 \begin{enumerate} \itemsep -4pt
 \item Functions to implement, and solves to solve the following problems: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
+	\item transitive closure: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item \cite[\S13.4.2]{Goodrich2011}
+		\cite[\S14.4]{Goodrich2013}
+		\end{enumerate}
 	\item For DAGs: \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
 		\item {\bf topological sort}: \vspace{-0.1cm}
@@ -774,6 +801,7 @@ Notes on directed graphs (digraphs), and directed acyclic graphs (DAGs): \vspace
 			\item \cite[\S53.6]{Goldman2008}
 			\item \cite[\S22.4]{Cormen2009}
 			\item \cite[\S5, pp. 75--80]{Cormen2013}
+			\item \cite[\S14.5.1]{Goodrich2013}
 			\end{itemize}
 		\item {\bf strongly connected components}:
 			\begin{itemize}
