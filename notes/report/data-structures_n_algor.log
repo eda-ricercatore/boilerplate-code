@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  27 NOV 2018 00:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  27 NOV 2018 09:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1073,45 +1073,34 @@ File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [3
 
 ] [4] [5]
-[6]
-Overfull \hbox (15.57025pt too wide) in paragraph at lines 183--184
-[]\T1/lmr/m/n/12 A di-rected edge has a head and a tail; see [][]$\T1/lmtt/m/n/
-12 https : / / en . wikipedia . org / wiki / Directed _
- []
-
-[7]
-Overfull \hbox (4.26259pt too wide) in paragraph at lines 217--218
+[6] [7]
+Overfull \hbox (4.26259pt too wide) in paragraph at lines 219--220
 []\T1/lmr/bx/n/12 Multidimensional net-work \T1/lmr/m/n/12 [[][]221[][]]: [][]$
 \T1/lmtt/m/n/12 https : / / en . wikipedia . org / wiki / Multidimensional _
  []
 
 
-Overfull \hbox (25.34761pt too wide) in paragraph at lines 219--220
+Overfull \hbox (25.34761pt too wide) in paragraph at lines 221--222
 []\T1/lmr/bx/n/12 Temporal net-work\T1/lmr/m/n/12 , or \T1/lmr/bx/n/12 time-var
 ying net-work\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 https : / / en . wikipedia .
  org / wiki / Temporal _
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 254--255
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 256--257
 
  []
 
 
-Overfull \hbox (0.99698pt too wide) in paragraph at lines 261--262
-\T1/lmtt/m/n/12 en . wikipedia . org / wiki / Dense _ graph$[][]\T1/lmr/m/n/12 
-. Also, see [][]$\T1/lmtt/m/n/12 https : / / en . wikipedia . org / wiki / Dens
-e _ subgraph$[][]
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 261--262
-
+Overfull \hbox (0.99698pt too wide) in paragraph at lines 263--264
+\T1/lmtt/m/n/12 en . wikipedia . org / wiki / Dense _ graph$[][]\T1/lmr/m/n/12 
+. Also, see [][]$\T1/lmtt/m/n/12 https : / / en . wikipedia . org / wiki / Dens
+e _ subgraph$[][]
  []
 
 
@@ -1119,83 +1108,88 @@ Underfull \hbox (badness 10000) in paragraph at lines 263--264
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--266
+
+ []
+
 [9] [10] [11]
-Overfull \hbox (37.49538pt too wide) in paragraph at lines 442--443
+Overfull \hbox (37.49538pt too wide) in paragraph at lines 444--445
 []\T1/lmr/bx/n/12 Bellman-Ford al-go-rithm \T1/lmr/m/n/12 (or, \T1/lmr/bx/n/12 
 Bellman-Ford-Moore al-go-rithm\T1/lmr/m/n/12 ): [][]$\T1/lmtt/m/n/12 https : / 
 / en . wikipedia .
  []
 
 
-Overfull \hbox (28.19597pt too wide) in paragraph at lines 443--444
+Overfull \hbox (28.19597pt too wide) in paragraph at lines 445--446
 []\T1/lmr/bx/n/12 Ford-Fulkerson al-go-rithm (FFA)\T1/lmr/m/n/12 , or \T1/lmr/b
 x/n/12 Ford-Fulkerson method\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 https : / / e
 n . wikipedia .
  []
 
 [12]
-Overfull \hbox (21.96764pt too wide) in paragraph at lines 501--502
+Overfull \hbox (21.96764pt too wide) in paragraph at lines 503--504
 []\T1/lmr/bx/n/12 max-flow min-cut the-o-rem\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/
 12 https : / / en . wikipedia . org / wiki / Max-[]flow _ min-[]cut _ theorem$[
 ][] 
  []
 
 
-Overfull \hbox (13.70074pt too wide) in paragraph at lines 502--503
+Overfull \hbox (13.70074pt too wide) in paragraph at lines 504--505
 []\T1/lmr/bx/n/12 minimum-cost flow prob-lem (MCFP)\T1/lmr/m/n/12 : [][]$\T1/lm
 tt/m/n/12 https : / / en . wikipedia . org / wiki / Minimum-[]cost _
  []
 
-
-Overfull \hbox (34.99174pt too wide) in paragraph at lines 553--554
+[13]
+Overfull \hbox (34.99174pt too wide) in paragraph at lines 555--556
 \T1/lmr/bx/n/17.28 du-al-i-ties\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 https : / 
 / en . wikipedia . org / wiki / Linear _ programming # Covering / packing _
  []
 
-[13]
-Overfull \hbox (30.58757pt too wide) in paragraph at lines 559--560
+
+Overfull \hbox (30.58757pt too wide) in paragraph at lines 561--562
 []\T1/lmr/bx/n/12 independent set prob-lem\T1/lmr/m/n/12 , and \T1/lmr/bx/n/12 
 max-i-mum in-de-pen-dent set\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 https : / / e
 n . wikipedia .
  []
 
 [14] [15]
-Overfull \hbox (14.54733pt too wide) in paragraph at lines 687--688
+Overfull \hbox (14.54733pt too wide) in paragraph at lines 689--690
 []\T1/lmr/bx/n/12 Homeomorphism\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 https : / 
 / en . wikipedia . org / wiki / Homeomorphism _ (graph _ theory )
  []
 
 
-Overfull \hbox (7.32706pt too wide) in paragraph at lines 698--699
+Overfull \hbox (7.32706pt too wide) in paragraph at lines 700--701
 []\T1/lmr/bx/n/12 Interdependent net-works\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12
  https : / / en . wikipedia . org / wiki / Interdependent _ networks$[][] 
  []
 
 
-Overfull \hbox (9.30283pt too wide) in paragraph at lines 745--746
+Overfull \hbox (9.30283pt too wide) in paragraph at lines 747--748
 []\T1/lmr/m/n/12 ``Used in the con-text of con-cur-rency con-trol in databases'
 '; see [][]$\T1/lmtt/m/n/12 https : / / en . wikipedia .
  []
 
 [16]
-Overfull \hbox (2.8676pt too wide) in paragraph at lines 840--841
+Overfull \hbox (2.8676pt too wide) in paragraph at lines 842--843
 []\T1/lmr/bx/n/12 Gallery of named graphs\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 
 https : / / en . wikipedia . org / wiki / Gallery _ of _ named _ graphs$[][] 
  []
 
 
-Overfull \hbox (1.05757pt too wide) in paragraph at lines 841--842
+Overfull \hbox (1.05757pt too wide) in paragraph at lines 843--844
 []\T1/lmr/bx/n/12 List of graph the-ory top-ics\T1/lmr/m/n/12 : [][]$\T1/lmtt/m
 /n/12 https : / / en . wikipedia . org / wiki / List _ of _ graph _ theory _
  []
 
 
-Overfull \hbox (9.98303pt too wide) in paragraph at lines 842--843
+Overfull \hbox (9.98303pt too wide) in paragraph at lines 844--845
 []\T1/lmr/bx/n/12 Glossary of graph the-ory terms\T1/lmr/m/n/12 : [][]$\T1/lmtt
 /m/n/12 https : / / en . wikipedia . org / wiki / Glossary _ of _ graph _
  []
 
-)) (./optimization/optimization.tex [17] [18]
+[17])) (./optimization/optimization.tex [18]
 Chapter 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 28--29
@@ -1650,9 +1644,9 @@ Package rerunfilecheck Info: File `data-structures_n_algor.out' has not changed
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 286.
  ) 
 Here is how much of TeX's memory you used:
- 17846 strings out of 493089
- 250734 string characters out of 6134842
- 364533 words of memory out of 5000000
+ 17848 strings out of 493089
+ 250752 string characters out of 6134842
+ 363533 words of memory out of 5000000
  19587 multiletter control sequences out of 15000+600000
  125350 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1680,10 +1674,10 @@ msy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><
 /texlive/2015/texmf-dist/fonts/type1/public/marvosym/marvosym.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on data-structures_n_algor.pdf (74 pages, 620777 bytes).
+Output written on data-structures_n_algor.pdf (74 pages, 622352 bytes).
 PDF statistics:
- 3104 PDF objects out of 3580 (max. 8388607)
- 2978 compressed objects within 30 object streams
- 1373 named destinations out of 1440 (max. 500000)
+ 3111 PDF objects out of 3580 (max. 8388607)
+ 2985 compressed objects within 30 object streams
+ 1375 named destinations out of 1440 (max. 500000)
  337 words of extra memory for PDF output out of 10000 (max. 10000000)
 
