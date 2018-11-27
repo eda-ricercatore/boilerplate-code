@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  27 NOV 2018 09:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  27 NOV 2018 10:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1113,83 +1113,83 @@ Underfull \hbox (badness 10000) in paragraph at lines 265--266
 
  []
 
-[9] [10] [11]
-Overfull \hbox (37.49538pt too wide) in paragraph at lines 444--445
+[9] [10] [11] [12]
+Overfull \hbox (37.49538pt too wide) in paragraph at lines 476--477
 []\T1/lmr/bx/n/12 Bellman-Ford al-go-rithm \T1/lmr/m/n/12 (or, \T1/lmr/bx/n/12 
 Bellman-Ford-Moore al-go-rithm\T1/lmr/m/n/12 ): [][]$\T1/lmtt/m/n/12 https : / 
 / en . wikipedia .
  []
 
 
-Overfull \hbox (28.19597pt too wide) in paragraph at lines 445--446
+Overfull \hbox (28.19597pt too wide) in paragraph at lines 477--478
 []\T1/lmr/bx/n/12 Ford-Fulkerson al-go-rithm (FFA)\T1/lmr/m/n/12 , or \T1/lmr/b
 x/n/12 Ford-Fulkerson method\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 https : / / e
 n . wikipedia .
  []
 
-[12]
-Overfull \hbox (21.96764pt too wide) in paragraph at lines 503--504
+[13]
+Overfull \hbox (21.96764pt too wide) in paragraph at lines 539--540
 []\T1/lmr/bx/n/12 max-flow min-cut the-o-rem\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/
 12 https : / / en . wikipedia . org / wiki / Max-[]flow _ min-[]cut _ theorem$[
 ][] 
  []
 
 
-Overfull \hbox (13.70074pt too wide) in paragraph at lines 504--505
+Overfull \hbox (13.70074pt too wide) in paragraph at lines 540--541
 []\T1/lmr/bx/n/12 minimum-cost flow prob-lem (MCFP)\T1/lmr/m/n/12 : [][]$\T1/lm
 tt/m/n/12 https : / / en . wikipedia . org / wiki / Minimum-[]cost _
  []
 
-[13]
-Overfull \hbox (34.99174pt too wide) in paragraph at lines 555--556
+[14]
+Overfull \hbox (34.99174pt too wide) in paragraph at lines 591--592
 \T1/lmr/bx/n/17.28 du-al-i-ties\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 https : / 
 / en . wikipedia . org / wiki / Linear _ programming # Covering / packing _
  []
 
 
-Overfull \hbox (30.58757pt too wide) in paragraph at lines 561--562
+Overfull \hbox (30.58757pt too wide) in paragraph at lines 597--598
 []\T1/lmr/bx/n/12 independent set prob-lem\T1/lmr/m/n/12 , and \T1/lmr/bx/n/12 
 max-i-mum in-de-pen-dent set\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 https : / / e
 n . wikipedia .
  []
 
-[14] [15]
-Overfull \hbox (14.54733pt too wide) in paragraph at lines 689--690
+[15] [16]
+Overfull \hbox (14.54733pt too wide) in paragraph at lines 725--726
 []\T1/lmr/bx/n/12 Homeomorphism\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 https : / 
 / en . wikipedia . org / wiki / Homeomorphism _ (graph _ theory )
  []
 
 
-Overfull \hbox (7.32706pt too wide) in paragraph at lines 700--701
+Overfull \hbox (7.32706pt too wide) in paragraph at lines 736--737
 []\T1/lmr/bx/n/12 Interdependent net-works\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12
  https : / / en . wikipedia . org / wiki / Interdependent _ networks$[][] 
  []
 
-
-Overfull \hbox (9.30283pt too wide) in paragraph at lines 747--748
+[17]
+Overfull \hbox (9.30283pt too wide) in paragraph at lines 784--785
 []\T1/lmr/m/n/12 ``Used in the con-text of con-cur-rency con-trol in databases'
 '; see [][]$\T1/lmtt/m/n/12 https : / / en . wikipedia .
  []
 
-[16]
-Overfull \hbox (2.8676pt too wide) in paragraph at lines 842--843
+
+Overfull \hbox (2.8676pt too wide) in paragraph at lines 879--880
 []\T1/lmr/bx/n/12 Gallery of named graphs\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 
 https : / / en . wikipedia . org / wiki / Gallery _ of _ named _ graphs$[][] 
  []
 
 
-Overfull \hbox (1.05757pt too wide) in paragraph at lines 843--844
+Overfull \hbox (1.05757pt too wide) in paragraph at lines 880--881
 []\T1/lmr/bx/n/12 List of graph the-ory top-ics\T1/lmr/m/n/12 : [][]$\T1/lmtt/m
 /n/12 https : / / en . wikipedia . org / wiki / List _ of _ graph _ theory _
  []
 
 
-Overfull \hbox (9.98303pt too wide) in paragraph at lines 844--845
+Overfull \hbox (9.98303pt too wide) in paragraph at lines 881--882
 []\T1/lmr/bx/n/12 Glossary of graph the-ory terms\T1/lmr/m/n/12 : [][]$\T1/lmtt
 /m/n/12 https : / / en . wikipedia . org / wiki / Glossary _ of _ graph _
  []
 
-[17])) (./optimization/optimization.tex [18]
+[18])) (./optimization/optimization.tex [19]
 Chapter 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 28--29
@@ -1211,20 +1211,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
  []
 
-[19
+[20
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 104--105
 
  []
 
-[20]
+[21]
 Overfull \hbox (7.34369pt too wide) in paragraph at lines 168--169
 []\T1/lmr/m/n/12 Its tech-ni-cal doc-u-men-ta-tion can be found at: [][]$\T1/lm
 tt/m/n/12 http : / / www . localsolver . com / documentation /
  []
 
-[21]) (./numerical_comp/numerical_comp.tex [22]
+[22]) (./numerical_comp/numerical_comp.tex [23]
 Chapter 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 38--48
@@ -1246,7 +1246,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--56
 
  []
 
-[23
+[24
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 127--129
@@ -1258,9 +1258,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 127--129
 
  []
 
-) (./statistics/statistical_comp.tex [24]
+) (./statistics/statistical_comp.tex [25]
 Chapter 5.
-) (./cpp_resources/cpp_resources.tex [25
+) (./cpp_resources/cpp_resources.tex [26
 
 ]
 Chapter 6.
@@ -1290,9 +1290,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--29
 
  []
 
-[26
+[27
 
-] [27] [28] [29] [30] [31]
+] [28] [29] [30] [31] [32]
 Overfull \hbox (39.2348pt too wide) in paragraph at lines 315--316
 \T1/lmr/m/it/12 C++ \T1/lmtt/m/n/12 template definition and implementation sepa
 rately into different files,
@@ -1304,20 +1304,20 @@ Overfull \hbox (37.53482pt too wide) in paragraph at lines 315--316
 ts templates
  []
 
-[32] [33] [34] [35]
+[33] [34] [35] [36]
 Overfull \hbox (252.02818pt too wide) in paragraph at lines 496--497
 [][][]$\T1/lmtt/m/n/12 http : / / stackoverflow . com / questions / 1143262 / w
 hat-[]is-[]the-[]difference-[]between-[]const-[]int-[]const-[]int-[]const-[]and
 -[]int-[]const$[][]
  []
 
-[36]
+[37]
 Overfull \hbox (20.27704pt too wide) in paragraph at lines 590--591
 \T1/lmr/m/n/12 Wisconsin-Madison, Madi-son, WI. Avail-able on-line at: [][]$\T1
 /lmtt/m/n/12 http : / / pages . cs . wisc . edu / ~driscoll /
  []
 
-[37] [38]
+[38] [39]
 Underfull \hbox (badness 10000) in paragraph at lines 669--670
 
  []
@@ -1327,20 +1327,20 @@ Overfull \hbox (31.64955pt too wide) in paragraph at lines 676--699
  [] 
  []
 
-[39]
+[40]
 Overfull \hbox (0.14552pt too wide) in paragraph at lines 770--771
 \T1/lmr/m/it/12 tions \T1/lmr/m/n/12 and \T1/lmr/m/it/12 Re-lated asymp-totic n
 o-ta-tions: Fam-ily of Bach-mann?Landau no-ta-tions\T1/lmr/m/n/12 , in \T1/lmr/
 m/it/12 Wikipedia,
  []
 
-[40]
+[41]
 Overfull \hbox (16.01239pt too wide) in paragraph at lines 771--772
 \T1/lmtt/m/n/12 wikipedia . org / wiki / Time _ complexity # Table _ of _ commo
 n _ time _ complexities$[][]\T1/lmr/m/n/12 ; last ac-cessed
  []
 
-[41]
+[42]
 Underfull \hbox (badness 10000) in paragraph at lines 837--838
 
  []
@@ -1350,7 +1350,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 839--840
 
  []
 
-[42] [43] [44]
+[43] [44] [45]
 Overfull \hbox (3.32965pt too wide) in paragraph at lines 986--987
 []\T1/lmr/m/n/12 Create as-sem-bly code: \T1/lmtt/m/n/12 c++ -S -fverbose-asm -
 g -02 \T1/lmr/m/it/12 [source_code.cpp] \T1/lmtt/m/n/12 -o \T1/lmr/m/it/12 [una
@@ -1367,7 +1367,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1035--1037
 
  []
 
-[45]
+[46]
 Underfull \hbox (badness 10000) in paragraph at lines 1038--1039
 
  []
@@ -1387,12 +1387,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 1081--1082
 
  []
 
-[46]
+[47]
 Underfull \hbox (badness 10000) in paragraph at lines 1083--1084
 
  []
 
-) (./questions/questions.tex [47]
+) (./questions/questions.tex [48]
 Chapter 7.
 
 Overfull \hbox (230.57298pt too wide) in paragraph at lines 51--53
@@ -1433,7 +1433,7 @@ rogrammers . stackexchange . com / questions / 17898 / whats-[]a-[]nice-[]expla
 nation-[]for-[]pointers /
  []
 
-[48
+[49
 
 ]
 Overfull \hbox (158.07701pt too wide) in paragraph at lines 59--60
@@ -1462,14 +1462,14 @@ rogrammers . stackexchange . com / questions / 17898 / whats-[]a-[]nice-[]expla
 nation-[]for-[]pointers /
  []
 
-[49]
+[50]
 Overfull \hbox (207.47728pt too wide) in paragraph at lines 86--87
 \T1/lmtt/m/n/12 stackoverflow . com / questions / 57483 / what-[]are-[]the-[]di
 fferences-[]between-[]a-[]pointer-[]variable-[]and-[]a-[]reference-[]variable-[
 ]in$[][]\T1/lmr/m/n/12 ;
  []
 
-[50]) (./misc/misc.tex [51]
+[51]) (./misc/misc.tex [52]
 Chapter 8.
 
 Overfull \hbox (35.7866pt too wide) in paragraph at lines 27--28
@@ -1478,13 +1478,13 @@ Overfull \hbox (35.7866pt too wide) in paragraph at lines 27--28
 
  []
 
-) [52
+) [53
 
-] (./data-structures_n_algor.bbl [53
+] (./data-structures_n_algor.bbl [54
 
-] [54
+] [55
 
-] [55] [56] [57]
+] [56] [57] [58]
 
 LaTeX Warning: Command \textregistered invalid in math mode on input line 383.
 
@@ -1509,7 +1509,7 @@ LaTeX Warning: Command \textregistered invalid in math mode on input line 419.
 
 LaTeX Warning: Command \textregistered invalid in math mode on input line 419.
 
-[58] [59] [60]
+[59] [60] [61]
 Underfull \hbox (badness 6961) in paragraph at lines 676--683
 [][]$\T1/lmtt/m/n/12 http : / / pweb . netcom . com / ~tjensen / ptr / cpoint .
  htm$[][]\T1/lmr/m/n/12 , [][]$\T1/lmtt/m/n/12 http : / / pweb . netcom . com /
@@ -1522,7 +1522,7 @@ Underfull \hbox (badness 1173) in paragraph at lines 730--735
 proach to func-tional de-bug-
  []
 
-[61] [62]
+[62] [63]
 Underfull \hbox (badness 5274) in paragraph at lines 901--910
 \T1/lmtt/m/n/12 JSC / EN / slides / cplusplus / cplusplus . pdf$[][] \T1/lmr/m/
 n/12 and [][]$\T1/lmtt/m/n/12 https : / / www . fz-[]juelich . de / SharedDocs 
@@ -1559,7 +1559,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 912--922
  ? _ _ blob = publicationFile$[][]\T1/lmr/m/n/12 ;
  []
 
-[63]
+[64]
 Underfull \hbox (badness 10000) in paragraph at lines 932--939
 []\T1/lmr/m/n/12 Peter Mortensen.  What is the dif-fer-ence be-tween const int$
 []$, const int $[]$
@@ -1631,9 +1631,9 @@ Underfull \hbox (badness 6927) in paragraph at lines 988--994
 rences$[][]\T1/lmr/m/n/12 ; Oc-to-ber 28, 2015 was
  []
 
-[64] [65] [66] [67] [68])
+[65] [66] [67] [68] [69])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 286.
- [69]
+ [70]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 286.
  (./data-structures_n_algor.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 286.
@@ -1644,8 +1644,8 @@ Package rerunfilecheck Info: File `data-structures_n_algor.out' has not changed
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 286.
  ) 
 Here is how much of TeX's memory you used:
- 17848 strings out of 493089
- 250752 string characters out of 6134842
+ 17874 strings out of 493089
+ 250984 string characters out of 6134842
  363533 words of memory out of 5000000
  19587 multiletter control sequences out of 15000+600000
  125350 words of font info for 91 fonts, out of 8000000 for 9000
@@ -1674,10 +1674,10 @@ msy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><
 /texlive/2015/texmf-dist/fonts/type1/public/marvosym/marvosym.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on data-structures_n_algor.pdf (74 pages, 622352 bytes).
+Output written on data-structures_n_algor.pdf (75 pages, 626624 bytes).
 PDF statistics:
- 3111 PDF objects out of 3580 (max. 8388607)
- 2985 compressed objects within 30 object streams
- 1375 named destinations out of 1440 (max. 500000)
+ 3171 PDF objects out of 3580 (max. 8388607)
+ 3043 compressed objects within 31 object streams
+ 1401 named destinations out of 1440 (max. 500000)
  337 words of extra memory for PDF output out of 10000 (max. 10000000)
 
