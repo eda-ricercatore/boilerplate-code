@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  12 DEC 2018 09:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  12 DEC 2018 10:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1644,8 +1644,8 @@ Package rerunfilecheck Info: File `data-structures_n_algor.out' has not changed
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 286.
  ) 
 Here is how much of TeX's memory you used:
- 17937 strings out of 493089
- 251623 string characters out of 6134842
+ 17941 strings out of 493089
+ 251659 string characters out of 6134842
  364694 words of memory out of 5000000
  19592 multiletter control sequences out of 15000+600000
  125350 words of font info for 91 fonts, out of 8000000 for 9000
@@ -1674,10 +1674,10 @@ msy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><
 /texlive/2015/texmf-dist/fonts/type1/public/marvosym/marvosym.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on data-structures_n_algor.pdf (77 pages, 635211 bytes).
+Output written on data-structures_n_algor.pdf (77 pages, 636263 bytes).
 PDF statistics:
- 3306 PDF objects out of 3580 (max. 8388607)
- 3175 compressed objects within 32 object streams
- 1459 named destinations out of 1728 (max. 500000)
+ 3310 PDF objects out of 3580 (max. 8388607)
+ 3179 compressed objects within 32 object streams
+ 1463 named destinations out of 1728 (max. 500000)
  353 words of extra memory for PDF output out of 10000 (max. 10000000)
 
