@@ -44,7 +44,7 @@ To uncompress/unarchive "*.tar.xz" files, try:
 
 ##	Notes on Using the GNU Build System / Autotools
 
-Dr. Anders Franzen suggested that I use "autoreconf --install" to generate the "./configure" executable if it is not available in my working directory (for a software project that uses the GNU Build System / Autotools).
+Dr. Anders Franz{\'{e}}n (or Anders Franzen) suggested that I use "autoreconf --install" to generate the "./configure" executable if it is not available in my working directory (for a software project that uses the GNU Build System / Autotools).
 
 Steps that I would use to build a software project that uses the GNU Build System (or Autotools):
 + autoreconf --install
