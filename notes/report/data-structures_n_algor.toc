@@ -11,7 +11,7 @@
 \contentsline {subsection}{\numberline {2.2.4}Directed Graphs, and Directed Acyclic Graphs}{19}{subsection.2.2.4}
 \contentsline {subsubsection}{\numberline {2.2.4.1}Binary Decision Diagrams (BDDs)}{19}{subsubsection.2.2.4.1}
 \contentsline {subsubsection}{\numberline {2.2.4.2}AND-Inverter Graphs (AIGs)}{19}{subsubsection.2.2.4.2}
-\contentsline {subsubsection}{\numberline {2.2.4.3}Majority-Inverter Graphs (MIGs)}{19}{subsubsection.2.2.4.3}
+\contentsline {subsubsection}{\numberline {2.2.4.3}Majority-Inverter Graphs (MIGs)}{20}{subsubsection.2.2.4.3}
 \contentsline {subsection}{\numberline {2.2.5}Undirected Graphs}{20}{subsection.2.2.5}
 \contentsline {subsection}{\numberline {2.2.6}Resources for Graphs}{20}{subsection.2.2.6}
 \contentsline {section}{\numberline {2.3}Notes on Data Structures for External Memory Computation}{20}{section.2.3}

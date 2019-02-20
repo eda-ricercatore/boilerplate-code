@@ -45,7 +45,10 @@ Types of {\bf finite graphs} \cite{WikipediaContributors2018a38}: \vspace{-0.2cm
 			\item Some authors/people use pseudographs and multigraphs interchangeably/synonymously.
 			\item Other people use pseudographs to refer to multigraphs that allow self-loops \cite[\S B.4, pp. 1168]{Cormen2009} (or loops) \cite{WikipediaContributors2017a13}.
 			\end{itemize}
-		\item A {\bf planar graph} remains planar, or preserves its planarity, when its edges become multiple edges by the addition of edges to edges in the original graph {\Huge Reference this!!!}.
+		\item A {\bf planar graph} remains planar, or preserves its planarity, when its edges become multiple edges by the addition of edges to edges in the original graph {\Huge Reference this!!!}.: \vspace{-0.1cm}
+			\begin{itemize} \itemsep -1pt
+			\item Does the following reference suffice {\bf for all conditions}? \url{http://jgaa.info/accepted/2004/BoyerMyrvold2004.8.3.pdf}.
+			\end{itemize}
 		\item Representations for different types of {\bf multigraphs} \cite{WikipediaContributors2018a39}: \vspace{-0.1cm}
 			\begin{itemize} \itemsep -1pt
 			\item A {\bf multidigraph} is also known as {\bf quiver} \cite{WikipediaContributors2018a40}.
@@ -118,7 +121,7 @@ Types of {\bf finite graphs} \cite{WikipediaContributors2018a38}: \vspace{-0.2cm
 			\item {\bf Dipole graph}: \url{https://en.wikipedia.org/wiki/Dipole_graph}
 			\end{itemize}
 		\end{enumerate}
-	\item A {\bf dual graph} $H = \{V_{H}, E_{H}\}$ of a {\bf planar graph} $G = \{V_{G}, E_{G}\}$ \cite{WikipediaContributors2018a43} is a graph that maps each vertex $v_{i} \in V_{G} = \{v_{1}, \dots, v_{n}\}, \forall i \in \{1, \dots, n\}, n \geq 3,$ to each face of $H$, and maps each vertex $v_{j} \in V_{H} = \{v_{1}, \dots, v_{m}\}, \forall j \in \{1, \dots, m\},$ to a face in $G$, and each edge $e_{k} \in E_{H} = \{e_{1}, \dots, e_{o}\}, \forall k \in \{1, \dots, o\},$ connects adjacent faces of $G$ that are separated by an edge. Hence, each edge $e_{l} \in E_{G} = \{e_{1}, \dots, e_{p}\}, \forall l \in \{1, \dots, p\},$ corresponds to a dual edge $e_{k}$ in $H$, such that the endpoints of $e_{k}$ are the dual vertices corresponding to faces on both sides of $e_{l}$ \cite{WikipediaContributors2018a48}. \vspace{-0.2cm}
+	\item A {\bf dual graph} $H = \{V_{H}, E_{H}\}$ of a {\bf planar graph} $G = \{V_{G}, E_{G}\}$ \cite{WikipediaContributors2018a43} is a graph that maps each vertex $v_{i} \in V_{G} = \{v_{1}, \dots, v_{n}\}, \forall i \in \{1, \dots, n\}, n \geq 3,$ to each face of $H$, and maps each vertex $v_{j} \in V_{H} = \{v_{1}, \dots, v_{m}\}, \forall j \in \{1, \dots, m\},$ to a face in $G$, and each edge $e_{k} \in E_{H} = \{e_{1}, \dots, e_{o}\}, \forall k \in \{1, \dots, o\},$ connects adjacent faces of $G$ that are separated by an edge. Hence, each edge $e_{l} \in E_{G} = \{e_{1}, \dots, e_{p}\}, \forall l \in \{1, \dots, p\},$ corresponds to a dual edge $e_{k}$ in $H$, such that the endpoints of $e_{k}$ are the dual vertices corresponding to faces on both sides of $e_{l}$ \cite{WikipediaContributors2018a48}.\vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
 		\item The definition of $H$ depends on the {\bf planar embedding} of $G$, since the {\bf duality property} is a property of the {\bf planar embedding} (as opposed to planar graphs that can be embedded, but its embedding is not known yet) \cite{WikipediaContributors2018a48}.
 		\item Hence, a planar graph can have multiple dual graphs, since it can have multiple {\bf planar embeddings} \cite{WikipediaContributors2018a48}.
@@ -331,6 +334,7 @@ References to cover: \vspace{-0.3cm}
 \begin{enumerate} \itemsep -4pt
 \item \cite[\S4-\S10, \S19, \S21-24, \S25-\S29]{Atallah2009}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
+	\item See \cite[\S3]{Atallah2009} regarding external sorting.
 	\item There exist a trade-off between computational time and space complexities in most data structures \cite[\S4.1.3, pp. 4-2]{Atallah2009}, including graphs.
 	\item Use a ``rooted tree with path compression'' for ``a simple and optimal'' implementation of the union-find data structure \cite[\S4.1.4, pp. 4-3]{Atallah2009}.
 	\item See \cite[\S7-\S9]{Atallah2009} regarding graph algorithms.
@@ -415,15 +419,18 @@ Common functions that need to be implemented in graph data structures; they are 
 	\item {\tt is\_adjacent($v_{u}, v_{v}$)}: $v_{u}$ and $v_{v}$ are vertices (of the graph), if $v_{u}, v_{v} \in V_{G}$ \cite{WikipediaContributors2018a49} \cite[\S13.1.1, pp. 599]{Goodrich2011}.
 	\item {\tt get\_neighbors($v_{u}$)}: $v_{u}$ is a vertex (of the graph), if $v_{u} \in V_{G}$ \cite{WikipediaContributors2018a49} (for hypergraphs). Or, name it {\tt opposite\_vertex($v_{u}$)} \cite[\S13.1.1, pp. 599]{Goodrich2011}, or {\tt get\_neighbor($v_{u}$)} for graphs without hyperedges.
 	\item {\tt add\_vertex($v_{u}$)}: $v_{u}$ is a vertex (of the graph), and is added if $v_{u} \not\in V_{G}$ \cite{WikipediaContributors2018a49} \cite[\S13.1.1, pp. 599]{Goodrich2011}.
-\item {\tt remove\_vertex($v_{u}$)}: $v_{u}$ is a vertex (of the graph), and is removed if $v_{u} \in V_{G}$  \cite{WikipediaContributors2018a49} \cite[\S13.1.1, pp. 599]{Goodrich2011}.
-\item {\tt add\_edge($v_{u}, v_{v}, elem$)}: $v_{u}$ and $v_{v}$ are vertices (of the graph), and the edge is added if $v_{u}, v_{v} \in V_{G}$ and edge $(v_{u}, v_{v}) \not\in E_{G}$ \cite{WikipediaContributors2018a49}. $elem$ represents the attribute(s) of the edge object \cite[\S13.1.1, pp. 599]{Goodrich2011}.
-\item {\tt remove\_edge($v_{u}, v_{v}$)}: $v_{u}$ and $v_{v}$ are vertices (of the graph), and the edge is removed if $v_{u}, v_{v} \in V_{G}$ and edge $(v_{u}, v_{v}) \in E_{G}$ \cite{WikipediaContributors2018a49} \cite[\S13.1.1, pp. 599]{Goodrich2011}.
+	\item {\tt remove\_vertex($v_{u}$)}: $v_{u}$ is a vertex (of the graph), and is removed if $v_{u} \in V_{G}$  \cite{WikipediaContributors2018a49} \cite[\S13.1.1, pp. 599]{Goodrich2011}.
+	\item {\tt add\_edge($v_{u}, v_{v}, elem$)}: $v_{u}$ and $v_{v}$ are vertices (of the graph), and the edge is added if $v_{u}, v_{v} \in V_{G}$ and edge $(v_{u}, v_{v}) \not\in E_{G}$ \cite{WikipediaContributors2018a49}. $elem$ represents the attribute(s) of the edge object \cite[\S13.1.1, pp. 599]{Goodrich2011}.
+	\item {\tt remove\_edge($v_{u}, v_{v}$)}: $v_{u}$ and $v_{v}$ are vertices (of the graph), and the edge is removed if $v_{u}, v_{v} \in V_{G}$ and edge $(v_{u}, v_{v}) \in E_{G}$ \cite{WikipediaContributors2018a49} \cite[\S13.1.1, pp. 599]{Goodrich2011}.
+	\item {\tt get\_vertex\_attribute\_x($v_{u}$)}: return the value associated with vertex $v_{u}$'s attribute $x$ \cite{WikipediaContributors2018a49}.
+	\item {\tt set\_vertex\_attribute\_x($v_{u}, value$)}: assigns/sets the value $value$ associated with vertex $v_{u}$'s attribute $x$ \cite{WikipediaContributors2018a49}.
+	\item {\tt get\_edge\_attribute\_x($(v_{u}, v_{v})$)}, or {\tt get\_edge\_attribute\_x($e_{i}$)}: return the value associated with the edge $e_{i} = (v_{u}, v_{v})$'s attribute $x$ \cite{WikipediaContributors2018a49}.
+	\item {\tt set\_edge\_attribute\_x($(v_{u}, v_{v}), value$)}: assigns/sets the value $value$ associated with the edge $e_{i} = (v_{u}, v_{v})$'s attribute $x$ \cite{WikipediaContributors2018a49}.
 	\item {\tt get\_all\_vertices()} \cite[\S13.1.1, pp. 599]{Goodrich2011}
 	\item {\tt get\_all\_edges()} \cite[\S13.1.1, pp. 599]{Goodrich2011}: \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
 		\item For directed graphs, provide a set/list of directed edges. Use the access functions for the head or tail to perform operations on the graph.
 		\end{enumerate}
-	\item 
 	\end{enumerate}
 \item {\bf Vertex class}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
@@ -438,7 +445,7 @@ Common functions that need to be implemented in graph data structures; they are 
 \end{enumerate}
 
 
-Common functions that need to be implemented in undirected graph data structures
+Common functions that need to be implemented in undirected graph data structures; they are instance methods, unless indicated otherwise (as static methods):
 \begin{enumerate}
 \item {\bf Graph class}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
@@ -466,7 +473,7 @@ Common functions that need to be implemented in undirected graph data structures
 	\end{enumerate}
 \end{enumerate}
 
-Common functions that need to be implemented in directed graph data structures
+Common functions that need to be implemented in directed graph data structures; they are instance methods, unless indicated otherwise (as static methods):
 \begin{enumerate}
 \item {\bf Graph class}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
@@ -830,6 +837,7 @@ Other problems and types of graphs, not of comparable importance: \vspace{-0.3cm
 
 
 
+The {\it GraphException} class is a child class of the Exception class. See \url{https://github.com/eda-ricercatore/gulyas-scripts/blob/master/notes/python.md#exception-handling} for information about implementing the {\it GraphException} class.
 
 
 
