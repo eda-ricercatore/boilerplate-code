@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  20 FEB 2019 17:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  20 FEB 2019 17:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1065,21 +1065,21 @@ Overfull \hbox (12.46811pt too wide) in paragraph at lines 94--95
 
 ) (./data_structures/data_structures.tex [2]
 Chapter 2.
-(./data_structures/graph.tex
+(./data_structures/graph.tex [3
+
+]
 LaTeX Font Info:    Try loading font information for TS1+lmr on input line 45.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [3
-
-]
+)
 Overfull \hbox (12.51347pt too wide) in paragraph at lines 50--51
 []\T1/lmr/m/n/12 Does the fol-low-ing ref-er-ence suf-fice \T1/lmr/bx/n/12 for 
 all con-di-tions\T1/lmr/m/n/12 ? [][]$\T1/lmtt/m/n/12 http : / / jgaa . info / 
 accepted /
  []
 
-[4] [5] [6] [7]
+[4] [5] [6] [7] [8]
 Overfull \hbox (4.26259pt too wide) in paragraph at lines 222--223
 []\T1/lmr/bx/n/12 Multidimensional net-work \T1/lmr/m/n/12 [[][]222[][]]: [][]$
 \T1/lmtt/m/n/12 https : / / en . wikipedia . org / wiki / Multidimensional _
@@ -1092,7 +1092,7 @@ ying net-work\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 https : / / en . wikipedia .
  org / wiki / Temporal _
  []
 
-[8]
+
 Underfull \hbox (badness 10000) in paragraph at lines 259--260
 
  []
@@ -1120,89 +1120,89 @@ Underfull \hbox (badness 10000) in paragraph at lines 268--269
  []
 
 [9] [10] [11] [12] [13] [14]
-Overfull \hbox (37.49538pt too wide) in paragraph at lines 566--567
+Overfull \hbox (37.49538pt too wide) in paragraph at lines 573--574
 []\T1/lmr/bx/n/12 Bellman-Ford al-go-rithm \T1/lmr/m/n/12 (or, \T1/lmr/bx/n/12 
 Bellman-Ford-Moore al-go-rithm\T1/lmr/m/n/12 ): [][]$\T1/lmtt/m/n/12 https : / 
 / en . wikipedia .
  []
 
 
-Overfull \hbox (28.19597pt too wide) in paragraph at lines 567--568
+Overfull \hbox (28.19597pt too wide) in paragraph at lines 574--575
 []\T1/lmr/bx/n/12 Ford-Fulkerson al-go-rithm (FFA)\T1/lmr/m/n/12 , or \T1/lmr/b
 x/n/12 Ford-Fulkerson method\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 https : / / e
 n . wikipedia .
  []
 
 [15]
-Overfull \hbox (21.96764pt too wide) in paragraph at lines 633--634
+Overfull \hbox (21.96764pt too wide) in paragraph at lines 640--641
 []\T1/lmr/bx/n/12 max-flow min-cut the-o-rem\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/
 12 https : / / en . wikipedia . org / wiki / Max-[]flow _ min-[]cut _ theorem$[
 ][] 
  []
 
 
-Overfull \hbox (13.70074pt too wide) in paragraph at lines 634--635
+Overfull \hbox (13.70074pt too wide) in paragraph at lines 641--642
 []\T1/lmr/bx/n/12 minimum-cost flow prob-lem (MCFP)\T1/lmr/m/n/12 : [][]$\T1/lm
 tt/m/n/12 https : / / en . wikipedia . org / wiki / Minimum-[]cost _
  []
 
-
-Overfull \hbox (34.99174pt too wide) in paragraph at lines 685--686
+[16]
+Overfull \hbox (34.99174pt too wide) in paragraph at lines 692--693
 \T1/lmr/bx/n/17.28 du-al-i-ties\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 https : / 
 / en . wikipedia . org / wiki / Linear _ programming # Covering / packing _
  []
 
-[16]
-Overfull \hbox (30.58757pt too wide) in paragraph at lines 691--692
+
+Overfull \hbox (30.58757pt too wide) in paragraph at lines 698--699
 []\T1/lmr/bx/n/12 independent set prob-lem\T1/lmr/m/n/12 , and \T1/lmr/bx/n/12 
 max-i-mum in-de-pen-dent set\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 https : / / e
 n . wikipedia .
  []
 
 [17] [18]
-Overfull \hbox (14.54733pt too wide) in paragraph at lines 819--820
+Overfull \hbox (14.54733pt too wide) in paragraph at lines 826--827
 []\T1/lmr/bx/n/12 Homeomorphism\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 https : / 
 / en . wikipedia . org / wiki / Homeomorphism _ (graph _ theory )
  []
 
 
-Overfull \hbox (7.32706pt too wide) in paragraph at lines 830--831
+Overfull \hbox (7.32706pt too wide) in paragraph at lines 837--838
 []\T1/lmr/bx/n/12 Interdependent net-works\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12
  https : / / en . wikipedia . org / wiki / Interdependent _ networks$[][] 
  []
 
 
-Overfull \hbox (46.71861pt too wide) in paragraph at lines 850--851
+Overfull \hbox (46.71861pt too wide) in paragraph at lines 857--858
 []\T1/lmr/m/n/12 The \T1/lmr/m/it/12 GraphEx-cep-tion \T1/lmr/m/n/12 class is a
  child class of the Ex-cep-tion class. See [][]$\T1/lmtt/m/n/12 https : / / git
 hub . com / eda-[]ricercatore /
  []
 
-
-Overfull \hbox (9.30283pt too wide) in paragraph at lines 885--886
+[19]
+Overfull \hbox (9.30283pt too wide) in paragraph at lines 892--893
 []\T1/lmr/m/n/12 ``Used in the con-text of con-cur-rency con-trol in databases'
 '; see [][]$\T1/lmtt/m/n/12 https : / / en . wikipedia .
  []
 
-[19]
-Overfull \hbox (2.8676pt too wide) in paragraph at lines 981--982
+[20]
+Overfull \hbox (2.8676pt too wide) in paragraph at lines 988--989
 []\T1/lmr/bx/n/12 Gallery of named graphs\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 
 https : / / en . wikipedia . org / wiki / Gallery _ of _ named _ graphs$[][] 
  []
 
 
-Overfull \hbox (1.05757pt too wide) in paragraph at lines 982--983
+Overfull \hbox (1.05757pt too wide) in paragraph at lines 989--990
 []\T1/lmr/bx/n/12 List of graph the-ory top-ics\T1/lmr/m/n/12 : [][]$\T1/lmtt/m
 /n/12 https : / / en . wikipedia . org / wiki / List _ of _ graph _ theory _
  []
 
 
-Overfull \hbox (9.98303pt too wide) in paragraph at lines 983--984
+Overfull \hbox (9.98303pt too wide) in paragraph at lines 990--991
 []\T1/lmr/bx/n/12 Glossary of graph the-ory terms\T1/lmr/m/n/12 : [][]$\T1/lmtt
 /m/n/12 https : / / en . wikipedia . org / wiki / Glossary _ of _ graph _
  []
 
-[20])) (./optimization/optimization.tex [21]
+)) (./optimization/optimization.tex [21]
 Chapter 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 28--29
@@ -1651,46 +1651,83 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 286.
  (./data-structures_n_algor.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 286.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 286.
-Package rerunfilecheck Info: File `data-structures_n_algor.out' has not changed
-.
-(rerunfilecheck)             Checksum: B76F1A2EE4413A73376DFCD39F99FF36;3098.
+
+
+Package rerunfilecheck Warning: File `data-structures_n_algor.out' has changed.
+
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `data-structures_n_algor.out':
+(rerunfilecheck)             Before: B76F1A2EE4413A73376DFCD39F99FF36;3098
+(rerunfilecheck)             After:  FA65DB4855B6EFC7387BA937B234812C;3164.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 286.
  ) 
 Here is how much of TeX's memory you used:
- 17954 strings out of 493089
- 251774 string characters out of 6134842
+ 17972 strings out of 493089
+ 252031 string characters out of 6134842
  364694 words of memory out of 5000000
- 19592 multiletter control sequences out of 15000+600000
+ 19593 multiletter control sequences out of 15000+600000
  125350 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,15n,96p,1261b,674s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
-texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/20
-15/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2015/texmf-dist/
-fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/
-dvips/lm/lm-mathex.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/l
-m-ts1.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmbx12.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/loc
-al/texlive/2015/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive
-/2015/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2015/texm
-f-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2015/texmf-dist/font
-s/type1/public/lm/lmmi8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
-lic/lm/lmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr1
-2.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr
-/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2015/texm
-f-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2015/texmf-dist/fon
-ts/type1/public/lm/lmro12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/p
-ublic/lm/lmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/l
-msy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/marvosym/marvosym.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loc
-al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on data-structures_n_algor.pdf (78 pages, 640625 bytes).
+ 63i,15n,96p,1261b,668s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{subsubsection.2.2.4.3} has been referenced but do
+es not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.2.2.4.2} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.2.2.4.1} has been referenced but does
+ not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.2.6} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.2.5} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.2.4} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.2.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.2.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.2.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/te
+xlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2015
+/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2015/texmf-dist/fo
+nts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dv
+ips/lm/lm-mathex.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-
+ts1.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local
+/texlive/2015/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2
+015/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2015/texmf-dist/fonts/
+type1/public/lm/lmmi8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publi
+c/lm/lmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr12.
+pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2015/texmf-dist/fonts
+/type1/public/lm/lmro12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
+lic/lm/lmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lms
+y8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/marvosym/marvosym.pfb></usr/local/tex
+live/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local
+/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on data-structures_n_algor.pdf (78 pages, 642028 bytes).
 PDF statistics:
- 3351 PDF objects out of 3580 (max. 8388607)
- 3218 compressed objects within 33 object streams
- 1476 named destinations out of 1728 (max. 500000)
+ 3380 PDF objects out of 3580 (max. 8388607)
+ 3247 compressed objects within 33 object streams
+ 1493 named destinations out of 1728 (max. 500000)
  353 words of extra memory for PDF output out of 10000 (max. 10000000)
 

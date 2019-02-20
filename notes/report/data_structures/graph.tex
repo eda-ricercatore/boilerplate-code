@@ -437,8 +437,11 @@ Common functions that need to be implemented in graph data structures; they are 
 	\item {\tt get\_edge($v_{u}, v_{v}$)} returns the edge $e_{i} = (v_{u}, v_{v}) \in E_{G}$ \cite[\S54.2, pp. 849]{Goldman2008}.
 	\item {\tt get\_num\_vertices()} returns the number of vertices in the graph $G = (V_{G}, E_{G})$, or the cardinality of the set/list of vertices $| V_{G} |$ \cite[\S54.2, pp. 849]{Goldman2008}.
 	\item Optional methods: \vspace{-0.2cm}
-		\begin{enumerate} \itemsep -2pt
+		\begin{enumerate} %\itemsep -2pt
 		\item {\tt boolean is\_multigraph()} returns boolean {\tt True} if the graph is a multigraph. Else, returns boolean {\tt False} \cite[\S54.2, pp. 849]{Goldman2008}. 
+		\item {\tt has\_cycles()} returns boolean {\tt True} if the graph $G$ has cycles; else, it returns boolean {\tt False} \cite[\S54.2, pp. 850]{Goldman2008}.
+		\item {\tt is\_cycle($E_{cycle}$)} returns boolean {\tt True} if graph $G$ contains the cycle $E_{cycle}$; else, it returns boolean {\tt False} \cite[\S54.2, pp. 850]{Goldman2008}.
+		\item {\tt get\_cycle()} \cite[\S54.2, pp. 850]{Goldman2008}: Not considered, since a graph can have multiple cycles.
 		\end{enumerate}
 	\end{enumerate}
 \item {\bf Vertex class}: \vspace{-0.3cm}
@@ -454,12 +457,14 @@ Common functions that need to be implemented in graph data structures; they are 
 \end{enumerate}
 
 
-Common functions that need to be implemented in undirected graph data structures; they are instance methods, unless indicated otherwise (as static methods):
+Common functions that need to be implemented in {\bf undirected graph} data structures; they are instance methods, unless indicated otherwise (as static methods):
 \begin{enumerate}
 \item {\bf Graph class}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
 	\item {\tt is\_path($e_{set}$)}, where $e_{set}$ is a set of edges (or 2-tuples of vertices), and check if this ordered list/set of edges follows a sequence.
 	\item {\tt are\_adjacent\_edges($e_{i}, e_{j}$)} \cite[\S13.1.1, pp. 599]{Goodrich2011}
+	\item {\tt get\_connected\_components()} returns a set of connected components, where each connected component is defined by a set of vertices \cite[\S54.2, pp. 850]{Goldman2008}.
+	\item {\tt get\_number\_of\_connected\_components()} returns the number of connected components in the graph $G$ \cite[\S54.2, pp. 850]{Goldman2008}.
 	\end{enumerate}
 \item {\bf Vertex class}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
@@ -481,13 +486,15 @@ Common functions that need to be implemented in undirected graph data structures
 	\end{enumerate}
 \end{enumerate}
 
-Common functions that need to be implemented in directed graph data structures; they are instance methods, unless indicated otherwise (as static methods):
+Common functions that need to be implemented in {\bf directed graph} data structures; they are instance methods, unless indicated otherwise (as static methods):
 \begin{enumerate}
 \item {\bf Graph class}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
 	\item {\tt is\_path($e_{set}$)}, where $e_{set}$ is a set of edges (or 2-tuples of vertices), and check if this ordered list/set of edges follows a sequence.
 	\item {\tt get\_list\_of\_outgoing\_edges($v_{u}$)} returns a list of outgoing edges of vertex $v_{u}$ \cite[\S54.2, pp. 849]{Goldman2008}.
 	\item {\tt get\_list\_of\_incoming\_edges($v_{u}$)} returns a list of incoming edges of vertex $v_{u}$ \cite[\S54.2, pp. 849]{Goldman2008}.
+	\item {\tt get\_strongly\_connected\_components()} returns a set of strongly connected components, where each strongly connected component is defined by a set of vertices \cite[\S54.2, pp. 850]{Goldman2008}.
+	\item {\tt get\_number\_of\_strongly\_connected\_components()} returns the number of strongly connected components in the graph $G$ \cite[\S54.2, pp. 850]{Goldman2008}.
 	\item 
 	\end{enumerate}
 \item {\bf Vertex class}: \vspace{-0.3cm}

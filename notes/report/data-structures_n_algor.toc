@@ -4,17 +4,18 @@
 \contentsline {section}{\numberline {1.2}Resources for Algorithms}{2}{section.1.2}
 \contentsline {chapter}{\numberline {2}Data Structures}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Basic Data Structures}{3}{section.2.1}
-\contentsline {section}{\numberline {2.2}Graph Data Structures}{3}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Graph Theory}{3}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Graph Representations}{9}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Functions that need to be implemented}{12}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}Directed Graphs, and Directed Acyclic Graphs}{19}{subsection.2.2.4}
-\contentsline {subsubsection}{\numberline {2.2.4.1}Binary Decision Diagrams (BDDs)}{20}{subsubsection.2.2.4.1}
-\contentsline {subsubsection}{\numberline {2.2.4.2}AND-Inverter Graphs (AIGs)}{20}{subsubsection.2.2.4.2}
-\contentsline {subsubsection}{\numberline {2.2.4.3}Majority-Inverter Graphs (MIGs)}{20}{subsubsection.2.2.4.3}
-\contentsline {subsection}{\numberline {2.2.5}Undirected Graphs}{20}{subsection.2.2.5}
-\contentsline {subsection}{\numberline {2.2.6}Resources for Graphs}{20}{subsection.2.2.6}
-\contentsline {section}{\numberline {2.3}Notes on Data Structures for External Memory Computation}{21}{section.2.3}
+\contentsline {section}{\numberline {2.2}Tree Data Structures}{3}{section.2.2}
+\contentsline {section}{\numberline {2.3}Graph Data Structures}{3}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Graph Theory}{3}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Graph Representations}{9}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Functions that need to be implemented}{12}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Directed Graphs, and Directed Acyclic Graphs}{20}{subsection.2.3.4}
+\contentsline {subsubsection}{\numberline {2.3.4.1}Binary Decision Diagrams (BDDs)}{20}{subsubsection.2.3.4.1}
+\contentsline {subsubsection}{\numberline {2.3.4.2}AND-Inverter Graphs (AIGs)}{20}{subsubsection.2.3.4.2}
+\contentsline {subsubsection}{\numberline {2.3.4.3}Majority-Inverter Graphs (MIGs)}{20}{subsubsection.2.3.4.3}
+\contentsline {subsection}{\numberline {2.3.5}Undirected Graphs}{21}{subsection.2.3.5}
+\contentsline {subsection}{\numberline {2.3.6}Resources for Graphs}{21}{subsection.2.3.6}
+\contentsline {section}{\numberline {2.4}Notes on Data Structures for External Memory Computation}{21}{section.2.4}
 \contentsline {chapter}{\numberline {3}Optimization}{22}{chapter.3}
 \contentsline {section}{\numberline {3.1}Benchmarks for Optimization}{22}{section.3.1}
 \contentsline {section}{\numberline {3.2}Notes on Using Optimization Tools}{22}{section.3.2}
