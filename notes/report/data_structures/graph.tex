@@ -24,7 +24,9 @@
 \subsection{Graph Theory}
 \label{ssec:GraphTheory}
 
-A {\bf graph} $G$ is an ordered pair, $G = (V,E)$, of a vertex/node set and an edge set \cite{WikipediaContributors2018a38}.
+A {\bf graph} $G$ is an ordered pair, $G = (V,E)$, of a vertex/node set $V$ and an edge set $E$\cite{WikipediaContributors2018a38}. \\
+
+We denote the number of vertices, or the cardinality of the vertex/node set, as $n = |V|$. Likewise, we denote the number of edges, or the cardinality of the edge set, as $ m = |E|$ \cite[\S52.2, pp. 845]{Goldman2008}. \\
 
 Types of {\bf finite graphs} \cite{WikipediaContributors2018a38}: \vspace{-0.2cm}
 \begin{enumerate} \itemsep -4pt
@@ -441,19 +443,45 @@ Other ontologies of graphs are based on whether the graphs are: \vspace{-0.3cm}
 \begin{enumerate} \itemsep -4pt
 \item weighted \cite{WikipediaContributors2018a38,Goldman2008}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
-	\item weighted graphs \cite[\S52, pp. 843]{Goldman2008}
-	\item unweighted graphs \cite[\S52, pp. 843]{Goldman2008}
+	\item weighted graphs \cite[\S52, pp. 843; \S51, pp. 842]{Goldman2008}
+	\item unweighted graphs \cite[\S52, pp. 843; \S51, pp. 842]{Goldman2008}
+	\end{enumerate}
+\item density/sparsity of the edges in a graph: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item Criteria for a graph to be considered as a dense graph: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item $m \geq \frac{n^{2}}{4}$, or comparable arbitrarily chosen cutoff \cite[\S52.2, pp. 848]{Goldman2008}.
+		\end{enumerate}
+	\item Criteria for a graph to be considered as a sparse graph: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item  \cite[\S52.2, pp. 848]{Goldman2008}.
+		\end{enumerate}
 	\end{enumerate}
 \end{enumerate}
 
 Required, or strongly preferred, data structures for implementing graphs: \vspace{-0.3cm}
 \begin{enumerate} \itemsep -4pt
-\item Fibonacci heap
+\item Fibonacci heap: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item Used to implement the following graph algorithms: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item Dijkstra's single-source shortest path algorithm \cite[\S24.8, pp. 351; \S57, pp. 925]{Goldman2008}.
+		\item all-pairs shortest paths algorithm \cite[\S24.8, pp. 351]{Goldman2008}.
+		\item Prim's or Prim-Jarnik algorithm minimum spanning tree problem \cite[\S24.8, pp. 351; \S57, pp. 925]{Goldman2008}.
+		\end{enumerate}
+	\item ``The Fibonacci heap is a forest, and not a tree'' \cite[\S28.2, pp. 426]{Goldman2008}..
+	\item When implementing priority queues, it uses constant time for merge operation instead of logarithmic time (leftist heap) or linear time (binary heap) \cite[\S24.4, pp. 346]{Goldman2008}.
+	\item It has poor computational space complexity \cite[\S24.4, pp. 346--347]{Goldman2008}.
+	\item See \cite[\S24.7, pp. 350]{Goldman2008} for the class hierarchy of priority queues and their implementations using binary heaps, leftist heaps, or pairing heaps (including Fibonacci heaps).
+	\item Instead of using the Fibonacci heap, use pairing heap to implement Prim's algorithm, or Prim-Jarnik algorithm, for minimum spanning trees \cite[\S24.8, pp. 351]{Goldman2008}. 
+	\end{enumerate}
 \item circular array for topological sort (for DAGs) \cite[\S53, pp. 857]{Goldman2008}.
 \item queue (FIFO) for BFS \cite[\S53, pp. 857]{Goldman2008}.
 \item open addressing for strongly connected components (for directed graphs) \cite[\S53, pp. 857]{Goldman2008}.
 \item open addressing mapping for DFS \cite[\S53, pp. 857]{Goldman2008}.
 \end{enumerate}
+
+ 
 
 
 Common functions that need to be implemented in graph data structures; they are instance methods, unless indicated otherwise (as static methods):
