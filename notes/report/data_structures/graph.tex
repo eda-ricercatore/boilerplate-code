@@ -302,6 +302,8 @@ The ways to represent graphs are listed as follows: \vspace{-0.3cm}
 		\begin{enumerate} \itemsep -2pt
 		\item \cite{WikipediaContributors2018a49,Savage1998}
 		\item \cite[\S52.7, pp. 844; \S52.6--\S52.7, pp. 851--856]{Goldman2008}
+		\item Memory/Space efficient representation of dense graphs, especially when they are not multigraphs. It can represent dense undirected graphs most efficiently \cite[\S54, pp. 883]{Goldman2008}.
+		\item For enumerating the edges outgoing from or incoming to a vertex in the graph, it takes $O(n)$ time, which slows down algorithms that need to enumerate edges outgoing from or incoming to each vertex in the graph \cite[\S54, pp. 883]{Goldman2008}.
 		\item An adjacency matrix is a preferred representation for dense graphs, which have the property $|E| \approx |V|^{2}$. It is also preferred if there exists a need to frequently determine if there is an edge connecting any given pair of vertices (fast lookup, or fast access time) \cite[\S22.1, pp. 589]{Cormen2009}. The reference \cite[\S22.1, pp. 589--590]{Cormen2009} covers {\bf adjacency matrix} graph representation.
 		\item \cite[\S5, pp. 78]{Cormen2013}
 		\item Its computational space complexity is $O(|V|^{2})$ \cite[\S13.2, pp. 600]{Goodrich2011} \cite[\S14.2, pp. 627]{Goodrich2013} \cite{WikipediaContributors2018a49}.
@@ -315,8 +317,9 @@ The ways to represent graphs are listed as follows: \vspace{-0.3cm}
 	\item References: \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
 		\item \cite{WikipediaContributors2018a49}
-		\item \cite[\S52.7, pp. 854; \S52.6--\S52.7, pp. 851--856; \S55]{Goldman2008}
-		\item An adjacency list is a compact representation for sparse graphs, which have the property $|E| \ll |V|^{2}$ \cite[\S22.1, pp. 589]{Cormen2009}. \cite[\S22.1, pp. 589,591--592]{Cormen2009} covers {\bf adjacency matrix} graph representation.
+		\item \cite[\S52.7, pp. 854; \S52.6--\S52.7, pp. 851--856; \S55, pp. 901--915]{Goldman2008}
+		\item An adjacency list is a compact representation for sparse graphs \cite[\S54, pp. 883]{Goldman2008}, which have the property $|E| \ll |V|^{2}$ \cite[\S22.1, pp. 589]{Cormen2009}. \cite[\S22.1, pp. 589,591--592]{Cormen2009} covers {\bf adjacency matrix} graph representation.
+		\item It enables algorithms to enumerate edges outgoing from or incoming to each vertex in the graph faster than the adjacency matrix graph representation \cite[\S55, pp. 901]{Goldman2008}.
 		\item \cite[\S5, pp. 79]{Cormen2013}
 		\item Its computational space complexity is $O(|V|+|E|)$ \cite[\S13.2, pp. 600]{Goodrich2011} \cite[\S14.2, pp. 627]{Goodrich2013} \cite{WikipediaContributors2018a49}.
 		\item \cite[\S13.2.2, pp. 603--604]{Goodrich2011}

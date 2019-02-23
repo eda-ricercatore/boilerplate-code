@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  21 FEB 2019 17:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  22 FEB 2019 12:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1139,84 +1139,84 @@ Underfull \hbox (badness 10000) in paragraph at lines 294--295
  []
 
 [10] [11] [12] [13] [14] [15] [16] [17]
-Overfull \hbox (37.49538pt too wide) in paragraph at lines 729--730
+Overfull \hbox (37.49538pt too wide) in paragraph at lines 735--736
 []\T1/lmr/bx/n/12 Bellman-Ford al-go-rithm \T1/lmr/m/n/12 (or, \T1/lmr/bx/n/12 
 Bellman-Ford-Moore al-go-rithm\T1/lmr/m/n/12 ): [][]$\T1/lmtt/m/n/12 https : / 
 / en . wikipedia .
  []
 
 
-Overfull \hbox (28.19597pt too wide) in paragraph at lines 730--731
+Overfull \hbox (28.19597pt too wide) in paragraph at lines 736--737
 []\T1/lmr/bx/n/12 Ford-Fulkerson al-go-rithm (FFA)\T1/lmr/m/n/12 , or \T1/lmr/b
 x/n/12 Ford-Fulkerson method\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 https : / / e
 n . wikipedia .
  []
 
 [18]
-Overfull \hbox (21.96764pt too wide) in paragraph at lines 796--797
+Overfull \hbox (21.96764pt too wide) in paragraph at lines 802--803
 []\T1/lmr/bx/n/12 max-flow min-cut the-o-rem\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/
 12 https : / / en . wikipedia . org / wiki / Max-[]flow _ min-[]cut _ theorem$[
 ][] 
  []
 
 
-Overfull \hbox (13.70074pt too wide) in paragraph at lines 797--798
+Overfull \hbox (13.70074pt too wide) in paragraph at lines 803--804
 []\T1/lmr/bx/n/12 minimum-cost flow prob-lem (MCFP)\T1/lmr/m/n/12 : [][]$\T1/lm
 tt/m/n/12 https : / / en . wikipedia . org / wiki / Minimum-[]cost _
  []
 
 [19]
-Overfull \hbox (34.99174pt too wide) in paragraph at lines 848--849
+Overfull \hbox (34.99174pt too wide) in paragraph at lines 854--855
 \T1/lmr/bx/n/17.28 du-al-i-ties\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 https : / 
 / en . wikipedia . org / wiki / Linear _ programming # Covering / packing _
  []
 
 
-Overfull \hbox (30.58757pt too wide) in paragraph at lines 854--855
+Overfull \hbox (30.58757pt too wide) in paragraph at lines 860--861
 []\T1/lmr/bx/n/12 independent set prob-lem\T1/lmr/m/n/12 , and \T1/lmr/bx/n/12 
 max-i-mum in-de-pen-dent set\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 https : / / e
 n . wikipedia .
  []
 
 [20] [21]
-Overfull \hbox (14.54733pt too wide) in paragraph at lines 982--983
+Overfull \hbox (14.54733pt too wide) in paragraph at lines 988--989
 []\T1/lmr/bx/n/12 Homeomorphism\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 https : / 
 / en . wikipedia . org / wiki / Homeomorphism _ (graph _ theory )
  []
 
 
-Overfull \hbox (7.32706pt too wide) in paragraph at lines 993--994
+Overfull \hbox (7.32706pt too wide) in paragraph at lines 999--1000
 []\T1/lmr/bx/n/12 Interdependent net-works\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12
  https : / / en . wikipedia . org / wiki / Interdependent _ networks$[][] 
  []
 
 [22]
-Overfull \hbox (46.71861pt too wide) in paragraph at lines 1013--1014
+Overfull \hbox (46.71861pt too wide) in paragraph at lines 1019--1020
 []\T1/lmr/m/n/12 The \T1/lmr/m/it/12 GraphEx-cep-tion \T1/lmr/m/n/12 class is a
  child class of the Ex-cep-tion class. See [][]$\T1/lmtt/m/n/12 https : / / git
 hub . com / eda-[]ricercatore /
  []
 
 
-Overfull \hbox (9.30283pt too wide) in paragraph at lines 1048--1049
+Overfull \hbox (9.30283pt too wide) in paragraph at lines 1054--1055
 []\T1/lmr/m/n/12 ``Used in the con-text of con-cur-rency con-trol in databases'
 '; see [][]$\T1/lmtt/m/n/12 https : / / en . wikipedia .
  []
 
 [23]
-Overfull \hbox (2.8676pt too wide) in paragraph at lines 1144--1145
+Overfull \hbox (2.8676pt too wide) in paragraph at lines 1150--1151
 []\T1/lmr/bx/n/12 Gallery of named graphs\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 
 https : / / en . wikipedia . org / wiki / Gallery _ of _ named _ graphs$[][] 
  []
 
 
-Overfull \hbox (1.05757pt too wide) in paragraph at lines 1145--1146
+Overfull \hbox (1.05757pt too wide) in paragraph at lines 1151--1152
 []\T1/lmr/bx/n/12 List of graph the-ory top-ics\T1/lmr/m/n/12 : [][]$\T1/lmtt/m
 /n/12 https : / / en . wikipedia . org / wiki / List _ of _ graph _ theory _
  []
 
 
-Overfull \hbox (9.98303pt too wide) in paragraph at lines 1146--1147
+Overfull \hbox (9.98303pt too wide) in paragraph at lines 1152--1153
 []\T1/lmr/bx/n/12 Glossary of graph the-ory terms\T1/lmr/m/n/12 : [][]$\T1/lmtt
 /m/n/12 https : / / en . wikipedia . org / wiki / Glossary _ of _ graph _
  []
@@ -1673,15 +1673,11 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 286.
 Package rerunfilecheck Info: File `data-structures_n_algor.out' has not changed
 .
 (rerunfilecheck)             Checksum: FA65DB4855B6EFC7387BA937B234812C;3164.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 286.
  ) 
 Here is how much of TeX's memory you used:
- 18069 strings out of 493089
- 252949 string characters out of 6134842
+ 18073 strings out of 493089
+ 252985 string characters out of 6134842
  364895 words of memory out of 5000000
  19597 multiletter control sequences out of 15000+600000
  125350 words of font info for 91 fonts, out of 8000000 for 9000
@@ -1710,10 +1706,10 @@ msy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><
 /texlive/2015/texmf-dist/fonts/type1/public/marvosym/marvosym.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on data-structures_n_algor.pdf (83 pages, 660118 bytes).
+Output written on data-structures_n_algor.pdf (83 pages, 660627 bytes).
 PDF statistics:
- 3588 PDF objects out of 4296 (max. 8388607)
- 3448 compressed objects within 35 object streams
- 1586 named destinations out of 1728 (max. 500000)
+ 3596 PDF objects out of 4296 (max. 8388607)
+ 3456 compressed objects within 35 object streams
+ 1590 named destinations out of 1728 (max. 500000)
  361 words of extra memory for PDF output out of 10000 (max. 10000000)
 
