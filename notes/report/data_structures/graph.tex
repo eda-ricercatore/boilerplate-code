@@ -318,10 +318,11 @@ The ways to represent graphs are listed as follows: \vspace{-0.3cm}
 		\begin{enumerate} \itemsep -2pt
 		\item \cite{WikipediaContributors2018a49}
 		\item \cite[\S52.7, pp. 854; \S52.6--\S52.7, pp. 851--856; \S55, pp. 901--915]{Goldman2008}
-		\item An adjacency list is a compact representation for sparse graphs \cite[\S54, pp. 883]{Goldman2008}, which have the property $|E| \ll |V|^{2}$ \cite[\S22.1, pp. 589]{Cormen2009}. \cite[\S22.1, pp. 589,591--592]{Cormen2009} covers {\bf adjacency matrix} graph representation.
-		\item It enables algorithms to enumerate edges outgoing from or incoming to each vertex in the graph faster than the adjacency matrix graph representation \cite[\S55, pp. 901]{Goldman2008}.
+		\item An adjacency list is a compact representation for sparse graphs \cite[\S54, pp. 883]{Goldman2008}, which have the property $|E| \ll |V|^{2}$ \cite[\S22.1, pp. 589]{Cormen2009}. \cite[\S22.1, pp. 589,591--592]{Cormen2009} covers {\bf adjacency matrix} graph representation. That is, it is ``space efficient'' \cite[\S55, pp. 901]{Goldman2008}, or memory efficient.
+		\item It enables algorithms to efficiently (in regards to computational time complexity) enumerate edges outgoing from or incoming to each vertex in the graph faster than the adjacency matrix graph representation \cite[\S55, pp. 901]{Goldman2008}; the vertices in the graph are enumerated in a data-dependent order. The computational time complexity of enumerating the list of incoming edges and the list of outgoing edges can be reduced by using a set of incoming edges and a set of outgoing edges, due to the hashing properties of hash sets.
 		\item \cite[\S5, pp. 79]{Cormen2013}
-		\item Its computational space complexity is $O(|V|+|E|)$ \cite[\S13.2, pp. 600]{Goodrich2011} \cite[\S14.2, pp. 627]{Goodrich2013} \cite{WikipediaContributors2018a49}.
+		\item Its computational space complexity is $O(|V|+|E|)$ \cite[\S13.2, pp. 600]{Goodrich2011} \cite[\S14.2, pp. 627]{Goodrich2013} \cite{WikipediaContributors2018a49}. While it is space efficient for sparse graphs, it is not space efficient for dense graphs.
+		\item \cite[\S55.1, pp. 904]{Goldman2008} mentions using a bucket mapping \cite[\S55.1, pp. 904; \S50.3, pp. 829; \S2.6.2, pp. 27; \S50; \S29.5, pp. 447]{Goldman2008} to implement the augmented adjacency sets that is used to store a set of incoming edges and a set of outgoing edges. The bucket mapping \cite[\S55.1, pp. 904; \S50.3, pp. 829]{Goldman2008}, or tagged bucket collection type \cite[\S2.6, pp. 25]{Goldman2008}, is based on a hash table. Bucket mapping, just like sets and mappings, are based on hash tables \cite[\S1.5, pp. 9]{Goldman2008}.
 		\item \cite[\S13.2.2, pp. 603--604]{Goodrich2011}
 		\item \cite[\S14.2, pp. 627; \S14.2.2, pp. 630--631]{Goodrich2013}
 		\end{enumerate}
@@ -453,7 +454,7 @@ Other ontologies of graphs are based on whether the graphs are: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
 	\item Criteria for a graph to be considered as a dense graph: \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
-		\item $m \geq \frac{n^{2}}{4}$, or comparable arbitrarily chosen cutoff \cite[\S52.2, pp. 848]{Goldman2008}.
+		\item $m \geq \frac{n^{2}}{4}$, or comparable arbitrarily chosen cutoff \cite[\S52.2, pp. 848; \S55, pp. 901]{Goldman2008}.
 		\end{enumerate}
 	\item Criteria for a graph to be considered as a sparse graph: \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt

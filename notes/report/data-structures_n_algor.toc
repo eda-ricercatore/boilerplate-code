@@ -8,9 +8,9 @@
 \contentsline {section}{\numberline {2.3}Graph Data Structures}{3}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Graph Theory}{3}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Graph Representations}{10}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Functions that need to be implemented}{12}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.3}Functions that need to be implemented}{13}{subsection.2.3.3}
 \contentsline {subsection}{\numberline {2.3.4}Directed Graphs, and Directed Acyclic Graphs}{23}{subsection.2.3.4}
-\contentsline {subsubsection}{\numberline {2.3.4.1}Binary Decision Diagrams (BDDs)}{23}{subsubsection.2.3.4.1}
+\contentsline {subsubsection}{\numberline {2.3.4.1}Binary Decision Diagrams (BDDs)}{24}{subsubsection.2.3.4.1}
 \contentsline {subsubsection}{\numberline {2.3.4.2}AND-Inverter Graphs (AIGs)}{24}{subsubsection.2.3.4.2}
 \contentsline {subsubsection}{\numberline {2.3.4.3}Majority-Inverter Graphs (MIGs)}{24}{subsubsection.2.3.4.3}
 \contentsline {subsection}{\numberline {2.3.5}Undirected Graphs}{24}{subsection.2.3.5}
