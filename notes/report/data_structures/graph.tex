@@ -304,6 +304,7 @@ The ways to represent graphs are listed as follows: \vspace{-0.3cm}
 		\item \cite[\S52.7, pp. 844; \S52.6--\S52.7, pp. 851--856]{Goldman2008}
 		\item Memory/Space efficient representation of dense graphs, especially when they are not multigraphs. It can represent dense undirected graphs most efficiently \cite[\S54, pp. 883]{Goldman2008}.
 		\item For enumerating the edges outgoing from or incoming to a vertex in the graph, it takes $O(n)$ time, which slows down algorithms that need to enumerate edges outgoing from or incoming to each vertex in the graph \cite[\S54, pp. 883]{Goldman2008}.
+		\item \cite[\S22.1, pp. 589, 591--592]{Cormen2009} covers {\bf adjacency matrix} graph representation. For dense graphs, the {\bf adjacency matrix} graph representation enables quick determination of whether an edge exists between any pair of vertices in the graph \cite[\S22.1, pp. 589]{Cormen2009}.
 		\item An adjacency matrix is a preferred representation for dense graphs, which have the property $|E| \approx |V|^{2}$. It is also preferred if there exists a need to frequently determine if there is an edge connecting any given pair of vertices (fast lookup, or fast access time) \cite[\S22.1, pp. 589]{Cormen2009}. The reference \cite[\S22.1, pp. 589--590]{Cormen2009} covers {\bf adjacency matrix} graph representation.
 		\item \cite[\S5, pp. 78]{Cormen2013}
 		\item Its computational space complexity is $O(|V|^{2})$ \cite[\S13.2, pp. 600]{Goodrich2011} \cite[\S14.2, pp. 627]{Goodrich2013} \cite{WikipediaContributors2018a49}.
@@ -318,7 +319,7 @@ The ways to represent graphs are listed as follows: \vspace{-0.3cm}
 		\begin{enumerate} \itemsep -2pt
 		\item \cite{WikipediaContributors2018a49}
 		\item \cite[\S52.7, pp. 854; \S52.6--\S52.7, pp. 851--856; \S55, pp. 901--915]{Goldman2008}
-		\item An adjacency list is a compact representation for sparse graphs \cite[\S54, pp. 883]{Goldman2008}, which have the property $|E| \ll |V|^{2}$ \cite[\S22.1, pp. 589]{Cormen2009}. \cite[\S22.1, pp. 589,591--592]{Cormen2009} covers {\bf adjacency matrix} graph representation. That is, it is ``space efficient'' \cite[\S55, pp. 901]{Goldman2008}, or memory efficient.
+		\item An adjacency list is a compact representation for sparse graphs \cite[\S54, pp. 883]{Goldman2008}, which have the property $|E| \ll |V|^{2}$ \cite[\S22.1, pp. 589]{Cormen2009}. That is, it is ``space efficient'' \cite[\S55, pp. 901]{Goldman2008}, or memory efficient.
 		\item {\bf It enables algorithms to efficiently (in regards to computational time complexity) enumerate edges outgoing from or incoming to each vertex in the graph faster than the adjacency matrix graph representation \cite[\S55, pp. 901]{Goldman2008}; the vertices in the graph are enumerated in a data-dependent order. The computational time complexity of enumerating the list of incoming edges and the list of outgoing edges can be reduced by using a set of incoming edges and a set of outgoing edges, due to the hashing properties of hash sets.}
 		\item \cite[\S5, pp. 79]{Cormen2013}
 		\item Its computational space complexity is $O(|V|+|E|)$ \cite[\S13.2, pp. 600]{Goodrich2011} \cite[\S14.2, pp. 627]{Goodrich2013} \cite{WikipediaContributors2018a49}. While it is space efficient for sparse graphs, it is not space efficient for dense graphs.
@@ -393,15 +394,18 @@ References to cover: \vspace{-0.3cm}
 		\begin{enumerate} \itemsep -2pt
 		\item Use {\bf expected time complexity} for {\it randomized algorithms}, or for {\it measuring computational time complexity based on random input}. For the latter case, we should specify the probability distribution for the possible inputs (e.g., uniform probability distribution). 
 		\end{enumerate}
-	\item \cite[\S53.8]{Goldman2008} discusses the computational time complexity of the graph algorithms.
+	\item \cite[\S52, pp. 843--844; \S52.2, pp. 845--848]{Goldman2008} covers information on graph theory.
+	\item \cite[\S53.8]{Goldman2008} discusses the computational time complexity of the graph algorithms. {\bf Update references in graph theory with this section!!!}
 	\end{enumerate}
 \item \cite{Cormen2009}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
-	\item \cite[\S B.4]{Cormen2009} covers graphs, and \cite[\S B.5]{Cormen2009} covers trees.
+	\item \cite[\S B.4]{Cormen2009} covers graphs, and \cite[\S B.5]{Cormen2009} covers trees. \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item (Free) trees are connected, undirected acyclic graphs \cite[\S B.5.1, pp. 173]{Cormen2009}.
+		\end{enumerate}
 	\item \cite[\S22.1]{Cormen2009} covers graph representations
 	\item \cite[\S D]{Cormen2009} covers basic matrix theory and matrix algebra.
-	\item \cite[\S21]{Cormen2009} and \cite[\S14.7]{Goodrich2013} cover data structures for disjoint sets.
-	\item \cite[\S52, pp. 843--844; \S52.2, pp. 845--848]{Goldman2008} covers information on graph theory. {\bf Update references in graph theory with this section!!!}
+	\item \cite[\S21]{Cormen2009} and \cite[\S14.7]{Goodrich2013} cover data structures for disjoint sets. {\bf Update references in graph theory with this section!!!}
 	\end{enumerate}
 \item \cite{Cormen2013}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
@@ -468,19 +472,29 @@ Other ontologies of graphs are based on whether the graphs are: \vspace{-0.3cm}
 
 Required, or strongly preferred, data structures for implementing graphs: \vspace{-0.3cm}
 \begin{enumerate} \itemsep -4pt
-\item Fibonacci heap: \vspace{-0.3cm}
+\item Fibonacci heaps \cite[\S19, pp. 505--530]{Cormen2009}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
-	\item Used to implement the following graph algorithms: \vspace{-0.2cm}
-		\begin{enumerate} \itemsep -2pt
+	\item Used to implement the following (fast) graph algorithms \cite[\S V, pp. 481--482; \S19, pp.505]{Cormen2009}: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep - 2pt
 		\item Dijkstra's single-source shortest path algorithm \cite[\S24.8, pp. 351; \S57, pp. 925]{Goldman2008}.
 		\item all-pairs shortest paths algorithm \cite[\S24.8, pp. 351]{Goldman2008}.
-		\item Prim's or Prim-Jarnik algorithm minimum spanning tree problem \cite[\S24.8, pp. 351; \S57, pp. 925]{Goldman2008}.
+		\item Prim's or Prim-Jarnik algorithm minimum spanning tree problem \cite[\S24.8, pp. 351; \S57, pp. 925]{Goldman2008} \cite[\S23, pp. 624; \S23-2, pp. 638]{Cormen2009}.
 		\end{enumerate}
 	\item ``The Fibonacci heap is a forest, and not a tree'' \cite[\S28.2, pp. 426]{Goldman2008}..
 	\item When implementing priority queues, it uses constant time for merge operation instead of logarithmic time (leftist heap) or linear time (binary heap) \cite[\S24.4, pp. 346]{Goldman2008}.
 	\item It has poor computational space complexity \cite[\S24.4, pp. 346--347]{Goldman2008}.
 	\item See \cite[\S24.7, pp. 350]{Goldman2008} for the class hierarchy of priority queues and their implementations using binary heaps, leftist heaps, or pairing heaps (including Fibonacci heaps).
 	\item Instead of using the Fibonacci heap, use pairing heap to implement Prim's algorithm, or Prim-Jarnik algorithm, for minimum spanning trees \cite[\S24.8, pp. 351]{Goldman2008}. 
+	\item Certain types of relaxed heaps are faster than Fibonacci heaps for certain operations, especially for parallel programming \cite[\S19.Chapter notes, pp. 530]{Cormen2009}. %\vspace{-0.2cm}
+		\begin{enumerate} %\itemsep -2pt
+		\item Driscoll, Gabow, Shrairman, and Tarjan [96]. James R. Driscoll, Harold N. Gabow, Ruth Shrairman, and Robert E. Tarjan. Relaxed heaps: An alternative to Fibonacci heaps with applications to parallel computation. Communications of the ACM, 31(11):1343--1354, 1988. \cite[\S29.Chapter notes, pp. 530; \S Bibliography, pp. 1236]{Cormen2009}.
+		\end{enumerate}
+	\item Analysis and treatment of Fibonacci heaps do not need understanding of binomial heaps as a prerequisite \cite[\S Preface, pp. xvi]{Cormen2009}.
+	\item See the following reference for the fastest implementation of Fibonacci heaps \cite[\S6.Chapter notes, pp. 169]{Cormen2009}: %\vspace{-0.2cm}
+		\begin{enumerate} %\itemsep -2pt
+		\item Rajeev Raman. Recent results on the single-source shortest paths problem. SIGACT News, 28(2):81--87, 1997. This is reference [291] in \cite[\S6.Chapter notes, pp. 169; \S Bibliography, pp. 1246]{Cormen2009}.
+		\item The bounds of {\sc Extract-Min} and {\sc Insert} are $O(\min(\lg^{\frac{1}{4} + \epsilon} C, \lg^{\frac{1}{3} + \epsilon} n))$
+		\end{enumerate}
 	\end{enumerate}
 \item circular array for topological sort (for DAGs) \cite[\S53, pp. 857]{Goldman2008}.
 \item queue (FIFO) for BFS \cite[\S53, pp. 857]{Goldman2008}.
@@ -743,7 +757,12 @@ Solvers for the following problems (or to perform the following functions) regar
 		\item \url{https://en.wikipedia.org/wiki/Shortest_path_problem}
 		\item \cite[\S55.2]{Goldman2008} references standard algorithms to find the shortest path.
 		\item In addition, \cite[\S55.3]{Goldman2008} suggests using the in-tree data structure to represent the shortest path tree.
-		\item \cite[\S24--\S25]{Cormen2009}
+		\item \cite[\S24--\S25]{Cormen2009}: \vspace{-0.1cm}
+			\begin{enumerate} \itemsep -1pt
+			\item For the single-source shortest-paths problem, by implementing the min-priority queue with a Fibonacci heap, the running time (or computational time complexity) can be significantly improved \cite[\S24.3, pp. 662]{Cormen2009} 
+			\item For graphs with ``weights [that] relatively small non-negative integers,'' there are faster ``algorithms to solve the single-source shortest-paths problems'' \cite[\S24.Chapter notes, pp. 682]{Cormen2009}.
+			\item To solve the all-pairs shortest paths problem, for each source vertex (or, vertex acting as the source) use Dijkstra's algorithm for the single-source shortest-paths problem along with an implementation of the min-priority queue with a Fibonacci heap \cite[\S25, pp. 684]{Cormen2009}.
+			\end{enumerate}
 		\item \cite[\S6]{Cormen2013}
 		\item \cite[\S13.5]{Goodrich2011}
 		\item \cite[\S14.6]{Goodrich2013}
@@ -772,7 +791,11 @@ Solvers for the following problems (or to perform the following functions) regar
 			\end{itemize}
 		\item {\bf Kruskal's algorithm}: \url{https://en.wikipedia.org/wiki/Kruskal%27s_algorithm}
 		\item \url{https://en.wikipedia.org/wiki/Minimum_spanning_tree}
-		\item \cite[\S23]{Cormen2009}
+		\item \cite[\S23]{Cormen2009}: %\vspace{-0.1cm}
+			\begin{enumerate} %\itemsep -1pt
+			\item \cite[\S23.Chapter notes, pp. 642]{Cormen2009} addresses {\bf spanning-tree verification}.
+			\item \cite[\S23.Chapter notes, pp. 642]{Cormen2009} also mentions faster algorithms for finding the minimum spanning tree (MST).
+			\end{enumerate}
 		\item \cite[\S13.6]{Goodrich2011}
 		\item \cite[\S14.7]{Goodrich2013}
 		\end{itemize}
