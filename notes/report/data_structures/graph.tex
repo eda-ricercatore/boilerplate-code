@@ -761,7 +761,12 @@ Solvers for the following problems (or to perform the following functions) regar
 			\begin{enumerate} \itemsep -1pt
 			\item For the single-source shortest-paths problem, by implementing the min-priority queue with a Fibonacci heap, the running time (or computational time complexity) can be significantly improved \cite[\S24.3, pp. 662]{Cormen2009} 
 			\item For graphs with ``weights [that] relatively small non-negative integers,'' there are faster ``algorithms to solve the single-source shortest-paths problems'' \cite[\S24.Chapter notes, pp. 682]{Cormen2009}.
-			\item To solve the all-pairs shortest paths problem, for each source vertex (or, vertex acting as the source) use Dijkstra's algorithm for the single-source shortest-paths problem along with an implementation of the min-priority queue with a Fibonacci heap \cite[\S25, pp. 684]{Cormen2009}.
+			\item To solve the all-pairs shortest paths problem: \vspace{-0.1cm}
+				\begin{itemize} \itemsep -1pt
+				\item For each source vertex (or, vertex acting as the source) use Dijkstra's algorithm for the single-source shortest-paths problem along with an implementation of the min-priority queue with a Fibonacci heap \cite[\S25, pp. 684]{Cormen2009}.
+				\item For sparse graphs, Johnson's algorithm can solve the all-pairs shortest paths problem more efficient using an implementation of the min-priority queue with a Fibonacci heap (or, Fibonacci heap min-priority queue) \cite[\S25.3, pp. 700]{Cormen2009}.
+				\item However, for dense graphs, ``using $d$-ary min-heaps in shortest-paths algorithms on $\epsilon$-dense graphs'' can result in computational complexities or running times comparable to Fibonacci-heap-based algorithms \cite[\S25.Problems, pp. 706]{Cormen2009}.
+				\end{itemize}
 			\end{enumerate}
 		\item \cite[\S6]{Cormen2013}
 		\item \cite[\S13.5]{Goodrich2011}
