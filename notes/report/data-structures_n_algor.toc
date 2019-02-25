@@ -9,12 +9,12 @@
 \contentsline {subsection}{\numberline {2.3.1}Graph Theory}{3}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Graph Representations}{10}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}Functions that need to be implemented}{13}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}Directed Graphs, and Directed Acyclic Graphs}{23}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.3.4}Directed Graphs, and Directed Acyclic Graphs}{24}{subsection.2.3.4}
 \contentsline {subsubsection}{\numberline {2.3.4.1}Binary Decision Diagrams (BDDs)}{24}{subsubsection.2.3.4.1}
 \contentsline {subsubsection}{\numberline {2.3.4.2}AND-Inverter Graphs (AIGs)}{24}{subsubsection.2.3.4.2}
 \contentsline {subsubsection}{\numberline {2.3.4.3}Majority-Inverter Graphs (MIGs)}{24}{subsubsection.2.3.4.3}
 \contentsline {subsection}{\numberline {2.3.5}Undirected Graphs}{24}{subsection.2.3.5}
-\contentsline {subsection}{\numberline {2.3.6}Resources for Graphs}{24}{subsection.2.3.6}
+\contentsline {subsection}{\numberline {2.3.6}Resources for Graphs}{25}{subsection.2.3.6}
 \contentsline {section}{\numberline {2.4}Notes on Data Structures for External Memory Computation}{25}{section.2.4}
 \contentsline {chapter}{\numberline {3}Optimization}{26}{chapter.3}
 \contentsline {section}{\numberline {3.1}Benchmarks for Optimization}{26}{section.3.1}
