@@ -57,8 +57,8 @@ Types of {\bf finite graphs} \cite{WikipediaContributors2018a38}: \vspace{-0.2cm
 			\item {\bf undirected multigraph, which edges have no identity}, is an ordered pair (or 2-tuple) $G = (V, E)$, where $V$ is a set of vertices (or, nodes), $E$ is a multi-set of undirected edges (or unordered pairs of vertices).
 			\item {\bf undirected multigraph, which edges have an identity each (or, where each edge has an identity)}, is an ordered triple (or 3-tuple) $G = (V, E, r)$, such that $r: E \rightarrow \{\{x, y\} : x, y \in V\}$ is a function that assigns each edge to an unordered pair of vertices (i.e., endpoint nodes).
 			\item {\bf directed multigraph (or multidigraph or quiver), which edges have no identity}, is an ordered pair (or 2-tuple) $G = (V,E)$. Here, $V$ is a set of vertices (or, nodes), and $E$ is a multi-set of ordered pairs of vertices (i.e., directed edges, directed arcs, or arrows)
+			\item A {\bf directed multigraph (or multidigraph or quiver), which edges have an identity each (or, where each edge has an identity)}, is a 4-tuple $G = (V, E, s, t)$. Here, $V$ is a set of vertices (or nodes), $E$ is a multi-set of ordered pairs of vertices (i.e., directed edges, directed arcs, or arrows), $s : E \rightarrow V$ so that each edge is assigned to its source node(s), and $t : E \rightarrow V$ so that each edge is assigned to its destination/target node(s).
 			\item A {\bf mixed multigraph} is a(n) (ordered) 3-tuple $G = (V, E, A)$, where $V$ is a set of vertices (or, nodes), $E$ is a set of undirected edges, and $A$ is a multi-set of directed edges/arcs.
-			\item A {\bf directed multigraph (or multidigraph or quiver), which edges have an identity each (or, where each edge has an identity)}, is a 4-tuple $G = (V, E, s, t)$. Here, $V$ is a set of vertices (or nodes), $E$ is a multi-set of ordered pairs of vertices (i.e., directed edges, directed arcs, or arrows), $s : E \rightarrow V$ so that each edge is assigned to its source node, and $t : E \rightarrow V$ so that each edge is assigned to its destination/target node.
 			\end{itemize}
 		\item A {\bf labeled multigraph} is a 6-tuple $G = (\sum_{V}, \sum_{E}, V, E, l_{V}, l_{E})$. Here, $V$ is a set of vertices (or, nodes), and $E$ is a multi-set of ordered pairs of vertices (i.e., directed edges, directed arcs, or arrows), $\sum_{V}$ is the finite alphabet of available vertex labels, $\sum_{E}$ is the finite alphabet of available edge labels, $l_{V} : V \rightarrow \sum_{V}$ is a map describing the labeling of the vertices, and $l_{E} : E \rightarrow \sum_{E}$ is a map describing the labeling of the edges.
 		\item A {\bf labeled multidigraph} is also known as a {\bf labeled, directed multigraph}. It is a 8-tuple $G = (\sum_{V}, \sum_{E}, V, E, s, t, l_{V}, l_{E})$. Here, $V$ is a set of vertices (or, nodes), and $E$ is a multi-set of ordered pairs of vertices (i.e., directed edges, directed arcs, or arrows), $\sum_{V}$ is the finite alphabet of available vertex labels, $\sum_{E}$ is the finite alphabet of available edge labels, $s : E \rightarrow V$ so that each edge is assigned to its source node (or, is a map that assigns each edge to its source node), $t : E \rightarrow V$ so that each edge is assigned to its destination/target node (or, is a map that assigns each edge to its destination/target node), $l_{V} : V \rightarrow \sum_{V}$ is a map describing the labeling of the vertices, and $l_{E} : E \rightarrow \sum_{E}$ is a map describing the labeling of the edges.
@@ -630,6 +630,7 @@ Common functions that need to be implemented in {\bf undirected graph} data stru
 \item {\bf Edge class}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
 	\item {\tt get\_endpoints()} \cite[\S14.1.1, pp. 626]{Goodrich2013}. Or, name it {\tt get\_end\_vertices()} \cite[\S13.1.1, pp. 599]{Goodrich2011}.
+	\item {\tt is\_endpoint($v_{u}$)} returns boolean {\tt True} if vertex $v_{u}$ is an endpoint of this edge. Else, return boolean {\tt False}.
 	\item {\tt is\_adjacent\_edge($e_{i}$)} \cite[\S13.1.1, pp. 599]{Goodrich2011}. If the one of the endpoints of this edge is one of the endpoints on edge $e$, this edge is adjacent to edge $e$.
 	\item {\tt is\_incident\_on\_vertex($v_{u}$)} \cite[\S13.1.1, pp. 599]{Goodrich2011}.
 	\item For two-endpoint edges, {\tt is\_opposite\_vertex($v_{u}$)} \cite[\S13.1.1, pp. 599]{Goodrich2011}.
@@ -710,7 +711,8 @@ Common functions that need to be implemented in {\bf directed graph} data struct
 	\item {\tt is\_adjacent\_edge($e_{i}$)} \cite[\S13.1.1, pp. 599]{Goodrich2011}. That is, determine if the destination vertex of this edge is the source vertex for $e_{i}$; if they are, they are adjacent.
 	\item {\tt is\_incident\_from\_vertex($v_{u}$)} \cite[\S13.1.1, pp. 599]{Goodrich2011}. Is current edge incident from $v_{u}$? Basically, this is equivalent to {\tt is\_head\_vertex($v_{u}$)} (or, {\tt is\_src\_vertex($v_{u}$)}).
 	\item {\tt is\_incident\_to\_vertex($v_{v}$)} \cite[\S13.1.1, pp. 599]{Goodrich2011}. Is current vertex incident to $v_{v}$? Basically, this is equivalent to {\tt is\_tail\_vertex($v_{v}$)} (or, {\tt is\_destn\_vertex($v_{v}$)}).
-	\item 
+	\item {\tt is\_src\_vertex($v_{u}$)} returns boolean {\tt True} if vertex $v_{u}$ is a source vertex of this edge. Else, return boolean {\tt False}.
+	\item {\tt is\_destn\_vertex($v_{u}$)} returns boolean {\tt True} if vertex $v_{u}$ is a destination vertex of this edge. Else, return boolean {\tt False}.
 	%\item {\tt get\_endpoints()}. Or, name it {\tt get\_end\_vertices()} \cite[\S13.1.1, pp. 599]{Goodrich2011}. {\it This is pretty useless.}
 	\end{enumerate}
 \end{enumerate}
@@ -1062,6 +1064,25 @@ Other problems and types of graphs, not of comparable importance: \vspace{-0.3cm
 
 
 The {\it GraphException} class is a child class of the Exception class. See \url{https://github.com/eda-ricercatore/gulyas-scripts/blob/master/notes/python.md#exception-handling} for information about implementing the {\it GraphException} class \cite[\S52.4, pp. 849]{Goldman2008}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Decision Decisions in Implementing Graphs}
+\label{sssec:DecisionDecisionsInImplementingGraphs}
+
+Design decisions in implementing graphs: \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item Assume that edges of the graphs have no identities \cite{WikipediaContributors2018a39}.: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item This makes defining the constructor and instantiating instances of the graph data structures easier. Since there is no need to define a function (for each graph class) that assigns each edge to: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item An unordered pair of vertices or (for endpoint nodes) for undirected graphs.
+		\item Its designation and target nodes for directed graphs.
+		\end{enumerate}
+	\item The smaller the tuple for defining the constructor of the graph class, the easier it is to maintain the graph module/package, extend it, and use it.
+	\end{enumerate}
+\end{enumerate}
+
 
 
 
