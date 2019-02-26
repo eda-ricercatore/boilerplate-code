@@ -401,7 +401,8 @@ References to cover: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
 	\item \cite[\S B.4]{Cormen2009} covers graphs, and \cite[\S B.5]{Cormen2009} covers trees. \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
-		\item (Free) trees are connected, undirected acyclic graphs \cite[\S B.5.1, pp. 173]{Cormen2009}.
+		\item Free trees are connected, undirected acyclic graphs \cite[\S B.5.1, pp. 173]{Cormen2009}.
+		\item Rooted trees are acyclic graphs with a root \cite[\S13.1, pp. 598]{Goodrich2011}.
 		\end{enumerate}
 	\item \cite[\S22.1]{Cormen2009} covers graph representations
 	\item \cite[\S D]{Cormen2009} covers basic matrix theory and matrix algebra.
@@ -472,22 +473,26 @@ Other ontologies of graphs are based on whether the graphs are: \vspace{-0.3cm}
 
 Required, or strongly preferred, data structures for implementing graphs: \vspace{-0.3cm}
 \begin{enumerate} \itemsep -4pt
-\item Fibonacci heaps \cite[\S19, pp. 505--530]{Cormen2009}: \vspace{-0.3cm}
+\item Fibonacci heaps \cite[\S19, pp. 505--530]{Cormen2009}, or ``F-heaps'' \cite[\S6, pp. 101]{Cormen2013}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
 	\item Used to implement the following (fast) graph algorithms \cite[\S V, pp. 481--482; \S19, pp.505]{Cormen2009}: \vspace{-0.2cm}
 		\begin{enumerate} \itemsep - 2pt
-		\item Dijkstra's single-source shortest path algorithm \cite[\S24.8, pp. 351; \S57, pp. 925]{Goldman2008}.
+		\item Dijkstra's single-source shortest path algorithm \cite[\S24.8, pp. 351; \S57, pp. 925]{Goldman2008} \cite[\S14.6.2, pp. 667; \S14.Chapter Notes, pp. 696]{Goodrich2013} \cite[\S13.Chapter Notes, pp. 663]{Goodrich2011}.
 		\item all-pairs shortest paths algorithm \cite[\S24.8, pp. 351]{Goldman2008}.
-		\item Prim's or Prim-Jarnik algorithm minimum spanning tree problem \cite[\S24.8, pp. 351; \S57, pp. 925]{Goldman2008} \cite[\S23, pp. 624; \S23-2, pp. 638]{Cormen2009}.
+		\item Prim's or Prim-Jarnik algorithm minimum spanning tree problem \cite[\S24.8, pp. 351; \S57, pp. 925]{Goldman2008} \cite[\S23, pp. 624; \S23-2, pp. 638]{Cormen2009} \cite[\S14.Chapter Notes, pp. 696]{Goodrich2013} \cite[\S13.Chapter Notes, pp. 663]{Goodrich2011}.
 		\end{enumerate}
-	\item ``The Fibonacci heap is a forest, and not a tree'' \cite[\S28.2, pp. 426]{Goldman2008}..
+	\item ``The Fibonacci heap is a forest, and not a tree'' \cite[\S28.2, pp. 426]{Goldman2008}.
 	\item When implementing priority queues, it uses constant time for merge operation instead of logarithmic time (leftist heap) or linear time (binary heap) \cite[\S24.4, pp. 346]{Goldman2008}.
 	\item It has poor computational space complexity \cite[\S24.4, pp. 346--347]{Goldman2008}.
 	\item See \cite[\S24.7, pp. 350]{Goldman2008} for the class hierarchy of priority queues and their implementations using binary heaps, leftist heaps, or pairing heaps (including Fibonacci heaps).
 	\item Instead of using the Fibonacci heap, use pairing heap to implement Prim's algorithm, or Prim-Jarnik algorithm, for minimum spanning trees \cite[\S24.8, pp. 351]{Goldman2008}. 
 	\item Certain types of relaxed heaps are faster than Fibonacci heaps for certain operations, especially for parallel programming \cite[\S19.Chapter notes, pp. 530]{Cormen2009}. %\vspace{-0.2cm}
 		\begin{enumerate} %\itemsep -2pt
-		\item Driscoll, Gabow, Shrairman, and Tarjan [96]. James R. Driscoll, Harold N. Gabow, Ruth Shrairman, and Robert E. Tarjan. Relaxed heaps: An alternative to Fibonacci heaps with applications to parallel computation. Communications of the ACM, 31(11):1343--1354, 1988. \cite[\S29.Chapter notes, pp. 530; \S Bibliography, pp. 1236]{Cormen2009}.
+		\item Driscoll, Gabow, Shrairman, and Tarjan [96]. James R. Driscoll, Harold N. Gabow, Ruth Shrairman, and Robert E. Tarjan. Relaxed heaps: An alternative to Fibonacci heaps with applications to parallel computation. Communications of the ACM, 31(11):1343--1354, 1988. \cite[\S29.Chapter notes, pp. 530; \S Bibliography, pp. 1236]{Cormen2009} \cite[\S Bibliography, pp. 733]{Goodrich2013} \cite[\S Bibliography, pp. 698]{Goodrich2011}.
+		\end{enumerate}
+	\item Also, see \cite[\S Bibliography, pp. 733]{Goodrich2013} \cite[\S Bibliography, pp. 698]{Goodrich2011}: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item M. L. Fredman and R. E. Tarjan, ``Fibonacci heaps and their uses in improved network optimization algorithms,'' J. ACM, vol. 34, pp. 596--615, 1987.
 		\end{enumerate}
 	\item Analysis and treatment of Fibonacci heaps do not need understanding of binomial heaps as a prerequisite \cite[\S Preface, pp. xvi]{Cormen2009}.
 	\item See the following reference for the fastest implementation of Fibonacci heaps \cite[\S6.Chapter notes, pp. 169]{Cormen2009}: %\vspace{-0.2cm}
@@ -519,6 +524,15 @@ Common functions that need to be implemented in graph data structures; they are 
 	\item {\tt add\_edge($v_{u}, v_{v}, elem$)}, or {\tt add\_edge($e_{i}, elem$)} \cite[\S52.4, pp. 849; \S52.5, pp. 850]{Goldman2008}: $v_{u}$ and $v_{v}$ are vertices (of the graph), and the edge is added if $v_{u}, v_{v} \in V_{G}$ and edge $e_{i} = (v_{u}, v_{v}) \not\in E_{G}$ \cite{WikipediaContributors2018a49}. $elem$ represents the attribute(s) of the edge object \cite[\S13.1.1, pp. 599]{Goodrich2011}.
 	\item {\tt remove\_edge($v_{u}, v_{v}$)}, {\tt remove\_edge($e_{i}$)}, {\tt remove\_edge($v_{u}, e_{i}$)} \cite[\S55.3.4, pp. 909]{Goldman2008}: $v_{u}$ and $v_{v}$ are vertices (of the graph), and the edge is removed if $v_{u}, v_{v} \in V_{G}$ and edge $e_{i} = (v_{u}, v_{v}) \in E_{G}$ \cite{WikipediaContributors2018a49} \cite[\S13.1.1, pp. 599]{Goodrich2011} \cite[\S52.4, pp. 849]{Goldman2008}.
 	\item {\tt has\_edge($v_{u}, v_{v}$)}, or {\tt has\_edge($e_{i}$)}: $v_{u}$ and $v_{v}$ are vertices (of the graph), and the boolean {\tt True} is returned if $v_{u}, v_{v} \in V_{G}$ and edge $e_{i} = (v_{u}, v_{v}) \in E_{G}$. Else, return boolean {\tt False} \cite[\S52.4, pp. 849; \S52.5, pp. 850]{Goldman2008}.
+	\item {\tt get\_edge($v_{u}, v_{v}$)}
+	
+	
+	
+	
+	
+	
+	
+	\cite[\S14.1.1, pp. 626]{Goodrich2013}
 	\item {\tt get\_vertex\_attribute\_x($v_{u}$)}: return the value associated with vertex $v_{u}$'s attribute $x$ \cite{WikipediaContributors2018a49}.
 	\item {\tt set\_vertex\_attribute\_x($v_{u}, value$)}: assigns/sets the value $value$ associated with vertex $v_{u}$'s attribute $x$ \cite{WikipediaContributors2018a49}.
 	\item {\tt get\_edge\_attribute\_x($(v_{u}, v_{v})$)}, or {\tt get\_edge\_attribute\_x($e_{i}$)}: return the value associated with the edge $e_{i} = (v_{u}, v_{v})$'s attribute $x$ \cite{WikipediaContributors2018a49}.
@@ -626,7 +640,7 @@ Common functions that need to be implemented in {\bf undirected graph} data stru
 	\item {\tt is\_incident\_on\_vertex($v_{u}$)} \cite[\S13.1.1, pp. 599]{Goodrich2011}.
 	\item For two-endpoint edges, {\tt is\_opposite\_vertex($v_{u}$)} \cite[\S13.1.1, pp. 599]{Goodrich2011}.
 	\item For two-endpoint edges, {\tt get\_opposite\_vertex($v_{u}$)} \cite[\S13.1.1, pp. 599]{Goodrich2011} \cite[\S14.1.1, pp. 626]{Goodrich2013}.
-	\item {\tt is\_incident\_on($v_{u}$)} \cite[\S13.1.1, pp. 599]{Goodrich2011}
+	\item {\tt is\_incident\_on($v_{u}$)} \cite[\S13.1.1, pp. 599]{Goodrich2011}. Is $v_{u}$ the sink end-point of the edge \cite[\S13.1.1, pp. 599]{Goodrich2011}?
 	\end{enumerate}
 \end{enumerate}
 
@@ -646,6 +660,7 @@ Common functions that need to be implemented in {\bf directed graph} data struct
 	\item {\tt get\_topological\_order()} returns an ordered set of vertices representing the graph $G_{DAG}$ traversal using topological sort \cite[\S52.4, pp. 850]{Goldman2008}. If  $G_{DAG}$ is not a directed acyclic graph (DAG), throw a {\tt GraphException}. \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
 		\item (May) require circular array to implement topological sort \cite[\S53, pp. 857]{Goldman2008}.
+		\item The algorithm for topological sort that is presented in \cite[\S22]{Cormen2009} is different \cite[\S5, pp. 89]{Cormen2013} from the algorithm for topological sort that is presented in \cite[\S5, pp. 75--78, 80]{Cormen2013} and in \cite{Knuth1997}, which are more intuitive but not as simple \cite[\S5, pp. 89]{Cormen2013}.
 		\end{enumerate}
 	\item {\tt get\_shortest\_path\_between\_vertices($v_{u}, v_{v}$)} returns the shortest path from vertex $v_{u}$ to vertex $v_{v}$ \cite[\S52.4, pp. 850]{Goldman2008}.
 	\item {\tt get\_set\_of\_shortest\_paths\_from\_vertex($v_{u}$)} returns the set of shortest paths from vertex $v_{u}$ to each reachable vertex $v_{i}$ (from $v_{u}$), such that a path from $v_{u}$ to $v_{i}$ exists, $\forall i \in$ set of paths from $v_{u}$ \cite[\S52.4, pp. 850]{Goldman2008}.
@@ -684,17 +699,17 @@ Common functions that need to be implemented in {\bf directed graph} data struct
 	\item {\tt is\_outgoing\_edge($e_{i}$)}
 	\item {\tt get\_incoming\_edges()} \cite[\S52.5, pp. 851]{Goldman2008}
 	\item {\tt is\_incoming\_edge($e_{i}$)}
-	\item {\tt get\_tail\_vertex()}
-	\item {\tt get\_tail\_vertices()} for directed hypergraphs
-	\item {\tt is\_adjacent\_to\_destn\_vertex($v_{v}$)}
-	\item {\tt is\_adjacent\_from\_src\_vertex($v_{v}$)}
+%	\item {\tt get\_destn\_vertex()}
+%	\item {\tt get\_destn\_vertices()} for directed hypergraphs
+	\item {\tt is\_adjacent\_to\_destn\_vertex($v_{v}$)} \cite[\S13.1.1, pp. 599]{Goodrich2011}. Does the edge $(v_{current}, v_{v})$ exists?
+	\item {\tt is\_adjacent\_from\_src\_vertex($v_{u}$)} \cite[\S13.1.1, pp. 599]{Goodrich2011}. Does the edge $(v_{u}, v_{current})$ exists?
 	\end{enumerate}
 \item {\bf Edge class}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
-	\item {\tt get\_head\_vertex()}, or {\tt get\_src\_vertex()}
-	\item {\tt get\_head\_vertices()}, or {\tt get\_src\_vertices()}, for directed hypergraphs
-	\item {\tt get\_tail\_vertex()}, {\tt get\_destn\_vertex()}
-	\item {\tt get\_tail\_vertices()}, or {\tt get\_destn\_vertices()}, for directed hypergraphs
+	\item {\tt get\_head\_vertex()}, or {\tt get\_src\_vertex()} \cite[\S13.1.1, pp. 599]{Goodrich2011}.
+	\item {\tt get\_head\_vertices()}, or {\tt get\_src\_vertices()}, for directed hypergraphs \cite[\S13.1.1, pp. 599]{Goodrich2011}.
+	\item {\tt get\_tail\_vertex()}, {\tt get\_destn\_vertex()} \cite[\S13.1.1, pp. 599]{Goodrich2011}.
+	\item {\tt get\_tail\_vertices()}, or {\tt get\_destn\_vertices()}, for directed hypergraphs \cite[\S13.1.1, pp. 599]{Goodrich2011}.
 	\item For two-endpoint edges, {\tt is\_opposite\_vertex($v_{u}$)} \cite[\S13.1.1, pp. 599]{Goodrich2011}. {\it This is pretty useless.}
 	\item {\tt is\_adjacent\_edge($e_{i}$)} \cite[\S13.1.1, pp. 599]{Goodrich2011}. That is, determine if the destination vertex of this edge is the source vertex for $e_{i}$; if they are, they are adjacent.
 	\item {\tt is\_incident\_from\_vertex($v_{u}$)} \cite[\S13.1.1, pp. 599]{Goodrich2011}. Is current edge incident from $v_{u}$? Basically, this is equivalent to {\tt is\_head\_vertex($v_{u}$)} (or, {\tt is\_src\_vertex($v_{u}$)}).
@@ -759,11 +774,12 @@ Solvers for the following problems (or to perform the following functions) regar
 		\item In addition, \cite[\S55.3]{Goldman2008} suggests using the in-tree data structure to represent the shortest path tree.
 		\item \cite[\S24--\S25]{Cormen2009}: \vspace{-0.1cm}
 			\begin{enumerate} \itemsep -1pt
-			\item For the single-source shortest-paths problem, by implementing the min-priority queue with a Fibonacci heap, the running time (or computational time complexity) can be significantly improved \cite[\S24.3, pp. 662]{Cormen2009} 
+			\item For the single-source shortest-paths problem, by implementing the min-priority queue with a Fibonacci heap, the running time (or computational time complexity) can be significantly improved \cite[\S24.3, pp. 662]{Cormen2009} \cite[\S6, pp. 101]{Cormen2013}.
+			\item ``In practice,'' other heaps (such as binary heaps) are used to implement the min-priority queue, which have better ``constant factors hidden in the asymptotic notation'' than Fibonacci heaps \cite[\S6, pp. 101]{Cormen2013}.
 			\item For graphs with ``weights [that] relatively small non-negative integers,'' there are faster ``algorithms to solve the single-source shortest-paths problems'' \cite[\S24.Chapter notes, pp. 682]{Cormen2009}.
 			\item To solve the all-pairs shortest paths problem: \vspace{-0.1cm}
 				\begin{itemize} \itemsep -1pt
-				\item For each source vertex (or, vertex acting as the source) use Dijkstra's algorithm for the single-source shortest-paths problem along with an implementation of the min-priority queue with a Fibonacci heap \cite[\S25, pp. 684]{Cormen2009}.
+				\item For each source vertex (or, vertex acting as the source) use Dijkstra's algorithm for the single-source shortest-paths problem along with an implementation of the min-priority queue with a Fibonacci heap \cite[\S25, pp. 684]{Cormen2009} \cite[\S6, pp. 101, 107]{Cormen2013}. This does not work well for dense graphs, due to ``the constant factor induced by the Fibonacci heap'' \cite[\S6, pp. 107]{Cormen2013}.
 				\item For sparse graphs, Johnson's algorithm can solve the all-pairs shortest paths problem more efficient using an implementation of the min-priority queue with a Fibonacci heap (or, Fibonacci heap min-priority queue) \cite[\S25.3, pp. 700]{Cormen2009}.
 				\item However, for dense graphs, ``using $d$-ary min-heaps in shortest-paths algorithms on $\epsilon$-dense graphs'' can result in computational complexities or running times comparable to Fibonacci-heap-based algorithms \cite[\S25.Problems, pp. 706]{Cormen2009}.
 				\end{itemize}

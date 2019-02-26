@@ -745,6 +745,12 @@ Donald~E. Knuth.
 \newblock {ACM} Press and Addison-Wesley, New York, {NY} and Reading, {MA},
   1993.
 
+\bibitem{Knuth1997}
+Donald~E. Knuth.
+\newblock {\em Fundamental Algorithms}, volume~1 of {\em The Art of Computer
+  Programming}.
+\newblock Addison-Wesley, Reading, {MA}, third edition, 1997.
+
 \bibitem{Koch2011a}
 Thorsten Koch, Tobias Achterberg, Erling Andersen, Oliver Bastert, Timo
   Berthold, Robert~E. Bixby, Emilie Danna, Gerald Gamrath, Ambros~M. Gleixner,
