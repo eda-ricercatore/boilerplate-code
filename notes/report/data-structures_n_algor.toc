@@ -13,7 +13,7 @@
 \contentsline {subsubsection}{\numberline {2.3.4.1}Binary Decision Diagrams (BDDs)}{25}{subsubsection.2.3.4.1}
 \contentsline {subsubsection}{\numberline {2.3.4.2}AND-Inverter Graphs (AIGs)}{25}{subsubsection.2.3.4.2}
 \contentsline {subsubsection}{\numberline {2.3.4.3}Majority-Inverter Graphs (MIGs)}{25}{subsubsection.2.3.4.3}
-\contentsline {subsection}{\numberline {2.3.5}Undirected Graphs}{25}{subsection.2.3.5}
+\contentsline {subsection}{\numberline {2.3.5}Undirected Graphs}{26}{subsection.2.3.5}
 \contentsline {subsection}{\numberline {2.3.6}Resources for Graphs}{26}{subsection.2.3.6}
 \contentsline {section}{\numberline {2.4}Notes on Data Structures for External Memory Computation}{26}{section.2.4}
 \contentsline {chapter}{\numberline {3}Optimization}{27}{chapter.3}
