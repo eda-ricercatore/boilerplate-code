@@ -422,6 +422,14 @@ References to cover: \vspace{-0.3cm}
 	\item \cite[\S14.1]{Goodrich2013} covers information on graph theory. {\bf Update references in graph theory with this section!!!}
 	\item \cite[\S14.7.3]{Goodrich2013} covers union-find data structures.
 	\end{enumerate}
+\item \cite{Gross2014}
+\item \cite{Thulasiraman2016}
+\item almost linear time graph algorithms: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item \cite{Bixby1988}
+	\item \cite{Chakraborty2018}???
+	\end{enumerate}
+\item \cite{BangJensen2009}
 \end{enumerate}
 
 Due to the lengthy coverage of graphs in \cite[\S52-\S57]{Goldman2008}, I would read the following references \cite{Cormen2009,Cormen2013,Goodrich2011} first. Lastly, I would read \cite{Goodrich2013} to implement the adjacency map representation of graphs.
@@ -507,6 +515,8 @@ Required, or strongly preferred, data structures for implementing graphs: \vspac
 \item open addressing mapping for DFS \cite[\S53, pp. 857]{Goldman2008}.
 \end{enumerate}
 
+
+Note that for the following list of common functions to be implemented, functions that are implemented for the generic graph need not be specified/written again in the specifications and implementations of directed graphs and undirected graphs. They need to be specified/written again (only) if they need to be overridden.
  
 
 
@@ -539,19 +549,26 @@ Common functions that need to be implemented in graph data structures; they are 
 	\item {\tt depth\_first\_search(string type)} returns a DFS ordering, which is one of the following DFS-based vertex orderings (preordering, postordering, or reverse postordering) \cite{WikipediaContributors2018a51}. {\it Implementation is found specifically for the abstract directed and undirected graph interfaces/headers/classes.}
 	\item {\tt breadth\_first\_search(string type)} returns a BFS ordering \cite{WikipediaContributors2019}. {\it Implementation is found specifically for the abstract directed and undirected graph interfaces/headers/classes.}
 	\item {\tt is\_updated()} returns boolean {\tt True} if the graph has been updated since a graph enumeration algorithm has been executed \cite[\S53.1, pp. 858]{Goldman2008}.
-	\item {\tt set\_updated()} returns boolean {\tt True} if the graph has been updated since a graph enumeration algorithm has been executed \cite[\S53.1, pp. 858]{Goldman2008}. 
+	\item {\tt set\_updated()} sets the {\tt updated} flag to boolean {\tt True} if the graph has been updated since a graph enumeration algorithm has been executed \cite[\S53.1, pp. 858]{Goldman2008}.
 	\item Optional methods: \vspace{-0.2cm}
 		\begin{enumerate} %\itemsep -2pt
 		\item {\tt boolean is\_multigraph()} returns boolean {\tt True} if the graph is a multigraph. Else, returns boolean {\tt False} \cite[\S52.4, pp. 849]{Goldman2008}.
-		\item {\tt boolean set\_as\_multigraph(boolean mgraph)}, where the boolean flag {\tt mgraph} indicates if the graph is a multigraph; if {\tt mgraph} is true, the graph is a multigraph; else, the graph is not a multigraph.
-		\item {\tt has\_cycles()} returns boolean {\tt True} if the graph $G$ has cycles; else, it returns boolean {\tt False} \cite[\S52.4, pp. 850]{Goldman2008}.
+		\item {\tt boolean set\_multigraph(boolean mgraph)}, where the boolean flag {\tt mgraph} indicates if the graph is a multigraph; if {\tt mgraph} is true, the graph is a multigraph; else, the graph is not a multigraph.
+		\item {\tt is\_cyclic()} (or {\tt has\_cycles()}) returns boolean {\tt True} if the graph $G$ has cycles; else, it returns boolean {\tt False} \cite[\S52.4, pp. 850]{Goldman2008}.
+		\item {\tt set\_cyclic(boolean value)} set the {\tt cyclic} attribute of the graph to boolean {\tt True} if the graph $G$ has cycles; else, it sets the {\tt cyclic} attribute to boolean {\tt False}. It returns nothing.
 		\item {\tt is\_cycle($E_{cycle}$)} returns boolean {\tt True} if graph $G$ contains the cycle $E_{cycle}$; else, it returns boolean {\tt False} \cite[\S52.4, pp. 850]{Goldman2008}.
 		\item {\tt get\_cycle()} \cite[\S52.4, pp. 850]{Goldman2008}: Not considered, since a graph can have multiple cycles.
+		\item {\tt boolean is\_hypergraph()} returns boolean {\tt True} if the graph is a hypergraph. Else, returns boolean {\tt False}.
+		\item {\tt boolean set\_hypergraph(boolean hgraph)}, where the boolean flag {\tt hgraph} indicates if the graph is a hypergraph; if {\tt hgraph} is true, the graph is a hypergraph; else, the graph is not a hypergraph.
+		\item {\tt boolean is\_self\_loop\_pseudograph()} returns boolean {\tt True} if the graph is a pseudograph (has self-loops). Else, returns boolean {\tt False}.
+		\item {\tt boolean set\_self\_loop\_pseudograph(boolean self\_loop)}, where the boolean flag {\tt self\_loop} indicates if the graph is a pseudograph (has self-loops); if {\tt self\_loop} is true, the graph is a pseudograph (has self-loops); else, the graph is not a pseudograph (has no self-loops).
 		\item While directed and undirected graphs can implement these methods, their implementations are significantly different, and cannot be abstracted from both of these categories of graphs.
 		\end{enumerate}
 	\item Variables: \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
 		\item boolean {\tt is\_multigraph} to indicate if the graph is a multigraph \cite[\S53, pp. 857]{Goldman2008}.
+		\item boolean {\tt hypergraph} to indicate if the graph is a hypergraph
+		\item boolean {\tt self\_loop\_pseudograph} to indicate if the graph allows self-loops to exist. 
 		\item set\_of\_cycles
 		\item boolean {\tt has\_been\_modified} to indicate if the graph has been modified since a graph enumeration algorithm has been executed; boolean {\tt true} indicates if it has been modified \cite[\S53.1, pp. 858]{Goldman2008}.
 		\item Ignore these variables: \vspace{-0.1cm}
@@ -600,10 +617,15 @@ Common functions that need to be implemented in {\bf undirected graph} data stru
 	\item Optional methods: \vspace{-0.2cm}
 		\begin{enumerate} %\itemsep -2pt
 		\item {\tt boolean is\_multigraph()} returns boolean {\tt True} if the graph is a multigraph. Else, returns boolean {\tt False} \cite[\S52.4, pp. 849]{Goldman2008}.
-		\item {\tt boolean set\_as\_multigraph(boolean mgraph)}, where the boolean flag {\tt mgraph} indicates if the graph is a multigraph; if {\tt mgraph} is true, the graph is a multigraph; else, the graph is not a multigraph.
-		\item {\tt has\_cycles()} returns boolean {\tt True} if the graph $G$ has cycles; else, it returns boolean {\tt False} \cite[\S52.4, pp. 850]{Goldman2008}.
+		\item {\tt boolean set\_multigraph(boolean mgraph)}, where the boolean flag {\tt mgraph} indicates if the graph is a multigraph; if {\tt mgraph} is true, the graph is a multigraph; else, the graph is not a multigraph.
+		\item {\tt is\_cyclic()} (or {\tt has\_cycles()}) returns boolean {\tt True} if the graph $G$ has cycles; else, it returns boolean {\tt False} \cite[\S52.4, pp. 850]{Goldman2008}.
+		\item {\tt set\_cyclic(boolean value)} set the {\tt cyclic} attribute of the graph to boolean {\tt True} if the graph $G$ has cycles; else, it sets the {\tt cyclic} attribute to boolean {\tt False}. It returns nothing.
 		\item {\tt is\_cycle($E_{cycle}$)} returns boolean {\tt True} if graph $G$ contains the cycle $E_{cycle}$; else, it returns boolean {\tt False} \cite[\S52.4, pp. 850]{Goldman2008}.
 		\item {\tt get\_cycle()} \cite[\S52.4, pp. 850]{Goldman2008}: Not considered, since a graph can have multiple cycles.
+		\item {\tt boolean is\_hypergraph()} returns boolean {\tt True} if the graph is a hypergraph. Else, returns boolean {\tt False}.
+		\item {\tt boolean set\_hypergraph(boolean hgraph)}, where the boolean flag {\tt hgraph} indicates if the graph is a hypergraph; if {\tt hgraph} is true, the graph is a hypergraph; else, the graph is not a hypergraph.
+		\item {\tt boolean is\_self\_loop\_pseudograph()} returns boolean {\tt True} if the graph is a pseudograph (has self-loops). Else, returns boolean {\tt False}.
+		\item {\tt boolean set\_self\_loop\_pseudograph(boolean self\_loop)}, where the boolean flag {\tt self\_loop} indicates if the graph is a pseudograph (has self-loops); if {\tt self\_loop} is true, the graph is a pseudograph (has self-loops); else, the graph is not a pseudograph (has no self-loops).
 		\end{enumerate}
 	\item Variables: \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
@@ -626,6 +648,8 @@ Common functions that need to be implemented in {\bf undirected graph} data stru
 		\end{enumerate}
 	\item {\tt is\_adjacent\_vertex($v_{v}$)} \cite[\S13.1.1, pp. 599]{Goodrich2011}
 	\item {\tt get\_degree()} returns the number of edges incident to the current vertex \cite[\S14.1.1, pp. 626]{Goodrich2013}.
+	\item {\tt add\_adjacent\_vertex()}
+	\item {\tt add\_adjacent\_vertices()} for directed hypergraphs
 	\end{enumerate}
 \item {\bf Edge class}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
@@ -672,10 +696,15 @@ Common functions that need to be implemented in {\bf directed graph} data struct
 	\item Optional methods: \vspace{-0.2cm}
 		\begin{enumerate} %\itemsep -2pt
 		\item {\tt boolean is\_multigraph()} returns boolean {\tt True} if the graph is a multigraph. Else, returns boolean {\tt False} \cite[\S52.4, pp. 849]{Goldman2008}. 
-		\item {\tt boolean set\_as\_multigraph(boolean mgraph)}, where the boolean flag {\tt mgraph} indicates if the graph is a multigraph; if {\tt mgraph} is true, the graph is a multigraph; else, the graph is not a multigraph.
-		\item {\tt has\_cycles()} returns boolean {\tt True} if the graph $G$ has cycles; else, it returns boolean {\tt False} \cite[\S52.4, pp. 850]{Goldman2008}.
+		\item {\tt boolean set\_multigraph(boolean mgraph)}, where the boolean flag {\tt mgraph} indicates if the graph is a multigraph; if {\tt mgraph} is true, the graph is a multigraph; else, the graph is not a multigraph.
+		\item {\tt is\_cyclic()} (or {\tt has\_cycles()}) returns boolean {\tt True} if the graph $G$ has cycles; else, it returns boolean {\tt False} \cite[\S52.4, pp. 850]{Goldman2008}.
+		\item {\tt set\_cyclic(boolean value)} set the {\tt cyclic} attribute of the graph to boolean {\tt True} if the graph $G$ has cycles; else, it sets the {\tt cyclic} attribute to boolean {\tt False}. It returns nothing.
 		\item {\tt is\_cycle($E_{cycle}$)} returns boolean {\tt True} if graph $G$ contains the cycle $E_{cycle}$; else, it returns boolean {\tt False} \cite[\S52.4, pp. 850]{Goldman2008}.
 		\item {\tt get\_cycle()} \cite[\S52.4, pp. 850]{Goldman2008}: Not considered, since a graph can have multiple cycles.
+		\item {\tt boolean is\_hypergraph()} returns boolean {\tt True} if the graph is a hypergraph. Else, returns boolean {\tt False}.
+		\item {\tt boolean set\_hypergraph(boolean hgraph)}, where the boolean flag {\tt hgraph} indicates if the graph is a hypergraph; if {\tt hgraph} is true, the graph is a hypergraph; else, the graph is not a hypergraph.
+		\item {\tt boolean is\_self\_loop\_pseudograph()} returns boolean {\tt True} if the graph is a pseudograph (has self-loops). Else, returns boolean {\tt False}.
+		\item {\tt boolean set\_self\_loop\_pseudograph(boolean self\_loop)}, where the boolean flag {\tt self\_loop} indicates if the graph is a pseudograph (has self-loops); if {\tt self\_loop} is true, the graph is a pseudograph (has self-loops); else, the graph is not a pseudograph (has no self-loops).
 		\end{enumerate}
 	\item Variables: \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
@@ -696,8 +725,10 @@ Common functions that need to be implemented in {\bf directed graph} data struct
 	\item {\tt get\_incoming\_edges()} \cite[\S52.5, pp. 851]{Goldman2008} \cite[\S14.1.1, pp. 626]{Goodrich2013}
 	\item {\tt is\_incoming\_edge($e_{i}$)}
 	\item {\tt get\_in\_degree()} returns the number of incoming edges to the current vertex \cite[\S14.1.1, pp. 626]{Goodrich2013}.
-%	\item {\tt get\_destn\_vertex()}
-%	\item {\tt get\_destn\_vertices()} for directed hypergraphs
+	\item {\tt add\_destn\_vertex()}
+	\item {\tt add\_destn\_vertices()} for directed hypergraphs
+	\item {\tt add\_src\_vertex()}
+	\item {\tt add\_src\_vertices()} for directed hypergraphs
 	\item {\tt is\_adjacent\_to\_destn\_vertex($v_{v}$)} \cite[\S13.1.1, pp. 599]{Goodrich2011}. Does the edge $(v_{current}, v_{v})$ exists?
 	\item {\tt is\_adjacent\_from\_src\_vertex($v_{u}$)} \cite[\S13.1.1, pp. 599]{Goodrich2011}. Does the edge $(v_{u}, v_{current})$ exists?
 	\end{enumerate}

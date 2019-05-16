@@ -193,6 +193,12 @@ Christopher~M. Bishop.
 \newblock Information Science and Statistics. Springer Science+Business Media,
   {LCC}, New York, {NY}, 2006.
 
+\bibitem{Bixby1988}
+Robert~E. Bixby and Donald~K. Wagner.
+\newblock An almost linear-time algorithm for graph realization.
+\newblock {\em Mathematics of Operations Research}, 13(1):99--123, February
+  1988.
+
 \bibitem{Boulanger2013}
 Jean-Louis Boulanger.
 \newblock {\em Static Analysis of Software: The Abstract Interpretation}.
@@ -247,6 +253,12 @@ Peter~J. Carrington, John Scott, and Stanley Wasserman.
 \newblock {\em Models and Methods in Social Network Analysis}, volume~27 of
   {\em Structural Analysis in the Social Sciences}.
 \newblock Cambridge University Press, New York, {NY}, 2005.
+
+\bibitem{Chakraborty2018}
+Sankar~Deep Chakraborty.
+\newblock {\em Space efficient graph algorithms}.
+\newblock PhD thesis, Homi Bhabha National Institute, Mumbai, India, March 16
+  2018.
 
 \bibitem{Chartrand2009}
 Gary Chartrand and Ping Zhang.
@@ -584,6 +596,12 @@ Jonathan~L. Gross and Jay Yellen.
 \newblock {\em Handbook of Graph Theory}.
 \newblock Discrete Mathematics and Its Applications. {CRC} Press, Boca Raton,
   {FL}, 2004.
+
+\bibitem{Gross2014}
+Jonathan~L. Gross, Jay Yellen, and Ping Zhang.
+\newblock {\em Handbook of Graph Theory}.
+\newblock Discrete Mathematics and Its Applications. {CRC} Press, Boca Raton,
+  {FL}, 2014.
 
 \bibitem{Guntheroth2016}
 Kurt Guntheroth.
@@ -1285,6 +1303,14 @@ Bruce~A. Tate.
 Mitchell~Aaron Thornton, Rolf Drechsler, and D.~Michael Miller.
 \newblock {\em Spectral Techniques in {VLSI CAD}}.
 \newblock Kluwer Academic Publishers, Boston, {MA}, 2001.
+
+\bibitem{Thulasiraman2016}
+Krishnaiyan~``KT'' Thulasiraman, Subramanian Arumugam, Andreas Brandstädt, and
+  Takao Nishizeki.
+\newblock {\em Handbook of Graph Theory, Combinatorial Optimization, and
+  Algorithms}.
+\newblock Chapman {\rm \&}\ Hall/{CRC} Computer {\rm \&}\ Information Science.
+  {CRC} Press, Boca Raton, {FL}, 2016.
 
 \bibitem{vanMieghem2011}
 Piet {van Mieghem}.
