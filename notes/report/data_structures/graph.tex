@@ -520,7 +520,7 @@ Note that for the following list of common functions to be implemented, function
  
 
 
-Common functions that need to be implemented in graph data structures; they are instance methods, unless indicated otherwise (as static methods):
+Common functions that need to be implemented in (generic) graph data structures; they are instance methods, unless indicated otherwise (as static methods):
 \begin{enumerate}
 \item {\bf Graph class}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
@@ -547,7 +547,7 @@ Common functions that need to be implemented in graph data structures; they are 
 		\end{enumerate}
 	\item {\tt get\_num\_vertices()} returns the number of vertices in the graph $G = (V_{G}, E_{G})$, or the cardinality of the set/list of vertices $| V_{G} |$ \cite[\S52.4, pp. 849; \S52.5, pp. 851]{Goldman2008}.
 	\item {\tt depth\_first\_search(string type)} returns a DFS ordering, which is one of the following DFS-based vertex orderings (preordering, postordering, or reverse postordering) \cite{WikipediaContributors2018a51}. {\it Implementation is found specifically for the abstract directed and undirected graph interfaces/headers/classes.}
-	\item {\tt breadth\_first\_search(string type)} returns a BFS ordering \cite{WikipediaContributors2019}. {\it Implementation is found specifically for the abstract directed and undirected graph interfaces/headers/classes.}
+	\item {\tt breadth\_first\_search()} returns a BFS ordering \cite{WikipediaContributors2019}. {\it Implementation is found specifically for the abstract directed and undirected graph interfaces/headers/classes.}
 	\item {\tt is\_updated()} returns boolean {\tt True} if the graph has been updated since a graph enumeration algorithm has been executed \cite[\S53.1, pp. 858]{Goldman2008}.
 	\item {\tt set\_updated()} sets the {\tt updated} flag to boolean {\tt True} if the graph has been updated since a graph enumeration algorithm has been executed \cite[\S53.1, pp. 858]{Goldman2008}.
 	\item Optional methods: \vspace{-0.2cm}
@@ -610,7 +610,7 @@ Common functions that need to be implemented in {\bf undirected graph} data stru
 		\begin{enumerate} \itemsep -2pt
 		\item (May) require open addressing mapping for implementing DFS \cite[\S53, pp. 857]{Goldman2008}.
 		\end{enumerate}
-	\item {\tt breadth\_first\_search(string type)} returns a BFS ordering \cite{WikipediaContributors2019}.\vspace{-0.2cm}
+	\item {\tt breadth\_first\_search()} returns a BFS ordering \cite{WikipediaContributors2019}.\vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
 		\item (May) require a queue (FIFO) for implementing BFS \cite[\S53, pp. 857]{Goldman2008}.
 		\end{enumerate}
@@ -650,6 +650,12 @@ Common functions that need to be implemented in {\bf undirected graph} data stru
 	\item {\tt get\_degree()} returns the number of edges incident to the current vertex \cite[\S14.1.1, pp. 626]{Goodrich2013}.
 	\item {\tt add\_adjacent\_vertex()}
 	\item {\tt add\_adjacent\_vertices()} for directed hypergraphs
+	\item {\tt remove\_adjacent\_vertex()}
+	\item {\tt remove\_adjacent\_vertices()} for directed hypergraphs
+	\item Variables: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item dict {\tt adjacent\_vertices} stores a dictionary of edges as key-value pairs, where the vertices are the keys for such pairs \cite[\S14.2, pp. 627; \S14.2.3, pp. 632; \S14.2.5, pp. 634--637]{Goodrich2013}. 
+		\end{enumerate}
 	\end{enumerate}
 \item {\bf Edge class}: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
@@ -689,7 +695,7 @@ Common functions that need to be implemented in {\bf directed graph} data struct
 		\begin{enumerate} \itemsep -2pt
 		\item (May) require open addressing mapping for implementing DFS \cite[\S53, pp. 857]{Goldman2008}.
 		\end{enumerate}
-	\item {\tt breadth\_first\_search(string type)} returns a BFS ordering \cite{WikipediaContributors2019}. \vspace{-0.2cm}
+	\item {\tt breadth\_first\_search()} returns a BFS ordering \cite{WikipediaContributors2019}. \vspace{-0.2cm}
 		\begin{enumerate} \itemsep -2pt
 		\item (May) require a queue (FIFO) for implementing BFS \cite[\S53, pp. 857]{Goldman2008}.
 		\end{enumerate}
@@ -1011,6 +1017,35 @@ Solvers for the following problems (or to perform the following functions) regar
 		\end{enumerate}
 	\end{enumerate}
 \end{enumerate}
+
+
+In summary, the graph data structures for generic graphs, undirected graphs, and directed graphs shall contain a compositional engine of graph problems (Class {\tt compositional\_engine}). That is, the classes for generic graphs, undirected graphs, and directed graphs shall only contain necessary attributes/properties/fields and methods, and methods implementing algorithms to solve graph problems are encapsulated by the {\tt compositional\_engine}.\\
+
+Components of the {\tt compositional\_engine} are (listed in order of priority to implement): \vspace{-0.3cm}
+\begin{enumerate} \itemsep -4pt
+\item {\tt graph\_traversal}
+\item {\tt routing\_engine}
+\item {\tt visualization}: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item VLSI floorplanning
+	\item VLSI placement
+	\item Visual representations of the graph
+	\item graph layouts
+	\end{enumerate}
+\item {\tt graph\_matching}
+\item {\tt graph\_partitioning}
+\item {\tt graph\_decomposition}
+\item {\tt graph\_covering}
+\item {\tt graph\_coloring}
+\item {\tt network\_flow}
+\item {\tt probabilistic\_graphical\_models}
+\item {\tt network\_science}
+\item {\tt graph\_closure}
+\item {\tt spectral\_graphs}
+\end{enumerate}
+
+
+
 
 
 
