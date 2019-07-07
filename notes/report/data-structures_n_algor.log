@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  16 MAY 2019 16:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  7 JUL 2019 17:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1060,7 +1060,7 @@ l.87 \section
 ]
 Overfull \hbox (12.46811pt too wide) in paragraph at lines 94--95
 []\T1/lmr/m/n/12 ``The Stony Brook Al-go-rithm Repos-i-tory'' by Steven Skiena 
-[[][]192[][]]: [][]$\T1/lmtt/m/n/12 http : / / algorist . com / algorist .
+[[][]193[][]]: [][]$\T1/lmtt/m/n/12 http : / / algorist . com / algorist .
  []
 
 ) (./data_structures/data_structures.tex [2]
@@ -1100,7 +1100,7 @@ accepted /
 
 [4] [5] [6] [7] [8]
 Overfull \hbox (4.26259pt too wide) in paragraph at lines 248--249
-[]\T1/lmr/bx/n/12 Multidimensional net-work \T1/lmr/m/n/12 [[][]229[][]]: [][]$
+[]\T1/lmr/bx/n/12 Multidimensional net-work \T1/lmr/m/n/12 [[][]230[][]]: [][]$
 \T1/lmtt/m/n/12 https : / / en . wikipedia . org / wiki / Multidimensional _
  []
 
@@ -1148,12 +1148,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 363--365
 
  []
 
-[11] [12]
-
-LaTeX Warning: Citation `BangJensen2009' on page 13 undefined on input line 432
-.
-
-[13] [14] [15] [16] [17] [18] [19] [20]
+[11] [12] [13] [14] [15] [16] [17] [18] [19] [20]
 Overfull \hbox (37.49538pt too wide) in paragraph at lines 804--805
 []\T1/lmr/bx/n/12 Bellman-Ford al-go-rithm \T1/lmr/m/n/12 (or, \T1/lmr/bx/n/12 
 Bellman-Ford-Moore al-go-rithm\T1/lmr/m/n/12 ): [][]$\T1/lmtt/m/n/12 https : / 
@@ -1538,12 +1533,6 @@ Overfull \hbox (35.7866pt too wide) in paragraph at lines 27--28
 
 ] [67] [68] [69]
 
-LaTeX Warning: Command \textregistered invalid in math mode on input line 400.
-
-
-LaTeX Warning: Command \textregistered invalid in math mode on input line 400.
-
-
 LaTeX Warning: Command \textregistered invalid in math mode on input line 406.
 
 
@@ -1556,129 +1545,137 @@ LaTeX Warning: Command \textregistered invalid in math mode on input line 412.
 LaTeX Warning: Command \textregistered invalid in math mode on input line 412.
 
 
-LaTeX Warning: Command \textregistered invalid in math mode on input line 436.
+LaTeX Warning: Command \textregistered invalid in math mode on input line 418.
 
 
-LaTeX Warning: Command \textregistered invalid in math mode on input line 436.
+LaTeX Warning: Command \textregistered invalid in math mode on input line 418.
+
+
+LaTeX Warning: Command \textregistered invalid in math mode on input line 442.
+
+
+LaTeX Warning: Command \textregistered invalid in math mode on input line 442.
 
 [70] [71] [72]
-Underfull \hbox (badness 6961) in paragraph at lines 699--706
+Underfull \hbox (badness 6961) in paragraph at lines 705--712
 [][]$\T1/lmtt/m/n/12 http : / / pweb . netcom . com / ~tjensen / ptr / cpoint .
  htm$[][]\T1/lmr/m/n/12 , [][]$\T1/lmtt/m/n/12 http : / / pweb . netcom . com /
  ~tjensen /
  []
 
 [73]
-Underfull \hbox (badness 1173) in paragraph at lines 753--758
+Underfull \hbox (badness 1173) in paragraph at lines 759--764
 []\T1/lmr/m/n/12 Darko Kirovski and Mio-drag Potkon-jak.  A quan-ti-ta-tive ap-
 proach to func-tional de-bug-
  []
 
 [74] [75]
-Underfull \hbox (badness 5274) in paragraph at lines 930--939
+Underfull \hbox (badness 5274) in paragraph at lines 936--945
 \T1/lmtt/m/n/12 JSC / EN / slides / cplusplus / cplusplus . pdf$[][] \T1/lmr/m/
 n/12 and [][]$\T1/lmtt/m/n/12 https : / / www . fz-[]juelich . de / SharedDocs 
 /
  []
 
 
-Underfull \hbox (badness 1038) in paragraph at lines 941--951
+Underfull \hbox (badness 1038) in paragraph at lines 947--957
 \T1/lmr/m/n/12 ( and a pre-view of C++17 ).  Avail-able on-line from \T1/lmr/m/
 it/12 Forschungszen-trum Jülich GmbH:
  []
 
 
-Underfull \hbox (badness 4595) in paragraph at lines 941--951
+Underfull \hbox (badness 4595) in paragraph at lines 947--957
 \T1/lmr/m/it/12 In-sti-tute for Ad-vanced Sim-u-la-tion: Jülich Su-per-com-put-
 ing Cen-ter \T1/lmr/m/n/12 at: [][]$\T1/lmtt/m/n/12 https : / / www .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 941--951
+Underfull \hbox (badness 10000) in paragraph at lines 947--957
 \T1/lmtt/m/n/12 fz-[]juelich . de / SharedDocs / Downloads / IAS / JSC / EN / s
 lides / cplusplus / cplusplus . pdf$[][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 941--951
+Underfull \hbox (badness 10000) in paragraph at lines 947--957
 \T1/lmr/m/n/12 and [][]$\T1/lmtt/m/n/12 https : / / www . fz-[]juelich . de / S
 haredDocs / Downloads / IAS / JSC / EN / slides / cplusplus /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 941--951
+Underfull \hbox (badness 10000) in paragraph at lines 947--957
 \T1/lmtt/m/n/12 cplusplus . pdf ; jsessionid = F6F2721BAADDF0E098B19D576F1E0ED1
  ? _ _ blob = publicationFile$[][]\T1/lmr/m/n/12 ;
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 961--968
+Underfull \hbox (badness 10000) in paragraph at lines 967--974
 []\T1/lmr/m/n/12 Peter Mortensen.  What is the dif-fer-ence be-tween const int$
 []$, const int $[]$
  []
 
 
-Underfull \hbox (badness 6252) in paragraph at lines 961--968
+Underfull \hbox (badness 6252) in paragraph at lines 967--974
 \T1/lmr/m/n/12 const, and int const $[]$?  Avail-able on-line from \T1/lmr/m/it
 /12 Stack Ex-change Inc.: Stack
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 961--968
+Underfull \hbox (badness 10000) in paragraph at lines 967--974
 \T1/lmr/m/it/12 Over-flow: Ques-tions \T1/lmr/m/n/12 at: [][]$\T1/lmtt/m/n/12 h
 ttp : / / stackoverflow . com / questions / 1143262 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 961--968
+Underfull \hbox (badness 10000) in paragraph at lines 967--974
 \T1/lmtt/m/n/12 what-[]is-[]the-[]difference-[]between-[]const-[]int-[]const-[]
 int-[]const-[]and-[]int-[]const$[][]\T1/lmr/m/n/12 ; Oc-to-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 970--978
+Underfull \hbox (badness 10000) in paragraph at lines 976--984
 \T1/lmtt/m/n/12 / / stackoverflow . com / a / 36319466 / 1531728$[][] \T1/lmr/m
 /n/12 and [][]$\T1/lmtt/m/n/12 http : / / stackoverflow . com / questions /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 970--978
+Underfull \hbox (badness 10000) in paragraph at lines 976--984
 \T1/lmtt/m/n/12 36319028 / why-[]is-[]the-[]discrepancy-[]in-[]these-[]two-[]ca
 ses-[]of-[]using-[]c-[]templates /
  []
 
 
-LaTeX Warning: Command \textregistered invalid in math mode on input line 990.
-
-
-LaTeX Warning: Command \textregistered invalid in math mode on input line 990.
-
-
 LaTeX Warning: Command \textregistered invalid in math mode on input line 996.
 
 
 LaTeX Warning: Command \textregistered invalid in math mode on input line 996.
+
+
+LaTeX Warning: Command \textregistered invalid in math mode on input line 1002.
+
+
+
+LaTeX Warning: Command \textregistered invalid in math mode on input line 1002.
+
 
 [76]
-Underfull \hbox (badness 10000) in paragraph at lines 1017--1023
+Underfull \hbox (badness 10000) in paragraph at lines 1023--1029
 []\T1/lmr/m/n/12 Yusuf Ke-mal Öz-can.  Is there any dif-fer-ence be-tween point
 -ers and ref-er-
  []
 
 
-Underfull \hbox (badness 7888) in paragraph at lines 1017--1023
+Underfull \hbox (badness 7888) in paragraph at lines 1023--1029
 \T1/lmr/m/n/12 ences?  Avail-able on-line from \T1/lmr/m/it/12 Stack Ex-change 
 Inc.: Pro-gram-mers Stack Ex-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1017--1023
+Underfull \hbox (badness 10000) in paragraph at lines 1023--1029
 \T1/lmr/m/it/12 change: Ques-tions \T1/lmr/m/n/12 at: [][]$\T1/lmtt/m/n/12 http
  : / / programmers . stackexchange . com / questions / 195337 /
  []
 
 
-Underfull \hbox (badness 6927) in paragraph at lines 1017--1023
+Underfull \hbox (badness 6927) in paragraph at lines 1023--1029
 \T1/lmtt/m/n/12 is-[]there-[]any-[]difference-[]between-[]pointers-[]and-[]refe
 rences$[][]\T1/lmr/m/n/12 ; Oc-to-ber 28, 2015 was
  []
@@ -1693,16 +1690,12 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 287.
 Package rerunfilecheck Info: File `data-structures_n_algor.out' has not changed
 .
 (rerunfilecheck)             Checksum: FA65DB4855B6EFC7387BA937B234812C;3164.
-
-
-LaTeX Warning: There were undefined references.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 287.
  ) 
 Here is how much of TeX's memory you used:
- 18169 strings out of 493089
- 253957 string characters out of 6134842
- 365156 words of memory out of 5000000
+ 18170 strings out of 493089
+ 253976 string characters out of 6134842
+ 365194 words of memory out of 5000000
  19604 multiletter control sequences out of 15000+600000
  125350 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1730,10 +1723,10 @@ msy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><
 /texlive/2015/texmf-dist/fonts/type1/public/marvosym/marvosym.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on data-structures_n_algor.pdf (87 pages, 682824 bytes).
+Output written on data-structures_n_algor.pdf (87 pages, 682774 bytes).
 PDF statistics:
- 3788 PDF objects out of 4296 (max. 8388607)
- 3642 compressed objects within 37 object streams
- 1679 named destinations out of 1728 (max. 500000)
+ 3790 PDF objects out of 4296 (max. 8388607)
+ 3644 compressed objects within 37 object streams
+ 1680 named destinations out of 1728 (max. 500000)
  361 words of extra memory for PDF output out of 10000 (max. 10000000)
 
