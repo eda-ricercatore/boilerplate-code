@@ -55,6 +55,26 @@ Steps that I would use to build a software project that uses the GNU Build Syste
 
 
 
+##	List of UNIX commands to find their man pages of
+
+Check if I can access the man pages for the following UNIX commands in the "Terminal" application:
++ man clang
++ man java
++ man gfortran
++ man make
++ man rmdir
++ man chmod
++ man gcc
++ man g++
++ man chmod
++ man rmdir
++ man rm
++ man pwd
++ man ls
++ man wc
+
+
+
 
 
 
