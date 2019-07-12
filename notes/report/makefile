@@ -16,17 +16,29 @@
 #	=============================================================
 #
 
-
+MAINSRC=	data-structures_n_algor
+PDFLATEX=	/usr/local/texlive/2019/bin/x86_64-darwin/pdflatex #pdflatex
+BIBTEX=		bibtex
 
 #	=============================================================
 #	Make targets for build automation with Make (using this Makefile).
 
 latex:
-	pdflatex	data-structures_n_algor
-	bibtex		data-structures_n_algor
-	pdflatex	data-structures_n_algor
-	bibtex		data-structures_n_algor
-	pdflatex	data-structures_n_algor
+	@echo + + + + + + + + + + + + + + + + + + + + + + + + + + +
+	@echo
+	@echo
+	@echo	"==		Typeset LaTeX source files for the 1st time."
+	$(PDFLATEX)		$(MAINSRC)
+	$(BIBTEX)		$(MAINSRC)
+	@echo
+	@echo
+	@echo	"==		Typeset LaTeX source files for the 2nd time."
+	$(PDFLATEX)		$(MAINSRC)
+	$(BIBTEX)		$(MAINSRC)
+	@echo
+	@echo
+	@echo	"==		Typeset LaTeX source files for the 3rd time."
+	$(PDFLATEX)		$(MAINSRC)
 
 
 
