@@ -1,0 +1,59 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/MacPorts 2017_4)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: data-structures_n_algor_clean.aux
+The style file: plain.bst
+Reallocated field_info (elt_size=4) to 10497 items from 5000.
+Database file #1: /Users/zhiyang/Documents/ricerca/saag-bibtex/references.bib
+Reallocated buffer (elt_size=1) to 40000 items from 20000.
+Reallocated sv_buffer (elt_size=1) to 40000 items from 20000.
+Reallocated ex_buf (elt_size=1) to 40000 items from 20000.
+Reallocated out_buf (elt_size=1) to 40000 items from 20000.
+Reallocated name_tok (elt_size=4) to 40000 items from 20000.
+Reallocated name_sep_char (elt_size=1) to 40000 items from 20000.
+Reallocated buffer (elt_size=1) to 60000 items from 40000.
+Reallocated sv_buffer (elt_size=1) to 60000 items from 40000.
+Reallocated ex_buf (elt_size=1) to 60000 items from 40000.
+Reallocated out_buf (elt_size=1) to 60000 items from 40000.
+Reallocated name_tok (elt_size=4) to 60000 items from 40000.
+Reallocated name_sep_char (elt_size=1) to 60000 items from 40000.
+You've used 239 entries,
+            2118 wiz_defined-function locations,
+            1783 strings with 52795 characters,
+and the built_in function-call counts, 61615 in all, are:
+= -- 5791
+> -- 2970
+< -- 30
++ -- 1235
+- -- 974
+* -- 3484
+:= -- 10877
+add.period$ -- 763
+call.type$ -- 239
+change.case$ -- 1113
+chr.to.int$ -- 0
+cite$ -- 239
+duplicate$ -- 2529
+empty$ -- 5204
+format.name$ -- 974
+if$ -- 12931
+int.to.chr$ -- 0
+int.to.str$ -- 239
+missing$ -- 305
+newline$ -- 1199
+num.names$ -- 478
+pop$ -- 1712
+preamble$ -- 1
+purify$ -- 965
+quote$ -- 0
+skip$ -- 1553
+stack$ -- 0
+substring$ -- 1386
+swap$ -- 297
+text.length$ -- 30
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 658
+warning$ -- 0
+while$ -- 494
+width$ -- 242
+write$ -- 2703

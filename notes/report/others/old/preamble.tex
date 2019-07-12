@@ -2,18 +2,6 @@
 %
 % It includes a list of LaTeX packages that he commonly uses to typeset LaTeX documents.
 
-%	The MIT License (MIT)
-
-%	Copyright (c) <2014> <Zhiyang Ong>
-
-%	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-%	The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-%	Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" | awk '{ sub("23wU4X5M589","F.d_c_b. ") sub("Stanford","d0mA1n"); print $5, $2, $8; for (i=1; i<=1; i++) print "6\b"; print $9, $7, $6 }' | sed y/kqcbuHwM62z/gnotrzadqmC/ | tr 'q' ' ' | tr -d [:cntrl:] | tr -d 'ir' | tr y "\n"
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Importing some standard LaTeX packages.
@@ -38,33 +26,29 @@
 %		\usepackage{theorem}
 
 
-
-
-%	Typesetting with the typewriter font.
-%\usepackage{ttfamily}
-
 % For better typesetting of tables (and arrays).
 \usepackage{array}
 % For creating tables without vertical separators.
 %		\usepackage{booktabs}
 % To control line spacing in LaTeX documents.
-\usepackage{setspace}
+%%%%%%%%%%\usepackage{setspace}
 % To modify the spacing between words and letters.
 %		\usepackage{microtype}
 % To change the dimensions of the page(s).
 %\usepackage[margin=1.5cm,vmargin={0pt,1cm},nohead]{geometry}
 \usepackage[margin=1.5cm,vmargin={1.5cm,2cm}]{geometry}
 % Use the packages needed to typeset algorithms. I can also use the combined ``algorithms'' bundle.
-\usepackage{algorithm}
-\usepackage{algorithmic}
+%%%%%%%%%%\usepackage{algorithm}
+%%%%%%%%%%\usepackage{algorithmic}
 % The listings package is a source code printer for LaTeX. You can typeset stand alone files as well as listings with an environment similar to verbatim as well as you can print code snippets using a command similar to \verb. Many parameters control the output and if your preferred programming language isnÕt already supported, you can make your own definition.
-\usepackage{listings}
+%%%%%%%%%%\usepackage{listings}
 % Use the ``clrscode3e'' LaTeX package to typeset algorithms like CLRS
 %	\usepackage{/data/others/notes/clrscode3e}
-%/Applications/apps/comune/SienaLaTeX/rapporto/
-%\usepackage{/Applications/apps/comune/SienaLaTeX/rapporto/others/clrscode3e}
-\usepackage{others/packages/clrscode3e}
 %\usepackage{/data/others/grappanotes/clrscode3e}
+%\usepackage{/Users/zhiyang/Documents/rapporti/grappanotes/clrscode3e}
+%%%%%%%%\usepackage{/Users/zhiyang/Documents/rapporti/marzipan-notes/others/packages/clrscode3e}
+%	Since most LaTeX installations do not include the LaTeX style files that I am using, include them in a subsubdirectory of my LaTeX templates.
+\usepackage{./others/packages/clrscode3e}
 % Use the ``algpseudocode'' LaTeX package to typeset algorithms -- Alternate solution, not preferred
 %\usepackage{algpseudocode}
 % Alternative packages for typesetting algorithms.
@@ -72,11 +56,11 @@
 %\usepackage{algorithmicx}
 %\usepackage{program}
 %	To check for syntax errors in my LaTeX document.
-\RequirePackage[l2tabu, orthodox]{nag}
+%%%%%%%%%%\RequirePackage[l2tabu, orthodox]{nag}
 
 % Concatenate adjacent references together when typeset.
 % That is, cite{ref1,ref2,ref3,ref4} can appear as [12-15], instead of [12] [13] [14] [15]
-\usepackage{cite}
+\usepackage{./others/packages/cite}
 % For automatic insertion of cross-referencing words, such as fig. for figures and eq. for equations.
 %		\usepackage{cleveref}
 
@@ -110,7 +94,7 @@
 % In particular, check out the gensymb package (Table 197, page 67) for symbols defined to work in both math and text modes, such as \celsius, \micro, \degree, and \ohm.
 % Also, check out the wasysym package (Table 198, page 67) for electrical symbols, such as that of alternating current (AC); it also provides symbols for \female, and \male (Table 212, pp.70); it also has symbols for ``Xs and Check Marks,'' which are checked boxes, \CheckedBox, squares, \Square, and crossed boxes (boxes filled with a cross), \XBox (Table 232, pp.73); it also has symbols for a clock, \clock, a Simley, \smiley, diameter, \diameter, lightning, \lightning, sun, \sun, and a tick or check mark \checked (symbol to indicate that something is correct), and a bell, \bell (Table 254, pp.78); it also has symbols for left and right turns (Table 256, pp.78), \leftturn and \rightturn; this package (Table 256, pp.78) and the arev package (Table 257, pp.78) can be used to typeset music symbols, along with Table 182, pp.62; it also has symbols for Navigation (Table 261, pp.79), such as \Forward, \RewindToStart, and \ForwardToIndex; it also has symbols for laundry (Table 262, pp.80); it also has the symbol for a heart, \Heart (Table 263, pp.80).
 % In addition, check out the ifsym package (Table 199, page 67) for pulse diagram symbols; it also has symbols for weather (Table 266, pp.80), alpine and mountain climbing, such as \Summit, \Mountain, \IceMountain, \VarMountain, \Flag, \FilledHut, \Hut, \Village, and \Tent (Table 267, pp.81); it also has different symbols for clocks, such as \Interval, \StopWatchEnd, \VarClock, \showclock (to indicate the time) (Table 268, pp.81); it also has symbols for fire, letter, telephone, dice, \PaperPortrait, and \PaperLandscape. Also, has symbol for the cross to indicate that something is incorrect
-\usepackage{ifsym}
+%%%%%%%%%%\usepackage{ifsym}
 % Besides, check out the keystroke package (Table 208, page 69) for symbols of Computer Keys, such as Alt, Ctrl, Del, Page down, Esc, Enter, Shift, Space Bar, and Up Arrow.
 % From the dingbat package (Table 225, page 72), it has symbols for Fists, such as \rightthumbsdown and \rightthumbsup.
 %\usepackage{dingbat}
@@ -133,13 +117,12 @@
 % From the bbding package (Table 226, page 72), it has symbols for Fists, such as \HandPencilLeft; it also has symbols for the Cross to represent Christianity, such as \Cross and \CrossOpenShadow (Table 228, pp.72); Use of the symbol \Cross has bugs; bugs exist in the package, as it fails to correctly overwrite the \Cross symbol; also has the peace symbol, \Peace. 
 %\usepackage{bbding}
 % The skak contains a cross, incorrect symbol that I can use to indicate that something is wrong, e.g. \markera or \weakpt
-\usepackage{skak}
+%%%%%%%%%%\usepackage{skak}
 % Package to enable the use of a strikeout/strikethrough font with LaTeX. To use the strikeout/strikethrough font, use the ``sout'' LaTeX command, or tag,  to ``strike through'' text. E.g., \sout{Bill Clinton} G.W. Bush is the pres.
-\usepackage{ulem}
+%%%%%%%%%%\usepackage{ulem}
 % The eurosym package has the symbols for the Euro (EU currency), \geneuro, \geneuronarrow, \geneurowide, \officialeuro (GOOD)
+%%%%%%%%%%
 \usepackage{eurosym}
-
-
 
 
 
@@ -214,8 +197,8 @@
 %\glossfiles{zhiyang_ong.glo}
 
 % Create the glossary
-\usepackage{nomencl}
-\makenomenclature
+%%%%%%%%%%\usepackage{./others/packages/nomencl}
+%%%%%%%%%%\makenomenclature
 
 
 % Enable captions to be modified.
@@ -223,17 +206,17 @@
 % Addition support for colored text.
 %\usepackage{color}
 % Enable the insertion of PDF/PS files/documents.
-		\usepackage{pdfpages}
+		\usepackage{./others/packages/pdfpages}
 % To rotate objects, including tables.
 		\usepackage{rotating}
 % To define multiple floats (figures and tables), with individual captions and labels, within one environment.
-		\usepackage{subfig}
+		\usepackage{./others/packages/subfig}
 % For a modular LaTeX document with multiple files (including the ``root file''), it allows the a non-empty subset of the ``child files'' to be typeset without having to typeset the ``root file'' (and/or the other ``child files'').
-		\usepackage{subfiles}
+		\usepackage{./others/packages/subfiles}
 % To annotate the LaTeX document with to-do notes.
-		\usepackage[colorinlistoftodos]{todonotes}
+		\usepackage[colorinlistoftodos]{./others/packages/todonotes}
 % To insert images surrounded by text.
-		\usepackage{wrapfig}
+		\usepackage{./others/packages/wrapfig}
 % To create trees, graphs, (commutative) diagrams, and similar things. Reference: Wikibooks contributors, ``\LaTeX/Xy-pic,'' in {\it \LaTeX}, Wikibooks: Open books for an open world, Wikimedia Foundation, San Francisco, CA, June 5, 2005. Available online at: \url{http://en.wikibooks.org/wiki/LaTeX/Xy-pic}; last accessed on December 25, 2013.		=> This package seems to have bugs in it. If I use this package, my document will not typeset properly. I have tried to use it successfully in other documents. It does not seem to be compatible with 
 %\usepackage{xypic}
 % Package for SI units.
@@ -241,22 +224,11 @@
 
 
 
-
-
-
 %	For typesetting the symbol: \AE.
 \usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
+%\usepackage[utf8]{inputenc}
+\usepackage{inputenc}
 \usepackage{lmodern}
-
-
-
-
-
-
-
-
-
 
 
 

@@ -1,0 +1,680 @@
+%%
+%% This is file `chessfss.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% chessfss-src.dtx  (with options: `sty')
+%% 
+%% chessfss: chess font selection commands
+%% Copyright 2005 Ulrike Fischer (skak@nililand.de)
+%% -------------------------------------------
+%% 
+%% This file can be redistributed and/or modified under the terms of
+%% the LaTeX Project Public License distributed from CTAN archives in
+%% the directory macros/latex/base/lppl.txt; either version 1 of the
+%% License, or (at your option) any later version.
+%% 
+%% For error reports see documentation.
+%% Changes
+%% 2006-06-14: added definitions for shortcastling and longcastling
+%% added \chesscomment for \comment to prevent a clash with some verbatim
+%% packages. Added lsbc5 encoding.
+%%
+%% 2006-06-09
+%% changed the default font to skaknew. The skaknew option don't do anything now.
+%%
+%% 2006-06-07
+%% corrected def of chesssee ->bugreport
+%% 2006-05-26
+%% changed handling of textchars,
+%% added language commands
+%% added new encodings for layers board chars
+%% changed a lot of things in the documentation
+
+%% 2006-05-22
+%% Corrected definition of BlackRookOnWhite
+%% Added \setboardfontencoding
+
+%% 2006-03-31:
+%% changed the name of the informatorsymbol \see to
+%% \chesssee to avoid a clash with makeidx
+%%
+%% Fontencoding declaration are now in external .def-files.
+%% fd-informations of skak and skaknew are in external .fd-files.
+%%
+%% Changed the internal definition of the pieces. They now use
+%% \DeclareTextCommand etc. So they now longer execute font
+%% commands like size! The user definitions like
+%% \WhiteEmptySquare or \king are unchanged.
+%%
+%% I added an LSBXA-encoding that can be used to color the back of board
+%% pieces differently to the piece itself.
+
+%% 2005-12-15: added three length (\len@cfss@squarewidth, \len@cfss@squaretotalheight),
+%% \len@cfss@squaredepth)
+%% added the commands \cfss@getsquaresize and \getsquaresize,
+%% changed \cfss@setupboardsize and \setboardfontsize.
+%% They now stores the dimensions of a square of the board.
+
+%% 2005-12-15: changed definition of \cfss@boardsymbol. To prevent the
+%% insertion of italic correction in boards \DeclareTextFontCommand
+%% is no longer used
+
+%% 2005-12-02: corrected missing % in definition of \cfss@sidefont
+
+%% 2005-06-28: Changed definition of boardfont. The baselineskip is now
+%% set to the total height of a square. This corrects a problem with fonts,
+%% where the board squares are not really squares.
+
+%% 2005-05-09: Corrected the definitions of \with and \without.
+%% \with is now |_ and \without is now _| (the old definition were the other
+%% way round).
+
+\NeedsTeXFormat{LaTeX2e}%
+\ProvidesPackage{chessfss}[2006/06/14 v1.2a chess font selection scheme]
+\RequirePackage{ifthen,xkeyval}
+\providecommand\cfss@default@family{skaknew}
+
+\DeclareOption{skaknew}{}
+\ProcessOptions
+
+%%%% Deklaration of the standard encodings
+%% other encoding have to been loaded e.g. with fontenc
+
+\input{lsbenc.def}
+\input{lsfenc.def}
+\input{lsienc.def}
+
+%%%% font commands
+
+%%%% commands for the figurine
+%%% encoding
+
+\newcommand\cfss@figfontencoding{LSF}
+
+%% figurines can be written in a game as figurine symbols or as text characters.
+%% Text characters can change with the language.
+%% I provide three sets to print figurines:
+%% \figfont and \figsymbol{} and \symking, \symqueen ... prints only symbols
+%% \textfigsymbol{<english Piecename>}, \textking, \textqueen ...  prints only a text
+%%  character,
+%% \textsymfigsymbol{}, \king, \queen, \textsymking, \textsymqueen ... prints either a text or
+%% symbol depending on a switch. The switch can be set with \usetextfig
+%% and \usesymfig.
+%% For the two \text... and \textsym command there aren't declaration commands, but the
+%% the fontstyle can be set with \settextfigstyle{<font commands>}.
+
+%%% commands to print figurine symbols
+
+\newcommand\cfss@figfontfamily     {\cfss@default@family}
+
+\newcommand*\setfigfontfamily[1]{%
+    \renewcommand*\cfss@figfontfamily{#1}}
+
+\DeclareRobustCommand\cfss@figfont{%
+    \fontencoding {\cfss@figfontencoding}%
+    \fontfamily   {\cfss@figfontfamily}%
+    \selectfont}
+
+\let\figfont\cfss@figfont
+
+\DeclareTextFontCommand\cfss@figsymbol{\cfss@figfont}
+
+\let\figsymbol\cfss@figsymbol
+
+%% "symbol" figurines
+
+\DeclareRobustCommand\symking
+    {\figsymbol{\cfss@symking}}
+\DeclareRobustCommand\symqueen
+    {\figsymbol{\cfss@symqueen}}
+\DeclareRobustCommand\symrook
+    {\figsymbol{\cfss@symrook}}
+\DeclareRobustCommand\symbishop
+    {\figsymbol{\cfss@symbishop}}
+\DeclareRobustCommand\symknight
+    {\figsymbol{\cfss@symknight}}
+\DeclareRobustCommand\sympawn
+    {\figsymbol{\cfss@sympawn}}
+
+%%% command to get text characters
+%% Defining the output characters and the translation from english input to the
+%% output
+
+%% Languagesupport/Input/Output
+%% new 2006-05-26
+\newcommand\cfss@textfiglanguage{english}
+\newcommand\cfss@symfiglanguage{@LSB}
+\newcommand\cfss@figlanguage{\cfss@symfiglanguage}
+
+\newcommand*\settextfiglanguage[1]{%
+   \ifcsname cfss@king@#1\endcsname
+    \def\cfss@textfiglanguage{#1}%
+   \else
+   \PackageWarning{chessfss}{%
+    Chars for language #1 undefined! \MessageBreak
+    I will use english instead!}
+    \def\cfss@textfiglanguage{english}%
+   \fi}
+
+\newcommand*\cfss@king@@LSB{\cfss@figsymbol{K}}
+\newcommand*\cfss@queen@@LSB{\cfss@figsymbol{Q}}
+\newcommand*\cfss@rook@@LSB{\cfss@figsymbol{R}}
+\newcommand*\cfss@bishop@@LSB{\cfss@figsymbol{B}}
+\newcommand*\cfss@knight@@LSB{\cfss@figsymbol{N}}
+\newcommand*\cfss@pawn@@LSB{\cfss@figsymbol{p}}
+
+\newcommand*\settextfigchars[7][english]{% language, {K}{Q}{R}{B}{N}{P}
+  \@namedef{cfss@king@#1}{#2}%
+  \@namedef{cfss@queen@#1}{#3}%
+  \@namedef{cfss@rook@#1}{#4}%
+  \@namedef{cfss@bishop@#1}{#5}%
+  \@namedef{cfss@knight@#1}{#6}%
+  \@namedef{cfss@pawn@#1}{#7}}
+
+\let\setfigtextchars\settextfigchars
+
+\settextfigchars[english]{K}{Q}{R}{B}{N}{P}
+\settextfigchars[german]{K}{D}{T}{L}{S}{B}
+\settextfigchars[spanish]{R}{D}{T}{A}{C}{P}
+\settextfigchars[finnish]{K}{D}{T}{L}{R}{S}
+\settextfigchars[french]{R}{D}{T}{F}{C}{P}
+\settextfigchars[interlingua]{R}{G}{T}{E}{C}{P}
+\settextfigchars[icelandic]{K}{D}{H}{B}{R}{P}
+\settextfigchars[italian]{R}{D}{T}{A}{C}{P}
+\settextfigchars[portuges]{R}{D}{T}{B}{C}{P}
+
+\newcommand*\cfss@kingchar{K}
+\newcommand*\cfss@queenchar{Q}
+\newcommand*\cfss@rookchar{R}
+\newcommand*\cfss@bishopchar{B}
+\newcommand*\cfss@knightchar{N}
+\newcommand*\cfss@pawnchar{P}
+
+\newcommand*{\cfss@input@K@english}{king}
+\newcommand*{\cfss@input@k@english}{king}
+\newcommand*{\cfss@input@Q@english}{queen}
+\newcommand*{\cfss@input@q@english}{queen}
+\newcommand*{\cfss@input@R@english}{rook}
+\newcommand*{\cfss@input@r@english}{rook}
+\newcommand*{\cfss@input@B@english}{bishop}
+\newcommand*{\cfss@input@b@english}{bishop}
+\newcommand*{\cfss@input@N@english}{knight}
+\newcommand*{\cfss@input@n@english}{knight}
+\newcommand*{\cfss@input@P@english}{pawn}
+\newcommand*{\cfss@input@p@english}{pawn}
+
+\newcommand*\cfss@checkinputchar[1]{%
+  \ifcsname cfss@input@#1@english\endcsname
+  \else
+  \PackageError{chessfss}{Input char #1 unknown}{}%
+  \fi}
+
+\DeclareRobustCommand\cfss@puretextfigsymbol[1]{%
+  \cfss@checkinputchar{#1}%
+   \csname cfss@\csname cfss@input@#1@english\endcsname @\cfss@textfiglanguage\endcsname}
+
+\DeclareRobustCommand\cfss@styletextfigsymbol[1]{%
+  \cfss@checkinputchar{#1}%
+   {\cfss@figstyle{\csname cfss@\csname cfss@input@#1@english\endcsname @\cfss@textfiglanguage\endcsname}}}
+
+\DeclareRobustCommand\cfss@textking
+    {\cfss@textfigsymbol{K}}
+\DeclareRobustCommand\cfss@textqueen
+    {\cfss@textfigsymbol{Q}}
+\DeclareRobustCommand\cfss@textrook
+    {\cfss@textfigsymbol{R}}
+\DeclareRobustCommand\cfss@textbishop
+    {\cfss@textfigsymbol{B}}
+\DeclareRobustCommand\cfss@textknight
+    {\cfss@textfigsymbol{N}}
+\DeclareRobustCommand\cfss@textpawn
+    {\cfss@textfigsymbol{P}}
+
+\let\textking\cfss@textking
+\let\textqueen\cfss@textqueen
+\let\textrook\cfss@textrook
+\let\textbishop\cfss@textbishop
+\let\textknight\cfss@textknight
+\let\textpawn\cfss@textpawn
+
+\DeclareRobustCommand\cfss@puretextsymfigsymbol[1]{%
+  \cfss@checkinputchar{#1}%
+   \csname cfss@\csname cfss@input@#1@english\endcsname @\cfss@figlanguage\endcsname}
+
+\DeclareRobustCommand\cfss@styletextsymfigsymbol[1]{%
+  \cfss@checkinputchar{#1}%
+  {\cfss@figstyle{%
+   \csname cfss@\csname cfss@input@#1@english\endcsname @\cfss@figlanguage\endcsname}}}
+
+\DeclareRobustCommand\cfss@textsymking
+    {\cfss@textsymfigsymbol{K}}
+\DeclareRobustCommand\cfss@textsymqueen
+    {\cfss@textsymfigsymbol{Q}}
+\DeclareRobustCommand\cfss@textsymrook
+    {\cfss@textsymfigsymbol{R}}
+\DeclareRobustCommand\cfss@textsymbishop
+    {\cfss@textsymfigsymbol{B}}
+\DeclareRobustCommand\cfss@textsymknight
+    {\cfss@textsymfigsymbol{N}}
+\DeclareRobustCommand\cfss@textsympawn
+    {\cfss@textsymfigsymbol{p}}
+
+\let\textsymking\cfss@textsymking
+\let\textsymqueen\cfss@textsymqueen
+\let\textsymrook\cfss@textsymrook
+\let\textsymbishop\cfss@textsymbishop
+\let\textsymknight\cfss@textsymknight
+\let\textsympawn\cfss@textsympawn
+
+\DeclareRobustCommand\cfss@king
+    {\cfss@textsymfigsymbol{K}}
+\DeclareRobustCommand\cfss@queen
+    {\cfss@textsymfigsymbol{Q}}
+\DeclareRobustCommand\cfss@rook
+    {\cfss@textsymfigsymbol{R}}
+\DeclareRobustCommand\cfss@bishop
+    {\cfss@textsymfigsymbol{B}}
+\DeclareRobustCommand\cfss@knight
+    {\cfss@textsymfigsymbol{N}}
+\DeclareRobustCommand\cfss@pawn
+    {\cfss@textsymfigsymbol{p}}
+
+\let\king\cfss@king
+\let\queen\cfss@queen
+\let\rook\cfss@rook
+\let\bishop\cfss@bishop
+\let\knight\cfss@knight
+\let\pawn\cfss@pawn
+
+\newif\ifcfss@textchars
+
+\newcommand\usesymfig{%
+ \def\cfss@figlanguage{\cfss@symfiglanguage}}
+
+\newcommand{\usetextfig}{%
+ \def\cfss@figlanguage{\cfss@textfiglanguage}}
+
+\usesymfig %default
+
+%% figstyle,
+
+\newcommand*\cfss@figstyle{}
+
+\DeclareRobustCommand\setfigstyle[1]{%
+ \def\next{#1}%
+ \ifx\next\empty
+  \let\cfss@textfigsymbol\cfss@puretextfigsymbol
+  \let\textfigsymbol\cfss@textfigsymbol
+  \let\cfss@textsymfigsymbol\cfss@puretextsymfigsymbol
+  \let\textsymfigsymbol\cfss@textsymfigsymbol
+ \else
+  \let\cfss@textfigsymbol\cfss@styletextfigsymbol
+  \let\textfigsymbol\cfss@textfigsymbol
+  \let\cfss@textsymfigsymbol\cfss@styletextsymfigsymbol
+  \let\textsymfigsymbol\cfss@textsymfigsymbol
+  \DeclareRobustCommand\cfss@figstyle{#1}%
+ \fi}
+
+\let\settextfigstyle\setfigstyle
+
+\setfigstyle{} %default
+
+%%%% commands for the board
+
+%% the font for the boards/diagrams, the size should be set independant
+%% of surrounding font sizes. I don't think that an "\itshape"-board is possible,
+%% but I provide a command to change to "bold" boards (I have a font with such a board).
+
+\newcommand*\cfss@boardfontencoding{LSB}
+\newcommand*\cfss@boardfontfamily   {\cfss@default@family}
+\newcommand*\cfss@boardfontseries   {\mddefault}
+\newcommand*\cfss@boardfontsize     {20pt}
+
+\newcommand*\setboardfontencoding[1]{%
+    \renewcommand*\cfss@boardfontencoding{#1}}
+
+\newcommand*\setboardfontfamily[1]{%
+    \renewcommand*\cfss@boardfontfamily{#1}}
+
+\newcommand*\setboardfontseries[1]{%
+    \renewcommand*\cfss@boardfontseries{#1}}
+
+\newcommand*\setboardfontsize[1]{%
+    %changed 2005-12-15. added \cfss@getsquaresize
+    \renewcommand*\cfss@boardfontsize{#1}%
+    \cfss@getsquaresize{\BlackEmptySquare}}
+
+\newcommand\showchessboardencoding[2][skaknew]{%
+  \ifcsname cfss@showboardencoding#2\endcsname
+   \@ifundefined{colorbox}
+    {\PackageWarning{chessfss}{color package not loaded!}{}
+     \def\colorbox[2][]{}}
+    {\begingroup
+      \setboardfontencoding{#2}%
+      \setboardfontfamily{#1}%
+      \normalfont
+      \colorbox[gray]{0.95}{\csname cfss@showboardencoding#2\endcsname}
+     \endgroup}%
+  \else
+   \PackageError{chessfss}{Encoding #2 has no description or hasn't been loaded}{}
+  \fi}
+
+%%% New 2005-12-15. Commands to get width, totalheight, and depth (for
+%%% correction) of the board.
+
+\newlength\len@cfss@squarewidth
+\newlength\len@cfss@squaretotalheight
+\newlength\len@cfss@squaredepth
+
+\newcommand\cfss@getsquaresize[1]{% use e.g.e as \cfss@getsquaresize{\BlackEmptySquare}
+    \settowidth\len@cfss@squarewidth{#1}%
+    \settodepth\len@cfss@squaredepth{#1}%
+    \settoheight\len@cfss@squaretotalheight{\raisebox{\depth}{#1}}}%
+
+\newcommand\cfss@globalgetsquaresize[1]{% use e.g.e as \cfss@getsquaresize{\BlackEmptySquare}
+    \settowidth{\global\len@cfss@squarewidth}{#1}%
+    \settodepth{\global\len@cfss@squaredepth}{#1}%
+    \settoheight{\global\len@cfss@squaretotalheight}{\raisebox{\depth}{#1}}}%
+
+\let\getsquaresize\cfss@getsquaresize
+
+%%% end New 2005-12-15
+
+%%2006-05-24 color encodings commands
+
+\providecommand\cfss@whitefieldmaskcolor{\color{white}}
+\providecommand\cfss@blackfieldmaskcolor{\color{gray}}
+\providecommand\cfss@whitefieldcolor{}
+\providecommand\cfss@blackfieldcolor{}
+\providecommand\cfss@whiteonwhitepiecemaskcolor{\color{white}}
+\providecommand\cfss@whiteonblackpiecemaskcolor{\color{white}}
+\providecommand\cfss@blackonwhitepiecemaskcolor{\color{white}}
+\providecommand\cfss@blackonblackpiecemaskcolor{\color{white}}
+\providecommand\cfss@whitepiececolor{}
+\providecommand\cfss@blackpiececolor{}
+
+\define@key[UFCF]{gloset}{whitefieldmask}{%
+  \def\cfss@whitefieldmaskcolor{\color{#1}}}%
+
+\define@key[UFCF]{gloset}{blackfieldmask}{%
+  \def\cfss@blackfieldmaskcolor{\color{#1}}}%
+
+\define@key[UFCF]{gloset}{whitefield}{%
+  \def\cfss@whitefieldcolor{\color{#1}}}%
+
+\define@key[UFCF]{gloset}{blackfield}{%
+  \def\cfss@blackfieldcolor{\color{#1}}}%
+
+\define@key[UFCF]{gloset}{whiteonwhitepiecemask}{%
+  \def\cfss@whiteonwhitepiecemaskcolor{\color{#1}}}%
+
+\define@key[UFCF]{gloset}{blackonwhitepiecemask}{%
+  \def\cfss@blackonwhitepiecemaskcolor{\color{#1}}}%
+
+\define@key[UFCF]{gloset}{whiteonblackpiecemask}{%
+  \def\cfss@whiteonblackpiecemaskcolor{\color{#1}}}%
+
+\define@key[UFCF]{gloset}{blackonblackpiecemask}{%
+  \def\cfss@blackonblackpiecemaskcolor{\color{#1}}}%
+
+\define@key[UFCF]{gloset}{whitepiece}{%
+  \def\cfss@whitepiececolor{\color{#1}}}%
+
+\define@key[UFCF]{gloset}{blackpiece}{%
+  \def\cfss@blackpiececolor{\color{#1}}}%
+
+\newcommand\setboardfontcolors[1]{%
+    \setkeys[UFCF]{gloset}{#1}}
+
+%% Font commands. The baselineskip is equal to the total height of the black
+%% square
+
+\DeclareRobustCommand\cfss@boardfont{% changed 2005-06-28
+             \fontencoding{\cfss@boardfontencoding}%
+             \fontfamily{\cfss@boardfontfamily}%
+             \fontshape{n}%
+             \fontseries{\cfss@boardfontseries}%
+             \fontsize{\cfss@boardfontsize}{\cfss@boardfontsize}%
+             \selectfont
+             \settoheight\baselineskip{\raisebox{\depth}{Z}}}%
+
+\let\boardfont\cfss@boardfont
+
+\DeclareRobustCommand\cfss@boardsymbol[1]{%
+%%changed 2005-12-15 to prevent the insertion of italic
+%%correction in boards. \DeclareTextFontCommand is no longer
+%%used
+    \ifmmode
+      \nfss@text{\cfss@boardfont#1}%
+    \else
+      \hmode@bgroup
+       \cfss@boardfont#1%
+      \egroup
+    \fi
+                       }%
+
+\let\boardsymbol\cfss@boardsymbol
+
+%% to be able to change figurine and board together
+%% we define a setchessfontfamily command:
+
+\newcommand*\setchessfontfamily[1]{%
+    \renewcommand*\cfss@figfontfamily{#1}%
+    \renewcommand*\cfss@boardfontfamily{#1}}
+
+%% and a command for all three families
+
+\newcommand*\setallchessfontfamily[1]{%
+    \renewcommand*\cfss@figfontfamily{#1}%
+    \renewcommand*\cfss@boardfontfamily{#1}%
+    \renewcommand*\cfss@inffontfamily{#1}}
+%%%% the font with the informator symbol.
+
+\newcommand*\cfss@inffontencoding{LSI}
+\newcommand*\cfss@inffontfamily     {\cfss@default@family}
+
+\newcommand*\setinffontfamily[1]{%
+    \renewcommand*\cfss@inffontfamily{#1}}
+
+%% declaration command
+\DeclareRobustCommand\cfss@inffont{%
+    \fontencoding  {LSI}%
+    \fontfamily    {\cfss@inffontfamily}%
+    \selectfont}
+
+\let\inffont\cfss@inffont
+
+\DeclareTextFontCommand\cfss@infsymbol{\cfss@inffont}
+
+\let\infsymbol\cfss@infsymbol
+
+%%% for notation on the board side, this font should be a "fixed" font, so
+%%% every font characteristik can be defined:
+
+\newcommand*\cfss@sidefontencoding{\encodingdefault}
+\newcommand*\cfss@sidefontfamily  {\sfdefault}
+\newcommand*\cfss@sidefontshape   {\updefault}
+\newcommand*\cfss@sidefontseries  {\mddefault}
+\newcommand*\cfss@sidefontsize    {6pt}
+
+\newcommand*\setsidefontencoding[1]{%
+    \renewcommand*\cfss@sidefontencoding{#1}}
+
+\newcommand*\setsidefontfamily[1]{%
+    \renewcommand*\cfss@sidefontfamily{#1}}
+
+\newcommand*\setsidefontshape[1]{%
+    \renewcommand*\cfss@sidefontshape{#1}}
+
+\newcommand*\setsidefontseries[1]{%
+    \renewcommand*\cfss@sidefontseries{#1}}
+
+\newcommand*\setsidefontsize[1]{%
+    \renewcommand*\cfss@sidefontsize{#1}}
+
+%% declaration command
+
+\DeclareRobustCommand\cfss@sidefont{%changed 2005-12-02
+                                    %corrected missing %
+            \fontsize{\cfss@sidefontsize}{\cfss@sidefontsize}%
+            \usefont{\cfss@sidefontencoding}%
+                    {\cfss@sidefontfamily}%
+                    {\cfss@sidefontseries}%
+                    {\cfss@sidefontshape}}
+
+\newcommand\sidefont{}
+\let\sidefont\cfss@sidefont
+
+\DeclareTextFontCommand\cfss@sidesymbol{\cfss@sidefont}
+
+\newcommand\sidesymbol{}
+\let\sidesymbol\cfss@sidesymbol
+
+%%% command to change size of boardfont and notation font
+%%% This is an internal command as packages will perhaps
+%%% need to adjust other things
+%%% The command is obsolete. package writer should better
+%%% decide themselve which piece should be the reference piece.
+%%% But as skak.sty use the command I didn't delete it.
+
+\newcommand\cfss@setupboardsize[2]{%
+%% changed 2005-12-15. added \cfss@getsquaresize
+           \renewcommand\cfss@boardfontsize     {#1}%
+           \renewcommand\cfss@sidefontsize  {#2}%
+           \cfss@getsquaresize{\BlackEmptySquare}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% support for symbols
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Symbols from figurine font (LSF encoding),
+%%%  commands are above
+
+%%% Symbols from the board font (LSB encoding)
+%%% These symbols are of less use for the normal user, so names with Initials are used
+
+\DeclareRobustCommand\WhiteEmptySquare  {\cfss@boardsymbol{\cfss@WhiteEmptySquare}}
+\DeclareRobustCommand\BlackEmptySquare  {\cfss@boardsymbol{\cfss@BlackEmptySquare}}
+\DeclareRobustCommand\WhiteKingOnWhite  {\cfss@boardsymbol{\cfss@WhiteKingOnWhite}}
+\DeclareRobustCommand\BlackKingOnWhite  {\cfss@boardsymbol{\cfss@BlackKingOnWhite}}
+\DeclareRobustCommand\WhiteKingOnBlack  {\cfss@boardsymbol{\cfss@WhiteKingOnBlack}}
+\DeclareRobustCommand\BlackKingOnBlack  {\cfss@boardsymbol{\cfss@BlackKingOnBlack}}
+\DeclareRobustCommand\WhiteQueenOnWhite {\cfss@boardsymbol{\cfss@WhiteQueenOnWhite}}
+\DeclareRobustCommand\BlackQueenOnWhite {\cfss@boardsymbol{\cfss@BlackQueenOnWhite}}
+\DeclareRobustCommand\WhiteQueenOnBlack {\cfss@boardsymbol{\cfss@WhiteQueenOnBlack}}
+\DeclareRobustCommand\BlackQueenOnBlack {\cfss@boardsymbol{\cfss@BlackQueenOnBlack}}
+\DeclareRobustCommand\WhiteRookOnWhite  {\cfss@boardsymbol{\cfss@WhiteRookOnWhite}}
+\DeclareRobustCommand\BlackRookOnWhite  {\cfss@boardsymbol{\cfss@BlackRookOnWhite}}
+\DeclareRobustCommand\WhiteRookOnBlack  {\cfss@boardsymbol{\cfss@WhiteRookOnBlack}}
+\DeclareRobustCommand\BlackRookOnBlack  {\cfss@boardsymbol{\cfss@BlackRookOnBlack}}
+\DeclareRobustCommand\WhiteBishopOnWhite{\cfss@boardsymbol{\cfss@WhiteBishopOnWhite}}
+\DeclareRobustCommand\BlackBishopOnWhite{\cfss@boardsymbol{\cfss@BlackBishopOnWhite}}
+\DeclareRobustCommand\WhiteBishopOnBlack{\cfss@boardsymbol{\cfss@WhiteBishopOnBlack}}
+\DeclareRobustCommand\BlackBishopOnBlack{\cfss@boardsymbol{\cfss@BlackBishopOnBlack}}
+\DeclareRobustCommand\WhiteKnightOnWhite{\cfss@boardsymbol{\cfss@WhiteKnightOnWhite}}
+\DeclareRobustCommand\BlackKnightOnWhite{\cfss@boardsymbol{\cfss@BlackKnightOnWhite}}
+\DeclareRobustCommand\WhiteKnightOnBlack{\cfss@boardsymbol{\cfss@WhiteKnightOnBlack}}
+\DeclareRobustCommand\BlackKnightOnBlack{\cfss@boardsymbol{\cfss@BlackKnightOnBlack}}
+\DeclareRobustCommand\WhitePawnOnWhite  {\cfss@boardsymbol{\cfss@WhitePawnOnWhite}}
+\DeclareRobustCommand\BlackPawnOnWhite  {\cfss@boardsymbol{\cfss@BlackPawnOnWhite}}
+\DeclareRobustCommand\WhitePawnOnBlack  {\cfss@boardsymbol{\cfss@WhitePawnOnBlack}}
+\DeclareRobustCommand\BlackPawnOnBlack  {\cfss@boardsymbol{\cfss@BlackPawnOnBlack}}
+
+%%% Various Symbols from textfont
+
+\DeclareRobustCommand\castlingchar  {O}
+\DeclareRobustCommand\novelty       {{\textsf{N}}}
+\ifcsname comment\endcsname
+ \PackageWarning{chessfss}{\string\comment\space already defined
+ \MessageBreak I will not overwrite it}
+\else
+ \newcommand\comment       {{\textsf{\mbox{RR}}}}
+\fi
+\DeclareRobustCommand\chesscomment  {{\textsf{\mbox{RR}}}}
+\DeclareRobustCommand\various       {{\textsf{R}}}
+
+%%% Commands for castling, definitions are temporary, don't know yet
+%%% the best way to handle them, so that glyphs can be used
+\newcommand\shortcastling{\mbox{\castlingchar\castlinghyphen\castlingchar}}
+\newcommand\longcastling{\mbox{\castlingchar\castlinghyphen\castlingchar\castlinghyphen\castlingchar}}
+
+\newcommand\cfss@shortcastling{\mbox{\castlingchar\castlinghyphen\castlingchar}}
+\newcommand\cfss@longcastling{\mbox{\castlingchar\castlinghyphen\castlingchar\castlinghyphen\castlingchar}}
+
+%%% Symbols from the LSI encoding (informator symbols)
+
+\DeclareRobustCommand\castlinghyphen{{\cfss@infsymbol{\cfss@castlinghyphen}}}
+\DeclareRobustCommand\checksymbol   {{\cfss@infsymbol{\cfss@checksymbol}}}
+\let\checksign\checksymbol %for texmate
+\DeclareRobustCommand\bishoppair    {{\cfss@infsymbol{\cfss@bishoppair}}}
+\let\bishops\bishoppair %for texmate
+\DeclareRobustCommand\betteris      {{\cfss@infsymbol{\cfss@betteris}}}
+\DeclareRobustCommand\wupperhand    {{\cfss@infsymbol{\cfss@wupperhand}}}
+\let\wBetter\wupperhand %for texmate
+\DeclareRobustCommand\doublepawns   {{\cfss@infsymbol{\cfss@doublepawns}}}
+\let\doubledpawns\doublepawns %for texmate
+\DeclareRobustCommand\bupperhand    {{\cfss@infsymbol{\cfss@bupperhand}}}
+\let\bBetter\bupperhand %for texmate
+\DeclareRobustCommand\wbetter       {{\cfss@infsymbol{\cfss@wbetter}}}
+\DeclareRobustCommand\bbetter       {{\cfss@infsymbol{\cfss@bbetter}}}
+\DeclareRobustCommand\wdecisive     {{\cfss@infsymbol{\cfss@wdecisive}}}
+\let\WBetter\wdecisive %for texmate
+\DeclareRobustCommand\bdecisive     {{\cfss@infsymbol{\cfss@bdecisive}}}
+\let\BBetter\bdecisive %for texmate
+\DeclareRobustCommand\equal         {{\cfss@infsymbol{\cfss@equal}}}
+\DeclareRobustCommand\unclear       {{\cfss@infsymbol{\cfss@unclear}}}
+\DeclareRobustCommand\chesssee      {{\cfss@infsymbol{\cfss@chesssee}}}
+%% Definition of \see delated as there is clash with makeidx
+%%\let\chesssee\see %for texmate
+\DeclareRobustCommand\mate          {{\cfss@infsymbol{\cfss@mate}}}
+\DeclareRobustCommand\compensation  {{\cfss@infsymbol{\cfss@compensation}}}
+\DeclareRobustCommand\opposbishops  {{\cfss@infsymbol{\cfss@opposbishops}}}
+\let\oppositebishops\opposbishops %for texmate
+\DeclareRobustCommand\seppawns      {{\cfss@infsymbol{\cfss@seppawns}}}
+\let\separatedpawns\seppawns %for texmate
+\DeclareRobustCommand\passedpawn    {{\cfss@infsymbol{\cfss@passedpawn}}}
+\DeclareRobustCommand\samebishops   {{\cfss@infsymbol{\cfss@samebishops}}}
+\DeclareRobustCommand\devadvantage  {{\cfss@infsymbol{\cfss@devadvantage}}}
+\let\development\devadvantage%for texmate
+\DeclareRobustCommand\unitedpawns   {{\cfss@infsymbol{\cfss@unitedpawns}}}
+\DeclareRobustCommand\with          {{\cfss@infsymbol{\cfss@with}}} %changed2005.05.09
+\DeclareRobustCommand\without       {{\cfss@infsymbol{\cfss@without}}} %changed2005.05.09
+\DeclareRobustCommand\markera       {{\cfss@infsymbol{\cfss@markera}}}
+\DeclareRobustCommand\markerb       {{\cfss@infsymbol{\cfss@markerb}}}
+\DeclareRobustCommand\withattack    {{\cfss@infsymbol{\cfss@withattack}}}
+\let\attack\withattack %for texmate
+\DeclareRobustCommand\withinit      {{\cfss@infsymbol{\cfss@withinit}}}
+\let\initiative\withinit %for texmate
+\DeclareRobustCommand\zugzwang      {{\cfss@infsymbol{\cfss@zugzwang}}}
+\DeclareRobustCommand\withidea      {{\cfss@infsymbol{\cfss@withidea}}}
+\DeclareRobustCommand\onlymove      {{\cfss@infsymbol{\cfss@onlymove}}}
+\DeclareRobustCommand\diagonal      {{\cfss@infsymbol{\cfss@diagonal}}}
+\let\boarddiagonal\diagonal %for texmate
+\DeclareRobustCommand\file          {{\cfss@infsymbol{\cfss@file}}}
+\let\boardfile\file %for texmate
+\DeclareRobustCommand\centre        {{\cfss@infsymbol{\cfss@centre}}}
+\let\boardcenter\centre %for texmate
+\DeclareRobustCommand\weakpt        {{\cfss@infsymbol{\cfss@weakpt}}}
+\let\weak\weakpt %for texmate, symbol changed
+\DeclareRobustCommand\ending        {{\cfss@infsymbol{\cfss@ending}}}
+\DeclareRobustCommand\qside         {{\cfss@infsymbol{\cfss@qside}}}
+\let\queenside\qside %for texmate
+\DeclareRobustCommand\kside         {{\cfss@infsymbol{\cfss@kside}}}
+\let\kingside\kside %for texmate
+\DeclareRobustCommand\etc           {{\cfss@infsymbol{\cfss@etc}}}
+\let\chessetc\etc %for texmate
+\DeclareRobustCommand\morepawns     {{\cfss@infsymbol{\cfss@morepawns}}}
+\let\pawnsno\morepawns %for texmate
+\DeclareRobustCommand\timelimit     {{\cfss@infsymbol{\cfss@timelimit}}}
+\let\timetrouble\timelimit %for texmate
+\DeclareRobustCommand\moreroom      {{\cfss@infsymbol{\cfss@moreroom}}}
+\let\spaceadv\moreroom %for texmate, use other symbol than texmate here!
+\DeclareRobustCommand\counterplay   {{\cfss@infsymbol{\cfss@counterplay}}}
+\DeclareRobustCommand\capturesymbol {{\cfss@infsymbol{\cfss@capturesymbol}}}
+
+\InputIfFileExists{chessfss.cfg}{}{}
+
+\endinput
+%%
+%% End of file `chessfss.sty'.

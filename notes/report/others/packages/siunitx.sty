@@ -1,0 +1,3994 @@
+%%
+%% This is file `siunitx.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% siunitx.dtx  (with options: `package')
+%% ---------------------------------------------------------------
+%% The siunitx package --- A comprehensive (SI) units package
+%% Maintained by Joseph Wright
+%% E-mail: joseph.wright@morningstar2.co.uk
+%% Released under the LaTeX Project Public License v1.3c or later
+%% See http://www.latex-project.org/lppl.txt
+%% ---------------------------------------------------------------
+%% 
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{siunitx}
+  [2010/02/22 v1.4c A comprehensive (SI) units package]
+\begingroup
+  \@ifundefined{eTeXversion}
+    {\PackageError{siunitx}
+       {Not running under e-TeX}
+       {This package requires e-TeX. Try compiling the document
+        with\MessageBreak `elatex' instead of `latex'. When
+        using pdfTeX, try `pdfelatex'\MessageBreak instead of
+        `pdflatex'}%
+     \endgroup\endinput}
+    {\endgroup}
+\edef\si@catcodes{%
+  \catcode\string`\string ` \the\catcode\string`\`\relax
+  \catcode\string`\string = \the\catcode\string`\=\relax
+  \catcode\string`\string ^ \the\catcode\string`\^\relax
+  \catcode\string`\string _ \the\catcode\string`\_\relax
+  \catcode\string`\string ~ \the\catcode\string`\~\relax
+  \catcode\string`\string : \the\catcode\string`\:\relax
+  \catcode\string`\string - \the\catcode\string`\-\relax
+  \catcode\string`\string + \the\catcode\string`\+\relax
+  \catcode\string`\string ; \the\catcode\string`\;\relax
+  \catcode\string`\string , \the\catcode\string`\,\relax
+  \catcode\string`\string . \the\catcode\string`\.\relax}
+\catcode\string`\` 12\relax
+\catcode`\= 12\relax
+\catcode`\^ 7\relax
+\catcode`\_ 8\relax
+\catcode`\~ \active\relax
+\@makeother{\:}
+\@makeother{\-}
+\@makeother{\+}
+\@makeother{\;}
+\@makeother{\,}
+\@makeother{\.}
+\RequirePackage{xkeyval}[2005/05/07]
+\RequirePackage{amstext,array,xspace}
+\newcommand*{\si@tempa}{}
+\newcommand*{\si@tempb}{}
+\newcommand*{\si@tempc}{}
+\newif\ifsi@switch
+\newbox\si@tempboxa
+\newbox\si@tempboxb
+\newbox\si@tempboxc
+\newbox\si@tempboxd
+\newtoks{\si@temptoks}
+\newcommand*{\si@blockpkgs}{SIunits,sistyle,siunits,SIstyle,%
+  unitsdef,fancyunits}
+\newcommand*{\si@checkpkgs}{units,hepunits,fancynum}
+\newcommand*{\si@packagecheck}{%
+  \begingroup
+  \@for\si@tempa:=\si@blockpkgs\do{
+    \@ifpackageloaded{\si@tempa}
+      {\PackageError{siunitx}
+         {Package `\si@tempa' incompatible}
+         {The \si@tempa\space package and siunitx are
+          incompatible.\MessageBreak Use the
+          `emulate=\si@tempa' package option when loading
+          siunitx}}
+      {}}
+  \@for\si@tempa:=\si@checkpkgs\do{%
+    \@ifpackageloaded{\si@tempa}
+      {\PackageWarning{siunitx}
+         {Consider loading the siunitx package
+          with\MessageBreak option `emulate=\si@tempa', rather
+          than\MessageBreak loading both \si@tempa\space and
+          siunitx}}
+      {}}
+  \endgroup}
+\si@packagecheck
+\AtBeginDocument{\si@packagecheck}
+\newcommand*{\si@ifdefinable}[1]{%
+  \expandafter\expandafter\expandafter\@ifundefined%
+    \expandafter\expandafter\expandafter%
+      {\expandafter\@gobble\string#1}}
+\newcommand*{\si@addtolist}[2]{%
+  \ifx\@empty#1\@empty
+    \edef#1{#2}%
+  \else
+    \edef#1{#1,#2}%
+  \fi}
+\newcommand*{\si@addtocsname}[2]{%
+  \@ifundefined{#1}
+    {\expandafter\gdef\csname #1\endcsname{#2}}
+    {\si@temptoks\expandafter\expandafter\expandafter{%
+       \csname #1\endcsname#2}%
+     \expandafter\xdef\csname #1\endcsname{\the\si@temptoks}}}
+\begingroup
+  \catcode`\Q=3
+  \long\gdef\si@ifmtarg#1{%
+    \si@xifmtarg#1QQ\@secondoftwo\@firstoftwo\@nil}
+  \long\gdef\si@xifmtarg#1#2Q#3#4#5\@nil{#4}
+  \long\gdef\si@ifnotmtarg#1{%
+    \si@xifmtarg#1QQ\@firstofone\@gobble\@nil}
+\endgroup
+\@ifpackageloaded{etoolbox}
+  {\let\si@newrobustcmd\newrobustcmd}
+  {\protected\def\si@newrobustcmd{%
+     \@ifstar
+       {\let\l@ngrel@x\protected\si@newcommand}
+       {\def\l@ngrel@x{\protected\long}\si@newcommand}}
+   \newcommand*{\si@newcommand}[1]{\@testopt{\si@newcmd#1}0}
+   \def\si@newcmd#1[#2]{%
+     \@ifnextchar[%]
+       {\si@xargdef#1[#2]}
+       {\@argdef#1[#2]}}
+   \long\def\si@xargdef#1[#2][#3]#4{%
+     \@ifdefinable#1{%
+       \expandafter\protected
+       \expandafter\def
+       \expandafter#1%
+       \expandafter{%
+         \expandafter\@testopt
+         \csname\string#1\endcsname{#3}}%
+       \expandafter\@yargdef
+       \csname\string#1\endcsname\tw@{#2}{#4}}}}
+\newif\ifsi@debug
+\newif\ifsi@logmin
+\newif\ifsi@lognone
+\newcommand*{\si@log@err}[2]{%
+  \ifsi@lognone\else
+    \ifsi@logmin
+      \PackageWarning{siunitx}{#1}%
+    \else
+      \PackageError{siunitx}{#1}{#2}%
+    \fi
+  \fi}
+\newcommand*{\si@log@warn}[1]{%
+  \ifsi@lognone\else
+    \ifsi@logmin\else
+      \PackageWarning{siunitx}{#1}%
+    \fi
+  \fi}
+\newcommand*{\si@log@inf}[1]{%
+  \ifsi@lognone\else
+    \ifsi@logmin\else
+      \PackageInfo{siunitx}{#1}%
+    \fi
+  \fi}
+\newcommand*{\si@log@debug}[1]{%
+  \ifsi@lognone\else
+    \ifsi@debug
+      \PackageInfo{siunitx}{#1}%
+    \fi
+  \fi}
+\newcommand*{\si@str@ifchrstr}[2]{%
+  \begingroup
+    \si@switchfalse
+    \renewcommand*{\si@tempa}{#1}%
+    \protected@edef\si@tempb{#2}%
+    \expandafter\si@str@chrstr\si@tempb\@empty\@empty\@empty
+    \ifsi@switch
+      \aftergroup\@firstoftwo
+    \else
+      \aftergroup\@secondoftwo
+    \fi
+  \endgroup}
+\def\si@str@chrstr#1#2\@empty{%
+  \renewcommand*{\si@tempc}{#1}%
+  \ifx\si@tempa\si@tempc
+    \expandafter\si@switchtrue
+  \else
+    \ifx\@empty#2\@empty\else
+      \si@str@chrstr#2\@empty\@empty
+    \fi
+  \fi}
+\newcommand*{\si@str@ifonlychrs}[2]{%
+  \begingroup
+    \si@switchtrue
+    \protected@edef\si@tempa{#1}%
+    \renewcommand*{\si@tempb}{#2}%
+    \expandafter\si@str@onlychrs\si@tempa\@empty\@empty\@empty
+    \ifsi@switch
+      \aftergroup\@firstoftwo
+    \else
+      \aftergroup\@secondoftwo
+    \fi
+  \endgroup}
+\def\si@str@onlychrs#1#2\@empty{%
+  \si@str@ifchrstr{#1}{\si@tempb}
+    {}{\si@switchfalse}%
+  \ifx\@empty#2\@empty\else
+    \si@str@onlychrs#2\@empty\@empty
+  \fi}
+\newcommand*{\sisetup}{\setkeys[si]{key}}
+\newcommand*{\si@opt@key}[2]{%
+  \define@key[si]{key}{#1}
+  {#2\si@log@debug{Option #1 set to ##1}}}
+\newcommand*{\si@opt@cmdkey}[3][]{%
+  \define@cmdkey[si]{key}[si@]{#2}[#1]{#3}}
+\newcommand*{\si@opt@cmdkeys}[2][]{%
+  \define@cmdkeys[si]{key}[si@]{#2}[#1]}
+\newcommand*{\si@opt@boolkey}[2][]{%
+  \define@boolkey[si]{key}[si@]{#2}[true]
+  {#1\si@log@debug{Option #2 set to ##1}}}
+\newcommand*{\si@opt@choicekey}[4][]{%
+  \define@choicekey*+[si]{key}{#2}[\si@tempa]{#3}[#1]
+    {#4\si@log@debug{Option #2 set to ##1}}
+    {\si@log@warn{Unknown value `##1' for option #2}}}
+\newcommand*{\si@opt@xchoicekey}[3]{%
+  \define@choicekey*+[si]{key}{#1}[\si@tempa]{#2}[#1]
+    {\si@log@debug{Option #1 set to ##1}%
+     \expandafter\renewcommand\expandafter*\expandafter{%
+      \csname si@#1\endcsname}{\@nameuse{si@fix@##1}}}
+    {\si@log@debug{Option #1 set to ##1}%
+     \expandafter\renewcommand\expandafter*\expandafter{%
+      \csname si@#1\endcsname}{##1}}
+  \expandafter\newcommand\expandafter*\expandafter{%
+    \csname si@#1\endcsname}%
+    {\@nameuse{si@fix@#3}}}
+\newcommand*{\si@opt@compatkey}[2]{%
+  \define@boolkey[si]{key}[si@old@]{#2}[true]
+  {\si@log@debug{Emulating #1 package option\MessageBreak #2}%
+   \sisetup{emulate=#1}%
+   \si@log@debug{Option #2 set to ##1}}
+   \AtEndOfPackage{\si@opt@disablekey{#2}
+     {Compatibility option #2 only\MessageBreak
+        available when loading siunitx package}}}
+\newcommand*{\si@opt@disablekey}[2]{%
+  \key@ifundefined[si]{key}{#1}
+    {}
+    {\si@log@debug{Disabling key #1}%
+     \si@opt@key{#1}{\si@log@warn{#2}}}}
+\si@opt@choicekey[normal]{log}{debug,verbose,normal,errors,none}
+  {\si@debugfalse
+   \si@logminfalse
+   \si@lognonefalse
+   \renewcommand*{\si@tempb}{none}%
+   \ifx\si@tempa\si@tempb
+     \si@lognonetrue
+   \fi
+   \renewcommand*{\si@tempb}{minimal}%
+   \ifx\si@tempa\si@tempb
+     \si@logmintrue
+   \fi
+   \renewcommand*{\si@tempb}{debug}%
+   \ifx\si@tempa\si@tempb
+     \si@debugtrue
+   \fi
+   \renewcommand*{\si@tempb}{verbose}%
+   \ifx\si@tempa\si@tempb
+     \si@debugtrue
+   \fi}
+\si@opt@boolkey{debug}
+\si@opt@boolkey[%
+  \ifsi@strict
+    \sisetup{
+      obeymode=false,
+      obeybold=false,
+      obeyitalic=false,
+      mode=maths,
+      repeatunits=true,
+      trapambigerr=true,
+      trapambigfrac=true,
+      trapambigrange=true}
+    \@for\si@tempa:=obeyall,obeymode,obeyitalic,mode,unitmode,%
+      valuemode,textmode,obeybold,repeatunits,trapambigerr,%
+      trapambigfrac,trapambigrange\do{%
+      \begingroup
+        \edef\si@tempb{\endgroup
+          \noexpand\si@opt@disablekey{\si@tempa}
+          {Option `\si@tempa' forbidden in strict mode}}%
+      \si@tempb}
+  \fi]{strict}
+\AtEndOfPackage{
+  \si@opt@disablekey{strict}
+    {Option `strict' only available when\MessageBreak
+     loading package}}
+\newcommand*{\si@emulate}{}
+\si@opt@key{emulate}{\si@addtolist{\si@emulate}{#1}}
+\AtEndOfPackage{
+  \si@opt@disablekey{emulate}
+    {Option `emulate' only available when\MessageBreak
+     loading package}}
+\si@opt@xchoicekey{unitsep}
+  {space,thin,med,medium,thick,none,comma,stop,fullstop,period,
+    times,tighttimes,cdot,tightcdot}{thin}
+\si@opt@xchoicekey{unitspace}{space,thin,med,medium,thick,
+  none}{thin}
+\si@opt@xchoicekey{errspace}{space,thin,med,medium,thick,
+  none}{none}
+\si@opt@xchoicekey{valuesep}
+  {space,thin,med,medium,thick,none,comma,stop,fullstop,period,
+    times,tighttimes,cdot,tightcdot}{thin}
+\si@opt@xchoicekey{digitsep}
+  {space,thin,med,medium,thick,none,comma,stop,fullstop,period,
+    times,tighttimes,cdot,tightcdot}{thin}
+\si@opt@xchoicekey{decimalsymbol}{comma,stop,fullstop,period,
+  cdot,tightcdot}{fullstop}
+\si@opt@xchoicekey{anglesep}
+    {space,thin,med,medium,thick,none,comma,stop,fullstop,period,
+      times,tighttimes,cdot,tightcdot}{none}
+\si@opt@boolkey{obeymode}
+\newif\ifsi@numtextmode
+\newif\ifsi@unittextmode
+\si@opt@choicekey[true]{textmode}{true,false}
+  {\si@numtextmodefalse
+   \si@unittextmodefalse
+   \renewcommand*{\si@tempb}{true}%
+   \ifx\si@tempa\si@tempb
+     \si@numtextmodetrue
+     \si@unittextmodetrue
+   \fi}
+\si@opt@choicekey{mode}{math,maths,text}
+  {\si@numtextmodefalse
+   \si@unittextmodefalse
+   \renewcommand*{\si@tempb}{text}%
+   \ifx\si@tempa\si@tempb
+     \si@numtextmodetrue
+     \si@unittextmodetrue
+   \fi}
+\si@opt@choicekey{valuemode}{math,maths,text}
+  {\si@numtextmodefalse
+   \renewcommand*{\si@tempb}{text}%
+   \ifx\si@tempa\si@tempb
+     \si@numtextmodetrue
+   \fi}
+\si@opt@choicekey{unitmode}{math,maths,text}
+  {\si@unittextmodefalse
+   \renewcommand*{\si@tempb}{text}%
+   \ifx\si@tempa\si@tempb
+     \si@unittextmodetrue
+   \fi}
+\si@opt@boolkey{obeyfamily}
+\si@opt@boolkey{obeybold}
+\newif\ifsi@inlinebtext
+\si@opt@choicekey{inlinebold}{text,maths,math}
+  {\si@inlinebtextfalse
+   \renewcommand*{\si@tempb}{text}%
+   \ifx\si@tempa\si@tempb
+     \si@inlinebtexttrue
+   \fi}
+\si@opt@boolkey{obeyitalic}
+\si@opt@boolkey{detectdisplay}
+\si@opt@choicekey[true]{obeyall}{true,false}
+  {\si@obeyboldfalse
+   \si@obeyitalicfalse
+   \si@obeymodefalse
+   \si@obeyfamilyfalse
+   \renewcommand*{\si@tempb}{true}%
+   \ifx\si@tempa\si@tempb
+     \si@obeyboldtrue
+     \si@obeyitalictrue
+     \si@obeymodetrue
+     \si@obeyfamilytrue
+   \fi}
+\si@opt@cmdkeys{valuemathsrm,valuemathssf,valuemathstt}
+\si@opt@cmdkeys{unitmathsrm,unitmathssf,unitmathstt}
+\si@opt@key{valuemathrm}{\sisetup{valuemathsrm=#1}}
+\si@opt@key{valuemathsf}{\sisetup{valuemathssf=#1}}
+\si@opt@key{valuemathtt}{\sisetup{valuemathstt=#1}}
+\si@opt@key{unitmathrm}{\sisetup{unitmathsrm=#1}}
+\si@opt@key{unitmathsf}{\sisetup{unitmathssf=#1}}
+\si@opt@key{unitmathtt}{\sisetup{unitmathstt=#1}}
+\si@opt@key{mathsrm}{\sisetup{valuemathsrm=#1,unitmathsrm=#1}}
+\si@opt@key{mathssf}{\sisetup{valuemathssf=#1,unitmathssf=#1}}
+\si@opt@key{mathstt}{\sisetup{valuemathstt=#1,unitmathstt=#1}}
+\si@opt@key{mathrm}{\sisetup{valuemathsrm=#1,unitmathsrm=#1}}
+\si@opt@key{mathsf}{\sisetup{valuemathssf=#1,unitmathssf=#1}}
+\si@opt@key{mathtt}{\sisetup{valuemathstt=#1,unitmathstt=#1}}
+\si@opt@cmdkeys{valuetextrm,valuetextsf,valuetexttt}
+\si@opt@cmdkeys{unittextrm,unittextsf,unittexttt}
+\si@opt@key{textrm}{\sisetup{unittextrm=#1,valuetextrm=#1}}
+\si@opt@key{textsf}{\sisetup{unittextsf=#1,valuetextsf=#1}}
+\si@opt@key{texttt}{\sisetup{unittexttt=#1,valuetexttt=#1}}
+\si@opt@cmdkeys{numdigits,numdecimal,numexp,numgobble,numsign,%
+  numcloseerr,numopenerr,numaddn,numprod,numdiv}
+\newcommand*{\si@numextra}{%
+  \si@numopenerr\si@numcloseerr\si@numaddn}
+\newcommand*{\si@numvalid}{\si@numgobble\si@numexp\si@numsign
+  \si@numdecimal\si@numdigits\si@numextra\si@numprod\si@numdiv}
+\si@opt@boolkey{seperr}
+\si@opt@boolkey{trapambigerr}
+\si@opt@cmdkeys{openerr,closeerr}
+\si@opt@boolkey{sepfour}
+\si@opt@boolkey{retainplus}
+\si@opt@xchoicekey{expproduct}{times,tighttimes,
+  cdot,tightcdot}{times}
+\si@opt@xchoicekey{expbase}{ten}{ten}
+\si@opt@boolkey{allowzeroexp}
+\si@opt@xchoicekey{prefixproduct}{times,tighttimes,cdot,
+  tightcdot,none}{times}
+\si@opt@xchoicekey{prefixbase}{ten,two}{ten}
+\si@opt@boolkey{prefixsymbolic}
+\newif\ifsi@num@padlead
+\newif\ifsi@num@padtrail
+\si@opt@choicekey[all]{padnumber}
+  {leading,lead,trailing,trail,all,both,true,none,false}
+  {\si@num@padleadfalse
+   \si@num@padtrailfalse
+   \renewcommand*{\si@tempb}{leading}%
+   \ifx\si@tempa\si@tempb
+     \si@num@padleadtrue
+   \fi
+   \renewcommand*{\si@tempb}{lead}%
+   \ifx\si@tempa\si@tempb
+     \si@num@padleadtrue
+   \fi
+   \renewcommand*{\si@tempb}{trailing}%
+   \ifx\si@tempa\si@tempb
+     \si@num@padtrailtrue
+   \fi
+   \renewcommand*{\si@tempb}{trail}%
+   \ifx\si@tempa\si@tempb
+     \si@num@padtrailtrue
+   \fi
+   \renewcommand*{\si@tempb}{all}%
+   \ifx\si@tempa\si@tempb
+     \si@num@padleadtrue
+     \si@num@padtrailtrue
+   \fi
+   \renewcommand*{\si@tempb}{true}%
+   \ifx\si@tempa\si@tempb
+     \si@num@padleadtrue
+     \si@num@padtrailtrue
+   \fi
+   \renewcommand*{\si@tempb}{both}%
+   \ifx\si@tempa\si@tempb
+     \si@num@padleadtrue
+     \si@num@padtrailtrue
+   \fi}
+\newif\ifsi@num@signmant
+\newif\ifsi@num@signexp
+\si@opt@xchoicekey{sign}{plus,minus,pm,mp}{plus}
+\si@opt@choicekey[all]{addsign}
+  {mantissa,exponent,mant,exp,all,both,true,none,false}
+  {\si@num@signmantfalse
+   \si@num@signexpfalse
+   \renewcommand*{\si@tempb}{mantissa}%
+   \ifx\si@tempa\si@tempb
+     \si@num@signmanttrue
+   \fi
+   \renewcommand*{\si@tempb}{mant}%
+   \ifx\si@tempa\si@tempb
+     \si@num@signmanttrue
+   \fi
+   \renewcommand*{\si@tempb}{exponent}%
+   \ifx\si@tempa\si@tempb
+     \si@num@signexptrue
+   \fi
+   \renewcommand*{\si@tempb}{exp}%
+   \ifx\si@tempa\si@tempb
+     \si@num@signexptrue
+   \fi
+   \renewcommand*{\si@tempb}{all}%
+   \ifx\si@tempa\si@tempb
+     \si@num@signmanttrue
+     \si@num@signexptrue
+   \fi
+   \renewcommand*{\si@tempb}{true}%
+   \ifx\si@tempa\si@tempb
+     \si@num@signmanttrue
+     \si@num@signexptrue
+   \fi
+   \renewcommand*{\si@tempb}{both}%
+   \ifx\si@tempa\si@tempb
+     \si@num@signmanttrue
+     \si@num@signexptrue
+   \fi}
+\si@opt@boolkey{tightpm}
+\newcommand*{\si@pm}{%
+  \ifsi@tightpm
+    \si@fix@tightpm
+  \else
+    \si@fix@pm
+  \fi}
+\newif\ifsi@ang@padsmall
+\newif\ifsi@ang@padlarge
+\si@opt@choicekey[all]{padangle}
+  {small,large,all,both,true,none,false}
+  {\si@ang@padsmallfalse
+   \si@ang@padlargefalse
+   \renewcommand*{\si@tempb}{small}%
+   \ifx\si@tempa\si@tempb
+     \si@ang@padsmalltrue
+   \fi
+   \renewcommand*{\si@tempb}{large}%
+   \ifx\si@tempa\si@tempb
+     \si@ang@padlargetrue
+   \fi
+   \renewcommand*{\si@tempb}{all}%
+   \ifx\si@tempa\si@tempb
+     \si@ang@padsmalltrue
+     \si@ang@padlargetrue
+   \fi
+   \renewcommand*{\si@tempb}{true}%
+   \ifx\si@tempa\si@tempb
+     \si@ang@padsmalltrue
+     \si@ang@padlargetrue
+   \fi
+   \renewcommand*{\si@tempb}{both}%
+   \ifx\si@tempa\si@tempb
+     \si@ang@padsmalltrue
+     \si@ang@padlargetrue
+   \fi}
+\newif\ifsi@ang@toarc
+\newif\ifsi@ang@todec
+\si@opt@choicekey[all]{angformat}
+  {dec,decimal,arc,dms,unchanged,none}
+  {\si@ang@toarcfalse
+   \si@ang@todecfalse
+   \renewcommand*{\si@tempb}{dec}%
+   \ifx\si@tempa\si@tempb
+     \si@ang@todectrue
+   \fi
+   \renewcommand*{\si@tempb}{decimal}%
+   \ifx\si@tempa\si@tempb
+     \si@ang@todectrue
+   \fi
+   \renewcommand*{\si@tempb}{arc}%
+   \ifx\si@tempa\si@tempb
+     \si@ang@toarctrue
+   \fi
+   \renewcommand*{\si@tempb}{dms}%
+   \ifx\si@tempa\si@tempb
+     \si@ang@toarctrue
+   \fi}
+\si@opt@boolkey{astroang}
+\si@opt@boolkey{strictarc}
+\newif\ifsi@tab@fixed
+\si@opt@boolkey{tabparseonly}
+\si@opt@choicekey{tabnumalign}
+  {centredecimal,centerdecimal,right,left,centre,center}
+  {\si@tab@fixedtrue
+   \def\si@tab@rfill@S{0.5}%
+   \def\si@tab@lfill@S{0.5}%
+   \renewcommand*{\si@tempb}{right}%
+   \ifx\si@tempa\si@tempb
+     \def\si@tab@rfill@S{0}%
+     \def\si@tab@lfill@S{1}%
+   \fi
+   \renewcommand*{\si@tempb}{left}%
+   \ifx\si@tempa\si@tempb
+     \def\si@tab@rfill@S{1}%
+     \def\si@tab@lfill@S{0}%
+   \fi
+   \renewcommand*{\si@tempb}{centredecimal}%
+   \ifx\si@tempa\si@tempb
+     \expandafter\si@tab@fixedfalse
+   \fi
+   \renewcommand*{\si@tempb}{centerdecimal}%
+   \ifx\si@tempa\si@tempb
+     \expandafter\si@tab@fixedfalse
+   \fi}
+\si@opt@key{tabalign}{\sisetup{tabnumalign=#1,tabtextalign=#1,
+  tabunitalign=#1}}
+\si@opt@boolkey{tabalignexp}
+\si@opt@boolkey[%
+  \si@tabalignexpfalse
+  \ifsi@tabexpalign
+    \expandafter\si@tabalignexptrue
+  \fi
+  ]{tabexpalign}
+\newcount\si@tab@mantprecnt
+\newcount\si@tab@mantpostcnt
+\newcount\si@tab@expprecnt
+\newcount\si@tab@exppostcnt
+\newif\ifsi@tab@mantsign
+\newif\ifsi@tab@expsign
+\si@opt@cmdkey{tabformat}
+  {\si@num@fixpm
+   \renewcommand*{\si@num@arg}{tabformat data}%
+   \renewcommand*{\si@num@exp}{}%
+   \renewcommand*{\si@num@mant}{}%
+   \si@tab@mantsignfalse
+   \si@tab@expsignfalse
+   \si@switchfalse
+   \si@num@sepmantexp{#1}%
+   \si@num@sepsign{mant}%
+   \ifx\@empty\si@num@mantsign\@empty
+     \ifsi@num@delplus
+       \expandafter\expandafter\expandafter\si@tab@mantsigntrue
+     \fi
+   \else
+     \expandafter\si@tab@mantsigntrue
+   \fi
+   \si@num@sepsign{exp}%
+   \ifx\@empty\si@num@expsign\@empty
+     \ifsi@num@delplus
+       \expandafter\expandafter\expandafter\si@tab@expsigntrue
+     \fi
+   \else
+     \expandafter\si@tab@expsigntrue
+   \fi
+   \si@opt@proctform{mant}%
+   \si@opt@proctform{exp}%
+   \ifnum\si@tab@mantpostcnt=\z@\relax
+     \ifnum\si@tab@mantprecnt=\z@\relax
+       \si@log@err{Empty mantissa argument for tabformat}
+         {The argument `#1' contains no valid entry for
+          a mantissa\MessageBreak It should be of the
+          form `m.n', where  m and n are integers}%
+     \fi
+   \fi
+   \ifsi@tab@fixed\else
+     \sisetup{tabnumalign=centre}%
+   \fi
+   \let\pm\si@num@pm
+   \let\mp\si@num@mp}
+\newcommand*{\si@opt@proctform}[1]{%
+  \renewcommand*{\si@num@predec}{}%
+  \renewcommand*{\si@num@postdec}{}%
+  \si@switchfalse
+  \expandafter\si@ifnotmtarg\expandafter{%
+    \csname si@num@#1\endcsname}
+     {\expandafter\expandafter\expandafter\si@num@digits
+        \csname si@num@#1\endcsname\@empty\@empty}%
+   \csname si@tab@#1precnt\endcsname\z@\relax
+   \csname si@tab@#1postcnt\endcsname\z@\relax
+   \ifx\@empty\si@num@predec\@empty\else
+     \csname si@tab@#1precnt\endcsname\si@num@predec\relax
+   \fi
+   \ifx\@empty\si@num@postdec\@empty\else
+     \csname si@tab@#1postcnt\endcsname\si@num@postdec\relax
+   \fi}
+\si@opt@choicekey{tabtextalign}{left,right,centre,center}
+  {\def\si@tab@rfill@t{0.5}%
+   \def\si@tab@lfill@t{0.5}%
+   \renewcommand*{\si@tempb}{right}%
+   \ifx\si@tempa\si@tempb
+     \def\si@tab@rfill@t{0}%
+     \def\si@tab@lfill@t{1}%
+   \fi
+   \renewcommand*{\si@tempb}{left}%
+   \ifx\si@tempa\si@tempb
+     \def\si@tab@rfill@t{1}%
+     \def\si@tab@lfill@t{0}%
+   \fi}
+\si@opt@choicekey{tabunitalign}{left,right,centre,center}
+  {\def\si@tab@rfill@s{0.5}%
+   \def\si@tab@lfill@s{0.5}%
+   \renewcommand*{\si@tempb}{right}%
+   \ifx\si@tempa\si@tempb
+     \def\si@tab@rfill@s{0}%
+     \def\si@tab@lfill@s{1}%
+   \fi
+   \renewcommand*{\si@tempb}{left}%
+   \ifx\si@tempa\si@tempb
+     \def\si@tab@rfill@s{1}%
+     \def\si@tab@lfill@s{0}%
+   \fi}
+\si@opt@boolkey[%
+  \ifsi@fixdp
+    \expandafter\si@fixsffalse
+  \fi]{fixdp}
+\newcount\si@num@dp
+\si@opt@key{dp}{%
+  \si@str@ifonlychrs{#1}{0123456789}
+    {\si@num@dp#1\relax
+     \si@fixdptrue
+     \si@fixsffalse}
+    {\si@log@err{Invalid input for dp option}
+      {The dp option must be given a positive integer}}}
+\si@opt@boolkey[%
+  \ifsi@fixsf
+    \expandafter\si@fixdpfalse
+  \fi]{fixsf}
+\newcount\si@num@sf
+\si@opt@key{sf}{%
+  \si@str@ifonlychrs{#1}{0123456789}
+    {\si@num@sf#1\relax
+     \ifnum\si@num@sf=\z@\relax
+       \si@log@warn{Setting sf=0 disables function}%
+       \si@fixsffalse
+     \else
+       \si@fixsftrue
+       \si@fixdpfalse
+     \fi}
+    {\si@log@err{Invalid input for sf option}
+      {The sf option must be given a positive integer}}}
+\si@opt@boolkey{tabautofit}
+\si@opt@boolkey{xspace}
+\si@opt@boolkey
+  [\si@unt@numfalse
+   \ifsi@prespace
+     \si@unt@numtrue
+  \fi]
+  {prespace}
+\si@opt@boolkey{allowoptarg}
+\si@opt@boolkey{allowlitunits}
+\newif\ifsi@slash
+\newif\ifsi@frac
+\si@opt@boolkey{stickyper}
+\si@opt@choicekey[reciprocal]{per}
+  {reciprocal,rp,power,slash,frac,fraction}
+  {\si@slashfalse
+   \si@fracfalse
+   \let\si@frac\si@frc@frac
+   \renewcommand*{\si@tempb}{slash}%
+   \ifx\si@tempa\si@tempb
+     \si@fractrue
+     \si@slashtrue
+     \let\si@frac\si@frc@slash
+   \fi
+   \renewcommand*{\si@tempb}{frac}%
+   \ifx\si@tempa\si@tempb
+     \si@fractrue
+   \fi
+   \renewcommand*{\si@tempb}{fraction}%
+   \ifx\si@tempa\si@tempb
+     \si@fractrue
+   \fi}
+\si@opt@xchoicekey{slash}{slash}{slash}
+\newif\ifsi@repeatunits
+\newif\ifsi@addunitpower
+\si@opt@choicekey[true]{repeatunits}{true,false,power}
+  {\si@repeatunitsfalse
+   \si@addunitpowerfalse
+   \renewcommand*{\si@tempb}{true}%
+   \ifx\si@tempa\si@tempb
+     \si@repeatunitstrue
+   \fi
+   \renewcommand*{\si@tempb}{power}%
+   \ifx\si@tempa\si@tempb
+     \si@addunitpowertrue
+   \fi}
+\si@opt@boolkey{trapambigfrac}
+\si@opt@cmdkeys{closefrac,openfrac}
+\si@opt@choicekey[frac]{fraction}
+  {frac,nicefrac,nice,sfrac,xfrac,uglyfrac,ugly}
+  {\let\si@frac\si@frc@frac
+   \renewcommand*{\si@tempb}{nicefrac}%
+   \ifx\si@tempa\si@tempb
+     \let\si@frac\si@frc@nice
+   \fi
+   \renewcommand*{\si@tempb}{uglyfrac}%
+   \ifx\si@tempa\si@tempb
+     \let\si@frac\si@frc@ugly
+   \fi
+   \renewcommand*{\si@tempb}{nice}%
+   \ifx\si@tempa\si@tempb
+     \let\si@frac\si@frc@nice
+   \fi
+   \renewcommand*{\si@tempb}{sfrac}%
+   \ifx\si@tempa\si@tempb
+     \let\si@frac\si@frc@sfrac
+   \fi
+   \renewcommand*{\si@tempb}{xfrac}%
+   \ifx\si@tempa\si@tempb
+     \let\si@frac\si@frc@sfrac
+   \fi
+   \renewcommand*{\si@tempb}{ugly}%
+   \ifx\si@tempa\si@tempb
+     \let\si@frac\si@frc@ugly
+   \fi}
+\si@opt@cmdkeys{load,noload}
+\si@opt@key{alsoload}{\si@addtolist{\si@load}{#1}}
+\AtEndOfPackage{
+  \si@opt@disablekey{load}
+    {Configuration files can only be used\MessageBreak
+     when loading package}
+  \si@opt@disablekey{noload}
+    {Configuration files can only be used\MessageBreak
+     when loading package}}
+\AtEndOfPackage{
+  \si@opt@key{alsoload}{%
+    \@for\si@tempa:=#1\do{\si@loadfile{\si@tempa}}}}
+\si@opt@boolkey{colourunits}
+\si@opt@boolkey{colourvalues}
+\si@opt@choicekey[true]{colorunits}
+  {true,false}
+  {\si@colourunitsfalse
+   \renewcommand*{\si@tempb}{true}%
+   \ifx\si@tempa\si@tempb
+     \si@colourunitstrue
+   \fi}
+\si@opt@choicekey[true]{colorvalues}
+  {true,false}
+  {\si@colourvaluesfalse
+   \renewcommand*{\si@tempb}{true}%
+   \ifx\si@tempa\si@tempb
+     \si@colourvaluestrue
+   \fi}
+\si@opt@choicekey[true]{colorall}
+  {true,false}
+  {\si@colourvaluesfalse
+   \si@colourunitsfalse
+   \renewcommand*{\si@tempb}{true}%
+   \ifx\si@tempa\si@tempb
+     \si@colourunitstrue
+     \si@colourvaluestrue
+   \fi}
+\si@opt@choicekey[true]{colourall}
+  {true,false}
+  {\si@colourvaluesfalse
+   \si@colourunitsfalse
+   \renewcommand*{\si@tempb}{true}%
+   \ifx\si@tempa\si@tempb
+     \si@colourunitstrue
+     \si@colourvaluestrue
+   \fi}
+\si@opt@cmdkeys{unitcolour,valuecolour}
+\si@opt@key{unitcolor}{\sisetup{unitcolour=#1}}
+\si@opt@key{valuecolor}{\sisetup{valuecolour=#1}}
+\si@opt@key{colour}{\sisetup{unitcolour=#1,valuecolour=#1}}
+\si@opt@key{color}{\sisetup{unitcolour=#1,valuecolour=#1}}
+\si@opt@boolkey{colourneg}
+\si@opt@choicekey[true]{colorneg}
+  {true,false}
+  {\si@colournegfalse
+   \renewcommand*{\si@tempb}{true}%
+   \ifx\si@tempa\si@tempb
+     \si@colournegtrue
+   \fi}
+\si@opt@cmdkeys{negcolour}
+\si@opt@key{negcolor}{\sisetup{negcolour=#1}}
+\si@opt@cmdkeys{textOmega,mathsOmega}
+\si@opt@key{mathOmega}{\sisetup{mathsOmega=#1}}
+\newcommand*{\si@mathsOmega}{\text{\ensuremath{\si@upOmega}}}
+\newcommand*{\si@textOmega}{\ensuremath{\si@upOmega}}
+\newcommand*\si@upOmega{}
+\AtBeginDocument{
+  \ifdefined\upOmega
+    \let\si@upOmega\upOmega
+  \else
+    \let\si@upOmega\Omega
+  \fi
+}
+\si@opt@cmdkeys{textmu,mathsmu}
+\si@opt@key{mathmu}{\sisetup{mathsmu=#1}}
+\DeclareFontEncoding{TS1}{}{}
+\DeclareFontSubstitution{TS1}{cmr}{m}{n}
+\DeclareTextSymbol{\si@textmu}{TS1}{181}
+\DeclareTextSymbolDefault{\si@textmu}{TS1}
+\def\si@mathsmu{\text{\si@textmu}}
+\si@opt@cmdkeys{textdegree,mathsdegree,textminute,mathsminute,
+  textsecond,mathssecond}
+\si@opt@key{mathdegree}{\sisetup{mathsdegree=#1}}
+\si@opt@key{mathminute}{\sisetup{mathsminute=#1}}
+\si@opt@key{mathsecond}{\sisetup{mathssecond=#1}}
+\newcommand*{\si@textdegree}{\ensuremath{{}^{\circ}}}
+\newcommand*{\si@mathsdegree}{{}^{\circ}}
+\newcommand*{\si@textminute}{\ensuremath{{}^{\prime}}}
+\newcommand*{\si@mathsminute}{{}^{\prime}}
+\newcommand*{\si@textsecond}{\ensuremath{{}^{\prime\prime}}}
+\newcommand*{\si@mathssecond}{{}^{\prime\prime}}
+\si@opt@cmdkeys{textcelsius,mathscelsius}
+\si@opt@key{mathcelsius}{\sisetup{mathscelsius=#1}}
+\newcommand*{\si@textcelsius}{%
+  \si@textdegree\kern-\scriptspace C}
+\newcommand*{\si@mathscelsius}{%
+  \si@mathsdegree\kern-\scriptspace C}
+\si@opt@cmdkeys{textringA,mathsringA}
+\si@opt@key{mathringA}{\sisetup{mathsringA=#1}}
+\newcommand*{\si@textringA}{\AA}
+\newcommand*{\si@mathsringA}{\text{\AA}}
+\si@opt@boolkey{redefsymbols}
+\AtBeginDocument{
+  \si@opt@disablekey{redefsymbols}
+    {Symbols can only be redefined\MessageBreak
+     when loading siunitx}}
+\newlength\si@eVcorra
+\newlength\si@eVcorrb
+\si@opt@key{eVcorra}{\setlength\si@eVcorra{#1}}
+\si@opt@key{eVcorrb}{\setlength\si@eVcorrb{#1}}
+\si@opt@xchoicekey{tophrase}{to,dots,ndash,dash}{to}
+\si@opt@boolkey{trapambigrange}
+\si@opt@cmdkeys{openrange,closerange}
+\si@opt@key{locale}{%
+  \si@loc@load{#1}%
+  \si@loc@set{#1}}%
+\si@opt@key{loctolang}{\si@loc@ltol{#1}}
+\si@opt@compatkey{units}{ugly}
+\si@opt@compatkey{units}{nice}
+\si@opt@compatkey{units}{loose}
+\si@opt@compatkey{units}{tight}
+\si@opt@compatkey{unitsdef}{OHM}
+\si@opt@compatkey{unitsdef}{ohm}
+\si@opt@compatkey{unitsdef}{redef-gensymb}
+\newif\ifsi@gensymb
+\si@opt@compatkey{unitsdef}{LITER}
+\si@opt@compatkey{unitsdef}{liter}
+\si@opt@compatkey{unitsdef}{noxspace}
+\si@opt@compatkey{unitsdef}{noconfig}
+\si@opt@compatkey{unitsdef}{noabbr}
+\si@opt@compatkey{unitsdef}{noampereageabbr}
+\si@opt@compatkey{unitsdef}{nofrequncyabbr}
+\si@opt@compatkey{unitsdef}{nomolabbr}
+\si@opt@compatkey{unitsdef}{novoltageabbr}
+\si@opt@compatkey{unitsdef}{novolumeabbr}
+\si@opt@compatkey{unitsdef}{noweightabbr}
+\si@opt@compatkey{unitsdef}{noenergyabbr}
+\si@opt@compatkey{unitsdef}{nolengthabbr}
+\si@opt@compatkey{unitsdef}{notimeabbr}
+\si@opt@compatkey{SIunits}{cdot}
+\si@opt@compatkey{SIunits}{thickspace}
+\si@opt@compatkey{SIunits}{mediumspace}
+\si@opt@compatkey{SIunits}{thinspace}
+\si@opt@compatkey{SIunits}{thickqspace}
+\si@opt@compatkey{SIunits}{mediumqspace}
+\si@opt@compatkey{SIunits}{thinqspace}
+\si@opt@compatkey{SIunits}{amssymb}
+\si@opt@compatkey{SIunits}{squaren}
+\si@opt@compatkey{SIunits}{pstricks}
+\si@opt@compatkey{SIunits}{Gray}
+\si@opt@compatkey{SIunits}{italian}
+\si@opt@compatkey{SIunits}{textstyle}
+\si@opt@compatkey{SIunits}{binary}
+\si@opt@compatkey{SIunits}{noams}
+\si@opt@compatkey{SIunits}{derivedinbase}
+\si@opt@compatkey{SIunits}{derived}
+\si@opt@compatkey{hepunits}{noprefixcmds}
+\si@opt@compatkey{fancynum}{english}
+\si@opt@compatkey{fancynum}{french}
+\si@opt@compatkey{fancynum}{tight}
+\si@opt@compatkey{fancynum}{loose}
+\si@opt@compatkey{fancynum}{thinspaces}
+\si@opt@compatkey{fancynum}{commas}
+\si@opt@compatkey{fancynum}{plain}
+\si@opt@compatkey{fancyunits}{spaceqspace}
+\newcommand*{\si@fix@thin}{\,}
+\newcommand*{\si@fix@med}{\:}
+\newcommand*{\si@fix@medium}{\:}
+\newcommand*{\si@fix@thick}{\;}
+\newcommand*{\si@fix@space}{\text{ }}
+\newcommand*{\si@fix@cdot}{{}\cdot{}}
+\newcommand*{\si@fix@comma}{{,}}
+\newcommand*{\si@fix@stop}{{.}}
+\newcommand*{\si@fix@fullstop}{{.}}
+\newcommand*{\si@fix@period}{{.}}
+\newcommand*{\si@fix@times}{\times}
+\newcommand*{\si@fix@tighttimes}{\bgroup\times\egroup}
+\newcommand*{\si@fix@tightcdot}{\bgroup\cdot\egroup}
+\newcommand*{\si@fix@plus}{+}
+\newcommand*{\si@fix@minus}{-}
+\newcommand*{\si@fix@pm}{\pm}
+\newcommand*{\si@fix@tightpm}{\bgroup\pm\egroup}
+\newcommand*{\si@fix@mp}{\mp}
+\newcommand*{\si@fix@two}{2}
+\newcommand*{\si@fix@ten}{10}
+\newcommand*{\si@fix@slash}{/}
+\newcommand*{\si@fix@none}{}
+\newcommand*{\si@fix@to}{ to }
+\newcommand*{\si@fix@dash}{--}
+\newcommand*{\si@fix@dots}{\,\dots\,}
+\newcommand*{\si@symbol}[1]{%
+  \expandafter\protected\expandafter\def
+    \csname si@sym@#1\endcsname{%
+    \ifmmode
+      \expandafter\csname si@maths#1\expandafter\endcsname
+    \else
+      \expandafter\csname si@text#1\expandafter\endcsname
+    \fi}}
+\si@symbol{Omega}
+\si@symbol{ringA}
+\si@symbol{mu}
+\si@symbol{degree}
+\si@symbol{minute}
+\si@symbol{second}
+\si@symbol{celsius}
+\AtBeginDocument{%
+  \ifsi@redefsymbols
+    \@ifpackageloaded{textcomp}
+      {\si@log@debug{Redefining symbols using textcomp}%
+       \renewcommand*{\si@textdegree}{\textdegree}%
+       \renewcommand*{\si@mathsdegree}{\text{\textdegree}}%
+       \@ifpackageloaded{mathptmx}{}
+         {\renewcommand*{\si@textmu}{\textmu}%
+          \renewcommand*{\si@textOmega}{\textohm}}%
+       \renewcommand*{\si@tempa}{OT1}%
+       \ifx\si@tempa\encodingdefault
+         \renewcommand*{\si@mathsringA}{%
+           \text{\capitalring{A}}}%
+         \renewcommand*{\si@textringA}{\capitalring{A}}
+       \fi}{}
+    \@ifpackageloaded{upgreek}
+      {\si@log@debug{Redefining symbols using upgreek}%
+       \renewcommand*{\si@mathsOmega}{\Upomega}}{}
+  \fi}
+\newcommand*{\si@frc@frac}[2]{%
+  \ensuremath{\si@frc@hook\frac{%
+    \expandafter\si@unt@out\expandafter{#1}}%
+    {\expandafter\si@unt@out\expandafter{#2}}}}
+\let\si@frac\si@frc@frac
+\newcommand*{\si@frc@hook}{}
+\newcommand*{\si@frc@slash}[2]{%
+    \expandafter\si@unt@out\expandafter{#1}%
+    \si@out{\ensuremath{\si@slash}}%
+    \expandafter\si@unt@out\expandafter{#2}}
+\newcommand*{\si@frc@nice}[2]{%
+  \ensuremath{\si@frc@nicefrac{\expandafter\si@unt@out%
+    \expandafter{#1}}{\expandafter\si@unt@out\expandafter
+      {#2}}}}
+\newcommand*{\si@frc@sfrac}[2]{%
+    \sfrac{\expandafter\si@unt@out\expandafter{#1}}%
+      {\expandafter\si@unt@out\expandafter{#2}}}
+\AtBeginDocument{
+  \@ifpackageloaded{xfrac}
+    {}
+    {\si@log@inf{xfrac package unavailable\MessageBreak
+       using `fraction=sfrac' will fall back on\MessageBreak
+       nicefrac-like method}%
+     \renewcommand*{\si@frc@sfrac}[2]{%
+      \si@log@warn{xfrac package unavailable}%
+      \si@frc@nice{#1}{#2}}}}
+\newlength\si@frc@displen
+\newlength\si@frc@textlen
+\newlength\si@frc@suplen
+\newlength\si@frc@ssuplen
+\newcommand*{\si@frc@nicefrac}{%
+  \ifmmode
+    \expandafter\si@frc@mathsnf
+  \else
+    \expandafter\si@frc@textnf
+  \fi}
+\newcommand*{\si@frc@mathsnf}[2]{%
+  \begingroup
+    \settoheight{\si@frc@displen}{\ensuremath{%
+      \displaystyle{M}}}%
+    \settoheight{\si@frc@textlen}{\ensuremath{%
+      \textstyle{M}}}%
+    \settoheight{\si@frc@suplen}{\ensuremath{%
+      \scriptstyle{M}}}%
+    \settoheight{\si@frc@ssuplen}{%
+      \ensuremath{\scriptscriptstyle{M}}}%
+    \addtolength{\si@frc@displen}{-\si@frc@ssuplen}%
+    \addtolength{\si@frc@textlen}{-\si@frc@ssuplen}%
+    \addtolength{\si@frc@suplen}{-\si@frc@ssuplen}%
+    \mathchoice
+      {\raisebox{\si@frc@displen}{\ensuremath{%
+        \scriptstyle{#1}}}}%
+      {\raisebox{\si@frc@textlen}{\ensuremath{%
+         \scriptstyle{#1}}}}%
+      {\raisebox{\si@frc@suplen}%
+        {\ensuremath{\scriptscriptstyle{#1}}}}%
+      {\raisebox{\si@frc@ssuplen}%
+        {\ensuremath{\scriptscriptstyle{#1}}}}%
+    \mkern-2mu\relax/\mkern-1mu\relax
+    \bgroup
+      \mathchoice
+        {\scriptstyle}%
+        {\scriptstyle}%
+        {\scriptscriptstyle}%
+        {\scriptscriptstyle}%
+      {#2}%
+    \egroup
+  \endgroup}
+\newcommand*{\si@frc@textnf}[2]{%
+  \begingroup
+    \settoheight{\si@frc@textlen}{M}%
+    \settoheight{\si@frc@ssuplen}{\fontsize\sf@size\z@\relax
+      \selectfont{M}}%
+    \addtolength{\si@frc@textlen}{-\si@frc@ssuplen}%
+    \raisebox{\si@frc@textlen}{\fontsize\sf@size\z@\relax
+      \selectfont{#1}}%
+    \hspace{-0.25ex}/\hspace{-0.25ex}%
+    \hbox{\fontsize\sf@size\z@\selectfont{#2}}%
+  \endgroup}
+\newcommand*{\si@frc@ugly}[1]{%
+  \renewcommand*{\si@tempa}{#1}%
+  \ifmmode
+    \expandafter\si@frc@frac
+  \else
+    \renewcommand*{\si@tempb}{1}%
+    \ifx\si@tempa\si@tempb
+      \setbox\si@tempboxa=\hbox{\ensuremath{\si@valuesep}}%
+      \hskip-\wd\si@tempboxa\relax
+      \renewcommand*{\si@tempa}{}%
+    \fi
+    \expandafter\si@frc@slash
+  \fi
+  {\si@tempa}}
+\g@addto@macro{\document}{%
+  \ifdefined\mathsf
+    \setbox\si@tempboxa=\hbox{%
+      $\mathsf{\global\chardef\si@fam@sf=\fam}$}%
+  \else
+    \si@log@inf{\string\mathsf not found}%
+    \global\chardef\si@fam@sf=99\relax
+  \fi
+  \ifdefined\mathtt
+    \setbox\si@tempboxa=\hbox{%
+      $\mathtt{\global\chardef\si@fam@tt=\fam}$}%
+  \else
+    \si@log@inf{\string\mathtt not found}%
+    \global\chardef\si@fam@tt=99\relax
+  \fi}
+\newcommand*\si@fam@detect@default{%
+  \edef\si@tempa{\familydefault}%
+  \edef\si@tempb{\sfdefault}%
+  \ifx\si@tempa\si@tempb
+    \@ifpackageloaded{cmbright}{}{\sisetup{ mathsrm = mathsf}}%
+    \sisetup{ textrm = sffamily }%
+  \fi
+  \edef\si@tempb{\ttdefault}%
+  \ifx\si@tempa\si@tempb
+    \sisetup
+      {
+        mathsrm = mathtt,
+        textrm  = ttfamily
+      }%
+  \fi
+}
+\AtBeginDocument{\si@fam@detect@default}
+\newcommand*{\si@fam@ifbtext}[1]{%
+  \if b\expandafter\@car\f@series\@nil
+    #1\fi}
+\newcommand*{\si@fam@ifbmaths}[1]{%
+  \renewcommand*{\si@tempa}{bold}%
+  \ifx\math@version\si@tempa
+    #1\fi}
+\newcommand*{\si@fam@ifbinline}{%
+  \ifsi@inlinebtext
+    \expandafter\si@fam@ifbtext
+  \else
+    \expandafter\si@fam@ifbmaths
+  \fi}
+\newcommand*{\si@fam@ifitext}[1]{%
+  \if n\expandafter\@car\f@series\@nil\else
+    #1\fi}
+\newcommand*{\si@fam@mode}{%
+  \ifsi@obeymode
+    \ifmmode
+      \sisetup{mode=maths}%
+    \else
+      \sisetup{mode=text}%
+    \fi
+  \fi}
+\AtBeginDocument{
+  \@ifpackageloaded{color}
+    {\let\si@fam@colourcmd\color}
+    {\let\si@fam@colourcmd\@gobble}}
+\newif\ifsi@fam@set
+\newif\ifsi@textmode
+\newcommand*{\si@fam@set}{%
+  \ifsi@out@num
+    \ifsi@numtextmode
+      \expandafter\expandafter\expandafter\si@textmodetrue
+    \else
+      \expandafter\expandafter\expandafter\si@textmodefalse
+    \fi
+  \else
+    \ifsi@unittextmode
+      \expandafter\expandafter\expandafter\si@textmodetrue
+    \else
+      \expandafter\expandafter\expandafter\si@textmodefalse
+    \fi
+  \fi
+  \ifsi@fam@set\else
+    \let\si@colourcmd\@gobble
+    \ifsi@out@num
+      \let\si@mathsrm\si@valuemathsrm
+      \let\si@mathssf\si@valuemathssf
+      \let\si@mathstt\si@valuemathstt
+      \let\si@textrm\si@valuetextrm
+      \let\si@textsf\si@valuetextsf
+      \let\si@texttt\si@valuetexttt
+      \ifsi@colourvalues
+        \let\si@colourcmd\si@fam@colourcmd
+      \fi
+      \let\si@colour\si@valuecolour
+    \else
+      \let\si@mathsrm\si@unitmathsrm
+      \let\si@mathssf\si@unitmathssf
+      \let\si@mathstt\si@unitmathstt
+      \let\si@textrm\si@unittextrm
+      \let\si@textsf\si@unittextsf
+      \let\si@texttt\si@unittexttt
+      \ifsi@colourunits
+        \let\si@colourcmd\si@fam@colourcmd
+      \fi
+      \let\si@colour\si@unitcolour
+    \fi
+  \fi
+  \si@fam@settrue
+  \edef\si@tempa{\sfdefault}%
+  \edef\si@tempb{\ttdefault}%
+  \expandafter\let\expandafter\si@fam@maths
+    \csname\si@mathsrm\endcsname
+  \expandafter\let\expandafter\si@fam@text
+    \csname\si@textrm\endcsname
+  \ifsi@obeyfamily
+    \si@log@debug{Font detection: checking font}%
+    \ifmmode
+      \ifinner
+        \si@log@debug{Font detection: inline maths}%
+        \si@fam@dettext
+      \else
+        \si@log@debug{Font detection: display maths}%
+        \ifsi@detectdisplay
+          \si@fam@detmaths
+        \else
+          \si@fam@dettext
+        \fi
+      \fi
+    \else
+      \si@log@debug{Font detection: text}%
+      \si@fam@dettext
+    \fi
+  \else
+    \si@log@debug{Font detection: inactive}%
+  \fi
+  \def\si@fam@bold{\unboldmath\mdseries}%
+  \ifsi@obeybold
+    \si@log@debug{Weight detection: checking weight}%
+    \ifmmode
+      \ifdim\displaywidth>0pt\relax
+        \ifsi@detectdisplay
+          \expandafter\si@fam@ifbmaths
+        \else
+          \expandafter\si@fam@ifbtext
+        \fi
+        \si@fam@setbold
+      \else
+        \si@fam@ifbinline\si@fam@setbold
+      \fi
+    \else
+      \si@fam@ifbtext\si@fam@setbold
+    \fi
+  \fi
+  \let\si@fam@italic\upshape
+  \ifsi@obeyitalic
+    \si@log@debug{Italic detection: checking italic}%
+    \si@fam@ifitext
+      {\let\si@fam@italic\relax
+       \si@log@debug{Italic detection: italic}}%
+  \fi}
+\newcommand*{\si@fam@detmaths}{%
+  \ifnum\the\fam=\si@fam@sf
+    \si@log@debug{Font detection: sf}%
+    \expandafter\let\expandafter\si@fam@maths
+      \csname\si@mathssf\endcsname
+    \expandafter\let\expandafter\si@fam@text
+      \csname\si@textsf\endcsname
+  \else
+    \ifnum\the\fam=\si@fam@tt
+      \si@log@debug{Font detection: tt}%
+      \expandafter\let\expandafter\si@fam@maths
+        \csname\si@mathstt\endcsname
+      \expandafter\let\expandafter\si@fam@text
+        \csname\si@texttt\endcsname
+    \else
+      \si@log@debug{Font detection: rm}%
+      \expandafter\let\expandafter\si@fam@maths
+        \csname\si@mathsrm\endcsname
+      \expandafter\let\expandafter\si@fam@text
+        \csname\si@textrm\endcsname
+    \fi
+  \fi}
+\newcommand*{\si@fam@dettext}{%
+  \ifx\f@family\si@tempa
+    \si@log@debug{Font detection: sf}%
+    \expandafter\let\expandafter\si@fam@maths
+      \csname\si@mathssf\endcsname
+    \expandafter\let\expandafter\si@fam@text
+      \csname\si@textsf\endcsname
+  \else
+    \ifx\f@family\si@tempb
+      \si@log@debug{Font detection: tt}%
+      \expandafter\let\expandafter\si@fam@maths
+        \csname\si@mathstt\endcsname
+      \expandafter\let\expandafter\si@fam@text
+        \csname\si@texttt\endcsname
+    \else
+      \si@log@debug{Font detection: rm}%
+      \expandafter\let\expandafter\si@fam@maths
+        \csname\si@mathsrm\endcsname
+      \expandafter\let\expandafter\si@fam@text
+        \csname\si@textrm\endcsname
+    \fi
+  \fi}
+\newcommand*{\si@fam@setbold}{%
+  \si@log@debug{Weight detection: bold weight}%
+  \let\si@fam@bold\si@fam@boldify}
+\newcommand*{\si@fam@boldify}{\boldmath\bfseries}
+\si@newrobustcmd*{\num}[2][]{%
+  \begingroup
+    \sisetup{#1}%
+    \si@fam@mode
+    \si@num@intabfalse
+    \si@log@debug{Processing \string\num\space input `#2'}%
+    \expandafter\si@out@num\expandafter{\si@num{#2}}%
+  \endgroup}
+\newif\ifsi@num@intab
+\newcommand*{\si@num}[1]{%
+  \si@num@fixpm
+  \begingroup
+    \makeatletter
+    \@makeother{\,}%
+    \@makeother{\.}%
+    \@makeother{\+}%
+    \@makeother{\-}%
+    \def~{}%
+    \def\,{}%
+    \catcode`\~=\active\relax
+    \catcode`\^=\active\relax
+    \catcode`\_=12\relax
+    \everyeof{\noexpand}%
+    \endlinechar\m@ne
+    \protected@xdef\si@tempa{\scantokens{#1}}%
+  \endgroup
+  \si@ifnotmtarg{\si@tempa}
+    {\si@num@ifvalid{\si@tempa}
+      {\si@num@format{\si@tempa}}
+      {\si@log@err{Invalid character `#1' in numerical input}%
+         {Only characters from the list
+          `\si@numvalid'\MessageBreak should be present in the
+          argument of the \string\num\space  macro\MessageBreak
+         (or derivative such as an `s' column)}%
+       {#1}}}}
+\newcommand*{\si@num@fixpm}{%
+  \let\si@num@pm\pm
+  \let\si@num@mp\mp
+  \protected\def\pm{\si@num@pm}%
+  \protected\def\mp{\si@num@mp}}
+\newcommand*{\si@num@ifvalid}[1]{%
+  \begingroup
+    \si@switchtrue
+    \expandafter\si@num@valid#1\@empty\@empty
+    \ifsi@switch
+      \aftergroup\@firstoftwo
+    \else
+      \aftergroup\@secondoftwo
+    \fi
+  \endgroup}
+\def\si@num@valid#1#2\@empty{%
+  \si@str@ifchrstr{#1}{\si@numvalid}
+    {\ifx\@empty#2\@empty\else
+       \si@num@valid#2\@empty\@empty\@empty
+     \fi}
+    {\si@switchfalse}}
+\newcommand*{\si@num@in}{}
+\newcommand*{\si@num@out}{}
+\newcommand*{\si@num@exp}{}
+\newcommand*{\si@num@expsign}{}
+\newcommand*{\si@num@mant}{}
+\newcommand*{\si@num@mantsign}{}
+\newcommand*{\si@num@err}{}
+\newcommand*{\si@num@xpart}{}
+\newcommand*{\si@num@ambig}{}
+\newcommand*{\si@tab@out}{}
+\newcommand*{\si@tab@expout}{}
+\newif\ifsi@num@erropen
+\newcommand*{\si@num@arg}{}
+\newcommand*{\si@num@format}[1]{%
+  \protected@edef\si@num@arg{#1}%
+  \si@log@debug{Formatting number `\si@num@arg'}%
+  \renewcommand*{\si@num@in}{}%
+  \renewcommand*{\si@num@exp}{}%
+  \renewcommand*{\si@num@expsign}{}%
+  \renewcommand*{\si@num@mant}{}%
+  \renewcommand*{\si@num@mantsign}{}%
+  \renewcommand*{\si@num@err}{}%
+  \renewcommand*{\si@num@xpart}{}%
+  \si@switchfalse
+  \expandafter\si@num@findxpart\si@num@arg\@empty\@empty
+  \si@switchfalse
+  \si@num@sepmantexp{\si@num@in}%
+  \si@num@sepsign{exp}%
+  \si@num@sepsign{mant}%
+  \ifx\@empty\si@num@exp\@empty
+    \ifx\@empty\si@num@expsign\@empty\else
+      \si@log@warn{Sign but no number for `\si@num@arg'}%
+    \fi
+    \let\si@num@expsign\@empty
+  \fi
+  \ifx\@empty\si@num@mant\@empty
+    \ifx\@empty\si@num@mantsign\@empty\else
+      \ifx\@empty\si@num@exp\@empty
+        \si@log@warn{Sign but no number for `\si@num@arg'}%
+        \let\si@num@mantsign\@empty
+      \fi
+    \fi
+  \fi
+  \renewcommand*{\si@tempa}{{-}}%
+  \ifx\si@num@mantsign\si@tempa
+    \ifsi@colourneg
+      \expandafter\expandafter\expandafter\si@fam@colourcmd
+    \else
+      \expandafter\expandafter\expandafter\@gobble
+    \fi
+  \else
+    \expandafter\@gobble
+  \fi
+  {\si@negcolour}%
+  \si@num@procnum{exp}%
+  \si@num@procnum{mant}%
+  \si@str@ifonlychrs{\si@num@exp}{0\si@numdecimal}
+    {\ifsi@allowzeroexp\else
+       \renewcommand*{\si@num@exp}{}%
+       \ifx\@empty\si@num@mant\@empty
+         \renewcommand*{\si@num@mant}{1}%
+       \fi
+     \fi}{}%
+  \ifx\@empty\si@num@exp\@empty\else
+    \ifsi@trapambigerr
+      \expandafter\expandafter\expandafter\si@num@ambigerrtrue
+    \fi
+  \fi
+  \protected@edef\si@num@out{%
+    \ensuremath{{\si@num@mantsign}}\si@num@mant}%
+  \renewcommand*{\si@tempa}{num}%
+  \ifsi@num@intab
+    \protected@edef\si@tab@out{%
+      \ensuremath{{\si@num@mantsign}}\si@num@predec}%
+    \protected@edef\si@num@out{\si@num@postdec}%
+    \renewcommand*{\si@tempa}{tab}%
+  \fi
+  \ifx\@empty\si@num@postdec\@empty\else
+    \renewcommand*{\si@tempa}{num}%
+  \fi
+  \ifx\@empty\si@num@err\@empty\else
+    \ifsi@seperr
+      \ifsi@num@ambigerr
+        \protected@edef\si@num@out{%
+          \ensuremath{\si@openerr}\si@num@out}%
+        \si@repeatunitsfalse
+        \expandafter\si@num@erropentrue
+      \else
+        \ifsi@trapambigerr\else
+          \ifx\@empty\si@num@exp\@empty\else
+            \protected@edef\si@num@err{%
+              \si@num@err\expandafter\@car\si@numexp\@nil
+              \si@num@expsign\si@num@exp}%
+            \ifsi@repeatunits\else
+              \renewcommand*{\si@num@exp}{}%
+              \renewcommand*{\si@num@expsign}{}%
+            \fi
+          \fi
+        \fi
+      \fi
+    \else
+      \expandafter\protected@edef\csname
+        si@\si@tempa @out\endcsname{%
+          \si@num@out\ensuremath{\si@errspace}\ensuremath
+          {\si@openerr}\si@num@err\ensuremath{\si@closeerr}}%
+      \renewcommand*{\si@num@err}{}%
+    \fi
+  \fi
+  \renewcommand*{\si@tempa}{num@out}%
+  \ifsi@num@erropen
+    \renewcommand*{\si@tempa}{num@ambig}%
+  \fi
+  \ifsi@num@intab
+    \renewcommand*{\si@tempa}{tab@expout}%
+  \fi
+  \ifx\@empty\si@num@exp\@empty
+    \ifx\@empty\si@num@mant\@empty
+      \si@log@err{Invalid number format `\si@num@arg'}
+        {Something is wrong with the number format; does it
+         contain \MessageBreak any numbers (from the list
+         `\si@numdigits')?}%
+      \renewcommand*\si@num@out{}%
+    \fi
+  \else
+    \ifx\@empty\si@num@mant\@empty\else
+      \expandafter\protected@edef\csname
+        si@\si@tempa\endcsname{%
+          \csname si@\si@tempa\endcsname\ensuremath{{}%
+          \si@expproduct{}}}%
+    \fi
+    \expandafter\protected@edef\csname
+      si@\si@tempa\endcsname{%
+        \csname si@\si@tempa\endcsname\si@expbase
+        \textsuperscript{\ensuremath{\si@num@expsign}%
+        \si@num@exp}}%
+  \fi
+  \ifsi@num@intab\else
+    \expandafter\si@num@out
+  \fi
+  \ifx\@empty\si@num@err\@empty\else
+    \expandafter\si@num@procerr
+  \fi
+  \ifsi@num@erropen
+    \expandafter\si@out@num\expandafter{%
+      \ensuremath{\si@closeerr}}%
+      \ifx\@empty\si@num@ambig\@empty\else
+        \si@out@num{\si@num@ambig}%
+        \renewcommand*{\si@num@ambig}{}%
+    \fi
+  \fi
+  \si@num@erropenfalse
+  \ifx\@empty\si@num@xpart\@empty\else
+    \expandafter\si@num@sepxpart
+  \fi}
+\def\si@num@findxpart#1#2\@empty{%
+  \si@str@ifchrstr{#1}{\si@numprod}
+    {\si@switchtrue\si@seperrfalse}{}%
+  \ifsi@switch
+    \protected@edef\si@num@xpart{\si@num@xpart#1}%
+  \else
+    \protected@edef\si@num@in{\si@num@in#1}%
+  \fi
+  \ifx\@empty#2\@empty\else
+    \si@num@findxpart#2\@empty
+  \fi}
+\newcommand*{\si@num@sepmantexp}[1]{%
+  \expandafter\si@num@mantexp#1\@empty\@empty}
+\def\si@num@mantexp#1#2\@empty{%
+  \si@str@ifchrstr{#1}{\si@numgobble}
+    {\si@log@debug{Gobbling `#1' in \si@num@arg}}
+    {\si@str@ifchrstr{#1}{\si@numexp}
+       {\ifsi@switch
+          \si@log@err{Duplicate exponent marker found}
+            {Only a single exponent character \MessageBreak
+            (from the list `\si@numexp')\MessageBreak may
+            occur in a numerical argument}%
+        \else
+          \si@log@debug{Exponent marker `#1' found in
+            `\si@num@arg'}%
+        \fi
+        \si@switchtrue}%
+       {\ifsi@switch
+          \expandafter\si@num@addexp
+        \else
+          \expandafter\si@num@addmnt
+        \fi
+        {#1}}}%
+  \ifx\@empty#2\@empty
+    \expandafter\@gobble
+  \else
+    \expandafter\si@num@sepmantexp
+  \fi
+  {#2}}
+\newcommand*{\si@num@addmnt}[1]{%
+  \si@num@addmntexp{#1}{mant}{mantissa}}
+\newcommand*{\si@num@addexp}[1]{%
+  \si@num@addmntexp{#1}{exp}{exponent}}
+\newcommand*{\si@num@addmntexp}[3]{%
+  \si@log@debug{Adding `#1' to #3 for `\si@num@arg'}%
+  \expandafter\protected@edef\csname si@num@#2\endcsname{%
+    \csname si@num@#2\endcsname#1}}
+\newcommand*{\si@num@sepsign}[1]{%
+  \expandafter\ifx\expandafter\@empty
+    \csname si@num@#1\endcsname\@empty
+    \expandafter\@gobble
+  \else
+    \expandafter\si@num@gensign
+  \fi
+  {#1}}
+\newcommand*{\si@num@gensign}[1]{%
+  \expandafter\expandafter\expandafter\si@num@findsign
+    \csname si@num@#1\endcsname\@empty\@empty
+  \ifx\@empty\si@num@sign\@empty
+    \ifx\@empty\si@num@value\@empty
+      \expandafter\expandafter\expandafter\@gobble
+    \else
+      \expandafter\expandafter\expandafter\si@num@addsign
+    \fi
+  \else
+    \expandafter\@gobble
+  \fi
+  {#1}%
+  \expandafter\let\csname si@num@#1sign\endcsname\si@num@sign
+  \expandafter\let\csname si@num@#1\endcsname\si@num@value}
+\newcommand*{\si@num@sign}{}
+\def\si@num@findsign#1#2#3\@empty{%
+  \si@num@delplusfalse
+  \si@str@ifchrstr{#1}{\si@numsign}{%
+    \si@str@ifchrstr{#2}{\si@numsign}{%
+      \if +#1%
+        \if -#2%
+          \si@log@debug{Found sign combination +- for
+            `\si@num@arg'}%
+          \renewcommand*{\si@num@sign}{{\si@pm}}%
+        \else
+          \si@log@inf{Unknown sign combination `#1#2'}%
+          \renewcommand*{\si@num@sign}{{#1#2}}%
+        \fi
+      \else
+        \if -#1%
+          \if +#2%
+            \si@log@debug{Found sign combination -+ for
+              `\si@num@arg'}%
+            \renewcommand*{\si@num@sign}{{\mp}}%
+          \else
+            \si@log@inf{Unknown sign combination `#1#2'}%
+            \renewcommand*{\si@num@sign}{{#1#2}}%
+          \fi
+        \else
+          \si@log@inf{Unknown sign combination `#1#2'}%
+          \renewcommand*{\si@num@sign}{{#1#2}}%
+        \fi
+      \fi
+      \protected@edef\si@num@value{#3}}%
+      {\si@log@debug{Found single sign character `#1' for
+         `\si@num@arg'}%
+       \renewcommand*{\si@num@sign}{{#1}}%
+       \if +#1%
+         \ifsi@retainplus\else
+           \expandafter\expandafter\expandafter\si@num@killsign
+         \fi
+       \fi
+       \protected@edef\si@num@value{#2#3}}}%
+    {\si@log@debug{No sign found for `\si@num@arg'}%
+     \renewcommand*{\si@num@sign}{}%
+     \protected@edef\si@num@value{#1#2#3}}}
+\newif\ifsi@num@delplus
+\newcommand*{\si@num@killsign}{%
+  \si@num@delplustrue
+  \renewcommand*{\si@num@sign}{}}
+\newcommand*{\si@num@addsign}[1]{%
+  \begingroup
+    \renewcommand*{\si@tempa}{#1}%
+    \renewcommand*{\si@tempb}{mant}%
+    \ifx\si@tempa\si@tempb
+      \aftergroup\@firstoftwo
+    \else
+      \aftergroup\@secondoftwo
+    \fi
+  \endgroup
+  {\ifsi@num@signmant
+     \expandafter\si@num@asign
+   \else
+     \expandafter\@gobble
+   \fi
+   {mantissa}}
+  {\ifsi@num@signexp
+     \expandafter\si@num@asign
+   \else
+     \expandafter\@gobble
+   \fi
+   {exponent}}}
+\newcommand*{\si@num@asign}[1]{%
+  \let\si@num@sign\si@sign
+  \si@log@debug{Adding sign \si@sign\space to #1 for
+    `\si@num@arg'}}
+\newcommand*{\si@num@procnum}[1]{%
+  \expandafter\ifx\expandafter\@empty
+    \csname si@num@#1\endcsname\@empty
+    \expandafter\@gobble
+  \else
+    \expandafter\si@num@finddigits
+  \fi
+  {#1}}
+\newcommand*{\si@num@predec}{}
+\newcommand*{\si@num@postdec}{}
+\newcommand*{\si@num@finddigits}[1]{%
+  \renewcommand*{\si@num@predec}{}%
+  \renewcommand*{\si@num@postdec}{}%
+  \si@switchfalse
+  \expandafter\expandafter\expandafter\si@num@digits
+    \csname si@num@#1\endcsname\@empty\@empty
+  \ifx\@empty\si@num@predec\@empty
+    \ifsi@num@padlead
+      \expandafter\expandafter\expandafter\si@num@addprezero
+    \fi
+  \fi
+  \ifx\@empty\si@num@postdec\@empty
+    \ifsi@num@padtrail
+      \ifsi@switch
+        \expandafter\expandafter\expandafter\expandafter
+          \expandafter\expandafter\expandafter
+          \si@num@addpostzero
+      \fi
+    \fi
+  \fi
+  \si@num@unsign{#1}%
+  \ifx\@empty\si@num@predec\@empty
+  \else
+    \expandafter\si@num@nozero
+  \fi
+  \ifx\@empty\si@num@predec\@empty
+    \ifx\@empty\si@num@postdec\@empty
+      \expandafter\expandafter\expandafter\@gobble
+    \else
+      \expandafter\expandafter\expandafter\si@num@sepdigits
+    \fi
+  \else
+    \expandafter\si@num@sepdigits
+  \fi
+  {#1}}
+\def\si@num@digits#1#2\@empty{%
+  \si@str@ifchrstr{#1}{\si@numdecimal}
+    {\ifsi@switch
+       \si@log@err{Duplicate decimal marker in `\si@num@arg'}
+         {Only a single decimal marker (from the list
+            `\si@numdecimal')\MessageBreak may occur in a
+            numerical argument}%
+     \else
+       \si@log@debug{Found decimal marker `#1' in
+         `\si@num@arg'}%
+       \expandafter\si@switchtrue
+     \fi}
+    {\si@str@ifchrstr{#1}{\si@numsign}
+       {\si@log@err{Misplaced sign character
+          `#1' in `\si@num@arg'}
+          {Sign characters `\si@numsign' can only
+            occur\MessageBreak at the start of a number}}
+       {\ifsi@switch
+          \expandafter\si@num@post
+        \else
+          \expandafter\si@num@pre
+        \fi
+        {#1}}}%
+  \ifx\@empty#2\@empty\else
+    \si@num@digits#2\@empty\@empty
+  \fi}
+\newcommand*{\si@num@pre}[1]{%
+  \si@num@prepost{#1}{pre}{integer}}
+\newcommand*{\si@num@post}[1]{%
+  \si@num@prepost{#1}{post}{decimal}}
+\newcommand*{\si@num@prepost}[3]{%
+  \expandafter\protected@edef\csname si@num@#2dec\endcsname{%
+    \csname si@num@#2dec\endcsname#1}%
+  \si@log@debug{Adding `#1' to #3 part for `\si@num@arg'}}
+\newcommand*{\si@num@addprezero}{%
+  \si@num@addpzero{pre}{leading}}
+\newcommand*{\si@num@addpostzero}{%
+  \si@num@addpzero{post}{trailing}}
+\newcommand*{\si@num@addpzero}[2]{%
+  \si@log@debug{Adding #2 zero for `\si@num@arg'}%
+  \@namedef{si@num@#1dec}{0}}
+\newcommand*{\si@num@unsign}[1]{%
+  \expandafter\ifx\expandafter\@empty
+    \csname si@num@#1sign\endcsname\@empty
+    \expandafter\@gobble
+  \else
+    \expandafter\si@num@nosign
+  \fi
+  {#1}}
+\newcommand*{\si@num@nosign}[1]{%
+  \begingroup
+    \si@switchtrue
+    \si@str@ifonlychrs{\si@num@predec\si@num@postdec}{0}
+      {\si@switchfalse}{}%
+    \ifsi@switch
+      \aftergroup\@gobble
+    \else
+      \aftergroup\@firstofone
+    \fi
+  \endgroup
+  {\si@log@debug{Zero value: removing any sign}%
+   \ifsi@ang@sign\else
+     \@namedef{si@num@#1sign}{}%
+   \fi}}
+\newcommand*{\si@num@nozero}{%
+  \si@str@ifonlychrs{\si@num@predec}{0}
+    {\renewcommand*{\si@num@predec}{0}}{}}
+\newcommand*{\si@num@decimalhook}{}
+\newcommand*{\si@num@sepdigits}[1]{%
+  \begingroup
+    \let\si@numextra\si@numaddn
+    \protected@edef\si@tempa{\si@num@predec\si@num@postdec}%
+    \si@num@ifextra{\si@tempa}
+      {\aftergroup\@gobble}
+      {\aftergroup\@firstofone}%
+  \endgroup
+  {\renewcommand*{\si@tempb}{mant}%
+   \renewcommand*{\si@tempc}{#1}%
+   \ifx\si@tempb\si@tempc
+     \expandafter\si@num@checkerr
+   \fi}%
+  \protected@edef\si@tempa{\si@num@predec\si@num@postdec}%
+  \expandafter\si@str@ifonlychrs\expandafter{\si@tempa}
+    {0123456789}
+    {\ifx\@empty\si@num@err\@empty
+       \renewcommand*{\si@tempb}{mant}%
+       \renewcommand*{\si@tempc}{#1}%
+       \ifx\si@tempb\si@tempc
+         \expandafter\expandafter\expandafter\si@num@fixlength
+       \fi
+     \fi}{}%
+  \si@num@ifextra{\si@num@predec}{}
+    {\expandafter\si@num@int\expandafter{\si@num@predec}}%
+  \renewcommand*{\si@tempc}{}%
+  \ifx\@empty\si@num@postdec\@empty\else
+    \si@num@decimalhook
+    \renewcommand*{\si@tempc}{%
+      \ensuremath{{\si@decimalsymbol}}}%
+    \si@num@ifextra{\si@num@postdec}{}
+      {\expandafter\si@num@dec\expandafter{\si@num@postdec}}%
+  \fi
+  \expandafter\protected@edef\csname si@num@#1\endcsname
+    {\si@num@predec\si@tempc\si@num@postdec}}
+\newcommand*{\si@num@ifextra}[1]{%
+  \begingroup
+    \si@switchfalse
+    \expandafter\si@num@extra#1\@empty\@empty
+    \ifsi@switch
+      \si@log@debug{Found `extra' characters in `#1'}%
+      \aftergroup\@firstoftwo
+    \else
+      \aftergroup\@secondoftwo
+    \fi
+  \endgroup}
+\def\si@num@extra#1#2\@empty{%
+  \ifx\@empty#1\@empty\else
+    \si@str@ifchrstr{#1}{\si@numextra}{\si@switchtrue}{}%
+    \ifx\@empty#2\@empty\else
+      \si@num@extra#2\@empty\@empty
+    \fi
+  \fi}
+\newif\ifsi@num@ambigerr
+\newcommand*{\si@num@checkerr}{%
+  \ifx\@empty\si@num@postdec\@empty
+    \expandafter\si@num@preerr
+  \else
+    \expandafter\si@num@posterr
+  \fi}
+\newcommand*{\si@num@preerr}{%
+  \si@num@seperr{pre}%
+  \ifx\@empty\si@tempb\@empty\else
+    \expandafter\renewcommand\expandafter*\expandafter
+      \si@num@err\expandafter{\si@tempb}%
+  \fi}
+\newcommand*{\si@num@posterr}{%
+  \si@num@seperr{post}%
+  \ifx\@empty\si@tempb\@empty\else
+    \ifsi@seperr
+      \expandafter\expandafter\expandafter\si@num@psterr
+    \else
+      \let\si@num@err\si@tempb
+    \fi
+  \fi}
+\newcommand*{\si@num@psterr}{%
+    \si@num@cntdigits{\si@tempb}%
+    \si@tempcntb\si@tempcnta\relax
+    \si@num@cntdigits{\si@num@postdec}%
+    \ifnum\si@tempcnta<\si@tempcntb\relax
+      \expandafter\si@num@largeerr
+    \else
+      \expandafter\si@num@smallerr
+    \fi}
+\newcommand*{\si@num@seperr}[1]{%
+  \si@switchfalse
+  \renewcommand*{\si@tempa}{}%
+  \renewcommand*{\si@tempb}{}%
+  \expandafter\expandafter\expandafter\si@num@finderr
+    \csname si@num@#1dec\endcsname\@empty\@empty
+  \ifx\@empty\si@tempb\@empty\else
+    \expandafter\let\csname si@num@#1dec\endcsname\si@tempa
+  \fi}
+\def\si@num@finderr#1#2\@empty{%
+  \si@str@ifchrstr{#1}{\si@numopenerr}
+    {\ifsi@switch
+       \si@log@err{Invalid error in number}
+         {The numerical argument \si@num@arg\space has two (or
+           more)\MessageBreak error-opening characters}%
+     \else
+       \expandafter\si@switchtrue
+     \fi}
+    {\si@str@ifchrstr{#1}{\si@numcloseerr}
+       {\ifsi@switch
+          \ifx\@empty#2\@empty\else
+            \si@log@err{Invalid error in number}
+              {The numerical argument \si@num@arg\space has an
+              error-closing before the last character}%
+          \fi
+        \else
+          \si@log@err{Invalid error in number}
+           {The numerical argument \si@num@arg\space has an
+              error-closing character\MessageBreak but no
+              error-opening one}%
+        \fi}
+       {\ifsi@switch
+          \expandafter\si@num@addtmpb
+        \else
+          \expandafter\si@num@addtmpa
+        \fi
+        {#1}}}%
+  \ifx\@empty#2\@empty\else
+    \si@num@finderr#2\@empty
+  \fi}
+\newcommand*{\si@num@addtmpa}[1]{\si@num@addtmp{a}{#1}}
+\newcommand*{\si@num@addtmpb}[1]{\si@num@addtmp{b}{#1}}
+\newcommand*{\si@num@addtmp}[2]{%
+  \expandafter\protected@edef\csname si@temp#1\endcsname{%
+    \csname si@temp#1\endcsname#2}}
+\newcommand*{\si@num@cntdigits}[1]{%
+  \si@tempcnta\z@\relax
+  \expandafter\si@num@cntdgt#1\@empty\@empty}
+\def\si@num@cntdgt#1#2\@empty{%
+  \ifx\@empty#1\@empty\else
+    \advance\si@tempcnta\@ne\relax
+  \fi
+  \ifx\@empty#2\@empty\else
+    \expandafter\si@num@cntdgt#2\@empty
+  \fi}
+\newcommand*{\si@num@smallerr}{%
+  \si@tempcntb\si@tempcnta\relax
+  \si@num@serr
+  \protected@edef\si@num@err{%
+    \ifsi@num@padlead0\fi\expandafter\@car\si@numdecimal\@nil
+    \si@tempb}}
+\newcommand*{\si@num@serr}{%
+  \si@num@cntdigits{\si@tempb}%
+  \ifnum\si@tempcnta=\si@tempcntb\relax\else
+    \protected@edef\si@tempb{0\si@tempb}%
+    \expandafter\si@num@serr
+  \fi}
+\newcommand*{\si@num@largeerr}{%
+  \renewcommand*{\si@tempa}{}%
+  \si@tempcntb\si@tempcnta\relax
+  \si@num@lerr
+  \protected@edef\si@num@err{%
+    \si@tempa\expandafter\@car\si@numdecimal\@nil\si@tempb}}
+\newcommand*{\si@num@lerr}{%
+  \si@num@cntdigits{\si@tempb}%
+  \ifnum\si@tempcnta=\si@tempcntb\relax\else
+    \expandafter\si@num@movedigit\si@tempb\@empty\@empty
+    \si@num@lerr
+  \fi}
+\def\si@num@movedigit#1#2\@empty{%
+  \protected@edef\si@tempa{\si@tempa#1}%
+  \protected@edef\si@tempb{#2}}
+\newcommand*{\si@num@fixlength}{%
+  \ifsi@fixdp
+    \expandafter\si@num@fixdp
+  \else
+    \ifsi@fixsf
+      \expandafter\expandafter\expandafter\si@num@fixsf
+    \fi
+  \fi}
+\newcommand*{\si@num@fixdp}{%
+  \si@num@cntdigits{\si@num@postdec}%
+  \ifx\@empty\si@num@postdec\@empty
+    \si@tempcnta\z@\relax
+  \fi
+  \ifnum\si@tempcnta>\si@num@dp\relax
+    \expandafter\si@num@round
+  \else
+    \ifnum\si@tempcnta<\si@num@dp\relax
+      \expandafter\expandafter\expandafter\si@num@pad
+    \fi
+  \fi}
+\newcommand*{\si@num@pad}{%
+  \si@log@debug{Padding to \the\si@num@dp\space digits}%
+  \loop\ifnum\si@tempcnta<\si@num@dp\si@num@pd\repeat}
+\newcommand*{\si@num@pd}{%
+  \advance\si@tempcnta\@ne\relax
+  \protected@edef\si@num@postdec{\si@num@postdec0}}
+\newcount\si@num@rndtarget
+\newcommand*{\si@num@prernd}{}
+\newcommand*{\si@num@postrnd}{}
+\newcommand*{\si@num@round}{%
+  \si@log@debug{Rounding to \the\si@num@dp\space digits}%
+  \si@num@rndtarget\si@num@dp\relax
+  \si@num@rndstart}
+\newcommand*{\si@num@rndstart}{%
+  \si@num@reverse{\si@num@postdec}%
+  \si@num@reverse{\si@num@predec}%
+  \let\si@num@prernd\si@num@predec
+  \let\si@num@postrnd\si@num@postdec
+  \renewcommand*{\si@num@predec}{}%
+  \renewcommand*{\si@num@postdec}{}%
+  \si@switchfalse
+  \si@num@rnd}
+\newcommand*{\si@num@reverse}[1]{%
+  \renewcommand*{\si@tempa}{}%
+  \expandafter\si@num@rev#1\@empty\@empty
+  \let#1\si@tempa}
+\def\si@num@rev#1#2\@empty{%
+  \edef\si@tempa{#1\si@tempa}%
+  \ifx\@empty#2\@empty\else
+    \si@num@rev#2\@empty\@empty
+  \fi}
+\newcommand*{\si@num@rnd}{%
+  \ifx\@empty\si@num@postrnd\@empty
+    \expandafter\si@num@rndpre
+  \else
+    \expandafter\si@num@rndpost
+  \fi}
+\newcommand*{\si@num@rndpre}{%
+  \expandafter\edef\expandafter\si@tempa\expandafter{%
+    \expandafter\@car\si@num@prernd\@nil}%
+  \expandafter\edef\expandafter\si@num@prernd\expandafter{%
+    \expandafter\@cdr\si@num@prernd\@nil}%
+  \si@tempcntb\si@tempa\relax
+  \ifsi@switch
+    \advance\si@tempcntb\@ne\relax
+  \fi
+  \si@switchfalse
+  \ifnum\si@tempcntb=10\relax
+    \si@tempcntb\z@\relax
+    \expandafter\expandafter\expandafter\si@switchtrue
+  \fi
+  \edef\si@num@predec{\the\si@tempcntb\si@num@predec}%
+  \ifx\@empty\si@num@prernd\@empty
+    \ifsi@switch
+      \edef\si@num@predec{1\si@num@predec}%
+    \fi
+  \else
+    \expandafter\si@num@rnd
+  \fi}
+\newcommand*{\si@num@rndpost}{%
+  \expandafter\edef\expandafter\si@tempa\expandafter{%
+    \expandafter\@car\si@num@postrnd\@nil}%
+  \expandafter\edef\expandafter\si@num@postrnd\expandafter{%
+    \expandafter\@cdr\si@num@postrnd\@nil}%
+  \si@tempcntb\si@tempa\relax
+  \ifsi@switch
+    \advance\si@tempcntb\@ne\relax
+  \fi
+  \si@switchfalse
+  \advance\si@num@rndtarget\@ne\relax
+  \ifnum\si@tempcnta>\si@num@rndtarget\relax
+    \advance\si@num@rndtarget\m@ne\relax
+  \else
+    \advance\si@num@rndtarget\m@ne\relax
+    \ifnum\si@tempcnta>\si@num@rndtarget\relax
+      \ifnum\si@tempcntb>4\relax
+        \expandafter\expandafter\expandafter\si@switchtrue
+      \fi
+    \else
+      \ifnum\si@tempcntb=10\relax
+        \si@tempcntb\z@\relax
+        \expandafter\expandafter\expandafter\si@switchtrue
+      \fi
+      \edef\si@num@postdec{\the\si@tempcntb\si@num@postdec}%
+    \fi
+  \fi
+  \advance\si@tempcnta\m@ne\relax
+  \ifnum\si@tempcnta=\m@ne\relax
+    \si@num@throw
+  \fi
+  \si@num@rnd}
+\newcommand*{\si@num@throw}{%
+  \si@num@reverse{\si@num@postdec}%
+  \edef\si@num@postdec{\expandafter\@cdr\si@num@postdec\@nil}%
+  \si@num@reverse{\si@num@postdec}}
+\newcommand*{\si@num@fixsf}{%
+  \si@num@cntdigits{\si@num@predec}%
+  \ifx\@empty\si@num@predec\@empty
+    \si@tempcnta\z@\relax
+  \fi
+  \ifnum\si@tempcnta=\@ne\relax
+    \renewcommand*{\si@tempa}{0}%
+    \ifx\si@num@predec\si@tempa
+      \ifx\@empty\si@num@postdec\@empty\else
+        \si@tempcnta\z@\relax
+        \si@switchfalse
+        \expandafter\si@num@cntpostsf\si@num@postdec
+          \@empty\@empty
+        \ifnum\si@tempcnta>\si@num@sf\relax
+          \si@log@debug{Rounding to \the\si@num@sf\space
+            figures}%
+          \si@num@rndtarget\si@num@sf\relax
+          \si@num@rndstart
+        \fi
+      \fi
+    \else
+      \si@num@cntprepost
+    \fi
+  \else
+    \ifnum\si@tempcnta<\si@num@sf\relax
+      \si@num@cntprepost
+    \else
+      \advance\si@tempcnta\m@ne\relax
+      \si@switchfalse
+      \ifnum\si@tempcnta>\si@num@sf\relax\else
+        \ifx\@empty\si@num@postdec\@empty\else
+          \edef\si@num@postdec{\expandafter\@car
+            \si@num@postdec\@nil}%
+          \ifnum\si@num@postdec>4\relax
+            \expandafter\si@switchtrue
+          \fi
+        \fi
+      \fi
+      \advance\si@tempcnta\@ne\relax
+      \renewcommand*{\si@num@postdec}{}%
+      \si@num@reverse{\si@num@predec}%
+      \let\si@num@prernd\si@num@predec
+      \renewcommand*{\si@num@predec}{}%
+      \si@num@sfpre
+      \ifsi@switch
+        \edef\si@num@predec{1\si@num@predec}%
+      \fi
+    \fi
+  \fi}
+\def\si@num@cntpostsf#1#2\@empty{%
+  \ifsi@switch
+    \advance\si@tempcnta\@ne\relax
+  \else
+    \if 0#1\relax\else
+      \si@tempcnta\@ne\relax
+      \expandafter\expandafter\expandafter\si@switchtrue
+    \fi
+  \fi
+  \ifx\@empty#2\@empty\else
+    \si@num@cntpostsf#2\@empty\@empty
+  \fi}
+\newcommand*{\si@num@cntprepost}{%
+  \si@tempcntb\si@tempcnta\relax
+  \si@num@cntdigits{\si@num@postdec}%
+  \advance\si@tempcnta\si@tempcntb\relax
+  \ifnum\si@tempcnta>\si@num@sf
+    \si@log@debug{Rounding to \the\si@num@sf\space figures}%
+    \si@num@rndtarget\si@num@sf\relax
+    \si@num@rndstart
+    \ifsi@switch
+      \si@num@throw
+    \fi
+  \fi}
+\newcommand*{\si@num@sfpre}{%
+  \expandafter\edef\expandafter\si@tempa\expandafter{%
+    \expandafter\@car\si@num@prernd\@nil}%
+  \expandafter\edef\expandafter\si@num@prernd\expandafter{%
+    \expandafter\@cdr\si@num@prernd\@nil}%
+  \si@tempcntb\si@tempa\relax
+  \ifsi@switch
+    \advance\si@tempcntb\@ne\relax
+  \fi
+  \si@switchfalse
+  \advance\si@num@sf\@ne\relax
+  \ifnum\si@tempcnta>\si@num@sf\relax
+    \advance\si@num@sf\m@ne\relax
+    \edef\si@num@predec{0\si@num@predec}%
+  \else
+    \advance\si@num@sf\m@ne\relax
+    \ifnum\si@tempcnta>\si@num@sf\relax
+      \ifnum\si@tempcntb>4\relax
+        \expandafter\expandafter\expandafter\si@switchtrue
+      \fi
+      \edef\si@num@predec{0\si@num@predec}%
+    \else
+      \ifnum\si@tempcntb=10\relax
+        \si@tempcntb\z@\relax
+        \expandafter\expandafter\expandafter\si@switchtrue
+      \fi
+      \edef\si@num@predec{\the\si@tempcntb\si@num@predec}%
+    \fi
+  \fi
+  \advance\si@tempcnta\m@ne\relax
+  \ifx\@empty\si@num@prernd\@empty\else
+    \expandafter\si@num@sfpre
+  \fi}
+\newcommand*{\si@num@int}[1]{%
+  \renewcommand*{\si@num@predec}{}%
+  \ifsi@sepfour
+    \si@num@intfmt{}#1\@empty\@empty\@empty
+  \else
+    \si@num@iffive{#1}
+      {\si@num@intfmt{}#1\@empty\@empty\@empty}
+      {\renewcommand*{\si@num@predec}{#1}}%
+  \fi}
+\newcommand*{\si@num@iffive}[1]{%
+  \si@num@five#1\@empty\@empty\@empty\@empty\@empty\end}
+\def\si@num@five#1#2#3#4#5\end{%
+   \ifx\@empty#5\@empty
+      \expandafter\@secondoftwo
+   \else
+      \expandafter\@firstoftwo
+   \fi}
+\newcommand*{\si@num@intfmt}[4]{%
+  \ifx\@empty#2\@empty
+    \si@num@intsep#1\relax
+  \else
+    \ifx\@empty#3\@empty
+      \si@num@intsep\@empty\@empty#1#2\relax
+    \else
+      \ifx\@empty#4\@empty
+        \si@num@intsep\@empty#1#2#3\relax
+      \else
+        \si@num@fiint{#1#2#3#4}%
+      \fi
+    \fi
+  \fi}
+\def\si@num@fiint#1\fi\fi\fi{\fi\fi\fi\si@num@intfmt{#1}}
+\newcommand*{\si@num@intsep}[4]{%
+  \protected@edef\si@num@predec{\si@num@predec#1#2#3}%
+  \if\relax#4\relax\else
+    \protected@edef\si@num@predec{%
+      \si@num@predec\ensuremath{\noexpand\si@digitsep}}%
+    \expandafter\si@num@intsep\expandafter#4%
+  \fi}
+\newcommand*{\si@num@dec}[1]{%
+  \renewcommand*{\si@num@postdec}{}%
+  \ifsi@sepfour
+    \si@num@decfmt#1\@empty\@empty\@empty\@empty
+  \else
+    \si@num@iffive{#1}
+      {\si@num@decfmt#1\@empty\@empty\@empty\@empty}
+      {\protected@edef\si@num@postdec{\si@num@postdec#1}}%
+  \fi}
+\newcommand*{\si@num@decfmt}[4]{%
+  \protected@edef\si@num@postdec{\si@num@postdec#1#2#3}%
+  \ifx\@empty#4\@empty%
+  \else
+    \protected@edef\si@num@postdec{%
+      \si@num@postdec\ensuremath{\noexpand\si@digitsep}}%
+    \expandafter\si@num@decfmt\expandafter#4%
+  \fi}
+\newcommand*{\si@num@procerr}{%
+  \si@num@addunit
+  \ensuremath{\si@pm}%
+  \expandafter\si@num\expandafter{\si@num@err}}
+\newcommand*{\si@num@sepxpart}{%
+  \si@num@addunit
+  \ensuremath{{}\times{}}%
+  \expandafter\expandafter\expandafter\si@num\expandafter
+    \expandafter\expandafter{%
+      \expandafter\@cdr\si@num@xpart\@nil}}
+\newcommand*{\si@num@addunit}{%
+  \si@unt@numtrue
+  \ifx\@empty\si@unt@unitarg\@empty\else
+    \ifsi@repeatunits
+      \begingroup
+        \si@out@numfalse
+        \si@fam@setfalse
+        \si@fam@set
+        \si@unt@printunit{\si@unt@unitarg}%
+      \endgroup
+    \fi
+  \fi}
+\si@newrobustcmd*{\ang}[2][]{%
+  \begingroup
+    \sisetup{#1}%
+    \si@fam@mode
+    \si@log@debug{Processing \string\ang\space input `#2'}%
+    \@makeother{\;}%
+    \makeatletter
+    \scantokens{\si@ang@parse#2;;;\@nil}}
+\def\si@ang@parse#1;#2;#3;#4\@nil{%
+  \let\ifsi@ang@fixdp\ifsi@fixdp
+  \si@fixdpfalse
+  \si@ifmtarg{#4}
+    {\si@log@debug{Angle argument contains no
+       semi-colons:\MessageBreak decimal angle}%
+     \si@ang@dec{#1}{}{}}
+    {\si@log@debug{Angle argument contains
+       semi-colons:\MessageBreak degree-minute-second angle}%
+     \renewcommand*{\si@tempa}{#4}%
+     \renewcommand*{\si@tempb}{;;}%
+     \ifx\si@tempa\si@tempb\else
+       \ifsi@strictarc
+         \renewcommand*{\si@tempb}{;}%
+         \ifx\si@tempa\si@tempb
+           \si@log@err{Insufficient semi-colons in argument
+             of \string\ang}{The argument of
+             \string\ang\space  must contain either no
+             semi-colons or exactly two}%
+         \else
+           \si@log@err{Excess semi-colons in argument of
+             \string\ang}{The argument of \string\ang\space
+             must contain either no semi-colons or exactly
+             two}%
+         \fi
+       \fi
+     \fi
+     \si@ang@arc{#1}{#2}{#3}}}
+\newcommand*{\si@ang@dec}{%
+  \let\si@ang@fix\@gobble
+  \ifsi@ang@toarc
+    \expandafter\si@ang@dectoarc
+  \else
+    \sisetup{padangle=none,anglesep=none}\expandafter\si@ang@typeset
+  \fi}
+\newcommand*{\si@ang@arc}{%
+  \let\si@ang@fix\si@ang@arcfix
+  \ifsi@ang@todec
+    \expandafter\si@ang@arctodec
+  \else
+    \expandafter\si@ang@typeset
+  \fi}
+\newif\ifsi@ang@fixdp
+\newcommand*{\si@ang@fix}[1]{}
+\newcommand*{\si@ang@arcfix}[1]{%
+  \renewcommand*{\si@tempa}{second}%
+  \renewcommand*{\si@tempb}{#1}%
+  \ifx\si@tempa\si@tempb
+    \ifsi@ang@fixdp
+      \expandafter\expandafter\expandafter\si@fixdptrue
+    \else
+      \expandafter\expandafter\expandafter\si@fixdpfalse
+    \fi
+  \else
+    \expandafter\si@fixdpfalse
+  \fi}
+\newcommand*{\si@ang@ifnum}[1]{%
+  \begingroup
+    \renewcommand*{\si@numvalid}{0123456789,.+-}%
+    \ifx\@empty#1\@empty
+      \aftergroup\@firstoftwo
+    \else
+      \si@num@ifvalid{#1}
+        {\aftergroup\@firstoftwo}
+        {\aftergroup\@secondoftwo}%
+    \fi
+  \endgroup}
+\newcommand*{\si@ang@arctodec}[3]{%
+  \let\si@ang@fix\@gobble
+  \ifnum\si@num@dp>\thr@@\relax
+    \si@num@dp\thr@@\relax
+  \fi
+  \si@fixdptrue
+  \si@ang@ifnum{#1}
+    {\si@ang@ifnum{#2}
+      {\si@ang@ifnum{#3}
+        {\si@tempdima\z@\relax
+         \renewcommand*{\si@tempa}{+}%
+         \ifx\@empty#1\@empty\else
+           \si@tempdima #1pt\relax
+         \fi
+         \ifdim\si@tempdima<\z@\relax
+           \renewcommand*{\si@tempa}{-}%
+         \fi
+         \ifx\@empty#2\@empty\else
+           \si@tempdima\dimexpr\si@tempdima\si@tempa
+             #2pt/60\relax
+         \fi
+         \ifdim\si@tempdima<\z@\relax
+           \renewcommand*{\si@tempa}{-}%
+         \else
+         \fi
+         \ifx\@empty#3\@empty\else
+           \si@tempdima\dimexpr\si@tempdima\si@tempa
+             #3pt/3600\relax
+         \fi
+         \sisetup{numdecimal=.}%
+         \expandafter\si@ang@typeset\expandafter{%
+           \strip@pt\si@tempdima}{}{}}
+        {\si@ang@notnum{#1}{#2}{#3}}}
+      {\si@ang@notnum{#1}{#2}{#3}}}
+    {\si@ang@notnum{#1}{#2}{#3}}}
+\newcommand*{\si@ang@dectoarc}[1]{%
+  \let\si@ang@fix\si@ang@arcfix
+  \si@ang@fixdptrue
+  \ifnum\si@num@dp>\@ne\relax
+    \si@num@dp\@ne\relax
+  \fi
+  \si@ang@ifnum{#1}
+    {\si@tempdima\z@\relax
+     \ifx\@empty#1\@empty\else
+       \si@tempdima #1pt\relax
+     \fi
+     \si@ang@sepint{deg}%
+     \si@tempdima\dimexpr\si@tempdima *60\relax
+     \si@ang@sepint{min}%
+     \edef\si@tempa{\the\dimexpr\si@tempdima *60\relax}%
+     \expandafter\newcommand\expandafter*\expandafter{%
+       \expandafter\si@ang@arcsec\expandafter}\expandafter{%
+       \expandafter\si@ang@strippt\si@tempa}%
+     \si@tempdima\z@\relax
+     \edef\si@tempa{\the\si@tempdima}%
+     \expandafter\renewcommand\expandafter*\expandafter{%
+       \expandafter\si@tempa\expandafter}\expandafter{%
+       \expandafter\si@ang@strippt\si@tempa}%
+     \ifx\si@tempa\si@ang@arcsec
+       \renewcommand*{\si@ang@arcsec}{0}%
+     \fi
+     \renewcommand*{\si@tempa}{0}%
+     \ifx\si@ang@arcdeg\si@tempa
+       \si@temptoks{{}}%
+     \else
+       \si@temptoks{{\si@ang@arcdeg}}%
+     \fi
+     \ifx\si@ang@arcmin\si@tempa
+       \si@temptoks\expandafter{\the\si@temptoks{}}%
+     \else
+       \si@temptoks\expandafter{\the\si@temptoks{%
+         \si@ang@arcmin}}%
+     \fi
+     \ifx\si@ang@arcsec\si@tempa
+       \si@temptoks\expandafter{\the\si@temptoks{}}%
+     \else
+       \si@temptoks\expandafter{\the\si@temptoks{%
+         \si@ang@arcsec}}%
+     \fi
+     \expandafter\si@ang@typeset\the\si@temptoks}
+    {\si@ang@notnum{#1}{}{}}}
+\newcommand*{\si@ang@sepint}[1]{%
+  \expandafter\si@ang@sint\the\si@tempdima\@empty
+  \expandafter\let\csname si@ang@arc#1\endcsname\si@tempa}
+\def\si@ang@sint#1.#2\@empty{%
+  \renewcommand*{\si@tempa}{#1}%
+  \si@tempdima 0.#2\relax}
+\begingroup
+  \catcode`P=12
+  \catcode`T=12
+  \lowercase{
+    \renewcommand*{\si@tempa}{%
+      \def\si@ang@strippt##1PT{##1}}}
+  \expandafter\endgroup
+\si@tempa
+\newcommand*{\si@ang@notnum}[3]{%
+  \si@log@warn{Angle `#1;#2;#3' is not a pure
+    number:\MessageBreak output will be as given}%
+  \si@ang@typeset{#1}{#2}{#3}}
+\newif\ifsi@ang@sign
+\newcommand*{\si@ang@typeset}[3]{%
+  \ifsi@ang@padlarge
+    \newcommand*{\si@ang@degs}{0\si@sym@degree}%
+    \newcommand*{\si@ang@mins}{0\si@sym@minute}%
+    \newcommand*{\si@ang@secs}{0\si@sym@second}%
+  \else
+    \newcommand*{\si@ang@degs}{}%
+    \newcommand*{\si@ang@mins}{}%
+    \newcommand*{\si@ang@secs}{}%
+  \fi
+  \protected@edef\si@ang@decimalsymbol{\si@decimalsymbol}%
+  \ifsi@astroang
+    \let\si@ang@movesign\si@ang@astrosign
+  \else
+    \let\si@ang@movesign\@gobble
+  \fi
+  \newcommand*{\si@ang@secnum}{\si@ang@num{second}}%
+  \newcommand*{\si@ang@minnum}{\si@ang@num{minute}}%
+   \si@ifnotmtarg{#3}
+     {\si@log@debug{Found seconds `#3'}%
+      \si@ang@ifnum{#3}
+        {\ifdim #3 pt=\z@\relax\else
+           \si@ang@signtrue
+         \fi}{}%
+      \renewcommand*{\si@ang@secs}
+       {\si@ang@secnum{#3}\si@sym@second}%
+      \renewcommand*{\si@ang@mins}
+        {\si@ang@pad{0\si@sym@minute}}%
+      \renewcommand*{\si@ang@degs}
+        {\si@ang@pad{0\si@sym@degree}}}%
+   \si@ifnotmtarg{#2}
+     {\si@log@debug{Found minutes `#2'}%
+      \si@ang@ifnum{#2}
+        {\ifdim #2 pt=\z@\relax\else
+           \si@ang@signtrue
+         \fi}{}%
+      \renewcommand*{\si@ang@secnum}{%
+        \si@ang@signlessnum{second}}%
+      \renewcommand*{\si@ang@mins}
+       {\si@ang@minnum{#2}\si@sym@minute}%
+      \renewcommand*{\si@ang@degs}
+        {\si@ang@pad{0\si@sym@degree}}}%
+   \si@ifnotmtarg{#1}
+     {\si@log@debug{Found degrees `#1'}%
+      \renewcommand*{\si@ang@secnum}{%
+        \si@ang@signlessnum{second}}%
+      \renewcommand*{\si@ang@minnum}{%
+        \si@ang@signlessnum{minute}}%
+      \renewcommand*{\si@ang@degs}
+       {\si@ang@num{degree}{#1}%
+        \si@sym@degree}}%
+   \si@out@num
+     {\si@ang@degs\si@anglesep\si@ang@mins\si@anglesep
+        \si@ang@secs}%
+   \endgroup}
+\newcommand*{\si@ang@pad}[1]{\ifsi@ang@padsmall #1\fi}
+\newcommand*{\si@ang@num}[2]{%
+  \begingroup
+    \si@ang@fix{#1}%
+    \si@ang@movesign{#1}%
+    \si@num{#2}%
+  \endgroup}
+\newcommand*{\si@ang@signlessnum}[2]{%
+  \begingroup
+    \si@ang@fix{#1}%
+    \si@ang@movesign{#1}%
+    \sisetup{addsign=none}%
+    \si@num{#2}%
+  \endgroup}
+\newcommand*{\si@ang@killdegree}{\let\si@sym@degree\relax}
+\newcommand*{\si@ang@killminute}{\let\si@sym@minute\relax}
+\newcommand*{\si@ang@killsecond}{\let\si@sym@second\relax}
+\newcommand*{\si@ang@astrosign}[1]{%
+  \renewcommand*{\si@decimalsymbol}{%
+    \setbox\si@tempboxa=\hbox{%
+      \ensuremath{{\si@ang@decimalsymbol}}}%
+    \si@tempdima\wd\si@tempboxa\relax
+    \setbox\si@tempboxb=\hbox to\z@{%
+      \hss\unhbox\si@tempboxa\hss}%
+    \setbox\si@tempboxa=\hbox{%
+      \csname si@sym@#1\endcsname\hskip-\scriptspace}%
+    \si@tempdimb\wd\si@tempboxa\relax
+    \setbox\si@tempboxc=\hbox to\z@{%
+      \hss\unhbox\si@tempboxa\hss}%
+    \setbox\si@tempboxd=\hbox{%
+      \usebox\si@tempboxb\usebox\si@tempboxc}%
+    \ifdim\si@tempdima>\si@tempdimb\relax
+      \setbox\si@tempboxa=\hbox to\si@tempdima{%
+        \hss\unhbox\si@tempboxd\hss}%
+    \else
+      \setbox\si@tempboxa=\hbox to\si@tempdimb{%
+        \hss\unhbox\si@tempboxd\hss}%
+    \fi
+    \usebox\si@tempboxa%
+    \ifdim\si@tempdima>\si@tempdimb\relax\else
+      \hskip\scriptspace
+    \fi}%
+  \renewcommand*{\si@num@decimalhook}{\expandafter\aftergroup
+    \csname si@ang@kill#1\endcsname}}%
+\@ifpackageloaded{cellspace}
+  {\newcolumntype{C}[1]{>{\bcolumn #1\@nil}#1<{\ecolumn}}}
+  {\AtBeginDocument{
+    \@ifpackageloaded{cellspace}
+     {\newcolumntype{C}[1]{>{\bcolumn #1\@nil}#1<{\ecolumn}}%
+      \renewcommand*{\NC@rewrite@S}[1][]{%
+        \edef\si@tempa{\the\@temptokena
+        >{\noexpand\si@tab@begin@S[#1]}c%
+        <{\noexpand\si@tab@end@S}}%
+        \@temptokena\expandafter{\si@tempa}%
+        \NC@find}}
+     {}}}
+\edef\si@tempa{%
+  \noexpand\NC@do S\noexpand\NC@do s\the\NC@list}
+\newcolumntype{S}{}
+\newcolumntype{s}{}
+\NC@list\expandafter{\si@tempa}
+\newcommand*{\si@tab@corr@colortbl}{\relax}
+\AtBeginDocument{
+  \@ifpackageloaded{colortbl}{%
+    \renewcommand*{\si@tab@corr@colortbl}{%
+      \hskip\stretch{-0.5}\kern\z@
+    }
+  }{}
+}
+\renewcommand*{\NC@rewrite@S}[1][]{%
+  \edef\si@tempa{\the\@temptokena
+    >{\noexpand\si@tab@begin@S[#1]}c%
+    <{\noexpand\si@tab@end@S}}%
+  \@temptokena\expandafter{\si@tempa}%
+  \NC@find}
+\renewcommand*{\NC@rewrite@s}[1][]{%
+  \edef\si@tempa{\the\@temptokena
+    >{\noexpand\si@tab@begin@s[#1]}c%
+    <{\noexpand\si@tab@end@s}}%
+  \@temptokena\expandafter{\si@tempa}%
+  \NC@find}
+\newcommand*{\si@tab@begin@S}[1][]{%
+  \si@log@debug{Processing S column cell contents}%
+  \let\si@tab@gettok\si@tab@gettok@S
+  \si@seperrfalse
+  \renewcommand*{\si@num@sepxpart}{%
+    \si@log@err{Multiple numbers not allowed in
+       tables\MessageBreak Only the first number used}
+       \@ehb}%
+  \si@tab@begin[#1]}
+\newcommand*{\si@tab@begin@s}[1][]{%
+  \si@log@debug{Processing s column cell contents}%
+  \let\si@tab@gettok\si@tab@gettok@s
+  \si@tab@begin[#1]}
+\newtoks\si@tab@toks
+\newtoks\si@tab@pretoks
+\newtoks\si@tab@posttoks
+\newcommand*{\si@tab@begin}[1][]{%
+  \begingroup
+    \sisetup{#1}%
+    \si@tab@toks{}%
+    \si@tab@pretoks{}%
+    \si@tab@posttoks{}%
+    \si@switchfalse
+    \si@tab@gettok}
+\newcommand*{\si@tab@next}{}
+\newcommand*{\si@tab@gettok@S}[1]{%
+  \ifx\tabularnewline#1\relax
+    \let\si@tab@next\si@tab@newline@S
+  \else
+    \ifx\end#1\relax
+      \let\si@tab@next\end
+    \else
+      \ifx\si@tab@end@S#1\relax
+        \let\si@tab@next\si@tab@end@S
+      \else
+        \ifx\endtabular#1\relax
+          \let\si@tab@next\endtabular
+        \else
+          \ifx\csname#1\relax
+            \let\si@tab@next\csname
+          \else
+            \ifx\relax#1\relax
+              \let\si@tab@next\relax
+            \else
+              \let\si@tab@next\si@tab@gettok@S
+              \ifx\ignorespaces#1\relax
+                \si@tab@othertok{#1}%
+              \else
+                \ifx\unskip#1\relax
+                  \si@tab@othertok{#1}%
+                \else
+                  \si@str@ifchrstr{#1}{\si@numvalid}
+                     {\si@switchtrue
+                      \si@log@debug{Found numerical cell
+                        contents `#1'}%
+                      \si@tab@toks=\expandafter{%
+                        \the\si@tab@toks#1}}
+                     {\si@tab@ifonechar{#1}
+                       {\futurelet\si@tempa\si@tab@bracetest#1}%
+                       {\si@tab@othertok{#1}}}%
+                \fi
+              \fi
+            \fi
+          \fi
+        \fi
+      \fi
+    \fi
+  \fi
+  \si@tab@next}
+\newcommand*{\si@tab@othertok}[1]{%
+  \si@log@debug{Found other cell contents `\unexpanded{#1}'}%
+  \ifsi@switch
+    \si@log@debug{Adding to post-numeral part}%
+    \si@tab@posttoks=\expandafter{\the\si@tab@posttoks#1}%
+  \else
+    \si@log@debug{Adding to pre-numeral part}%
+    \si@tab@pretoks=\expandafter{\the\si@tab@pretoks#1}%
+  \fi}
+\newcommand*{\si@tab@ifonechar}[1]{\si@tab@onechar#1\@empty}
+\def\si@tab@onechar#1#2\@empty{%
+  \ifx\@empty#2\@empty
+    \expandafter\@firstoftwo
+  \else
+    \expandafter\@secondoftwo
+  \fi}
+\newcommand*{\si@tab@bracetest}{%
+  \ifx\si@tempa\bgroup
+    \expandafter\si@tab@othertok
+  \else
+    \expandafter\si@tab@exptest
+  \fi}
+\newcommand*{\si@tab@exptest}[1]{%
+  \edef\si@tempa{\si@tab@meaning{#1}}%
+  \ifx\si@tempa\si@tab@macro
+    \expandafter\si@tab@exptest@aux
+  \else
+    \expandafter\si@tab@othertok
+  \fi
+  {#1}%
+}
+\newcommand*{\si@tab@exptest@aux}[1]{%
+  \ifcsname\expandafter\@gobble\string#1 \endcsname
+    \si@tab@othertok{#1}%
+  \else
+    \si@log@debug{Expanding cell contents `\unexpanded{#1}'}%
+    \the\si@tab@pretoks
+    \si@tab@pretoks{}%
+    \protected@edef\si@tab@next{\noexpand\si@tab@gettok@S#1}%
+  \fi
+}
+\newcommand*{\si@tab@meaning}[1]{%
+  \expandafter\si@tab@strip\meaning#1:->:->\@empty}
+\def\si@tab@strip#1:->#2:->#3\@empty{#1}
+\newcommand*{\si@tab@macro}{}
+\edef\si@tab@macro{\si@tab@meaning{\si@tab@macro}}
+\newcommand*{\si@tab@gettok@s}[1]{%
+  \ifx\tabularnewline#1\relax
+    \let\si@tab@next\si@tab@newline@s
+  \else
+    \ifx\end#1\relax
+      \let\si@tab@next\end
+    \else
+      \ifx\si@tab@end@s#1\relax
+        \let\si@tab@next\si@tab@end@s
+      \else
+        \ifx\endtabular#1\relax
+          \let\si@tab@next\endtabular
+        \else
+          \ifx\csname#1\relax
+            \let\si@tab@next\csname
+          \else
+            \ifx\relax#1\relax
+              \let\si@tab@next\relax
+            \else
+              \let\si@tab@next\si@tab@gettok@s
+              \ifx\ignorespaces#1\relax\else
+                \ifx\unskip#1\relax\else
+                  \si@tab@toks=\expandafter{%
+                    \the\si@tab@toks#1}%
+                  \si@log@debug{Found cell contents `#1'}%
+                \fi
+              \fi
+            \fi
+          \fi
+        \fi
+      \fi
+    \fi
+  \fi
+  \si@tab@next}
+\newcommand*{\si@tab@end@S}{%
+    \ifsi@switch
+      \let\si@tab@lfill\si@tab@lfill@S
+      \let\si@tab@rfill\si@tab@rfill@S
+    \else
+      \let\si@tab@rfill\si@tab@rfill@t
+      \let\si@tab@lfill\si@tab@lfill@t
+    \fi
+    \si@tab@corr@colortbl
+    \hskip\stretch{\si@tab@lfill}\kern\z@
+    \ifsi@switch
+      \the\si@tab@pretoks
+      \si@tab@numout
+      \the\si@tab@posttoks
+    \else
+      \the\si@tab@pretoks
+    \fi
+    \hskip\stretch{\si@tab@rfill}\kern\z@
+    \si@tab@corr@colortbl
+  \endgroup}
+\newcommand*{\si@tab@end@s}{%
+    \si@tab@corr@colortbl
+    \hskip\stretch{\si@tab@lfill@s}\kern\z@
+    \ignorespaces
+    \expandafter\si\expandafter{\the\si@tab@toks}%
+    \unskip
+    \hskip\stretch{\si@tab@rfill@s}\kern\z@
+    \si@tab@corr@colortbl
+  \endgroup}
+\newcommand*{\si@tab@newline@S}{%
+  \si@tab@end@S
+  \hfil\relax
+  \let\si@tab@end\si@tab@end@S
+  \renewcommand*{\si@tab@end@S}{\let\si@tab@end@S\si@tab@end}%
+  \tabularnewline}
+\newcommand*{\si@tab@newline@s}{%
+  \si@tab@end@s
+  \hfil\relax
+  \let\si@tab@end\si@tab@end@s
+  \renewcommand*{\si@tab@end@s}{\let\si@tab@end@s\si@tab@end}%
+  \tabularnewline}
+\newcount\si@tempcnta
+\newcount\si@tempcntb
+\newcommand*{\si@tab@numout}{%
+  \si@num@intabtrue
+  \ifsi@tabparseonly\else
+    \ifsi@tab@fixed
+      \ifsi@tabautofit
+        \si@num@dp\si@tab@mantpostcnt\relax
+        \expandafter\expandafter\expandafter\expandafter
+          \expandafter\expandafter\expandafter\si@fixdptrue
+      \fi
+    \fi
+  \fi
+  \expandafter\si@num\expandafter{\the\si@tab@toks}%
+  \si@tab@format}
+\newbox\si@tab@prebox
+\newbox\si@tab@midbox
+\newbox\si@tab@postbox
+\newbox\si@tab@expbox
+\newcommand*{\si@tab@format}{%
+  \ifsi@tabparseonly
+    \expandafter\si@tab@outonly
+  \else
+    \ifsi@tab@fixed
+      \expandafter\expandafter\expandafter\si@tab@fixed
+    \else
+      \expandafter\expandafter\expandafter\si@tab@unfixed
+    \fi
+  \fi
+  \ifsi@colourvalues
+    \si@fam@colourcmd{\si@valuecolour}%
+  \fi
+  \box\si@tab@prebox\box\si@tab@midbox\box\si@tab@postbox
+    \box\si@tab@expbox}
+\newcommand*{\si@tab@outonly}{%
+  \si@log@debug{Using non-aligned S column}%
+  \setbox\si@tab@prebox=\hbox{}%
+  \setbox\si@tab@midbox=\hbox{}%
+  \setbox\si@tab@postbox=\hbox{}%
+  \setbox\si@tab@expbox=\hbox{}%
+    \protected@edef\si@tempa{%
+      \si@tab@out
+    \ifx\@empty\si@num@out\@empty\else
+      \ensuremath{{\si@decimalsymbol}}%
+    \fi
+    \si@num@out
+    \si@tab@expout}%
+  \expandafter\si@out@num\expandafter{\si@tempa}}
+\newcommand*{\si@tab@unfixed}{%
+  \si@log@debug{Using variable width S column}%
+  \ifx\@empty\si@num@out\@empty
+    \setbox\si@tab@midbox=\hbox
+      {\phantom{\ensuremath{{\si@decimalsymbol}}}}%
+  \else
+    \setbox\si@tab@midbox=\hbox
+      {\ensuremath{{\si@decimalsymbol}}}%
+  \fi
+  \protected@edef\si@num@out{\si@num@out\si@tab@expout}%
+  \setbox\si@tab@prebox=\hbox{\si@out@num{\si@tab@out}}%
+  \setbox\si@tab@postbox=\hbox{\si@out@num{\si@num@out}}%
+  \ifdim\wd\si@tab@prebox>\wd\si@tab@postbox\relax
+    \setbox\si@tab@postbox=\hbox to\wd\si@tab@prebox%
+      {\unhbox\si@tab@postbox\hfill}%
+  \else
+    \setbox\si@tab@prebox=\hbox to\wd\si@tab@postbox%
+      {\hfill\unhbox\si@tab@prebox}%
+  \fi
+  \setbox\si@tab@expbox=\hbox{}}
+\newdimen\si@tab@predim
+\newdimen\si@tab@postdim
+\newdimen\si@tab@expdim
+\newdimen\si@tempdima
+\newdimen\si@tempdimb
+\newcommand*{\si@tab@sp}{}
+\newcommand*{\si@tab@fixed}{%
+  \si@log@debug{Using fixed-width S column}%
+  \let\si@tab@sp\relax
+  \setbox\si@tab@midbox=\hbox{}%
+  \setbox\si@tab@expbox=\hbox{}%
+  \setbox\si@tempboxa=\hbox{\si@out@num{1}}%
+  \si@tempdima\wd\si@tempboxa\relax
+  \si@tab@predim\the\si@tab@mantprecnt\si@tempdima\relax
+  \si@tab@sepcorr{mantpre}{pre}%
+  \si@tab@postdim\si@tab@mantpostcnt\si@tempdima\relax
+  \setbox\si@tempboxa=\hbox{\ensuremath{{\si@decimalsymbol}}}%
+  \ifnum\si@tab@mantpostcnt=\z@\relax\else
+    \advance\si@tab@postdim\wd\si@tempboxa\relax
+  \fi
+  \si@tab@sepcorr{mantpost}{post}%
+  \setbox\si@tempboxa=\hbox{\si@out@num{^{1}}}%
+  \si@tempdima\wd\si@tempboxa\relax
+  \ifnum\si@tab@expprecnt>\z@\relax
+    \si@tab@expdim\si@tab@expprecnt\si@tempdima\relax
+    \si@tab@sepcorr{exppre}{exp}%
+  \fi
+  \let\si@tab@sp\sp
+  \ifnum\si@tab@exppostcnt>\z@\relax
+    \advance\si@tab@expdim\si@tab@exppostcnt\si@tempdima\relax
+    \setbox\si@tempboxa=\hbox{%
+      \ensuremath{^{\si@decimalsymbol}}}%
+    \advance\si@tab@expdim\wd\si@tempboxa\relax
+    \si@tab@sepcorr{exppost}{exp}%
+  \fi
+  \setbox\si@tempboxa=\hbox{\ensuremath{-}}%
+  \ifsi@tab@mantsign
+    \advance\si@tab@predim\wd\si@tempboxa\relax
+  \fi
+  \setbox\si@tempboxa=\hbox{\ensuremath{^{-}}}%
+  \ifsi@tab@expsign
+    \advance\si@tab@expdim\wd\si@tempboxa\relax
+  \fi
+  \si@tempcnta\si@tab@expprecnt\relax
+  \advance\si@tempcnta\si@tab@exppostcnt\relax
+  \ifnum\si@tempcnta>\z@\relax
+    \setbox\si@tempboxa=\hbox{\ensuremath{%
+      {}\si@expproduct{}\si@expbase}}%
+    \advance\si@tab@expdim\wd\si@tempboxa\relax
+  \fi
+  \ifsi@tabalignexp\else
+    \advance\si@tab@postdim\si@tab@expdim\relax
+  \fi
+  \setbox\si@tab@prebox=\hbox to\si@tab@predim{\hss\hfill
+    \si@out@num{\si@tab@out}}%
+  \ifx\@empty\si@num@out\@empty
+    \setbox\si@tab@postbox=\hbox to\si@tab@postdim{\hfil}%
+  \else
+    \ifsi@tabalignexp\else
+      \protected@edef\si@num@out{\si@num@out\si@tab@expout}%
+    \fi
+    \setbox\si@tab@postbox=\hbox to\si@tab@postdim
+      {\ensuremath{{\si@decimalsymbol}}\si@out@num
+        {\si@num@out}\hfil}%
+  \fi
+  \ifx\@empty\si@tab@expout\@empty
+    \ifsi@tabalignexp
+      \setbox\si@tab@expbox=\hbox to\si@tab@expdim{\hfil}%
+    \fi
+  \else
+    \ifsi@tabalignexp
+      \setbox\si@tab@expbox=\hbox to\si@tab@expdim
+        {\si@out@num{\si@tab@expout}\hfil}%
+    \fi
+  \fi}
+\newcommand*{\si@tab@sepcorr}[2]{%
+  \expandafter\si@tempcnta\expandafter\the
+    \csname si@tab@#1cnt\endcsname\relax
+  \divide\si@tempcnta\thr@@\relax
+  \ifsi@sepfour\else
+    \expandafter\ifnum\expandafter\the
+      \csname si@tab@#1cnt\endcsname=4\relax
+      \si@tempcnta\z@\relax
+    \fi
+  \fi
+  \setbox\si@tempboxa=\hbox{%
+    \ensuremath{\si@tab@sp{\si@digitsep}}}%
+  \expandafter\advance\csname si@tab@#2dim\endcsname
+    \si@tempcnta\wd\si@tempboxa}
+\si@newrobustcmd*{\SI}[2][]{%
+  \@ifnextchar[%]
+    {\si@SI[#1]{#2}}
+    {\si@SI[#1]{#2}[]}}
+\si@newrobustcmd*{\si}[2][]{\si@SI[#1]{}[]{#2}}
+
+\newcommand*{\newunit}[3][]{%
+  \si@ifdefinable{#2}
+    {\si@unt@defunit[#1]{#2}{#3}}
+    {\si@log@err{Unit \string#2 already defined!}\@eha}}
+\newcommand*{\renewunit}[3][]{%
+  \si@ifdefinable{#2}
+    {\si@log@err{Unit \string#2 undefined}\@ehc
+     \si@unt@defunit[#1]{#2}{#3}}
+    {\si@log@inf{Redefining unit \string#2}%
+     \si@unt@defunit[#1]{#2}{#3}}}
+\newcommand*{\provideunit}[3][]{%
+  \si@ifdefinable{#2}
+    {\si@unt@defunit[#1]{#2}{#3}}
+    {}}
+\newcommand*{\newprefix}[4][]{%
+  \si@ifdefinable{#2}
+    {\si@unt@defprefix[#1]{#2}{#3}{#4}}
+    {\si@log@err{Prefix \string#2 already defined!}\@eha}}
+\newcommand*{\renewprefix}[4][]{%
+  \si@ifdefinable{#2}
+    {\si@log@err{Prefix \string#2 undefined}\@ehc
+     \si@unt@defprefix[#1]{#2}{#3}{#4}}
+    {\si@log@inf{Redefining prefix \string#2}%
+     \si@unt@defprefix[#1]{#2}{#3}{#4}}}
+\newcommand*{\provideprefix}[4][]{%
+  \si@ifdefinable{#2}
+    {\si@unt@defprefix[#1]{#2}{#3}{#4}}
+    {}}
+\newcommand*{\newpower}[3][]{%
+  \si@ifdefinable{#2}
+    {\si@unt@defpower[#1]{#2}{#3}}
+    {\si@log@err{Power \string#2 already defined!}\@eha}}
+\newcommand*{\renewpower}[3][]{%
+  \si@ifdefinable{#2}
+    {\si@log@err{Power \string#2 undefined}\@ehc
+     \si@unt@defpower[#1]{#2}{#3}}
+    {\si@log@inf{Redefining power \string#2}%
+     \si@unt@defpower[#1]{#2}{#3}}}
+\newcommand*{\providepower}[3][]{%
+  \si@ifdefinable{#2}
+    {\si@unt@defpower[#1]{#2}{#3}}
+    {}}
+\newcommand*{\newqualifier}[2]{%
+  \si@ifdefinable{#1}
+    {\si@unt@defqual{#1}{#2}}
+    {\si@log@err{Qualifier \string#1 already defined!}\@eha}}
+\newcommand*{\renewqualifier}[2]{%
+  \si@ifdefinable{#1}
+    {\si@log@err{Qualifier \string#1 undefined}\@ehc
+     \si@unt@defqual{#1}{#2}}
+    {\si@unt@defqual{#1}{#2}}}
+\newcommand*{\providequalifier}[2]{%
+  \si@ifdefinable{#1}
+    {\si@unt@defqual{#1}{#2}}
+    {}}
+\newif\ifsi@unt@num
+\newcommand*{\si@unt@unitarg}{}
+\newcommand*{\si@unt@SIopts}{}
+\def\si@SI[#1]#2[#3]#4{%
+  \begingroup
+    \let\fg\SIfg
+    \sisetup{#1}%
+    \renewcommand*{\si@unt@SIopts}{#1}%
+    \si@fam@mode
+    \si@unt@numfalse
+    \si@xspacefalse
+    \si@ifnotmtarg{#3}
+      {\si@log@debug{Prefix unit found}%
+       \si@unt@printunit{#3}}%
+    \si@ifnotmtarg{#4}
+      {\renewcommand*{\si@unt@unitarg}{#4}}%
+    \si@ifnotmtarg{#2}
+      {\si@log@debug{Number found in \string\SI\space
+         argument}%
+       \ifsi@repeatunits\else
+         \ifsi@trapambigerr
+           \expandafter\expandafter\expandafter
+             \si@num@ambigerrtrue
+         \fi
+       \fi
+       \num{#2}%
+       \si@unt@numtrue}%
+    \si@ifnotmtarg{#4}
+      {\si@ifmtarg{#2}
+         {\si@unt@printunit{#4}}
+         {\si@tempcnta\z@\relax
+         \ifsi@addunitpower
+           \si@unt@countx{#2}%
+         \fi
+          \ifnum\si@tempcnta>\z@\relax
+            \advance\si@tempcnta\@ne\relax
+            \edef\si@tempa{\noexpand\tothe{\si@tempcnta}}%
+            \renewcommand*{\si@tempb}{#4}%
+            \expandafter\expandafter\expandafter
+            \si@unt@printunit\expandafter\expandafter
+            \expandafter{%
+              \expandafter\si@tempb\si@tempa}%
+          \else
+            \si@unt@printunit{#4}%
+          \fi}}%
+  \endgroup}
+\newcommand*{\si@unt@countx}[1]{%
+  \si@tempcnta\z@\relax
+  \expandafter\si@unt@cntx#1\@empty\@empty}
+\def\si@unt@cntx#1#2\@empty{%
+  \si@str@ifchrstr{#1}{\si@numprod}
+    {\advance\si@tempcnta\@ne\relax}
+    {}%
+  \ifx\@empty#2\@empty\else
+    \si@unt@cntx#2\@empty\@empty
+  \fi}
+\newif\ifsi@unt@littest
+\newcommand*{\si@unt@ifliteral}[1]{%
+  \begingroup
+    \si@unt@littesttrue
+    \setbox\si@tempboxa=\hbox{\si@unt@out{#1}}%
+    \ifdim\wd\si@tempboxa>\z@\relax
+      \aftergroup\@firstoftwo
+    \else
+      \aftergroup\@secondoftwo
+    \fi
+  \endgroup}
+\newif\ifsi@unt@litout
+\newcommand*{\si@unt@printunit}[1]{%
+  \si@unt@ifliteral{#1}
+    {\ifsi@allowlitunits
+        \expandafter\si@unt@litprint
+     \else
+        \expandafter\si@unt@nolitprint
+     \fi
+     {#1}}
+    {\si@log@debug{Macro unit found:\MessageBreak
+       processing to format output}%
+     \si@unt@init
+     \advance\si@unt@depthcnt\@ne\relax
+     #1%
+     \si@unt@final}}
+\newcommand*{\si@unt@litprint}[1]{%
+  \si@log@debug{%
+    Literal items found in unit argument:\MessageBreak outputting
+    without further processing}%
+  \si@unt@litouttrue
+  \si@unt@addvaluesep
+  \si@unt@out{#1}%
+}
+\newcommand*{\si@unt@nolitprint}[1]{%
+  \si@log@err{Literal units disabled}{%
+    You can the literal input `#1' for a unit\MessageBreak
+    but the allowliteralunits option is off.
+  }
+}
+\newcommand*{\si@unt@addvaluesep}{%
+  \ifsi@unt@num
+    \expandafter\si@unt@addvalsep
+  \fi}
+\newcommand*{\si@unt@addvalsep}{%
+  \ifsi@unt@litout
+    \expandafter\si@unt@litvalsep
+  \else
+    \expandafter\si@unt@stackvalsep
+  \fi}
+\newcommand*{\si@unt@stackvalsep}{%
+  \protected@edef\si@unt@spstack{\si@valuesep}}
+\newcommand*{\si@unt@litvalsep}{%
+  \nobreak\ensuremath{\si@valuesep}\nobreak}
+\newcommand*{\si@unt@spstack}{}
+\newcommand*{\si@unt@stacka}{}
+\newcommand*{\si@unt@stackb}{}
+\newcount\si@unt@unitcnta
+\newcount\si@unt@unitcntb
+\newcount\si@unt@depthcnt
+\newif\ifsi@unt@first
+\si@unt@depthcnt\m@ne\relax
+\newcommand*{\si@unt@init}{%
+  \begingroup
+    \si@unt@litoutfalse
+    \si@unt@litprefixfalse
+    \si@unt@firsttrue
+    \si@unt@perfalse
+    \si@unt@perseenfalse
+    \si@unt@prepowerfalse
+    \si@unt@depthcnt\z@\relax
+    \si@unt@powerdim\z@\relax
+    \si@unt@unitcnta\z@\relax
+    \si@unt@unitcntb\z@\relax
+    \si@unt@prefixcnt\z@\relax
+    \renewcommand*{\si@unt@spstack}{}%
+    \renewcommand*{\si@unt@stacka}{}%
+    \renewcommand*{\si@unt@stackb}{}%
+    \renewcommand*{\si@unt@spacestacka}{}%
+    \renewcommand*{\si@unt@spacestackb}{}%
+    \renewcommand*{\si@unt@lastadda}{space}%
+    \renewcommand*{\si@unt@lastaddb}{space}}
+\newcommand*{\si@unt@final}{%
+    \si@unt@third
+    \si@unt@stackout
+  \endgroup
+  \ifsi@xspace
+    \expandafter\expandafter\expandafter\xspace
+  \fi}
+\newcommand*{\si@unt@defunit}[3][]{%
+  \si@log@debug{Declaring unit \string#2 with \MessageBreak
+    meaning \string#3}%
+  \si@ifnotmtarg{#1}
+    {\expandafter\@namedef\expandafter{%
+      \expandafter\@gobble\string#2@opt@unt@si}{#1}}%
+  \protected\def#2{%
+    \ifsi@allowoptarg
+      \expandafter\si@unt@withopt
+    \else
+      \expandafter\si@unt@noopt
+    \fi
+    {#2}{#3}}}
+\newcommand*{\si@unt@withopt}[2]{%
+  \@ifnextchar[%]
+    {\si@unt@opt{#1}{#2}}
+    {\si@unt@opt{#1}{#2}[]}}
+\newcommand*{\si@unt@noopt}[2]{\si@unt@opt{#1}{#2}[]}
+\def\si@unt@opt#1#2[#3]{%
+  \ifsi@unt@littest
+    \expandafter\si@gobblethree
+  \else
+    \ifsi@unt@litout
+      \expandafter\expandafter\expandafter\@gobbletwo
+    \else
+      \expandafter\expandafter\expandafter\si@unt@unit
+    \fi
+  \fi
+  {#3}{#1}{#2}}
+\long\def\si@gobblethree #1#2#3{}
+\newif\ifsi@unt@litprefix
+\si@unt@litprefixtrue
+\newcommand*{\si@unt@defprefix}[4][]{%
+  \si@log@debug{Declaring multiple \string#1 with\MessageBreak
+    meaning \string#4}%
+  \expandafter\expandafter\expandafter\def\expandafter
+    \csname\expandafter\@gobble\string#2@opt@si\endcsname{#1}%
+  \protected\def#2{%
+    \ifsi@unt@littest
+      \expandafter\si@gobblethree
+    \else
+      \ifsi@unt@litout
+        \expandafter\expandafter\expandafter\@gobbletwo
+      \else
+        \ifsi@unt@litprefix
+          \expandafter\expandafter\expandafter\expandafter
+            \expandafter\expandafter\expandafter\@gobbletwo
+        \else
+          \expandafter\expandafter\expandafter\expandafter
+            \expandafter\expandafter\expandafter\si@unt@prefix
+        \fi
+      \fi
+    \fi
+    {#2}{#3}{#4}}}
+\newcommand*{\si@unt@defpower}[3][]{%
+  \si@log@debug{Declaring power \string#2 with\MessageBreak
+    meaning \string#3}%
+  \expandafter\expandafter\expandafter\def\expandafter
+    \csname\expandafter\@gobble\string#2@opt@si\endcsname{#1}%
+  \protected\def#2{%
+    \ifsi@unt@littest
+      \expandafter\@gobbletwo
+    \else
+      \ifsi@unt@litout
+        \expandafter\expandafter\expandafter\si@unt@litpower
+      \else
+        \expandafter\expandafter\expandafter\si@unt@power
+      \fi
+    \fi
+    {#2}{#3}}}
+\newcommand*{\si@unt@defqual}[2]{%
+  \si@log@debug{Declaring qualifier \string#1 with\MessageBreak
+    meaning \string#2}%
+  \protected\def#1{%
+    \ifsi@unt@littest
+      \expandafter\@gobble
+    \else
+      \ifsi@unt@litout
+        \expandafter\expandafter\expandafter\si@unt@litqual
+      \else
+        \expandafter\expandafter\expandafter\si@unt@qual
+      \fi
+    \fi
+    {#2}}}
+\newcommand*{\si@unt@unithook}{}
+\newcommand*{\si@unt@unit}[3]{%
+  \ifnum\si@unt@depthcnt=\m@ne\relax
+    \expandafter\si@unt@init
+  \fi
+  \advance\si@unt@depthcnt\@ne\relax
+  \si@log@debug{Unit processing: level \the\si@unt@depthcnt,
+    \MessageBreak unit \string#2}%
+  \si@unt@firstorsecond{#1}{#2}%
+  \si@unt@ifliteral{#3}
+    {\si@unt@addtostack{unit}{#3}%
+     \ifsi@unt@prepower
+       \expandafter\si@unt@stkpower
+     \fi}
+    {#3}%
+  \advance\si@unt@depthcnt\m@ne\relax
+  \ifnum\si@unt@depthcnt=\z@\relax
+    \expandafter\si@unt@final
+  \fi}
+\newcommand*{\si@unt@firstorsecond}[2]{%
+  \ifsi@unt@first
+    \expandafter\si@unt@first
+  \else
+    \expandafter\si@unt@second
+  \fi
+  {#1}{#2}}%
+\newcommand*{\si@unt@first}[2]{%
+  \si@ifnotmtarg{#1}
+    {\num{#1}%
+     \si@unt@numtrue}%
+  \si@unt@unithook
+  \ifcsname\expandafter\@gobble\string#2@opt@unt@si\endcsname
+    \expandafter\si@unt@setopts
+  \else
+    \expandafter\@gobble
+  \fi
+  {#2}%
+  \si@unt@addvaluesep
+  \si@unt@firstfalse}
+\newcommand*{\si@unt@setopts}[1]{%
+  \expandafter\expandafter\expandafter\expandafter\expandafter
+    \expandafter\expandafter\si@temptoks\expandafter
+    \expandafter\expandafter\expandafter\expandafter
+    \expandafter\expandafter{\expandafter%
+      \csname\expandafter\@gobble\string#1@opt@unt@si%
+      \endcsname}%
+  \expandafter\sisetup\expandafter{\the\si@temptoks}%
+  \si@log@debug{Applying options `\the\si@temptoks'
+    for\MessageBreak unit \string#1}%
+  \@ifundefined{si@unt@SIopts}{}
+    {\ifx\@empty\si@unt@SIopts\@empty\else
+       \expandafter\expandafter\si@unt@setSIopts
+     \fi}}
+\newcommand*{\si@unt@setSIopts}{%
+  \expandafter\si@temptoks\expandafter{\si@unt@SIopts}%
+  \expandafter\sisetup\expandafter{\the\si@temptoks}}
+\newcommand*{\si@unt@second}[2]{%
+  \si@ifnotmtarg{#1}
+    {\si@log@warn{Optional argument to unit macro\MessageBreak
+       allowed only for outer unit}}%
+  \si@unt@third
+  \si@unt@addtostack{space}{\ensuremath{\si@unitsep}}}
+\newcommand*{\si@unt@third}{%
+  \ifsi@unt@prepower\else
+    \expandafter\si@unt@stkpower
+  \fi
+  \renewcommand*{\si@tempa}{prefix}%
+  \expandafter\ifx
+    \csname si@unt@lastadd\si@unt@checkstack\endcsname\si@tempa
+  \else
+    \expandafter\si@unt@spacecheck
+  \fi
+  \ifsi@unt@per
+    \expandafter\si@unt@perseentrue
+  \fi}
+\newcommand*{\si@unt@spacecheck}{%
+  \renewcommand*{\si@tempa}{space}%
+  \expandafter\ifx
+    \csname si@unt@lastadd\si@unt@checkstack\endcsname\si@tempa
+  \else
+    \expandafter\si@unt@reciptest
+  \fi}
+\newcommand*{\si@unt@prefix}[3]{%
+  \si@unt@firstorsecond{}{#1}%
+  \ifsi@prefixsymbolic
+    \expandafter\si@unt@addprefix
+  \else
+    \expandafter\si@unt@countprefix
+  \fi
+  {#1}{#2}{#3}}
+\newcommand*{\si@unt@addprefix}[3]{%
+  \si@unt@addtostack{prefix}{#3}}
+\newcount\si@unt@prefixcnt
+\newcommand*{\si@unt@countprefix}[3]{%
+  \renewcommand*{\si@tempa}{binary}%
+  \expandafter\expandafter\expandafter\ifx\expandafter
+    \csname\expandafter\@gobble\string#1@opt@si\endcsname
+    \si@tempa
+    \expandafter\sisetup
+  \else
+    \expandafter\@gobble
+  \fi
+  {prefixbase=two}%
+  \si@tempcnta#2\relax
+  \ifsi@unt@per
+    \expandafter\si@unt@invprefix
+  \fi
+  \advance\si@unt@prefixcnt\si@tempcnta\relax}
+\newcommand*{\si@unt@invprefix}{%
+  \si@tempcntb\si@tempcnta\relax
+  \si@tempcnta -\si@tempcntb\relax}
+\newcommand*{\si@unt@litpower}[2]{\textsuperscript{#2}}
+\newif\ifsi@unt@prepower
+\newcommand*{\si@unt@power}[2]{%
+  \renewcommand*{\si@tempa}{post}%
+  \expandafter\expandafter\expandafter\ifx\expandafter
+    \csname\expandafter\@gobble\string#1@opt@si\endcsname
+    \si@tempa
+    \expandafter\@gobbletwo
+  \else
+    \expandafter\si@unt@firstorsecond
+  \fi
+  {}{\power}%
+  \si@unt@powerdim #2 pt\relax
+  \ifsi@frac\else
+    \ifsi@unt@per
+      \expandafter\expandafter\expandafter\si@unt@invpower
+    \fi
+  \fi
+  \renewcommand*{\si@tempa}{post}%
+  \si@unt@prepowertrue
+  \expandafter\expandafter\expandafter\ifx\expandafter
+    \csname\expandafter\@gobble\string#1@opt@si\endcsname
+    \si@tempa
+    \expandafter\si@unt@stackpower
+  \else
+    \si@log@debug{Power \strip@pt\si@unt@powerdim\space saved
+      to be added after\MessageBreak next unit}%
+  \fi}
+\newdimen\si@unt@powerdim
+\newcommand*{\si@unt@stackpower}{%
+  \si@unt@prepowerfalse
+  \si@unt@stkpower
+  \ifsi@stickyper\else
+    \si@unt@perfalse
+    \si@unt@perseenfalse
+  \fi}
+\newcommand*{\si@unt@stkpower}{%
+  \ifdim\si@unt@powerdim=\m@ne pt\relax
+    \ifsi@frac\else
+      \expandafter\expandafter\expandafter\si@unt@stkpwr
+    \fi
+  \else
+    \expandafter\si@unt@stkpwr
+  \fi}
+\newcommand*{\si@unt@stkpwr}{%
+  \ifdim\si@unt@powerdim=\z@\relax\else
+    \renewcommand*{\si@tempa}{unit}%
+    \expandafter\ifx
+      \csname si@unt@lastadd\si@unt@checkstack\endcsname
+      \si@tempa
+      \si@unt@skpwr
+    \else
+      \renewcommand*{\si@tempa}{qual}%
+      \expandafter\ifx
+        \csname si@unt@lastadd\si@unt@checkstack\endcsname
+        \si@tempa
+        \si@unt@skpwrqual
+      \fi
+    \fi
+  \fi
+  \si@unt@powerdim\z@\relax}
+\newcommand*{\si@unt@skpwr}{%
+  \si@log@debug{Adding power
+    \strip@pt\si@unt@powerdim\space to output stack}%
+  \si@unt@addtostack{power}{^{\num[fixdp=false]{%
+    \strip@pt\si@unt@powerdim}}}}
+\newcommand*{\si@unt@invpower}{%
+  \si@tempdima\si@unt@powerdim\relax
+  \si@unt@powerdim -\si@tempdima\relax
+  \ifdim\si@unt@powerdim=\p@\relax
+    \si@unt@powerdim\z@\relax
+  \fi}
+\newcommand*{\si@unt@litqual}[1]{(#1)}
+\newcommand*{\si@unt@qual}[1]{%
+  \ifsi@unt@first
+    \si@log@err{Qualifier before units}
+      {A unit qualifier can only be given after\MessageBreak
+       one or more units.  You tried to open a unit
+       with\MessageBreak \string#1}%
+  \fi
+  \expandafter\let\expandafter\si@unt@spacestack
+    \csname si@unt@spacestack\si@unt@checkstack\endcsname
+  \expandafter\let\csname si@unt@spacestack\si@unt@checkstack
+    \endcsname\@empty
+  \renewcommand*{\si@tempa}{power}%
+    \expandafter\ifx
+    \csname si@unt@lastadd\si@unt@checkstack\endcsname\si@tempa
+    \let\si@unt@skpwrqual\relax
+  \else
+    \let\si@unt@skpwrqual\si@unt@skpwr
+  \fi
+  \si@unt@addtostack{qual}{_{#1}}%
+  \expandafter\let\csname si@unt@spacestack\si@unt@checkstack
+    \endcsname\si@unt@spacestack}
+\newif\ifsi@unt@per
+\newif\ifsi@unt@perseen
+\si@newrobustcmd*{\si@per}{%
+  \ifsi@unt@littest\else
+    \ifsi@unt@litout
+      \expandafter\expandafter\expandafter /%
+    \else
+      \ifsi@unt@litprefix
+        \expandafter\expandafter\expandafter\expandafter
+          \expandafter\expandafter\expandafter /%
+      \else
+        \expandafter\expandafter\expandafter\expandafter
+          \expandafter\expandafter\expandafter\si@unt@per
+      \fi
+    \fi
+  \fi}
+\newcommand*{\si@unt@per}{%
+  \si@unt@firstorsecond{}{\per}%
+  \ifsi@unt@per
+    \ifsi@stickyper\else
+      \expandafter\expandafter\expandafter\si@unt@perfalse
+    \fi
+  \else
+    \expandafter\si@unt@pertrue
+  \fi}
+\let\per\si@per
+\newcommand*{\si@unt@reciptest}{%
+  \ifsi@unt@per
+    \ifsi@unt@perseen
+      \expandafter\expandafter\expandafter\si@unt@recip
+    \fi
+  \fi}
+\newcommand*{\si@unt@recip}{%
+  \si@unt@powerdim\m@ne pt\relax
+  \si@unt@stackpower}
+\newcommand*{\si@unt@lastadda}{}
+\newcommand*{\si@unt@lastaddb}{}
+\newcommand*{\si@unt@addtostack}[2]{%
+  \renewcommand*{\si@tempa}{#1}%
+  \expandafter\ifx
+    \csname si@unt@lastadd\si@unt@checkstack\endcsname\si@tempa
+      \renewcommand*{\si@tempa}{prefix}%
+      \expandafter\ifx\csname si@unt@lastadd\si@unt@checkstack
+        \endcsname\si@tempa
+        \si@log@warn{Two prefixes found: only first printed}%
+      \fi
+    \expandafter\@gobbletwo
+  \else
+    \expandafter\si@unt@preplussp
+  \fi
+  {#1}{#2}}
+\newcommand*{\si@unt@preplussp}[2]{%
+  \renewcommand*{\si@tempa}{prefix+space}%
+  \edef\si@tempb{%
+    \csname si@unt@lastadd\si@unt@checkstack\endcsname+#1}%
+  \ifx\si@tempa\si@tempb
+    \expandafter\@gobbletwo
+  \else
+    \expandafter\si@unt@stack
+  \fi
+  {#1}{#2}}
+\newcommand*{\si@unt@stack}[2]{%
+  \expandafter\renewcommand\expandafter*\expandafter{%
+    \csname si@unt@lastadd\si@unt@checkstack\endcsname}{#1}%
+  \renewcommand*{\si@tempa}{#1}%
+  \renewcommand*{\si@tempb}{unit}%
+  \ifx\si@tempa\si@tempb
+    \expandafter\si@unt@inccnt
+  \fi
+  \renewcommand*{\si@tempb}{space}%
+  \ifx\si@tempa\si@tempb
+    \expandafter\si@unt@holdspace
+  \else
+    \expandafter\si@unt@addstack
+  \fi
+  {#2}}
+\newcommand*{\si@unt@inccnt}{%
+  \expandafter\advance
+    \csname si@unt@unitcnt\si@unt@checkstack\endcsname
+    \@ne\relax}
+\newcommand*{\si@unt@spacestack}{}
+\newcommand*{\si@unt@spacestacka}{}
+\newcommand*{\si@unt@spacestackb}{}
+\newcommand*{\si@unt@holdspace}[1]{%
+  \renewcommand*{\si@tempa}{b}%
+  \edef\si@tempb{\si@unt@checkstack}%
+  \ifx\si@tempa\si@tempb
+    \ifx\@empty\si@unt@stackb\@empty
+    \else
+      \protected@edef\si@unt@spacestackb{#1}%
+    \fi
+  \else
+    \protected@edef\si@unt@spacestacka{#1}%
+  \fi}
+\newcommand*{\si@unt@addstack}[1]{%
+  \expandafter\protected@edef
+    \csname si@unt@stack\si@unt@checkstack\endcsname
+    {\csname si@unt@stack\si@unt@checkstack\endcsname
+     \csname si@unt@spacestack\si@unt@checkstack\endcsname#1}%
+  \expandafter\renewcommand\expandafter*\expandafter{%
+    \csname si@unt@spacestack\si@unt@checkstack\endcsname}{}}
+\newcommand*{\si@unt@stackout}{%
+  \si@unt@litouttrue
+  \ifsi@frac
+    \expandafter\si@unt@fracout
+  \else
+    \expandafter\si@unt@normout
+  \fi}
+\newcommand*{\si@unt@checkstack}{%
+  \ifsi@frac
+    \ifsi@unt@per
+      \expandafter\expandafter\expandafter b%
+    \else
+      \expandafter\expandafter\expandafter a%
+    \fi
+  \else
+    \expandafter a%
+  \fi}
+\newcommand*{\si@unt@spaceout}{%
+   \ensuremath{\si@unt@spstack}}
+\newcommand*{\si@unt@prefixout}{%
+  \ifnum\si@unt@prefixcnt=\z@\relax\else
+    \ifsi@unt@num
+      \si@out{\ensuremath{{}\si@prefixproduct{}}}%
+    \fi
+    \si@unt@stackvalsep
+    \let\si@expbase\si@prefixbase
+    \num[fixdp=false]{e\the\si@unt@prefixcnt}%
+  \fi}
+\newcommand*{\si@unt@normout}{%
+  \si@unt@prefixout
+  \si@unt@spaceout
+  \expandafter\si@unt@out\expandafter{\si@unt@stacka}}
+\newcommand*{\si@unt@fracout}{%
+  \si@unt@notambig
+  \ifx\@empty\si@unt@stacka\@empty
+    \ifx\@empty\si@unt@stackb\@empty
+      \ifsi@unt@litout\else
+        \si@log@err{Empty fractional unit}{The unit
+          argument\MessageBreak given does not contain any
+          symbols}%
+      \fi
+    \else
+      \ifsi@slash
+        \si@unt@prefixout
+        \si@frac{}{\si@unt@stackb}%
+      \else
+        \si@unt@prefixout
+        \si@unt@spaceout
+        \si@frac{1}{\si@unt@stackb}%
+      \fi
+    \fi
+  \else
+    \ifx\@empty\si@unt@stackb\@empty
+      \si@unt@normout
+    \else
+      \si@unt@prefixout
+      \si@unt@spaceout
+      \si@frac{\si@unt@stacka}{\si@unt@stackb}%
+    \fi
+  \fi}
+\newcommand*{\si@unt@notambig}{%
+  \ifnum\si@unt@unitcntb>\@ne\relax
+    \ifsi@slash
+        \ifsi@trapambigfrac
+          \expandafter\expandafter\expandafter\expandafter
+            \expandafter\expandafter\expandafter\si@unt@notabg
+        \fi
+    \fi
+  \fi}
+\newcommand*{\si@unt@notabg}{%
+  \protected@edef\si@unt@stackb{\si@openfrac\si@unt@stackb
+    \si@closefrac}}
+\begingroup
+  \catcode`\~=\active
+  \catcode`\.=\active
+  \gdef\si@unt@out#1{%
+    \si@temptoks{#1}%
+    \si@unt@fullstop
+    \def.{\ensuremath{\si@unitsep}}%
+    \def~{\ensuremath{\si@unitspace}}%
+    \expandafter\protected@edef\expandafter\si@tempa
+      \expandafter{\the\si@temptoks}%
+    \begingroup
+      \si@unt@nonlatin
+      \makeatletter
+      \endlinechar\m@ne
+      \expandafter\si@out\expandafter{%
+        \expandafter\scantokens\expandafter{\si@tempa}}%
+    \endgroup}
+\endgroup
+\begingroup
+  \catcode`\.=\active
+  \catcode`\&=12\relax
+  \begingroup
+    \lccode`\.=`\.\relax
+    \lccode`\&=`\.\relax
+  \lowercase{\endgroup
+    \gdef\si@unt@fullstop{%
+      \si@temptoks\expandafter{\expandafter}\expandafter
+      \si@unt@stp\the\si@temptoks&\@nil}
+  \gdef\si@unt@stp#1&#2\@nil{%
+    \edef\si@tempa{\the\si@temptoks}%
+    \ifx\si@tempa\@empty
+      \expandafter\@firstoftwo
+    \else
+      \expandafter\@secondoftwo
+    \fi
+      {\si@temptoks{#1}}
+      {\si@temptoks\expandafter{\the\si@temptoks.#1}}%
+    \si@ifmtarg{#2}
+      {}
+      {\si@unt@stp#2\@nil}}}
+\endgroup
+\newcommand*{\si@unt@nonlatin}{}
+\ifdefined\XeTeXrevision
+  \renewcommand*{\si@unt@nonlatin}{%
+    \catcode176=\active
+    \catcode181=\active
+    \catcode197=\active
+    \si@unt@sym{176}{\si@sym@degree}%
+    \si@unt@sym{181}{\si@sym@mu}%
+    \si@unt@sym{197}{\si@sym@ringA}}%
+\fi
+\AtBeginDocument{
+  \@ifpackageloaded{inputenc}
+    {\@for\si@tempa:=latin1,latin5,latin9\do{
+       \ifx\inputencodingname\si@tempa
+         \renewcommand*{\si@unt@nonlatin}{%
+           \catcode176=\active
+           \catcode181=\active
+           \catcode197=\active
+           \si@unt@sym{176}{\si@sym@degree}%
+           \si@unt@sym{181}{\si@sym@mu}%
+           \si@unt@sym{197}{\si@sym@ringA}}%
+       \fi}}
+    {}}
+\newcommand*{\si@unt@sym}[1]{%
+  \bgroup
+    \uccode`\~#1%
+    \uppercase{%
+      \egroup
+      \def~}}
+\newunit{\kilogram}{kg}
+\newunit{\metre}{m}
+\newunit{\meter}{\metre}
+\newunit{\mole}{mol}
+\AtBeginDocument{\provideunit{\second}{s}}
+\newunit{\ampere}{A}
+\newunit{\kelvin}{K}
+\newunit{\candela}{cd}
+\AtBeginDocument{
+  \@ifundefined{Square}{%
+    \newpower{\Square}{2}}{}}
+\newpower{\ssquare}{2}
+\newpower[post]{\squared}{2}
+\newpower{\cubic}{3}
+\newpower[post]{\cubed}{3}
+\newcommand*{\tothe}{\si@tothe{\tothe}}
+\newcommand*{\raiseto}{\si@tothe{\raiseto}}
+\newcommand*{\si@tothe}[2]{%
+  \ifsi@unt@littest
+    \expandafter\@gobbletwo
+  \else
+    \ifsi@unt@litout
+      \expandafter\expandafter\expandafter\si@unt@litpower
+    \else
+      \expandafter\expandafter\expandafter\si@unt@power
+    \fi
+  \fi
+  {#1}{#2}}
+\newcommand*{\tothe@opt@si}{post}
+\newcommand*{\raiseto@opt@si}{}
+\si@newrobustcmd*{\numrange}[3][]{%
+  \begingroup
+    \sisetup{#1}%
+    \num{#2}%
+    \text{\si@tophrase}%
+    \num{#3}%
+  \endgroup
+}
+\si@newrobustcmd*{\SIrange}[4][]{%
+  \begingroup
+    \sisetup{#1}%
+    \ifsi@repeatunits
+      \SI{#2}{#4}%
+    \else
+      \ifsi@trapambigrange
+        \ensuremath{\si@openrange}%
+      \fi
+      \num{#2}%
+    \fi
+    \text{\si@tophrase}%
+    \ifsi@repeatunits
+      \SI{#3}{#4}%
+    \else
+      \ifsi@trapambigrange
+        \num{#3}%
+        \ensuremath{\si@closerange\si@valuesep}%
+        \si{#4}%
+      \else
+        \SI{#3}{#4}%
+      \fi
+    \fi
+  \endgroup
+}
+\newcommand*{\si@loc@load}[1]{%
+  \let\si@loc@sisetup\sisetup
+  \renewcommand*{\sisetup}[1]{%
+    \expandafter\gdef\csname si@loc@#1\endcsname{##1}}%
+  \si@loadfile{#1}%
+  \let\sisetup\si@loc@sisetup}
+\newcommand*{\si@loc@set}[1]{%
+  \ifcsname si@loc@#1\endcsname
+    \si@log@inf{Setting locale to `#1'}%
+    \expandafter\expandafter\expandafter\expandafter
+      \expandafter\expandafter\expandafter\si@temptoks
+      \expandafter\expandafter\expandafter\expandafter
+      \expandafter\expandafter\expandafter{%
+        \expandafter\csname si@loc@#1\endcsname}%
+    \expandafter\sisetup\expandafter{\the\si@temptoks}%
+    \ifcsname si@loc@#1@extra\endcsname
+      \csname si@loc@#1@extra\endcsname
+    \fi
+  \else
+    \ifcsname si@loc@#1@extra\endcsname
+      \si@log@inf{Setting locale to `#1'}%
+      \csname si@loc@#1@extra\endcsname
+    \else
+      \si@log@warn{Unknown locale `#1'}%
+    \fi
+  \fi}
+\newcommand*{\si@loc@ltol}[1]{%
+  \def\si@tempa##1:##2\@nil{\si@loc@load{##1}}
+  \@for\si@tempb:=#1\do{%
+    \expandafter\si@tempa\si@tempb:\@nil}
+  \AtBeginDocument{
+    \@ifpackageloaded{babel}
+      {\def\si@tempa##1:##2:##3\@nil{%
+        \expandafter\addto\expandafter{%
+          \csname extras##2\endcsname}%
+          {\si@loc@set{##1}}}%
+       \@for\si@tempb:=#1\do{%
+         \expandafter\si@tempa\si@tempb::\@nil}%
+       \expandafter\selectlanguage\expandafter{\languagename}}
+      {\si@log@warn{babel not loaded \MessageBreak
+        loctolang option ignored}}}}
+\AtBeginDocument{
+  \@ifpackageloaded{babel}
+    {\renewcommand*{\si@loc@ltol}[1]{%
+       \def\si@tempa##1:##2\@nil{\si@loc@load{##1}}%
+       \@for\si@tempb:=#1\do{%
+         \expandafter\si@tempa\si@tempb:\@nil}%
+       \def\si@tempa##1:##2:##3\@nil{%
+         \expandafter\addto\expandafter{%
+           \csname extras##2\endcsname}%
+           {\si@loc@set{##1}}}%
+       \@for\si@tempb:=#1\do{%
+         \expandafter\si@tempa\si@tempb::\@nil}}}
+    {\renewcommand*{\si@loc@ltol}[1]{%
+       \si@log@warn{babel not loaded \MessageBreak
+         loctolang option ignored}}}}
+\newcommand*{\addtolocale}[2]{%
+  \si@addtocsname{si@loc@#1@extra}{#2}}
+\begingroup
+  \catcode`\^=\active
+  \catcode`\-=\active
+  \catcode`\_=\active
+  \gdef\si@out#1{%
+    \begingroup
+      \catcode`\^=\active
+      \catcode`\_=\active
+      \makeatletter
+      \endlinechar\m@ne
+      \ifsi@fam@set\else
+        \expandafter\si@fam@set
+      \fi
+      \text{%
+        \si@colourcmd{\si@colour}%
+        \si@fam@italic\si@fam@bold\si@fam@text
+        \ifsi@textmode
+          \expandafter\si@out@text
+        \else
+          \expandafter\si@out@maths
+        \fi
+        {\scantokens{#1}}}%
+    \endgroup
+    \check@mathfonts}
+  \gdef\si@out@text#1{%
+    \let^\si@out@sp
+    \let_\si@out@sb
+    \let\textsuperscript\si@out@sp
+    \let\textsubscript\si@out@sb
+    \catcode`\-=\active\relax
+    \let-\si@out@minus
+    #1}
+  \gdef\si@out@maths#1{%
+    \let^\sp
+    \let_\sb
+    \let\textsuperscript\sp
+    \let\textsubscript\sb
+    $\si@fam@maths{#1}$}
+\endgroup
+\newcommand*{\si@out@sp}[1]{\ensuremath{^{\text{#1}}}}
+\newcommand*{\si@out@sb}[1]{\ensuremath{_{\text{#1}}}}
+\newcommand*{\si@out@minus}{}
+\DeclareTextSymbolDefault{\si@out@minus}{TS1}
+\DeclareTextSymbol{\si@out@minus}{TS1}{61}
+\newif\ifsi@out@num
+\newcommand*{\si@out@num}[1]{%
+  \begingroup
+    \si@out@numtrue
+    \si@out{#1}%
+  \endgroup}
+\newcommand*{\si@extension}{cfg}
+\newcommand*{\si@fileprefix}{si-}
+\newcommand*{\si@ifl@aded}{}
+\let\si@ifl@aded\@ifl@aded
+\newcommand*{\si@ifloaded}[1]{%
+  \si@ifl@aded\si@extension{\si@fileprefix#1}}
+\newcommand*{\si@loadfile}[1]{%
+  \si@ifloaded{#1}{}
+    {\si@InputIfFileExists{\si@fileprefix#1.\si@extension}
+      {}
+      {\si@log@err{Failed to load file
+         \si@fileprefix#1.\si@extension}
+         {The configuration file requested could not be
+          found}}}}
+\newif\ifsi@outerinput\si@outerinputtrue
+\let\si@InputIfFileExists\InputIfFileExists
+\AtBeginDocument{
+  \renewcommand*{\si@InputIfFileExists}{%
+    \ifsi@outerinput
+      \expandafter\si@outerinput
+    \else
+      \expandafter\InputIfFileExists
+    \fi}}
+\newcommand*{\si@outerinput}[3]{%
+  \makeatletter
+  \nullfont
+  \si@outerinputfalse
+  \IfFileExists{#1}%
+    {#2\@addtofilelist{#1}\@@input \@filef@und\normalsize}
+    {#3}%
+  \normalsize
+  \makeatother}
+\newcommand*{\requiresiconfigs}[1]{%
+  \@for\si@tempb:=#1\do{\si@loadfile{\si@tempb}}}
+\newcommand*{\si@loademfile}[1]{%
+  \@ifpackageloaded{#1}
+    {\si@log@err{Emulation clash for package `#1'}
+      {You have asked for emulation of package
+       `#1'\MessageBreak
+       (perhaps by giving siunitx a back-compatibility
+       option)\MessageBreak but the package is already
+       loaded!}}
+    {\si@loadfile{#1}}}
+\newcommand*{\si@emclash}[2]{%
+  \si@log@err{Emulation clash: `#1' and `#2'}
+    {You have asked for emulation of package `#1'\MessageBreak
+     but have already loaded emulation of `#2'}}
+\newcommand*{\si@emulating}[2]{%
+  \@namedef{ver@#1.sty}{#2 siunitx emulation of #1}%
+  \let\si@tempa\si@blockpkgs
+  \renewcommand*{\si@blockpkgs}{}%
+  \@for\si@tempb:=\si@tempa\do{%
+    \renewcommand*{\si@tempa}{#1}%
+    \ifx\si@tempa\si@tempb\else
+      \lowercase{\edef\si@tempa{#1}}%
+      \lowercase{\edef\si@tempc{\si@tempb}}%
+      \ifx\si@tempa\si@tempc
+        \@namedef{ver@\si@tempc.sty}{#2 siunitx emulation of
+          #1}%
+      \else
+        \si@addtolist{\si@blockpkgs}{\si@tempb}%
+      \fi
+    \fi}%
+  \let\si@tempa\si@checkpkgs
+  \renewcommand*{\si@checkpkgs}{}%
+  \renewcommand*{\si@tempb}{#1}%
+  \@for\si@tempc:=\si@tempa\do{%
+    \ifx\si@tempb\si@tempc\else
+      \si@addtolist{\si@checkpkgs}{\si@tempc}%
+    \fi}}
+\sisetup{
+  addsign=none,
+  allowlitunits=true,
+  allowzeroexp=false,
+  angformat=unchanged,
+  astroang=false,%(
+  closeerr=),%(
+  closefrac=),%(
+  closerange=),
+  colour=black,
+  colourall=false,
+  colourneg=false,
+  decimalsymbol=fullstop,
+  detectdisplay=true,
+  digitsep=thin,
+  dp=3,
+  eVcorra=0.3ex,
+  eVcorrb=0ex,
+  errspace=none,
+  fixdp=false,
+  inlinebold=text,
+  load=default,
+  mathsrm=mathrm,
+  mathssf=mathsf,
+  mathstt=mathtt,
+  mode=maths,
+  negcolour=red,
+  noload={},
+  numaddn={},%(
+  numcloseerr=),
+  numdecimal={.,},
+  numdigits=0123456789,
+  numdiv=/,
+  numexp=eEdD,
+  numgobble={},
+  numopenerr=(,%)
+  numprod=x,
+  numsign=+-\pm\mp,
+  obeybold=false,
+  obeyitalic=false,
+  obeymode=false,
+  openerr=(,%)
+  openfrac=(,%)
+  openrange=(,%
+  padangle=small,
+  padnumber=lead,
+  per=reciprocal,
+  prefixbase=ten,
+  prefixproduct=times,
+  prefixsymbolic=true,
+  prespace=false,
+  redefsymbols=true,
+  repeatunits=true,
+  retainplus=false,
+  seperr=false,
+  sepfour=false,
+  sign=plus,
+  slash=slash,
+  stickyper=false,
+  strictarc=true,
+  tabalignexp=true,
+  tabautofit=false,
+  tabformat=3.2,
+  tabnumalign=centredecimal,
+  tabparseonly=false,
+  tabtextalign=centre,
+  tabunitalign=left,
+  textrm=rmfamily,
+  textsf=sffamily,
+  texttt=ttfamily,
+  tightpm=false,
+  tophrase=to,
+  trapambigerr=true,
+  trapambigfrac=true,
+  trapambigrange=true,
+  unitsep=thin,
+  valuesep=thin,
+  xspace=false}
+\ProcessOptionsX[si]<key>
+\ifx\@empty\si@emulate\@empty\else
+  \@for\si@tempa:=\si@emulate\do{%
+    \expandafter\si@loademfile\expandafter{\si@tempa}}
+\fi
+\newcommand*{\si@expanddefault}[2]{%
+  \expandafter\ifx\expandafter\@empty\csname si@#1\endcsname
+    \@empty
+  \else
+    \renewcommand*{\si@tempb}{default}%
+    \renewcommand*{\si@tempc}{}%
+    \expandafter\@for\expandafter\si@tempa\expandafter
+      :\expandafter=\csname si@#1\endcsname\do{%
+      \ifx\si@tempa\si@tempb
+        \si@addtolist{\si@tempc}{#2}%
+      \else
+        \si@addtolist{\si@tempc}{\si@tempa}%
+      \fi}
+    \expandafter\edef\csname si@#1\endcsname{\si@tempc}%
+    \expandafter\si@addtolist\expandafter{%
+      \csname si@no#1\endcsname}%
+      {default}%
+    \renewcommand*{\si@tempc}{}%
+    \expandafter\@for\expandafter\si@tempa\expandafter
+      :\expandafter=\csname si@#1\endcsname\do{%
+      \si@switchfalse
+      \expandafter\@for\expandafter\si@tempb\expandafter
+        :\expandafter=\csname si@no#1\endcsname\do{%
+        \ifx\si@tempa\si@tempb
+          \si@switchtrue
+        \fi
+        \ifsi@switch\else
+          \si@addtolist{\si@tempc}{\si@tempa}%
+        \fi}}
+    \@for\si@tempa:=\si@tempc\do{%
+      \si@loadfile{\si@tempa}}%
+  \fi}
+\si@expanddefault{load}{prefix,named,addn,prefixed,accepted,%
+  physical,abbr}
+\IfFileExists{siunitx.cfg}
+  {\si@log@inf{Local configuration file found}%
+   \InputIfFileExists{siunitx.cfg}{}{}}
+  {}
+\si@catcodes
+%% 
+%% Copyright (C) 2008-2010 by
+%%   Joseph Wright <joseph.wright@morningstar2.co.uk>
+%% 
+%% It may be distributed and/or modified under the conditions of
+%% the LaTeX Project Public License (LPPL), either version 1.3c of
+%% this license or (at your option) any later version.  The latest
+%% version of this license is in the file:
+%% 
+%%    http://www.latex-project.org/lppl.txt
+%% 
+%% This work is "maintained" (as per LPPL maintenance status) by
+%%   Joseph Wright.
+%% 
+%% This work consists of the file  siunitx.dtx
+%%           and the derived files siunitx.pdf,
+%%                                 siunitx.sty
+%%                                 siunitx.bib,
+%%                                 siunitx.ins,
+%%                                 siunitx-bug.tex and
+%%                                 various .cfg files.
+%% 
+%%
+%% End of file `siunitx.sty'.

@@ -1,0 +1,287 @@
+%	This is written by Zhiyang Ong to document, in a report, common data structures and algorithms that are used in electronic design automation software.
+
+%	The MIT License (MIT)
+
+%	Copyright (c) <2014> <Zhiyang Ong>
+
+%	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+%	The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+%	Email address: echo "cukj -wb- 23wU4X5M589 TROJANS cqkH wiuz2y 0f Mw Stanford" | awk '{ sub("23wU4X5M589","F.d_c_b. ") sub("Stanford","d0mA1n"); print $5, $2, $8; for (i=1; i<=1; i++) print "6\b"; print $9, $7, $6 }' | sed y/kqcbuHwM62z/gnotrzadqmC/ | tr 'q' ' ' | tr -d [:cntrl:] | tr -d 'ir' | tr y "\n"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Preamble.
+\documentclass[letterpaper,12pt]{report}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%	Importing LaTeX source files, without quoting the ".tex" extension.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	File containing the LaTeX preamble.
+\input{./others/preamble_clean}
+%	Enable the use of right-sided cases.
+\usepackage{others/packages/mathtools}
+%\usepackage{extarrows}
+\usepackage{others/packages/proof}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	New commands to typeset Vietnamese fonts
+%%%%%%%%%%%%\usepackage{others/packages/stackengine}
+%%%%%%%%%%%%\usepackage{others/packages/scalerel}
+\def\stackalignment{r}
+%	Required shortcut for creating commands.
+\def\shortcomma{\vstretch{.7}{,}}
+%	command ``\uhorn'' produces: u'
+\newcommand\uhorn{\topinset{\shortcomma}{u}{.05ex}{-.1ex}}
+%	References:
+%	Steven B. Segletes, answer to ``Horn accent in LaTeX,'' Stack Exchange Inc., New York, NY, August 7, 2013. Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://tex.stackexchange.com/a/127173}; March 16, 2016 was the last accessed date.
+
+ 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%	Start of LaTeX document
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	File containing a list of ``the 68 predefined internal colors of the {\tt dvips} PostScript driver'' \cite{Kopka04} 
+%	This allows me to use any of these ``68 predefined internal colors''
+\input{./others/list_of_colors.def}
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%	Information for Top Matter / Title page
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Beginning of FRONT MATTER: title page, table of contents and prefaces
+%	Note that the \vspace{length} command does NOT work for the front matter
+%\frontmatter
+\title{\Huge \bf Boilerplate Code: Data Structures and Algorithms for Design Automation}
+
+%	Indicate the date of the report.
+\date{\today}
+
+\author{{\LARGE Zhiyang Ong}
+\thanks{Email correspondence to: \href{mailto:ongz@acm.org}{\Email\ ongz@acm.org}}
+\ \\
+\vspace{-4.0in}
+\ \\
+\ \\
+\ \\
+{\bf \LARGE
+	Design Automation Renegades
+	\vspace{0.1cm}} \\
+\hline
+\ \\
+{\Large \sc Globetrotting Division} \\
+\ \\
+\ \\
+\ \\
+\ \\
+\ \\
+\vspace{2.0in}
+\ \\
+{\large \sc Report on } \\
+{\large Common Data Structures and Algorithms} \\
+{\large Found in Bolierplate Code for} \\
+{\large Design Automation Software}
+}
+
+%	Create the title page.
+\maketitle
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%	Abstract
+
+\begin{abstract} 
+This report describes the design and implementation of common data structures and algorithms, as well as ``computational engines'' that are found in electronic design automation (EDA) software. \\
+
+Data structures and algorithms for digital VLSI and cyber-physical system design include: binary decision diagrams (BDDs), AND-inverter graphs (AIGs), and their associated algorithms for optimization, traversal, and other operations (such as graph matching). Common computational engines for digital systems would include: optimization and verification engines for deterministic and nondeterministic finite state machines; decision procedures for the boolean satisfiability problem (SAT solvers) and satisfiability modulo theories (SMT solvers); quantified boolean formula (QBF) solvers; and SAT and SMT solvers for maximum satisfiability (i.e., Max-SAT and Max-SMT solvers). \\
+
+Regarding EDA problems that require numerical computation (in digital, analog, or mixed-signal VLSI design), the data structures and algorithms for circuit simulation based on sparse graph would be required. In addition, techniques for model order reduction shall be implemented. \\
+
+Computational engines for statistical and probabilistic analyses or stochastic modeling can include data structures and algorithms for partially observable Markov decision processes (POMDPs) and Markov chains. Tools for analyses of queueing systems (based on queueing theory) should be included. \\
+
+Regarding cyber-physical systems and mixed-signal circuits, hybrid automata can be used to represent these circuits and systems. \\
+
+Optimization engines for EDA include: solvers for different types of mathematical programming, such as linear programming (LP), integer linear programming (ILP), mixed-integer linear programming (MILP), quadratic programming (QP), convex programming (CP), geometric programming (GP), and second-order conic programming (SOCP); solvers for pseudo-boolean optimization (PBO solvers) and weighted-boolean optimization (WBO); and meta-heuristics (e.g., evolutionary algorithms, simulated annealing, and ant colony optimization). \\
+
+Algorithms shall be implemented using parallel programming, in a scalable style. In addition, considerations shall be given to the use of constraint programming. \\
+\ \\
+\ \\
+More stuff to be included\dots
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Set the page numbering to lowercase Roman numerals
+\pagenumbering{roman}
+% Set the initial page number of the pages in the content section to be ``i''
+\setcounter{page}{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Revision History
+\input{./others/revision_history}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Create the table of contents
+\tableofcontents
+%	Start the numbering of chapters from 1, instead of 0.
+%\setcounter{chapter}{1}
+%	Increase the depth of each section in the Table of Contents to 4.
+\setcounter{secnumdepth}{4}
+%\setcounter{tocdepth}{4}
+
+%	List of Figures		=> Insert Here!!!
+%	List of Tables			=> Insert Here!!!
+%	List of To-Do Tasks	=> Insert Here!!!
+%\listoftodos
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+%\mainmatter
+
+%	Body, or main section, of the document
+%	Set the page numbering to normal (Arabic) numerals
+\pagenumbering{arabic}
+% Set the page numbers for the body of the document
+\setcounter{page}{1}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Algorithms to be Implemented
+\input{./algor/algorithms}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Data Structures to be Implemented
+\input{./data_structures/data_structures}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Optimization Techniques to be Implemented
+\input{./optimization/optimization}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Numerical Methods to be Implemented
+\input{./numerical_comp/numerical_comp}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Statistical Computation Methods to be Implemented
+\input{./statistics/statistical_comp}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	C++ and C++ STL Notes and Resources
+\input{./cpp_resources/cpp_resources_clean}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Questions
+\input{./questions/questions}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Miscellaneous
+\input{./misc/misc}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Bibliography
+%\input{./others/bibliography}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{Acknowledgments}
+\addcontentsline{toc}{chapter}{Acknowledgments}
+\label{chp:Acknowledgments}
+
+I would like to thank Ms. Deepika Panchalingam for motivating me to revise basic data structures and algorithms for internship and job interviews.
+
+I would also like to thank the following users on {\tt Stack Overflow} for their help: sdsmith2016 \cite{sdsmith2016}.
+
+%	References: \vspace{-0.3cm}
+%	\begin{enumerate} \itemsep -4pt
+%	\item sdsmith, comment to the question ``Why is the discrepancy in these two cases of using C++ templates?,'' Stack Exchange Inc., New York, NY, March 30, 2016. Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://stackoverflow.com/q/36319028/1531728}; March 30, 2016 was the last accessed date.
+%	\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%	End of document
+%
+%	Inserting references
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Beginning of BACK MATTER: bibliography, indexes and colophon
+%\backmatter
+\appendix
+
+{\linespread{1}
+\bibliographystyle{plain}
+%\bibliography{./references/references}
+%\bibliography{~/Documents/ricerca/antipastobibtex/references}
+%\bibliography{/Users/zhiyang/Documents/ricerca/antipastobibtex/references}
+%\bibliography{/Users/zhiyang/Documents/ricerca/lassi-bibtex/references}
+\bibliography{/Users/zhiyang/Documents/ricerca/saag-bibtex/references}
+%\bibliography{/data/research/antipastobibtex/references}
+\addcontentsline{toc}{chapter}{Bibliography}
+}
+\end{document}

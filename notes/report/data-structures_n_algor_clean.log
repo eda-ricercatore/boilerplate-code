@@ -1,0 +1,2008 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/MacPorts 2017_4) (preloaded format=pdflatex 2018.5.22)  12 JUL 2019 00:21
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**data-structures_n_algor_clean
+(./data-structures_n_algor_clean.tex
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 3 language(s) loaded.
+(/opt/local/share/texmf-texlive/tex/latex/base/report.cls
+Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
+(/opt/local/share/texmf-texlive/tex/latex/base/size12.clo
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(./others/preamble_clean.tex
+(/opt/local/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/opt/local/share/texmf-texlive/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/opt/local/share/texmf-texlive/tex/latex/graphics/graphics.sty
+Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
+
+(/opt/local/share/texmf-texlive/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/opt/local/share/texmf-texlive/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/opt/local/share/texmf-texlive/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
+
+(/opt/local/share/texmf-texlive/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/opt/local/share/texmf-texlive/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/opt/local/share/texmf-texlive/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/11/05 v2.16a AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/opt/local/share/texmf-texlive/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/opt/local/share/texmf-texlive/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks15
+\ex@=\dimen105
+))
+(/opt/local/share/texmf-texlive/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen106
+)
+(/opt/local/share/texmf-texlive/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count89
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count90
+\leftroot@=\count91
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count92
+\DOTSCASE@=\count93
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen107
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count94
+\c@MaxMatrixCols=\count95
+\dotsspace@=\muskip10
+\c@parentequation=\count96
+\dspbrk@lvl=\count97
+\tag@help=\toks16
+\row@=\count98
+\column@=\count99
+\maxfields@=\count100
+\andhelp@=\toks17
+\eqnshift@=\dimen108
+\alignsep@=\dimen109
+\tagshift@=\dimen110
+\tagwidth@=\dimen111
+\totwidth@=\dimen112
+\lineht@=\dimen113
+\@envbody=\toks18
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+(/opt/local/share/texmf-texlive/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/opt/local/share/texmf-texlive/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/opt/local/share/texmf-texlive/tex/latex/amscls/amsthm.sty
+Package: amsthm 2015/03/04 v2.20.2
+\thm@style=\toks20
+\thm@bodyfont=\toks21
+\thm@headfont=\toks22
+\thm@notefont=\toks23
+\thm@headpunct=\toks24
+\thm@preskip=\skip46
+\thm@postskip=\skip47
+\thm@headsep=\skip48
+\dth@everypar=\toks25
+)
+\c@theorem=\count101
+\c@axiom=\count102
+\c@corollary=\count103
+\c@lemma=\count104
+\c@Rule=\count105
+\c@law=\count106
+\c@principle=\count107
+
+(/opt/local/share/texmf-texlive/tex/latex/tools/array.sty
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+\col@sep=\dimen114
+\extrarowheight=\dimen115
+\NC@list=\toks26
+\extratabsurround=\skip49
+\backup@length=\skip50
+)
+(./others/packages/setspace.sty
+
+LaTeX Warning: You have requested package `others/packages/setspace',
+               but the package provides `setspace'.
+
+Package: setspace 2011/12/19 v6.7a set line spacing
+) (/opt/local/share/texmf-texlive/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/opt/local/share/texmf-texlive/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+(/opt/local/share/texmf-texlive/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/opt/local/share/texmf-texlive/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count108
+\Gm@cntv=\count109
+\c@Gm@tempcnt=\count110
+\Gm@bindingoffset=\dimen116
+\Gm@wd@mp=\dimen117
+\Gm@odd@mp=\dimen118
+\Gm@even@mp=\dimen119
+\Gm@layoutwidth=\dimen120
+\Gm@layoutheight=\dimen121
+\Gm@layouthoffset=\dimen122
+\Gm@layoutvoffset=\dimen123
+\Gm@dimlist=\toks27
+)
+(./others/packages/algorithm.sty
+\c@algorithm=\count111
+\Blockindent=\skip51
+\algorithmindent=\skip52
+) (./others/packages/algorithmic.sty
+
+LaTeX Warning: You have requested package `others/packages/algorithmic',
+               but the package provides `algorithmic'.
+
+Package: algorithmic 2005/07/05
+Document Style `algorithmic' - environment
+(/opt/local/share/texmf-texlive/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/opt/local/share/texmf-texlive/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count112
+\calc@Bcount=\count113
+\calc@Adimen=\dimen124
+\calc@Bdimen=\dimen125
+\calc@Askip=\skip53
+\calc@Bskip=\skip54
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count114
+\calc@Cskip=\skip55
+)
+\c@ALC@line=\count115
+\c@ALC@rem=\count116
+\c@ALC@depth=\count117
+\ALC@tlm=\skip56
+\algorithmicindent=\skip57
+)
+(./others/packages/listings.sty
+
+LaTeX Warning: You have requested package `others/packages/listings',
+               but the package provides `listings'.
+
+Package: listings 1999/07/12 v0.20 (Carsten Heinz)
+\lst@mode=\count118
+\lst@token=\toks28
+\lst@length=\count119
+\lst@width=\dimen126
+\lst@linewidth=\dimen127
+\lst@column=\count120
+\lst@pos=\count121
+\lst@lostspace=\dimen128
+\lst@lineno=\count122
+\c@lstlisting=\count123
+\lst@maxwidth=\dimen129
+(./others/packages/lstmisc.sty
+File: lstmisc.sty 1999/07/12 v0.20 (Carsten Heinz)
+\c@lstlabel=\count124
+\lst@skiplabels=\count125
+\lst@innerspread=\dimen130
+\lst@outerspread=\dimen131
+)) (./others/packages/clrscode3e.sty
+
+LaTeX Warning: You have requested package `others/packages/clrscode3e',
+               but the package provides `clrscode3e'.
+
+Package: clrscode3e 
+\c@codelinenumber=\count126
+\c@indent=\count127
+\digitwidth=\skip58
+\savecode=\box28
+\codeboxwidth=\skip59
+\c@thisindent=\count128
+) (./others/packages/nag.sty
+
+LaTeX Warning: You have requested package `others/packages/nag',
+               but the package provides `nag'.
+
+Package: nag 2011/11/25 0.7 warning about old commands (ulmi)
+\c@nag@c=\count129
+\c@nag@sins=\count130
+
+Package nag Warning: Required ruleset l2tabu, and it wasn't there.
+
+
+Package nag Warning: Required ruleset orthodox, and it wasn't there.
+
+) (./others/packages/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+
+
+LaTeX Warning: You have requested package `others/packages/cite',
+               but the package provides `cite'.
+
+Package: cite 2015/02/27  v 5.5
+) (/opt/local/share/texmf-texlive/tex/latex/mflogo/mflogo.sty
+Package: mflogo 1999/03/10 v2.0 LaTeX package for Metafont and MetaPost logos
+)
+(/opt/local/share/texmf-texlive/tex/latex/tipa/tipa.sty
+Package: tipa 2002/08/08 TIPA version 1.1
+
+(/opt/local/share/texmf-texlive/tex/latex/base/fontenc.sty
+Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
+
+(/opt/local/share/texmf-texlive/tex/latex/tipa/t3enc.def
+File: t3enc.def 2001/12/31 T3 encoding
+)
+(/opt/local/share/texmf-texlive/tex/latex/base/ot1enc.def
+File: ot1enc.def 2017/04/05 v2.0i Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding OT1 on input line 48.
+)))
+(/opt/local/share/texmf-texlive/tex/latex/base/textcomp.sty
+Package: textcomp 2017/04/05 v2.0i Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+
+(/opt/local/share/texmf-texlive/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+)
+(./others/packages/ifsym.sty
+
+LaTeX Warning: You have requested package `others/packages/ifsym',
+               but the package provides `ifsym'.
+
+Package: ifsym 2000/04/18 I.Kloeckl
+\c@ifsymcnt=\count131
+) (/opt/local/share/texmf-texlive/tex/latex/marvosym/marvosym.sty
+Package: marvosym 2011/07/20 v2.2 Martin Vogel's Symbols font definitions
+)
+(./others/packages/ulem.sty
+\UL@box=\box29
+\UL@hyphenbox=\box30
+\UL@skip=\skip60
+\UL@hook=\toks29
+\UL@height=\dimen132
+\UL@pe=\count132
+\UL@pixel=\dimen133
+\ULC@box=\box31
+
+
+LaTeX Warning: You have requested package `others/packages/ulem',
+               but the package provides `ulem'.
+
+Package: ulem 2012/05/18
+\ULdepth=\dimen134
+) (/opt/local/share/texmf-texlive/tex/latex/eurosym/eurosym.sty
+Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
+\@eurobox=\box32
+)
+(/opt/local/share/texmf-texlive/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
+\fancy@headwidth=\skip61
+\f@ncyO@elh=\skip62
+\f@ncyO@erh=\skip63
+\f@ncyO@olh=\skip64
+\f@ncyO@orh=\skip65
+\f@ncyO@elf=\skip66
+\f@ncyO@erf=\skip67
+\f@ncyO@olf=\skip68
+\f@ncyO@orf=\skip69
+)
+(/opt/local/share/texmf-texlive/tex/latex/tools/verbatim.sty
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks30
+\verbatim@line=\toks31
+\verbatim@in@stream=\read1
+)
+(/opt/local/share/texmf-texlive/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2017/03/14 v6.85a Hypertext links for LaTeX
+
+(/opt/local/share/texmf-texlive/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+(/opt/local/share/texmf-texlive/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+(/opt/local/share/texmf-texlive/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+(/opt/local/share/texmf-texlive/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen135
+\Hy@linkcounter=\count133
+\Hy@pagecounter=\count134
+
+(/opt/local/share/texmf-texlive/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count135
+
+(/opt/local/share/texmf-texlive/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Option `bookmarks' set `true' on input line 4374.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 4374.
+Package hyperref Info: Option `colorlinks' set `true' on input line 4374.
+Package hyperref Info: Hyper figures OFF on input line 4498.
+Package hyperref Info: Link nesting OFF on input line 4503.
+Package hyperref Info: Hyper index ON on input line 4506.
+Package hyperref Info: Plain pages OFF on input line 4513.
+Package hyperref Info: Backreferencing OFF on input line 4518.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4751.
+\c@Hy@tempcnt=\count136
+
+(/opt/local/share/texmf-texlive/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5104.
+\XeTeXLinkMargin=\dimen136
+\Fld@menulength=\count137
+\Field@Width=\dimen137
+\Fld@charsize=\dimen138
+Package hyperref Info: Hyper figures OFF on input line 6358.
+Package hyperref Info: Link nesting OFF on input line 6363.
+Package hyperref Info: Hyper index ON on input line 6366.
+Package hyperref Info: backreferencing OFF on input line 6373.
+Package hyperref Info: Link coloring ON on input line 6376.
+Package hyperref Info: Link coloring with OCG OFF on input line 6383.
+Package hyperref Info: PDF/A mode OFF on input line 6388.
+LaTeX Info: Redefining \ref on input line 6428.
+LaTeX Info: Redefining \pageref on input line 6432.
+\Hy@abspage=\count138
+\c@Item=\count139
+\c@Hfootnote=\count140
+)
+
+Package hyperref Message: Driver: hpdftex.
+
+(/opt/local/share/texmf-texlive/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
+\Fld@listcount=\count141
+\c@bookmark@seq@number=\count142
+
+(/opt/local/share/texmf-texlive/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip70
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 188.
+
+(/opt/local/share/texmf-texlive/tex/latex/graphics/rotating.sty
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+\c@r@tfl@t=\count143
+\rotFPtop=\skip71
+\rotFPbot=\skip72
+\rot@float@box=\box33
+\rot@mess@toks=\toks32
+)
+(./others/packages/subfig.sty
+Style Option: `subfig' v1.2 <28 Jan 92> (M.O.)
+\c@subfigure=\count144
+) (./others/packages/subfiles.sty
+
+LaTeX Warning: You have requested package `others/packages/subfiles',
+               but the package provides `subfiles'.
+
+Package: subfiles 2012/05/23 Federico Garcia
+) (./others/packages/wrapfig.sty
+\wrapoverhang=\dimen139
+\WF@size=\dimen140
+\c@WF@wrappedlines=\count145
+\WF@box=\box34
+\WF@everypar=\toks33
+
+
+LaTeX Warning: You have requested package `others/packages/wrapfig',
+               but the package provides `wrapfig'.
+
+Package: wrapfig 2003/01/31  v 3.6
+) (/opt/local/share/texmf-texlive/tex/latex/base/fontenc.sty
+Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
+
+(/opt/local/share/texmf-texlive/tex/latex/base/t1enc.def
+File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
+(/opt/local/share/texmf-texlive/tex/latex/base/inputenc.sty
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks34
+\inpenc@posthook=\toks35
+
+(/opt/local/share/texmf-texlive/tex/latex/base/utf8.def
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+(/opt/local/share/texmf-texlive/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00AD (decimal 173)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0100 (decimal 256)
+   defining Unicode char U+0101 (decimal 257)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+0108 (decimal 264)
+   defining Unicode char U+0109 (decimal 265)
+   defining Unicode char U+010A (decimal 266)
+   defining Unicode char U+010B (decimal 267)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0112 (decimal 274)
+   defining Unicode char U+0113 (decimal 275)
+   defining Unicode char U+0114 (decimal 276)
+   defining Unicode char U+0115 (decimal 277)
+   defining Unicode char U+0116 (decimal 278)
+   defining Unicode char U+0117 (decimal 279)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011C (decimal 284)
+   defining Unicode char U+011D (decimal 285)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0120 (decimal 288)
+   defining Unicode char U+0121 (decimal 289)
+   defining Unicode char U+0122 (decimal 290)
+   defining Unicode char U+0123 (decimal 291)
+   defining Unicode char U+0124 (decimal 292)
+   defining Unicode char U+0125 (decimal 293)
+   defining Unicode char U+0128 (decimal 296)
+   defining Unicode char U+0129 (decimal 297)
+   defining Unicode char U+012A (decimal 298)
+   defining Unicode char U+012B (decimal 299)
+   defining Unicode char U+012C (decimal 300)
+   defining Unicode char U+012D (decimal 301)
+   defining Unicode char U+012E (decimal 302)
+   defining Unicode char U+012F (decimal 303)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0134 (decimal 308)
+   defining Unicode char U+0135 (decimal 309)
+   defining Unicode char U+0136 (decimal 310)
+   defining Unicode char U+0137 (decimal 311)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013B (decimal 315)
+   defining Unicode char U+013C (decimal 316)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0145 (decimal 325)
+   defining Unicode char U+0146 (decimal 326)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+014C (decimal 332)
+   defining Unicode char U+014D (decimal 333)
+   defining Unicode char U+014E (decimal 334)
+   defining Unicode char U+014F (decimal 335)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0156 (decimal 342)
+   defining Unicode char U+0157 (decimal 343)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015C (decimal 348)
+   defining Unicode char U+015D (decimal 349)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+0168 (decimal 360)
+   defining Unicode char U+0169 (decimal 361)
+   defining Unicode char U+016A (decimal 362)
+   defining Unicode char U+016B (decimal 363)
+   defining Unicode char U+016C (decimal 364)
+   defining Unicode char U+016D (decimal 365)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0172 (decimal 370)
+   defining Unicode char U+0173 (decimal 371)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+01CD (decimal 461)
+   defining Unicode char U+01CE (decimal 462)
+   defining Unicode char U+01CF (decimal 463)
+   defining Unicode char U+01D0 (decimal 464)
+   defining Unicode char U+01D1 (decimal 465)
+   defining Unicode char U+01D2 (decimal 466)
+   defining Unicode char U+01D3 (decimal 467)
+   defining Unicode char U+01D4 (decimal 468)
+   defining Unicode char U+01E2 (decimal 482)
+   defining Unicode char U+01E3 (decimal 483)
+   defining Unicode char U+01E6 (decimal 486)
+   defining Unicode char U+01E7 (decimal 487)
+   defining Unicode char U+01E8 (decimal 488)
+   defining Unicode char U+01E9 (decimal 489)
+   defining Unicode char U+01EA (decimal 490)
+   defining Unicode char U+01EB (decimal 491)
+   defining Unicode char U+01F0 (decimal 496)
+   defining Unicode char U+01F4 (decimal 500)
+   defining Unicode char U+01F5 (decimal 501)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+0232 (decimal 562)
+   defining Unicode char U+0233 (decimal 563)
+   defining Unicode char U+1E02 (decimal 7682)
+   defining Unicode char U+1E03 (decimal 7683)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2010 (decimal 8208)
+   defining Unicode char U+2011 (decimal 8209)
+   defining Unicode char U+2012 (decimal 8210)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2015 (decimal 8213)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+   defining Unicode char U+1E20 (decimal 7712)
+   defining Unicode char U+1E21 (decimal 7713)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+(/opt/local/share/texmf-texlive/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AD (decimal 173)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+(/opt/local/share/texmf-texlive/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+Now handling font encoding T3 ...
+... no UTF-8 mapping file for font encoding T3
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
+
+(/opt/local/share/texmf-texlive/tex/latex/base/ts1enc.dfu
+File: ts1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+02C7 (decimal 711)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+02DD (decimal 733)
+   defining Unicode char U+0E3F (decimal 3647)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+2044 (decimal 8260)
+   defining Unicode char U+204E (decimal 8270)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+20A1 (decimal 8353)
+   defining Unicode char U+20A4 (decimal 8356)
+   defining Unicode char U+20A6 (decimal 8358)
+   defining Unicode char U+20A9 (decimal 8361)
+   defining Unicode char U+20AB (decimal 8363)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+20B1 (decimal 8369)
+   defining Unicode char U+2103 (decimal 8451)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2117 (decimal 8471)
+   defining Unicode char U+211E (decimal 8478)
+   defining Unicode char U+2120 (decimal 8480)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2422 (decimal 9250)
+   defining Unicode char U+25E6 (decimal 9702)
+   defining Unicode char U+25EF (decimal 9711)
+   defining Unicode char U+266A (decimal 9834)
+)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+(/opt/local/share/texmf-texlive/tex/latex/lm/lmodern.sty
+Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+))
+(./others/packages/mathtools.sty
+
+LaTeX Warning: You have requested package `others/packages/mathtools',
+               but the package provides `mathtools'.
+
+Package: mathtools 2012/04/24 v1.12 mathematical typesetting tools
+(./others/packages/embedded/mhsetup.sty
+
+LaTeX Warning: You have requested package `others/packages/embedded/mhsetup',
+               but the package provides `mhsetup'.
+
+Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
+)
+\g_MT_multlinerow_int=\count146
+\l_MT_multwidth_dim=\dimen141
+\origjot=\skip73
+\l_MT_shortvdotswithinadjustabove_dim=\dimen142
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen143
+\l_MT_above_intertext_dim=\dimen144
+\l_MT_below_intertext_dim=\dimen145
+\l_MT_above_shortintertext_dim=\dimen146
+\l_MT_below_shortintertext_dim=\dimen147
+) (./others/packages/proof.sty
+\inferLineSkip=\dimen148
+\inferLabelSkip=\dimen149
+\@LeftOffset=\dimen150
+\@RightOffset=\dimen151
+\@SavedLeftOffset=\dimen152
+\UpperWidth=\dimen153
+\LowerWidth=\dimen154
+\LowerHeight=\dimen155
+\UpperLeftOffset=\dimen156
+\UpperRightOffset=\dimen157
+\UpperCenter=\dimen158
+\LowerCenter=\dimen159
+\UpperAdjust=\dimen160
+\RuleAdjust=\dimen161
+\LowerAdjust=\dimen162
+\RuleWidth=\dimen163
+\HLabelAdjust=\dimen164
+\VLabelAdjust=\dimen165
+\WidthAdjust=\dimen166
+\@UpperPart=\box35
+\@LowerPart=\box36
+\@LabelPart=\box37
+\ResultBox=\box38
+) (./data-structures_n_algor_clean.aux)
+\openout1 = `data-structures_n_algor_clean.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 65.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 65.
+
+(/opt/local/share/texmf-texlive/tex/latex/tipa/t3cmr.fd
+File: t3cmr.fd 2001/12/31 TIPA font definitions
+)
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 65.
+
+(/opt/local/share/texmf-texlive/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 65.
+
+(/opt/local/share/texmf-texlive/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+(/opt/local/share/texmf-texlive/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count147
+\scratchdimen=\dimen167
+\scratchbox=\box39
+\nofMPsegments=\count148
+\nofMParguments=\count149
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count150
+\MPscratchDim=\dimen168
+\MPnumerator=\count151
+\makeMPintoPDFobject=\count152
+\everyMPtoPDFconversion=\toks37
+) (/opt/local/share/texmf-texlive/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/opt/local/share/texmf-texlive/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/opt/local/share/texmf-texlive/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(42.67912pt, 528.93675pt, 42.67912pt)
+* v-part:(T,H,B)=(42.67912pt, 695.38536pt, 56.9055pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=528.93675pt
+* \textheight=695.38536pt
+* \oddsidemargin=-29.59087pt
+* \evensidemargin=-29.59087pt
+* \topmargin=-66.59087pt
+* \headheight=15.2pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\AtBeginShipoutBox=\box40
+(/opt/local/share/texmf-texlive/tex/latex/graphics/color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+(/opt/local/share/texmf-texlive/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+Package hyperref Info: Link coloring ON on input line 65.
+
+(/opt/local/share/texmf-texlive/tex/latex/hyperref/nameref.sty
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+(/opt/local/share/texmf-texlive/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count153
+)
+LaTeX Info: Redefining \ref on input line 65.
+LaTeX Info: Redefining \pageref on input line 65.
+LaTeX Info: Redefining \nameref on input line 65.
+
+(./data-structures_n_algor_clean.out) (./data-structures_n_algor_clean.out)
+\@outlinefile=\write3
+\openout3 = `data-structures_n_algor_clean.out'.
+
+
+(./others/list_of_colors.def)
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 123.
+
+
+(/opt/local/share/texmf-texlive/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 123.
+
+
+(/opt/local/share/texmf-texlive/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 123
+.
+
+(/opt/local/share/texmf-texlive/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 123
+.
+
+(/opt/local/share/texmf-texlive/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 123.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 123.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 123.
+LaTeX Font Info:    Try loading font information for U+msa on input line 123.
+
+(/opt/local/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 123.
+
+(/opt/local/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 123.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 123.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 123.
+LaTeX Font Info:    Try loading font information for U+mvs on input line 123.
+
+(/opt/local/share/texmf-texlive/tex/latex/marvosym/umvs.fd) [1
+
+{/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--146
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--146
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.146 \end{abstract}
+                     [1] (./others/revision_history.tex) [1
+
+]
+(./data-structures_n_algor_clean.toc
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 3.
+ [2
+
+])
+\tf@toc=\write4
+\openout4 = `data-structures_n_algor_clean.toc'.
+
+ [3] (./algor/algorithms.tex
+Chapter 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+
+ []
+
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 32.
+(/opt/local/share/texmf-texlive/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 32.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.87 \section
+             {Resources for Algorithms} [1
+
+]
+Overfull \hbox (12.46811pt too wide) in paragraph at lines 94--95
+[]\T1/lmr/m/n/12 ``The Stony Brook Al-go-rithm Repos-i-tory'' by Steven Skiena 
+[[][]193[][]]: [][]$\T1/lmtt/m/n/12 http : / / algorist . com / algorist .
+ []
+
+) (./data_structures/data_structures.tex [2]
+Chapter 2.
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
+
+ []
+
+(./data_structures/graph.tex
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+
+ []
+
+[3
+
+]
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 47.
+ (/opt/local/share/texmf-texlive/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Overfull \hbox (15.19496pt too wide) in paragraph at lines 47--48
+[]\T1/lmr/m/n/12 Some au-thors/people use pseu-do-graphs and multi-graphs in-te
+r-change-ably/synonymously. 
+ []
+
+
+Overfull \hbox (12.51347pt too wide) in paragraph at lines 52--53
+[]\T1/lmr/m/n/12 Does the fol-low-ing ref-er-ence suf-fice \T1/lmr/bx/n/12 for 
+all con-di-tions\T1/lmr/m/n/12 ? [][]$\T1/lmtt/m/n/12 http : / / jgaa . info / 
+accepted /
+ []
+
+[4] [5] [6] [7] [8]
+Overfull \hbox (4.26259pt too wide) in paragraph at lines 248--249
+[]\T1/lmr/bx/n/12 Multidimensional net-work \T1/lmr/m/n/12 [[][]230[][]]: [][]$
+\T1/lmtt/m/n/12 https : / / en . wikipedia . org / wiki / Multidimensional _
+ []
+
+
+Overfull \hbox (25.34761pt too wide) in paragraph at lines 250--251
+[]\T1/lmr/bx/n/12 Temporal net-work\T1/lmr/m/n/12 , or \T1/lmr/bx/n/12 time-var
+ying net-work\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 https : / / en . wikipedia .
+ org / wiki / Temporal _
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 285--286
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 287--288
+
+ []
+
+
+Overfull \hbox (0.99698pt too wide) in paragraph at lines 292--293
+\T1/lmtt/m/n/12 en . wikipedia . org / wiki / Dense _ graph$[][]\T1/lmr/m/n/12 
+. Also, see [][]$\T1/lmtt/m/n/12 https : / / en . wikipedia . org / wiki / Dens
+e _ subgraph$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 292--293
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--295
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 360--361
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 363--365
+
+ []
+
+[11] [12] [13] [14] [15] [16] [17] [18] [19] [20]
+Overfull \hbox (37.49538pt too wide) in paragraph at lines 804--805
+[]\T1/lmr/bx/n/12 Bellman-Ford al-go-rithm \T1/lmr/m/n/12 (or, \T1/lmr/bx/n/12 
+Bellman-Ford-Moore al-go-rithm\T1/lmr/m/n/12 ): [][]$\T1/lmtt/m/n/12 https : / 
+/ en . wikipedia .
+ []
+
+
+Overfull \hbox (28.19597pt too wide) in paragraph at lines 805--806
+[]\T1/lmr/bx/n/12 Ford-Fulkerson al-go-rithm (FFA)\T1/lmr/m/n/12 , or \T1/lmr/b
+x/n/12 Ford-Fulkerson method\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 https : / / e
+n . wikipedia .
+ []
+
+[21] [22]
+Overfull \hbox (21.96764pt too wide) in paragraph at lines 886--887
+[]\T1/lmr/bx/n/12 max-flow min-cut the-o-rem\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/
+12 https : / / en . wikipedia . org / wiki / Max-[]flow _ min-[]cut _ theorem$[
+][] 
+ []
+
+
+Overfull \hbox (13.70074pt too wide) in paragraph at lines 887--888
+[]\T1/lmr/bx/n/12 minimum-cost flow prob-lem (MCFP)\T1/lmr/m/n/12 : [][]$\T1/lm
+tt/m/n/12 https : / / en . wikipedia . org / wiki / Minimum-[]cost _
+ []
+
+[23]
+Overfull \hbox (34.99174pt too wide) in paragraph at lines 938--939
+\T1/lmr/bx/n/17.28 du-al-i-ties\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 https : / 
+/ en . wikipedia . org / wiki / Linear _ programming # Covering / packing _
+ []
+
+
+Overfull \hbox (30.58757pt too wide) in paragraph at lines 944--945
+[]\T1/lmr/bx/n/12 independent set prob-lem\T1/lmr/m/n/12 , and \T1/lmr/bx/n/12 
+max-i-mum in-de-pen-dent set\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 https : / / e
+n . wikipedia .
+ []
+
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 1022--1023
+
+ []
+
+[25]
+Overfull \hbox (14.54733pt too wide) in paragraph at lines 1101--1102
+[]\T1/lmr/bx/n/12 Homeomorphism\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 https : / 
+/ en . wikipedia . org / wiki / Homeomorphism _ (graph _ theory )
+ []
+
+
+Overfull \hbox (7.32706pt too wide) in paragraph at lines 1112--1113
+[]\T1/lmr/bx/n/12 Interdependent net-works\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12
+ https : / / en . wikipedia . org / wiki / Interdependent _ networks$[][] 
+ []
+
+[26]
+Overfull \hbox (46.71861pt too wide) in paragraph at lines 1132--1133
+[]\T1/lmr/m/n/12 The \T1/lmr/m/it/12 GraphEx-cep-tion \T1/lmr/m/n/12 class is a
+ child class of the Ex-cep-tion class. See [][]$\T1/lmtt/m/n/12 https : / / git
+hub . com / eda-[]ricercatore /
+ []
+
+
+Overfull \hbox (9.30283pt too wide) in paragraph at lines 1186--1187
+[]\T1/lmr/m/n/12 ``Used in the con-text of con-cur-rency con-trol in databases'
+'; see [][]$\T1/lmtt/m/n/12 https : / / en . wikipedia .
+ []
+
+[27]
+Overfull \hbox (2.8676pt too wide) in paragraph at lines 1282--1283
+[]\T1/lmr/bx/n/12 Gallery of named graphs\T1/lmr/m/n/12 : [][]$\T1/lmtt/m/n/12 
+https : / / en . wikipedia . org / wiki / Gallery _ of _ named _ graphs$[][] 
+ []
+
+
+Overfull \hbox (1.05757pt too wide) in paragraph at lines 1283--1284
+[]\T1/lmr/bx/n/12 List of graph the-ory top-ics\T1/lmr/m/n/12 : [][]$\T1/lmtt/m
+/n/12 https : / / en . wikipedia . org / wiki / List _ of _ graph _ theory _
+ []
+
+
+Overfull \hbox (9.98303pt too wide) in paragraph at lines 1284--1285
+[]\T1/lmr/bx/n/12 Glossary of graph the-ory terms\T1/lmr/m/n/12 : [][]$\T1/lmtt
+/m/n/12 https : / / en . wikipedia . org / wiki / Glossary _ of _ graph _
+ []
+
+) [28]) (./optimization/optimization.tex [29]
+Chapter 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--46
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
+
+ []
+
+[30
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
+
+ []
+
+
+Overfull \hbox (49.15675pt too wide) in paragraph at lines 148--149
+[]\T1/lmr/m/n/12 From [[][]105[][], Sup-port Cen-ter: Ex-am-ple tour], \T1/lmr/
+m/it/12 Lo-cal-Solver \T1/lmr/m/n/12 can solve con-tin-u-ous and dis-crete/comb
+inatorial
+ []
+
+
+Overfull \hbox (16.17236pt too wide) in paragraph at lines 153--154
+[]\T1/lmr/m/n/12 optimal bucket de-sign: min-i-miza-tion of a bucket en-cap-su-
+lat-ing/covering the rod/cylinder 
+ []
+
+[31]
+Overfull \hbox (7.34369pt too wide) in paragraph at lines 168--169
+[]\T1/lmr/m/n/12 Its tech-ni-cal doc-u-men-ta-tion can be found at: [][]$\T1/lm
+tt/m/n/12 http : / / www . localsolver . com / documentation /
+ []
+
+[32]) (./numerical_comp/numerical_comp.tex [33]
+Chapter 4.
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--48
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--48
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--56
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--56
+
+ []
+
+[34
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 127--129
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 127--129
+
+ []
+
+) (./statistics/statistical_comp.tex [35]
+Chapter 5.
+) (./cpp_resources/cpp_resources_clean.tex [36
+
+]
+Chapter 6.
+
+Overfull \hbox (20.3734pt too wide) in paragraph at lines 23--24
+\T1/lmr/m/n/12 Quick ad-vice: \T1/lmtt/m/n/12 Learn how to use \T1/lmr/m/it/12 
+C++1y \T1/lmtt/m/n/12 features, including those of C++11, C++14, and C++17.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--29
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--29
+
+ []
+
+[37
+
+] [38] [39] [40] [41] [42]
+Overfull \hbox (39.2348pt too wide) in paragraph at lines 315--316
+\T1/lmr/m/it/12 C++ \T1/lmtt/m/n/12 template definition and implementation sepa
+rately into different files,
+ []
+
+
+Overfull \hbox (37.53482pt too wide) in paragraph at lines 315--316
+\T1/lmtt/m/n/12 and keeps things modular in my software architecture. It preven
+ts templates
+ []
+
+[43] [44] [45] [46]
+Overfull \hbox (252.02818pt too wide) in paragraph at lines 496--497
+[][][]$\T1/lmtt/m/n/12 http : / / stackoverflow . com / questions / 1143262 / w
+hat-[]is-[]the-[]difference-[]between-[]const-[]int-[]const-[]int-[]const-[]and
+-[]int-[]const$[][]
+ []
+
+[47]
+Overfull \hbox (20.27704pt too wide) in paragraph at lines 590--591
+\T1/lmr/m/n/12 Wisconsin-Madison, Madi-son, WI. Avail-able on-line at: [][]$\T1
+/lmtt/m/n/12 http : / / pages . cs . wisc . edu / ~driscoll /
+ []
+
+[48] [49]
+Underfull \hbox (badness 10000) in paragraph at lines 669--670
+
+ []
+
+
+Overfull \hbox (31.64955pt too wide) in paragraph at lines 676--699
+ [] 
+ []
+
+
+Overfull \hbox (7.0928pt too wide) in paragraph at lines 709--710
+[]\T1/lmtt/m/n/12 std::deque \T1/lmr/m/n/12 and \T1/lmtt/m/n/12 std::vector \T1
+/lmr/m/n/12 do not sup-port very well data types with high cost of copy/assignm
+ent 
+ []
+
+[50]
+Overfull \hbox (0.14552pt too wide) in paragraph at lines 770--771
+\T1/lmr/m/it/12 tions \T1/lmr/m/n/12 and \T1/lmr/m/it/12 Re-lated asymp-totic n
+o-ta-tions: Fam-ily of Bach-mann?Landau no-ta-tions\T1/lmr/m/n/12 , in \T1/lmr/
+m/it/12 Wikipedia,
+ []
+
+[51]
+Overfull \hbox (16.01239pt too wide) in paragraph at lines 771--772
+\T1/lmtt/m/n/12 wikipedia . org / wiki / Time _ complexity # Table _ of _ commo
+n _ time _ complexities$[][]\T1/lmr/m/n/12 ; last ac-cessed
+ []
+
+[52]
+Underfull \hbox (badness 10000) in paragraph at lines 837--838
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 839--840
+
+ []
+
+[53] [54] [55]
+Overfull \hbox (3.32965pt too wide) in paragraph at lines 986--987
+[]\T1/lmr/m/n/12 Create as-sem-bly code: \T1/lmtt/m/n/12 c++ -S -fverbose-asm -
+g -02 \T1/lmr/m/it/12 [source_code.cpp] \T1/lmtt/m/n/12 -o \T1/lmr/m/it/12 [una
+ssem-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1033--1034
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1035--1037
+
+ []
+
+[56]
+Underfull \hbox (badness 10000) in paragraph at lines 1038--1039
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1040--1041
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1059--1061
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1081--1082
+
+ []
+
+[57]
+Underfull \hbox (badness 10000) in paragraph at lines 1083--1084
+
+ []
+
+) (./questions/questions.tex [58]
+Chapter 7.
+
+Overfull \hbox (230.57298pt too wide) in paragraph at lines 51--53
+\T1/lmr/m/n/12 and [][]$\T1/lmtt/m/n/12 http : / / programmers . stackexchange 
+. com / questions / 195337 / is-[]there-[]any-[]difference-[]between-[]pointers
+-[]and-[]references /
+ []
+
+
+Overfull \hbox (12.85683pt too wide) in paragraph at lines 54--55
+\T1/lmr/m/it/12 Ex-change Inc.: Pro-gram-mers Stack Ex-change: Ques-tions \T1/l
+mr/m/n/12 at: [][]$\T1/lmtt/m/n/12 http : / / programmers . stackexchange .
+ []
+
+
+Overfull \hbox (4.82614pt too wide) in paragraph at lines 56--57
+[]\T1/lmr/m/n/12 Answer from Kevin, Novem-ber 10, 2010: [][]$\T1/lmtt/m/n/12 ht
+tp : / / programmers . stackexchange . com / a / 17919$[][]
+ []
+
+
+Overfull \hbox (112.24792pt too wide) in paragraph at lines 56--57
+\T1/lmr/m/n/12 and [][]$\T1/lmtt/m/n/12 http : / / programmers . stackexchange 
+. com / questions / 17898 / whats-[]a-[]nice-[]explanation-[]for-[]pointers /
+ []
+
+
+Overfull \hbox (145.73401pt too wide) in paragraph at lines 57--58
+\T1/lmtt/m/n/12 18087$[][] \T1/lmr/m/n/12 and [][]$\T1/lmtt/m/n/12 http : / / p
+rogrammers . stackexchange . com / questions / 17898 / whats-[]a-[]nice-[]expla
+nation-[]for-[]pointers /
+ []
+
+
+Overfull \hbox (145.727pt too wide) in paragraph at lines 58--59
+\T1/lmtt/m/n/12 17915$[][] \T1/lmr/m/n/12 and [][]$\T1/lmtt/m/n/12 http : / / p
+rogrammers . stackexchange . com / questions / 17898 / whats-[]a-[]nice-[]expla
+nation-[]for-[]pointers /
+ []
+
+[59
+
+]
+Overfull \hbox (158.07701pt too wide) in paragraph at lines 59--60
+\T1/lmtt/m/n/12 a / 18529$[][] \T1/lmr/m/n/12 and [][]$\T1/lmtt/m/n/12 http : /
+ / programmers . stackexchange . com / questions / 17898 / whats-[]a-[]nice-[]e
+xplanation-[]for-[]pointers /
+ []
+
+
+Overfull \hbox (112.24792pt too wide) in paragraph at lines 60--61
+\T1/lmr/m/n/12 and [][]$\T1/lmtt/m/n/12 http : / / programmers . stackexchange 
+. com / questions / 17898 / whats-[]a-[]nice-[]explanation-[]for-[]pointers /
+ []
+
+
+Overfull \hbox (145.727pt too wide) in paragraph at lines 61--62
+\T1/lmtt/m/n/12 18092$[][] \T1/lmr/m/n/12 and [][]$\T1/lmtt/m/n/12 http : / / p
+rogrammers . stackexchange . com / questions / 17898 / whats-[]a-[]nice-[]expla
+nation-[]for-[]pointers /
+ []
+
+
+Overfull \hbox (145.727pt too wide) in paragraph at lines 62--63
+\T1/lmtt/m/n/12 23016$[][] \T1/lmr/m/n/12 and [][]$\T1/lmtt/m/n/12 http : / / p
+rogrammers . stackexchange . com / questions / 17898 / whats-[]a-[]nice-[]expla
+nation-[]for-[]pointers /
+ []
+
+[60]
+Overfull \hbox (207.47728pt too wide) in paragraph at lines 86--87
+\T1/lmtt/m/n/12 stackoverflow . com / questions / 57483 / what-[]are-[]the-[]di
+fferences-[]between-[]a-[]pointer-[]variable-[]and-[]a-[]reference-[]variable-[
+]in$[][]\T1/lmr/m/n/12 ;
+ []
+
+[61]) (./misc/misc.tex [62]
+Chapter 8.
+
+Overfull \hbox (35.7866pt too wide) in paragraph at lines 27--28
+[]\T1/lmr/m/n/12 List of im-por-tant pub-li-ca-tions in math-e-mat-ics: [][]$\T
+1/lmtt/m/n/12 https : / / en . wikipedia . org / wiki / List _ of _ important _
+
+ []
+
+[63
+
+]) [64] (./data-structures_n_algor_clean.bbl [65
+
+] [66
+
+] [67] [68] [69]
+
+LaTeX Warning: Command \textregistered invalid in math mode on input line 406.
+
+
+LaTeX Warning: Command \textregistered invalid in math mode on input line 406.
+
+
+LaTeX Warning: Command \textregistered invalid in math mode on input line 412.
+
+
+LaTeX Warning: Command \textregistered invalid in math mode on input line 412.
+
+
+LaTeX Warning: Command \textregistered invalid in math mode on input line 418.
+
+
+LaTeX Warning: Command \textregistered invalid in math mode on input line 418.
+
+
+LaTeX Warning: Command \textregistered invalid in math mode on input line 442.
+
+
+LaTeX Warning: Command \textregistered invalid in math mode on input line 442.
+
+[70] [71] [72]
+Underfull \hbox (badness 6961) in paragraph at lines 705--712
+[][]$\T1/lmtt/m/n/12 http : / / pweb . netcom . com / ~tjensen / ptr / cpoint .
+ htm$[][]\T1/lmr/m/n/12 , [][]$\T1/lmtt/m/n/12 http : / / pweb . netcom . com /
+ ~tjensen /
+ []
+
+[73]
+Underfull \hbox (badness 1173) in paragraph at lines 759--764
+[]\T1/lmr/m/n/12 Darko Kirovski and Mio-drag Potkon-jak.  A quan-ti-ta-tive ap-
+proach to func-tional de-bug-
+ []
+
+[74] [75]
+Underfull \hbox (badness 5274) in paragraph at lines 936--945
+\T1/lmtt/m/n/12 JSC / EN / slides / cplusplus / cplusplus . pdf$[][] \T1/lmr/m/
+n/12 and [][]$\T1/lmtt/m/n/12 https : / / www . fz-[]juelich . de / SharedDocs 
+/
+ []
+
+
+Underfull \hbox (badness 1038) in paragraph at lines 947--957
+\T1/lmr/m/n/12 ( and a pre-view of C++17 ).  Avail-able on-line from \T1/lmr/m/
+it/12 Forschungszen-trum Jülich GmbH:
+ []
+
+
+Underfull \hbox (badness 4595) in paragraph at lines 947--957
+\T1/lmr/m/it/12 In-sti-tute for Ad-vanced Sim-u-la-tion: Jülich Su-per-com-put-
+ing Cen-ter \T1/lmr/m/n/12 at: [][]$\T1/lmtt/m/n/12 https : / / www .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 947--957
+\T1/lmtt/m/n/12 fz-[]juelich . de / SharedDocs / Downloads / IAS / JSC / EN / s
+lides / cplusplus / cplusplus . pdf$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 947--957
+\T1/lmr/m/n/12 and [][]$\T1/lmtt/m/n/12 https : / / www . fz-[]juelich . de / S
+haredDocs / Downloads / IAS / JSC / EN / slides / cplusplus /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 947--957
+\T1/lmtt/m/n/12 cplusplus . pdf ; jsessionid = F6F2721BAADDF0E098B19D576F1E0ED1
+ ? _ _ blob = publicationFile$[][]\T1/lmr/m/n/12 ;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 967--974
+[]\T1/lmr/m/n/12 Peter Mortensen.  What is the dif-fer-ence be-tween const int$
+[]$, const int $[]$
+ []
+
+
+Underfull \hbox (badness 6252) in paragraph at lines 967--974
+\T1/lmr/m/n/12 const, and int const $[]$?  Avail-able on-line from \T1/lmr/m/it
+/12 Stack Ex-change Inc.: Stack
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 967--974
+\T1/lmr/m/it/12 Over-flow: Ques-tions \T1/lmr/m/n/12 at: [][]$\T1/lmtt/m/n/12 h
+ttp : / / stackoverflow . com / questions / 1143262 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 967--974
+\T1/lmtt/m/n/12 what-[]is-[]the-[]difference-[]between-[]const-[]int-[]const-[]
+int-[]const-[]and-[]int-[]const$[][]\T1/lmr/m/n/12 ; Oc-to-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 976--984
+\T1/lmtt/m/n/12 / / stackoverflow . com / a / 36319466 / 1531728$[][] \T1/lmr/m
+/n/12 and [][]$\T1/lmtt/m/n/12 http : / / stackoverflow . com / questions /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 976--984
+\T1/lmtt/m/n/12 36319028 / why-[]is-[]the-[]discrepancy-[]in-[]these-[]two-[]ca
+ses-[]of-[]using-[]c-[]templates /
+ []
+
+
+LaTeX Warning: Command \textregistered invalid in math mode on input line 996.
+
+
+LaTeX Warning: Command \textregistered invalid in math mode on input line 996.
+
+
+LaTeX Warning: Command \textregistered invalid in math mode on input line 1002.
+
+
+
+LaTeX Warning: Command \textregistered invalid in math mode on input line 1002.
+
+
+[76]
+Underfull \hbox (badness 10000) in paragraph at lines 1023--1029
+[]\T1/lmr/m/n/12 Yusuf Ke-mal Öz-can.  Is there any dif-fer-ence be-tween point
+-ers and ref-er-
+ []
+
+
+Underfull \hbox (badness 7888) in paragraph at lines 1023--1029
+\T1/lmr/m/n/12 ences?  Avail-able on-line from \T1/lmr/m/it/12 Stack Ex-change 
+Inc.: Pro-gram-mers Stack Ex-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1023--1029
+\T1/lmr/m/it/12 change: Ques-tions \T1/lmr/m/n/12 at: [][]$\T1/lmtt/m/n/12 http
+ : / / programmers . stackexchange . com / questions / 195337 /
+ []
+
+
+Underfull \hbox (badness 6927) in paragraph at lines 1023--1029
+\T1/lmtt/m/n/12 is-[]there-[]any-[]difference-[]between-[]pointers-[]and-[]refe
+rences$[][]\T1/lmr/m/n/12 ; Oc-to-ber 28, 2015 was
+ []
+
+[77] [78] [79] [80] [81])
+No complaints by nag.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 287.
+[82]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 287.
+ (./data-structures_n_algor_clean.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 287.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 287.
+Package rerunfilecheck Info: File `data-structures_n_algor_clean.out' has not c
+hanged.
+(rerunfilecheck)             Checksum: A784820C905262E2CEFAD04BFA557DBF;3164.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 287.
+ ) 
+Here is how much of TeX's memory you used:
+ 13442 strings out of 494936
+ 181917 string characters out of 6180785
+ 277058 words of memory out of 5000000
+ 14762 multiletter control sequences out of 15000+600000
+ 124885 words of font info for 89 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 36i,15n,43p,1263b,662s stack positions out of 5000i,500n,10000p,30000000b,80000s
+{/opt/local/share/texmf-texlive/fonts/enc/dvips/lm/lm-ec.enc}{/opt/local/shar
+e/texmf-texlive/fonts/enc/dvips/lm/lm-mathit.enc}{/opt/local/share/texmf-texliv
+e/fonts/enc/dvips/lm/lm-rm.enc}{/opt/local/share/texmf-texlive/fonts/enc/dvips/
+lm/lm-mathsy.enc}{/opt/local/share/texmf-texlive/fonts/enc/dvips/lm/lm-mathex.e
+nc}{/opt/local/share/texmf-texlive/fonts/enc/dvips/lm/lm-ts1.enc}</opt/local/sh
+are/texmf-texlive/fonts/type1/public/lm/lmbx12.pfb></opt/local/share/texmf-texl
+ive/fonts/type1/public/lm/lmcsc10.pfb></opt/local/share/texmf-texlive/fonts/typ
+e1/public/lm/lmex10.pfb></opt/local/share/texmf-texlive/fonts/type1/public/lm/l
+mmi12.pfb></opt/local/share/texmf-texlive/fonts/type1/public/lm/lmmi6.pfb></opt
+/local/share/texmf-texlive/fonts/type1/public/lm/lmmi8.pfb></opt/local/share/te
+xmf-texlive/fonts/type1/public/lm/lmr10.pfb></opt/local/share/texmf-texlive/fon
+ts/type1/public/lm/lmr12.pfb></opt/local/share/texmf-texlive/fonts/type1/public
+/lm/lmr17.pfb></opt/local/share/texmf-texlive/fonts/type1/public/lm/lmr6.pfb></
+opt/local/share/texmf-texlive/fonts/type1/public/lm/lmr8.pfb></opt/local/share/
+texmf-texlive/fonts/type1/public/lm/lmri12.pfb></opt/local/share/texmf-texlive/
+fonts/type1/public/lm/lmro12.pfb></opt/local/share/texmf-texlive/fonts/type1/pu
+blic/lm/lmsy10.pfb></opt/local/share/texmf-texlive/fonts/type1/public/lm/lmsy8.
+pfb></opt/local/share/texmf-texlive/fonts/type1/public/lm/lmtk10.pfb></opt/loca
+l/share/texmf-texlive/fonts/type1/public/lm/lmtt12.pfb></opt/local/share/texmf-
+texlive/fonts/type1/public/marvosym/marvosym.pfb></opt/local/share/texmf-texliv
+e/fonts/type1/public/amsfonts/symbols/msam10.pfb></opt/local/share/texmf-texliv
+e/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on data-structures_n_algor_clean.pdf (87 pages, 682440 bytes).
+PDF statistics:
+ 3793 PDF objects out of 4296 (max. 8388607)
+ 3647 compressed objects within 37 object streams
+ 1681 named destinations out of 1728 (max. 500000)
+ 361 words of extra memory for PDF output out of 10000 (max. 10000000)
+
