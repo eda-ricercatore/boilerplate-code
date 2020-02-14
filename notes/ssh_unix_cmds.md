@@ -1,3 +1,11 @@
+>	## ⚠️ Warning about using this note:
+
+>	Information about [SSH access](https://github.com/eda-ricercatore/gulyas-scripts/blob/master/notes/cheat-sheets/unix-like-os/ssh_unix_cmds.md)
+>		has been relocated.
+>
+>	This note is no longer maintained.
+
+
 #	SSH Access 
 
 ##	Setting Up SSH Access
