@@ -1,3 +1,12 @@
+>	## ⚠️ Warning about using this note:
+
+>	Information about [*UNIX*-like operating systems](https://github.com/eda-ricercatore/gulyas-scripts/blob/master/notes/cheat-sheets/unix-like-os/unix-information.md)
+>		has been relocated.
+>
+>	This note is no longer maintained.
+
+
+
 #	Notes About *UNIX*-like Operating Systems
 
 
