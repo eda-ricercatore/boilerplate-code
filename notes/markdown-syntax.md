@@ -1,3 +1,12 @@
+>	## ⚠️ Warning about using this note:
+
+>	Information about [*Markdown* syntax](https://github.com/eda-ricercatore/gulyas-scripts/blob/master/notes/computer-languages/markdown-syntax.md)
+>		has been relocated.
+>
+>	This note is no longer maintained.
+
+
+
 #	Notes about the Markdown Syntax
 
 ##	Notes About Horizontal Rules/Lines
