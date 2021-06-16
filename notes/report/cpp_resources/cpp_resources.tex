@@ -431,7 +431,7 @@ C++ topics: \vspace{-0.3cm}
 	\item \cite{Eckel2000}, Chp 8
 	\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\item Functions and pointers: \vspace{-0.3cm}
+\item Functions, parameters/arguments, and pointers: \vspace{-0.3cm}
 	\begin{enumerate} \itemsep -2pt
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\item See \cite[\S7.2-7.4]{Pomeranz2014} regarding passing arguments by value, reference, and by address.
@@ -583,6 +583,48 @@ C++ topics: \vspace{-0.3cm}
 		\begin{enumerate} \itemsep -2pt
 		\item 
 		\end{enumerate}
+	\end{enumerate}
+\item Extern variables: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item : \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item 
+		\end{enumerate}
+	\item : \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item 
+		\end{enumerate}
+	\item : \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item 
+		\end{enumerate}
+	\item : \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item 
+		\end{enumerate}
+	\item : \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item 
+		\end{enumerate}
+	\item : \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item 
+		\end{enumerate}
+	\item : \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item 
+		\end{enumerate}
+	\end{enumerate}
+\item types of variables: \vspace{-0.3cm}
+	\begin{enumerate} \itemsep -2pt
+	\item local variables
+	\item global variables: \vspace{-0.2cm}
+		\begin{enumerate} \itemsep -2pt
+		\item Reside in the {\tt .bss} (block started by symbol) segment of the executable
+		\end{enumerate}
+	\item static variables
+	\item static global variables
+	\item extern variables
 	\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item {\tt typename}: \vspace{-0.3cm}
@@ -982,6 +1024,7 @@ Notes about software development in {\it C++}: \vspace{-0.3cm}
 			\end{enumerate}
 		\end{enumerate}
 	\item References: \cite[pp. 3, or pp. 15 in the PDF]{Arndt2010} and Kenneth Finnegan, answer to ``How do you get assembler output from C/C++ source in gcc?,'' Stack Exchange Inc., New York, NY, September 26, 2008. Available online from {\it Stack Exchange Inc.: Stack Overflow: Questions} at: \url{http://stackoverflow.com/a/137479}; March 16, 2016 was the last accessed date. Also, includes information from comments to this answer by Sundaram Ramaswamy (May 6, 2013) and L{\uhorn}u V{\~{\i}}nh Ph{\'{u}}c (June 7, 2014): \vspace{-0.2cm}
+		%	To typeset ``\uhorn'', we need the vntex LaTeX package.
 		\begin{enumerate} \itemsep -2pt
 		\item Create assembly code: {\tt c++ -S -fverbose-asm -g -02 {\it [source\_code.cpp]} -o {\it [unassembled\_file.s]}}
 		\item Create assembled code interfaced with source lines: {\tt as -alhnd {\it [unassembled\_file.s]} $>$ {\it [listing\_file.lst]}} 
